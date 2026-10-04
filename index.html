@@ -6,7 +6,7 @@
 <title>la librairie</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:ital,wght@1,600&family=Noto+Serif+KR:wght@600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:ital,wght@1,600&family=Noto+Serif+KR:wght@600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Song+Myung&family=Noto+Serif+TC:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0a0a0c;
@@ -430,6 +430,11 @@
     color:var(--text-dim);
     font-size:12.5px;
   }
+  footer .foot-title{
+    font-family:'Inter','Noto Serif KR',sans-serif; font-weight:700;
+    font-size:13.5px; color:var(--text); letter-spacing:.02em; margin-bottom:6px;
+  }
+  footer .foot-note{ line-height:1.6; }
 
   /* 시리즈 재생목록 모달 */
   .modal-overlay{
@@ -661,6 +666,129 @@
     margin-top:auto; width:100%; height:24%; flex:0 0 auto;
     background-repeat:no-repeat;
   }
+
+  /* 디자인 책등: 초기불전연구원 4부 니까야 (모든 권 같은 두께) */
+  .spine-c{
+    width:calc(var(--spine-h) * .18);
+    background-color:#fbfbf9;
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -3px 0 6px rgba(0,0,0,.10), inset 2px 0 3px rgba(255,255,255,.7), 0 2px 6px rgba(0,0,0,.5);
+    color:#1f2f6a;
+  }
+  .spine-c .sc-tab{
+    margin-top:9px; width:58%; padding:4px 0; border-radius:5px; flex:0 0 auto;
+    display:flex; justify-content:center; align-items:center;
+    writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+    font-family:'Noto Serif KR',serif; font-size:clamp(7.5px,1.2vh,9px); color:#2b3a6b; letter-spacing:0; line-height:1;
+  }
+  .spine-c .sc-tab i{ font-style:normal; }
+  .spine-c .sc-tab i + i{ margin-inline-start:.35em; }
+  .spine-c .sc-body{
+    margin-top:7px; writing-mode:vertical-rl; white-space:nowrap;
+    display:flex; flex-direction:column; align-items:flex-start; gap:0; overflow:hidden;
+  }
+  .spine-c .sc-title{ font-family:'Song Myung','Noto Serif KR',serif; font-size:clamp(14px,2.6vh,20px); line-height:1; }
+  .spine-c .sc-side{ display:flex; flex-direction:row; align-items:center; padding-top:16px; }
+  .spine-c .sc-side i{ font-style:normal; }
+  .spine-c .sc-side i + i{ margin-inline-start:.22em; }
+  .spine-c .sc-side2{ display:flex; flex-direction:row; align-items:center; padding-top:30px; }
+  .spine-c .sc-side2 i{ font-style:normal; }
+  .spine-c .sc-side2 i + i{ margin-inline-start:.22em; }
+  .spine-c .sc-ro{ font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:clamp(8.5px,1.3vh,10px); color:#3a4778; line-height:1.05; }
+  .spine-c .sc-sub{ margin-top:0; line-height:1.05; font-family:'Noto Serif KR',serif; font-size:clamp(7.5px,1.2vh,9px); color:#3a4778; text-orientation:upright; }
+  .spine-c .sc-tr{ margin-top:.8em; line-height:1.05; font-family:'Noto Serif KR',serif; font-size:clamp(7.5px,1.2vh,9px); color:#3a4778; text-orientation:upright; }
+  .spine-c .sc-no{ margin-top:auto; font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:clamp(10px,1.6vh,12.5px); line-height:1; color:#1f2f6a; padding-top:2px; }
+  .spine-c .sc-logo{ margin:5px 0 6px; display:flex; flex-direction:column; align-items:center; gap:2px; }
+  .spine-c .sc-logo i{ width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-bottom:9px solid #c4322f; }
+  .spine-c .sc-logo b{ font-family:'Noto Serif KR',serif; font-weight:600; font-size:6.5px; color:#444; letter-spacing:-.02em; white-space:nowrap; }
+
+  /* 디자인 책등: 敦煌石窟全集 (청록 바탕 · 敦煌 붓글씨 · 흰 칸에 권 이름 · 주황 문양) */
+  .spine-h{
+    width:calc(var(--spine-h) * .16);
+    background:linear-gradient(90deg,#0396b2,#08b3d3 30%,#06a9c8 72%,#03869f);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -3px 0 6px rgba(0,0,0,.22), inset 2px 0 3px rgba(255,255,255,.25), 0 2px 6px rgba(0,0,0,.5);
+    color:#111;
+  }
+  .spine-h .sh-title{ width:54%; height:auto; margin-top:13px; display:block; }
+  .spine-h .sh-series{
+    margin-top:6px; display:flex; flex-direction:column; align-items:center;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(8.5px,1.4vh,10.5px); line-height:1.2; color:#111;
+  }
+  .spine-h .sh-no{ margin-top:3px; font-family:'EB Garamond',Georgia,serif; font-size:clamp(10px,1.6vh,12.5px); color:#111; line-height:1; }
+  /* 권 이름: 흰 종이 칸에 한 자씩 네모 테두리 (내지 표제 디자인) */
+  .spine-h .sh-name{
+    margin-top:8px; display:flex; flex-direction:column; align-items:center;
+    background:#fbfaf6; padding:2px; box-shadow:0 0 0 1px rgba(0,60,70,.25);
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(9px,1.55vh,11.5px); line-height:1; color:#1b8e9e;
+    max-height:58%; overflow:hidden;
+  }
+  .spine-h .sh-name span{ display:block; padding:1.5px 2px; border:1px solid #6fb9c2; margin-top:-1px; }
+  .spine-h .sh-name span:first-child{ margin-top:0; }
+  .spine-h .sh-name .gap{ border:none; height:.3em; padding:0; }
+  .spine-h .sh-name.long{ font-size:clamp(7.5px,1.25vh,9.5px); }
+  .spine-h .sh-name.long span{ padding:1px 2px; }
+  .spine-h .sh-emblem{ width:44%; height:auto; margin:auto 0 4px; display:block; }
+  .spine-h .sh-pub{
+    margin-bottom:8px; text-align:center; white-space:pre-line;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-size:6.5px; line-height:1.25; color:#0d2f36;
+  }
+  /* 소장하지 않은 권: 같은 크기의 빈 칸 */
+  .spine-empty{
+    width:calc(var(--spine-h) * .16);
+    border:1px dashed rgba(255,255,255,.16); border-bottom:none;
+    background:rgba(255,255,255,.025);
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
+    box-shadow:none; cursor:default;
+  }
+  .spine-empty:hover, .spine-empty:focus-visible{ transform:none; box-shadow:none; }
+  .spine-empty .se-name{
+    display:flex; flex-direction:column; align-items:center; line-height:1.1; margin-bottom:auto; margin-top:16px;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-size:clamp(9px,1.4vh,11px); color:rgba(255,255,255,.22);
+    max-height:70%; overflow:hidden;
+  }
+  .spine-empty .se-no{ font-family:'EB Garamond',Georgia,serif; font-size:12px; color:rgba(255,255,255,.25); margin-bottom:10px; }
+
+  /* 디자인 책등: 望月佛教大辭典 — cloth(고동색 천·금박) / case(분홍 케이스·남색) */
+  .spine-z{
+    width:calc(var(--spine-h) * .2);
+    display:flex; flex-direction:column; align-items:center; position:relative;
+  }
+  .spine-z.cloth{
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px),
+      repeating-linear-gradient(0deg, rgba(0,0,0,.05) 0 1px, transparent 1px 3px),
+      linear-gradient(90deg,#2a1e1b,#45332e 30%,#3d2c28 72%,#231917);
+    color:#dcb862;
+    box-shadow:inset -3px 0 6px rgba(0,0,0,.45), inset 2px 0 3px rgba(255,255,255,.08), 0 2px 6px rgba(0,0,0,.6);
+  }
+  .spine-z.case{
+    background:
+      repeating-linear-gradient(0deg, rgba(120,80,70,.05) 0 1px, transparent 1px 4px),
+      linear-gradient(90deg,#c39c92,#dcbab0 30%,#d6b2a8 72%,#b98f85);
+    color:#272b5e;
+    box-shadow:inset -3px 0 6px rgba(80,40,30,.25), inset 2px 0 3px rgba(255,255,255,.3), 0 2px 6px rgba(0,0,0,.5);
+  }
+  /* 위·아래 문양 띠 */
+  .spine-z .sz-band{ width:100%; height:5.5%; flex:0 0 auto; }
+  .spine-z.cloth .sz-band{
+    background:
+      repeating-linear-gradient(90deg, transparent 0 2px, rgba(60,40,20,.55) 2px 3px),
+      repeating-linear-gradient(45deg, #e3c26e 0 2px, #b8913f 2px 4px);
+    border-top:1px solid #f0d58a; border-bottom:1px solid #f0d58a;
+  }
+  .spine-z.case .sz-band{
+    background:
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,.55) 0 1.2px, transparent 1.6px) 0 0/6px 6px,
+      repeating-linear-gradient(90deg, #4c4f8c 0 3px, #3e4180 3px 6px);
+    border-top:2px solid #3b3e7a; border-bottom:2px solid #3b3e7a;
+  }
+  .spine-z .sz-band.top{ margin-top:7%; }
+  .spine-z .sz-band.bot{ margin-bottom:6%; }
+  .spine-z .sz-title{ width:52%; height:auto; margin-top:12px; display:block; }
+  .spine-z .sz-no{ margin-top:10px; font-family:'EB Garamond',Georgia,serif; font-size:clamp(14px,2.4vh,19px); line-height:1; }
+  .spine-z .sz-sub{ margin-top:4px; font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(8px,1.3vh,10px); white-space:nowrap; line-height:1.1; }
+  .spine-z .sz-ed{ margin-top:auto; margin-bottom:7px; font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(7px,1.15vh,9px); letter-spacing:.06em; }
   .shelf-caption{
     text-align:center; font-size:12px; color:var(--text-dim);
     min-height:18px; margin:-12px 20px 16px;
@@ -896,7 +1024,10 @@
   <div class="list-view" id="listView"></div>
 </main>
 
-<footer>표지 클릭 시 새 탭에서 원문(구글 드라이브 등) 링크로 이동합니다. (여러 권짜리는 목록이 먼저 열립니다)</footer>
+<footer>
+  <p class="foot-title">佛法圖書館 DB 祥佛庫 ･ BUDDHAPADA PROJECT</p>
+  <p class="foot-note">본 페이지는 思惟空間이며 권한이 없는 자의 출입은 통제됩니다.</p>
+</footer>
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-box">
@@ -1675,7 +1806,7 @@
         { label: '제4권', title: '정선 화엄 I (精選 華嚴)', url: 'https://drive.google.com/file/d/102WJcfWUUsN1qeKsc99bGdoiS_IT6MTA/view?usp=sharing', spine: 'spines/hjts-04.jpg' },
         { label: '제5권', title: '정선 화엄 II (精選 華嚴)', url: 'https://drive.google.com/file/d/10KvtROHgwZIbyGHgC1_s6A5_k9eIKP4t/view?usp=sharing', spine: 'spines/hjts-05.jpg' },
         { label: '제6권', title: '정선 제교학 (精選 諸敎學)', url: 'https://drive.google.com/file/d/10F89YzzG2hllK0gjRUTetJXXVmtkjpo3/view?usp=sharing', spine: 'spines/hjts-06.jpg' },
-        { label: '제7-1권', title: '정선 공안집 1 (精選 公案集)', url: 'https://drive.google.com/file/d/10K8utBNSdcSF_Ka0FRplh0TYSdZr4T5N/view?usp=sharing' },
+        { label: '제7-1권', title: '정선 공안집 1 (精選 公案集)', url: 'https://drive.google.com/file/d/10K8utBNSdcSF_Ka0FRplh0TYSdZr4T5N/view?usp=sharing', spine: 'spines/hjts-07-1.jpg' },
         { label: '제7-2권', title: '정선 공안집 2 (精選 公案集)', url: 'https://drive.google.com/file/d/10Y_g4LPlmzL3NP_McCDsIMEtciXDGnpp/view?usp=sharing', spine: 'spines/hjts-07-2.jpg' },
         { label: '제8권', title: '정선 선어록 (精選 禪語錄)', url: 'https://drive.google.com/file/d/10nJOah7dBZTJysaDdE-we0LwwFlJ12IY/view?usp=sharing', spine: 'spines/hjts-08.jpg' },
         { label: '제9권', title: '정선 시선집 (精選 詩選集)', url: 'https://drive.google.com/file/d/10AV82cF-E00m2NDCjLLpAyc0ilagENl3/view?usp=sharing', spine: 'spines/hjts-09.jpg' },
@@ -1897,6 +2028,145 @@
         { label: 'AN 4', coll: 'AN', vno: 4, title: 'Numbered Discourses, Vol. 4 (Aṅguttara Nikāya)', url: 'https://drive.google.com/file/d/17Np2xBuLjTKkHTwZaDC4K3n1lD0ugZlM/view?usp=sharing' },
         { label: 'AN 5', coll: 'AN', vno: 5, title: 'Numbered Discourses, Vol. 5 (Aṅguttara Nikāya)', url: 'https://drive.google.com/file/d/16oHXc6nMRIHJnGDV-muSTS4F8hhJI_4F/view?usp=sharing' }
       ]
+    },
+    {
+      title: '몽유록 夢遊錄 — 나에게 기쁨이 되어준 고전 속 한 구절',
+      badge: '박상준 유고집 · 조계종출판사 · 2020',
+      category: ['10-0001'],
+      isbn: '9791155801444',
+      poster: 'covers/0124.jpg',
+      url: 'https://drive.google.com/file/d/1MfKluaxVJzikDIYfJvaE8RZdxTE9nADK/view?usp=sharing'
+    },
+    {
+      title: '보지 못하는 것을 본다는 것',
+      badge: '주경 지음 · 마음의숲 (주경스님의 사랑의 아포리즘 108) · 2023',
+      category: ['10-0001'],
+      isbn: '9791162851364',
+      poster: 'covers/0125.jpg',
+      url: 'https://drive.google.com/file/d/1R5F7T14SJH1DiVSISbLzCz_Zg8vrtpwb/view?usp=sharing'
+    },
+    {
+      title: '나도 때론 울고 싶다',
+      badge: '주경 스님 · 불광출판사 · 2008',
+      category: ['10-0001'],
+      isbn: '9788974795467',
+      poster: 'covers/0126.jpg',
+      url: 'https://drive.google.com/file/d/1W3JYnRa0gJkj5Q2O9gI7xgGs6Ip7OG_o/view?usp=sharing'
+    },
+    {
+      title: '지혜의 길 — 눈을 뜨자. 아니, 누가 내 눈을 감겼단 말인가',
+      badge: '주경 스님 · 불교방송출판부 (BBS) · 2008',
+      category: ['10-0001'],
+      isbn: '9788986715125',
+      poster: 'covers/0127.jpg',
+      url: 'https://drive.google.com/file/d/1aOpOjv_myTtaJtKyqyabp6eLEw-0noF-/view?usp=sharing'
+    },
+    {
+      title: '나보다 당신이 먼저입니다 — 당신이 행복해야 내가 행복해지는 이야기',
+      badge: '주경 지음 · 마음의숲 · 2015',
+      category: ['10-0001'],
+      isbn: '9788992783866',
+      poster: 'covers/0128.jpg',
+      url: 'https://drive.google.com/file/d/1i6PN5KBpuKdbVjMradhYU0xXIp2TlNhw/view?usp=sharing'
+    },
+    {
+      title: '미안하지만 다음 생에 계속됩니다',
+      badge: '주경 지음 · 마음의숲 · 2009',
+      category: ['10-0001'],
+      isbn: '9788992783255',
+      poster: 'covers/0129.jpg',
+      url: 'https://drive.google.com/file/d/1Rtr2wrj2w3XvKGpAtToIWjog-fJeuUrr/view?usp=sharing'
+    },
+    {
+      title: '빠알리 경장 4부 니까야 (디가 · 맛지마 · 상윳따 · 앙굿따라)',
+      badge: '각묵스님 · 대림스님 옮김 · 초기불전연구원 · 전 19권 (디가 3 · 맛지마 4 · 상윳따 6 · 앙굿따라 6)',
+      category: ['06-0004'],
+      poster: 'covers/0130.jpg',
+      // 초기불전연구원판 책등을 본떠 화면에서 그림 (니까야별 꼬리표 색·수채화 무늬)
+      spineDesign: { kind: 'cbri', publisher: '초기불전연구원', colls: {
+        DN: { ko: '디가니까야',     ro: 'Dīghanikāya',      sub: '길게 설하신 경',        tr: '각묵스님 옮김', tab: '#cdd9e8', wash: ['#f3c3b8', '#c9d3ea'], bg: '#ede2e6', n: 3 },
+        MN: { ko: '맛지마니까야',   ro: 'Majjhima Nikāya',  sub: '중간 길이로 설하신 경', tr: '대림스님 옮김', tab: '#cde6d2', wash: ['#ece3a6', '#cfe6d4'], bg: '#edf0db', n: 4 },
+        SN: { ko: '상윳따니까야',   ro: 'Saṁyutta Nikāya',  sub: '주제별로 모은 경',      tr: '각묵스님 옮김', tab: '#dcdcdf', wash: ['#c3c5cc', '#e4ddd6'], bg: '#e7e6e6', n: 6 },
+        AN: { ko: '앙굿따라니까야', ro: 'Aṅguttara Nikāya', sub: '숫자별로 모은 경',      tr: '대림스님 옮김', tab: '#cfe0f1', wash: ['#b7d3ef', '#e0eaf6'], bg: '#e3edf8', n: 6 }
+      } },
+      volumes: [
+        { label: '디가니까야 1', coll: 'DN', vno: 1, title: '디가니까야 1 (Dīgha Nikāya) — 길게 설하신 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/1UX4b5UgZ0miUEy_vgFknbwbCBre1ejRs/view?usp=sharing' },
+        { label: '디가니까야 2', coll: 'DN', vno: 2, title: '디가니까야 2 (Dīgha Nikāya) — 길게 설하신 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/122rIRVMRkL_p1w00RuZKyUtuzk-EHu4G/view?usp=sharing' },
+        { label: '디가니까야 3', coll: 'DN', vno: 3, title: '디가니까야 3 (Dīgha Nikāya) — 길게 설하신 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/1P2wdXrEZhoMaqc-HW9-ELgdej8sPu8fX/view?usp=sharing' },
+        { label: '맛지마니까야 1', coll: 'MN', vno: 1, title: '맛지마니까야 1 (Majjhima Nikāya) — 중간 길이로 설하신 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1WktQxfped4Cf9TJHutz851hX7qoElKUA/view?usp=sharing' },
+        { label: '맛지마니까야 2', coll: 'MN', vno: 2, title: '맛지마니까야 2 (Majjhima Nikāya) — 중간 길이로 설하신 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1zId4qIO8IL_GBbNKinlASWrpvr6EF-XF/view?usp=sharing' },
+        { label: '맛지마니까야 3', coll: 'MN', vno: 3, title: '맛지마니까야 3 (Majjhima Nikāya) — 중간 길이로 설하신 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1ihRG-yxvTlmRYgN97hFwTf4PkJUGYbnf/view?usp=sharing' },
+        { label: '맛지마니까야 4', coll: 'MN', vno: 4, title: '맛지마니까야 4 (Majjhima Nikāya) — 중간 길이로 설하신 경 · 대림스님 옮김', url: '' },
+        { label: '상윳따니까야 1', coll: 'SN', vno: 1, title: '상윳따니까야 1 (Saṁyutta Nikāya) — 주제별로 모은 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/1Wvf94piGiF8VmZelUdRAUsWGrO30q1vM/view?usp=sharing' },
+        { label: '상윳따니까야 2', coll: 'SN', vno: 2, title: '상윳따니까야 2 (Saṁyutta Nikāya) — 주제별로 모은 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/1WPnpAtPT4KBJqeyZ2C7nwFTzmLeTNd0w/view?usp=sharing' },
+        { label: '상윳따니까야 3', coll: 'SN', vno: 3, title: '상윳따니까야 3 (Saṁyutta Nikāya) — 주제별로 모은 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/1EvxN-TJ1CIa9GT5HRyHk6fv21QR2-XDW/view?usp=sharing' },
+        { label: '상윳따니까야 4', coll: 'SN', vno: 4, title: '상윳따니까야 4 (Saṁyutta Nikāya) — 주제별로 모은 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/163EQmz89MFqL2VLYWGa0FQMKMTujs4kr/view?usp=sharing' },
+        { label: '상윳따니까야 5', coll: 'SN', vno: 5, title: '상윳따니까야 5 (Saṁyutta Nikāya) — 주제별로 모은 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/1GnSr4mTJd72KFU8uSYEBCptL0wFMs1VA/view?usp=sharing' },
+        { label: '상윳따니까야 6', coll: 'SN', vno: 6, title: '상윳따니까야 6 (Saṁyutta Nikāya) — 주제별로 모은 경 · 각묵스님 옮김', url: 'https://drive.google.com/file/d/1hEc9iOWRNGXfep7QyLweVTF0Z7HFI5Ah/view?usp=sharing' },
+        { label: '앙굿따라니까야 1', coll: 'AN', vno: 1, title: '앙굿따라니까야 1 (Aṅguttara Nikāya) — 숫자별로 모은 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1hCG8CeiOK4ei0zdgnQNk0eH9sDe5jjis/view?usp=sharing' },
+        { label: '앙굿따라니까야 2', coll: 'AN', vno: 2, title: '앙굿따라니까야 2 (Aṅguttara Nikāya) — 숫자별로 모은 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1kgRDD5hqFZKgCNSDAEO84Hm--2FEu9LZ/view?usp=sharing' },
+        { label: '앙굿따라니까야 3', coll: 'AN', vno: 3, title: '앙굿따라니까야 3 (Aṅguttara Nikāya) — 숫자별로 모은 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1LRhcwRqWvEGkDlLmHN22wsRvK3lS6xk8/view?usp=sharing' },
+        { label: '앙굿따라니까야 4', coll: 'AN', vno: 4, title: '앙굿따라니까야 4 (Aṅguttara Nikāya) — 숫자별로 모은 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1sqk63mIapilqnrMDQULlPHW8Lrd9eU-Q/view?usp=sharing' },
+        { label: '앙굿따라니까야 5', coll: 'AN', vno: 5, title: '앙굿따라니까야 5 (Aṅguttara Nikāya) — 숫자별로 모은 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1uQM1m61LC7OGyV7oiLTxr1fFgyG40Q74/view?usp=sharing' },
+        { label: '앙굿따라니까야 6', coll: 'AN', vno: 6, title: '앙굿따라니까야 6 (Aṅguttara Nikāya) — 숫자별로 모은 경 · 대림스님 옮김', url: 'https://drive.google.com/file/d/1sLiNhsdD-kDAUmYSZX6PufQA1d460bLF/view?usp=sharing' }
+      ]
+    },
+    {
+      title: '敦煌石窟全集 (돈황석굴전집)',
+      badge: '敦煌研究院 主編 · 上海人民出版社 · 1999– · 전 26권 (總卷 1 + 專題卷 25)',
+      category: ['02-0004'],
+      poster: 'covers/0131.jpg',
+      // ※ 비슷한 시리즈 「敦煌石窟藝術全集(돈황석굴예술전집)」과 다른 책입니다.
+      // emptyIfNoUrl: true 이면 링크 없는 권은 빈 칸(같은 크기)으로 비워 둠
+      spineDesign: { kind: 'dunhuang', titleImg: 'spines/dh-title-dark.png', emblem: 'spines/dh-swirl.png', pub: '上海人民\n出版社', emptyIfNoUrl: true },
+      volumes: [
+        { label: '제1권', vno: 1, name: '再現敦煌', title: '敦煌石窟全集 1 · 再現敦煌', url: '' },
+        { label: '제2권', vno: 2, name: '尊像畫卷', title: '敦煌石窟全集 2 · 尊像畫卷', url: '' },
+        { label: '제3권', vno: 3, name: '本生因緣故事畫卷', title: '敦煌石窟全集 3 · 本生·因緣故事畫卷', url: '' },
+        { label: '제4권', vno: 4, name: '佛傳故事畫卷', title: '敦煌石窟全集 4 · 佛傳故事畫卷', url: '' },
+        { label: '제5권', vno: 5, name: '阿彌陀經畫卷', title: '敦煌石窟全集 5 · 阿彌陀經畫卷', url: '' },
+        { label: '제6권', vno: 6, name: '彌勒經畫卷', title: '敦煌石窟全集 6 · 彌勒經畫卷', url: 'https://drive.google.com/file/d/1DsEtu1utv-t8za_eW8ggXvuG_FWarGJW/view?usp=sharing' },
+        { label: '제7권', vno: 7, name: '法華經畫卷', title: '敦煌石窟全集 7 · 法華經畫卷', url: 'https://drive.google.com/file/d/1FMXVptodG_uMmqghXayTJEPhlVqZei3N/view?usp=sharing' },
+        { label: '제8권', vno: 8, name: '塑像卷', title: '敦煌石窟全集 8 · 塑像卷', url: 'https://drive.google.com/file/d/14TDgCvTJbT45-czQFKaVitI5F5JYtnlw/view?usp=sharing' },
+        { label: '제9권', vno: 9, name: '報恩經畫卷', title: '敦煌石窟全集 9 · 報恩經畫卷', url: '' },
+        { label: '제10권', vno: 10, name: '密教畫卷', title: '敦煌石窟全集 10 · 密教畫卷', url: 'https://drive.google.com/file/d/1pN33yOm2nXuhAeH0gG_Xi5DrLr3cAaC_/view?usp=sharing' },
+        { label: '제11권', vno: 11, name: '楞伽經畫卷', title: '敦煌石窟全集 11 · 楞伽經畫卷', url: 'https://drive.google.com/file/d/13el2Aqjox-TrpDxnKKw89h2SJaF1CF8b/view?usp=sharing' },
+        { label: '제12권', vno: 12, name: '佛教東傳故事畫卷', title: '敦煌石窟全集 12 · 佛教東傳故事畫卷', url: 'https://drive.google.com/file/d/1JGiUa0evmVGz-sM5MtpJgGQGAqvU8TRd/view?usp=sharing' },
+        { label: '제13권', vno: 13, name: '圖案卷 上', title: '敦煌石窟全集 13 · 圖案卷 上', url: 'https://drive.google.com/file/d/1amZRS_9G-Nw-quqL8lissRSeFVw6ghkw/view?usp=sharing' },
+        { label: '제14권', vno: 14, name: '圖案卷 下', title: '敦煌石窟全集 14 · 圖案卷 下', url: 'https://drive.google.com/file/d/1HAWXePK1ytz_4XsEMij6ZAXiQABUMbBJ/view?usp=sharing' },
+        { label: '제15권', vno: 15, name: '飛天畫卷', title: '敦煌石窟全集 15 · 飛天畫卷', url: '' },
+        { label: '제16권', vno: 16, name: '音樂畫卷', title: '敦煌石窟全集 16 · 音樂畫卷', url: '' },
+        { label: '제17권', vno: 17, name: '舞蹈畫卷', title: '敦煌石窟全集 17 · 舞蹈畫卷', url: '' },
+        { label: '제18권', vno: 18, name: '山水畫卷', title: '敦煌石窟全集 18 · 山水畫卷', url: '' },
+        { label: '제19권', vno: 19, name: '動物畫卷', title: '敦煌石窟全集 19 · 動物畫卷', url: 'https://drive.google.com/file/d/1Yj8fv_t93LTufnaasQ3DLokwOgVHhmcH/view?usp=sharing' },
+        { label: '제20권', vno: 20, name: '藏經洞珍品卷', title: '敦煌石窟全集 20 · 藏經洞珍品卷', url: 'https://drive.google.com/file/d/1fHtbuKI1QiQ9yzkyAaH8ZM3nlqDtVMuR/view?usp=sharing' },
+        { label: '제21권', vno: 21, name: '石窟建築卷', title: '敦煌石窟全集 21 · 石窟建築卷', url: 'https://drive.google.com/file/d/1MMRF28aoNrLGkMKBC_WzLzbhehuVYHUU/view?usp=sharing' },
+        { label: '제22권', vno: 22, name: '建築畫卷', title: '敦煌石窟全集 22 · 建築畫卷', url: '' },
+        { label: '제23권', vno: 23, name: '科學技術畫卷', title: '敦煌石窟全集 23 · 科學技術畫卷', url: '' },
+        { label: '제24권', vno: 24, name: '服飾畫卷', title: '敦煌石窟全集 24 · 服飾畫卷', url: '' },
+        { label: '제25권', vno: 25, name: '民俗畫卷', title: '敦煌石窟全集 25 · 民俗畫卷', url: 'https://drive.google.com/file/d/1dk7ablUiIkmIgx9A02D3cmShCEkduLYM/view?usp=sharing' },
+        { label: '제26권', vno: 26, name: '交通畫卷', title: '敦煌石窟全集 26 · 交通畫卷', url: 'https://drive.google.com/file/d/1JuIO-pe0QJLEV8GA6xQfnyKhZj6bBurf/view?usp=sharing' }
+      ]
+    },
+    {
+      title: '望月佛教大辭典 (망월불교대사전)',
+      badge: '望月信亨 · 世界聖典刊行協會 · 增訂版 · 전 10권 + 中文索引 1권',
+      category: ['08-0002'],
+      poster: 'covers/0133.jpg',
+      spineDesign: { kind: 'mochizuki', variant: 'cloth', titleImg: 'spines/mz-title-gold.png' },
+      volumes: [
+        { label: '제1권', vno: 1, sub: 'アーケ', title: '望月佛教大辭典 1 · 本文 ア～ケ (1~5권 합본 파일)', url: 'https://drive.google.com/file/d/11PUFPNBszRu9R9hArMCd3GHc8zWBF93I/view?usp=sharing' },
+        { label: '제2권', vno: 2, sub: 'コーシ', title: '望月佛教大辭典 2 · 本文 コ～シ (1~5권 합본 파일)', url: 'https://drive.google.com/file/d/11PUFPNBszRu9R9hArMCd3GHc8zWBF93I/view?usp=sharing' },
+        { label: '제3권', vno: 3, sub: 'シーセ', title: '望月佛教大辭典 3 · 本文 シ～セ (1~5권 합본 파일)', url: 'https://drive.google.com/file/d/11PUFPNBszRu9R9hArMCd3GHc8zWBF93I/view?usp=sharing' },
+        { label: '제4권', vno: 4, sub: 'ソーナ', title: '望月佛教大辭典 4 · 本文 ソ～ナ (1~5권 합본 파일)', url: 'https://drive.google.com/file/d/11PUFPNBszRu9R9hArMCd3GHc8zWBF93I/view?usp=sharing' },
+        { label: '제5권', vno: 5, sub: 'ニーワ', title: '望月佛教大辭典 5 · 本文 ニ～ワ (1~5권 합본 파일)', url: 'https://drive.google.com/file/d/11PUFPNBszRu9R9hArMCd3GHc8zWBF93I/view?usp=sharing' },
+        { label: '제6권', vno: 6, sub: '年表', title: '望月佛教大辭典 6 · 佛教大年表', url: 'https://drive.google.com/file/d/1iVRzv6otGomfX9JHKVDforP4W4UEUPD6/view?usp=sharing' },
+        { label: '제7권', vno: 7, sub: '索引', title: '望月佛教大辭典 7 · 索引', url: 'https://drive.google.com/file/d/1NCz4bd3OUvFQxpUqnhkwqRSpo9v9vB5F/view?usp=sharing' },
+        { label: '제8권', vno: 8, sub: '增補', title: '望月佛教大辭典 8 · 增補', url: 'https://drive.google.com/file/d/1C4c3pqVM7xwL1OcHR7qvWVuicNN23sth/view?usp=sharing' },
+        { label: '제9권', vno: 9, sub: '補遺 (Ⅰ)', title: '望月佛教大辭典 9 · 補遺 Ⅰ (9~10권 합본 파일)', url: 'https://drive.google.com/file/d/1v4aBvyBsh8wbMqB0PvRkZ2H-eR64Iw8r/view?usp=sharing' },
+        { label: '제10권', vno: 10, sub: '補遺 (Ⅱ)', title: '望月佛教大辭典 10 · 補遺 Ⅱ (9~10권 합본 파일)', url: 'https://drive.google.com/file/d/1v4aBvyBsh8wbMqB0PvRkZ2H-eR64Iw8r/view?usp=sharing' },
+        { label: '부록', vno: '附', sub: '中文索引', noEd: true, title: '望月大辭典中文冠字筆畫索引 (중국에서 따로 만든 한자 획수 색인 · 원본에는 없음)', url: 'https://drive.google.com/file/d/1-GCaqDsHbWI3mqK5tTXZG-f6ijTCZLvr/view?usp=sharing' }
+      ]
     }
   ];
 
@@ -1942,8 +2212,9 @@
         {code:'07-0003', label:'South East-Asia'},
         {code:'07-0004', label:'Western'}
     ]},
-    { code:'08-0000', label:'Index', subs:[
-        {code:'08-0001', label:'index'}
+    { code:'08-0000', label:'Tools', subs:[
+        {code:'08-0001', label:'Index'},
+        {code:'08-0002', label:'Encyclopedia'}
     ]},
     { code:'10-0000', label:'General Buddhism', subs:[
         {code:'10-0001', label:'에세이'}
@@ -1993,6 +2264,16 @@
     });
   }
 
+  // 글자를 한 자씩 세로로 쌓기 (띄어쓰기는 작은 간격)
+  function stackChars(el, text) {
+    el.innerHTML = '';
+    [...text].forEach(ch => {
+      const span = document.createElement('span');
+      if (/\s/.test(ch)) span.className = 'gap'; else span.textContent = ch;
+      el.appendChild(span);
+    });
+  }
+
   function renderShelf(b) {
     modalList.innerHTML = '';
     const scroll = document.createElement('div');
@@ -2010,7 +2291,58 @@
       a.title = `${vol.label} · ${vol.title}`;
       a.setAttribute('aria-label', a.title);
       if (!vol.url) { a.removeAttribute('href'); a.style.cursor = 'default'; a.title += ' (링크 준비 중)'; }
-      if (b.spineDesign && b.spineDesign.kind === 'nikaya') {
+      if (b.spineDesign && b.spineDesign.emptyIfNoUrl && !vol.url) {
+        // 소장하지 않은 권: 자리만 비워 둔 빈 칸
+        a.className = 'spine spine-empty';
+        a.title = `${vol.label} · ${vol.title} (소장하지 않음)`;
+        a.innerHTML = `<span class="se-name"></span><span class="se-no"></span>`;
+        stackChars(a.querySelector('.se-name'), vol.name || vol.title);
+        a.querySelector('.se-no').textContent = vol.vno || vol.label.replace(/^제|권$/g, '');
+      } else if (b.spineDesign && b.spineDesign.kind === 'mochizuki') {
+        // 望月佛教大辭典: 금박(천 장정) 또는 남색(케이스) — 문양 띠 · 붓글씨 제목 · 권 번호 · 범위 · 增訂版
+        a.className = `spine spine-z ${b.spineDesign.variant || 'cloth'}`;
+        a.innerHTML = `<span class="sz-band top"></span><img class="sz-title" alt=""><span class="sz-no"></span><span class="sz-sub"></span><span class="sz-ed">增訂版</span><span class="sz-band bot"></span>`;
+        a.querySelector('.sz-title').src = b.spineDesign.titleImg;
+        a.querySelector('.sz-no').textContent = vol.vno;
+        a.querySelector('.sz-sub').textContent = vol.sub || '';
+        if (vol.noEd) a.querySelector('.sz-ed').style.visibility = 'hidden';
+      } else if (b.spineDesign && b.spineDesign.kind === 'dunhuang') {
+        // 敦煌石窟全集: 붉은 敦煌 붓글씨 → 石窟全集 → 권 이름 → 번호 → 주황 문양
+        a.className = 'spine spine-h';
+        a.innerHTML = `<img class="sh-title" alt=""><span class="sh-series"></span><span class="sh-no"></span><span class="sh-name"></span><img class="sh-emblem" alt=""><span class="sh-pub"></span>`;
+        a.querySelector('.sh-title').src = b.spineDesign.titleImg;
+        a.querySelector('.sh-emblem').src = b.spineDesign.emblem;
+        stackChars(a.querySelector('.sh-series'), '石窟全集');
+        stackChars(a.querySelector('.sh-name'), vol.name);
+        if (vol.name.replace(/\s/g, '').length > 6) a.querySelector('.sh-name').classList.add('long');
+        a.querySelector('.sh-no').textContent = vol.vno;
+        a.querySelector('.sh-pub').textContent = b.spineDesign.pub || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'cbri') {
+        // 초기불전연구원판: 꼬리표 → 세로 제목 + (눕힌 로마자·부제·옮긴이) → 권 번호 → 로고
+        const c = b.spineDesign.colls[vol.coll];
+        a.className = 'spine spine-c';
+        a.style.setProperty('--tab', c.tab);
+        a.style.backgroundColor = c.bg || '#fbfbf9';   // 니까야별 옅은 바탕색
+        // 수채화 무늬: 같은 니까야 권끼리 한 장으로 이어지게 크기·위치를 나눔
+        const [w1, w2] = c.wash, g = c.n;
+        a.style.backgroundImage =
+          `radial-gradient(ellipse 22% 16% at 18% 58%, ${w1}cc, transparent 70%),` +
+          `radial-gradient(ellipse 26% 20% at 46% 70%, ${w2}cc, transparent 70%),` +
+          `radial-gradient(ellipse 20% 14% at 74% 54%, ${w1}aa, transparent 70%),` +
+          `radial-gradient(ellipse 24% 22% at 90% 76%, ${w2}bb, transparent 70%),` +
+          `radial-gradient(ellipse 30% 12% at 35% 88%, ${w1}88, transparent 70%)`;
+        a.style.backgroundSize = `${g * 100}% 100%`;
+        a.style.backgroundPosition = `${g > 1 ? (vol.vno - 1) / (g - 1) * 100 : 0}% 0`;
+        a.style.backgroundRepeat = 'no-repeat';
+        a.innerHTML = `<span class="sc-tab"><i>빠알리</i><i>경장</i></span><span class="sc-body"><span class="sc-title"></span><span class="sc-side"><span class="sc-ro"></span><span class="sc-tr"></span></span><span class="sc-side2"><span class="sc-sub"></span></span></span><span class="sc-no"></span><span class="sc-logo"><b></b></span>`;
+        a.querySelector('.sc-title').textContent = c.ko;
+        a.querySelector('.sc-ro').textContent = c.ro;
+        const words = (el, t) => t.split(/\s+/).forEach(w => { const i = document.createElement('i'); i.textContent = w; el.appendChild(i); });
+        words(a.querySelector('.sc-sub'), c.sub);   // 낱말 사이 띄어쓰기를 좁게
+        words(a.querySelector('.sc-tr'), c.tr);
+        a.querySelector('.sc-no').textContent = vol.vno;
+        a.querySelector('.sc-logo b').textContent = b.spineDesign.publisher || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'nikaya') {
         // 니까야별 색 책등: 위 약어·권 번호, 가운데 눕힌 영문 제목, 아래 잎맥 무늬(같은 니까야 권끼리 이어짐)
         const c = b.spineDesign.colls[vol.coll];
         a.className = 'spine spine-n';
