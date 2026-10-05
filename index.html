@@ -6,7 +6,7 @@
 <title>la librairie</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:ital,wght@1,600&family=Noto+Serif+KR:wght@600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Song+Myung&family=Noto+Serif+TC:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:ital,wght@1,600&family=Noto+Serif+KR:wght@600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Song+Myung&family=Noto+Serif+TC:wght@500;600&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0a0a0c;
@@ -219,6 +219,108 @@
     display:grid;
     grid-template-columns:repeat(auto-fill,minmax(120px,1fr));
     gap:12px 8px;   /* 위아래 12px · 좌우 8px (이전 18px 14px) */
+  }
+
+  /* ===== 매대 (홍보 배너) ===== */
+  .feature-wrap{ grid-column:1 / -1; margin:2px 0 10px; }
+  .feature{
+    position:relative; overflow:hidden; cursor:pointer;
+    height:clamp(250px, 24vw, 330px);
+    border-radius:4px; border:1px solid rgba(255,255,255,.07);
+    background:#16130f;
+    display:flex; align-items:stretch;
+    box-shadow:0 18px 40px rgba(0,0,0,.45);
+  }
+  .feature:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+  .ft-bg{
+    position:absolute; inset:-20px; background-size:cover; background-position:70% 18%;
+    filter:grayscale(1) contrast(1.1) blur(1.5px); opacity:.16; transform:scale(1.05);
+    transition:transform 6s ease;
+  }
+  .feature:hover .ft-bg{ transform:scale(1.12); }
+  .ft-shade{
+    position:absolute; inset:0;
+    background:
+      linear-gradient(90deg, rgba(12,10,8,.96) 0%, rgba(12,10,8,.86) 38%, rgba(12,10,8,.35) 70%, rgba(12,10,8,.55) 100%),
+      radial-gradient(ellipse at 78% 50%, rgba(201,164,103,.10), transparent 60%);
+  }
+  .ft-text{
+    position:relative; z-index:1; flex:1 1 auto; min-width:0;
+    display:flex; flex-direction:column; justify-content:center;
+    padding:0 0 0 clamp(22px, 4vw, 54px);
+  }
+  .ft-kicker{
+    font-family:'Inter',sans-serif; font-size:11px; font-weight:600; letter-spacing:.22em;
+    color:var(--accent);
+  }
+  .ft-title{
+    margin:8px 0 4px; font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600;
+    font-size:clamp(34px, 4.6vw, 58px); line-height:1; letter-spacing:.06em; color:#f1ece2;
+  }
+  .ft-sub{ font-family:'Noto Serif KR',serif; font-size:13px; color:#b9b3a8; }
+  .ft-stats{ display:flex; gap:18px; margin-top:16px; font-family:'Noto Sans KR',sans-serif; font-size:12px; color:#a59f94; }
+  .ft-stats b{
+    font-family:'Inter',sans-serif; font-weight:400; font-size:24px; color:#f1ece2; margin-right:3px;
+    font-variant-numeric:tabular-nums;
+  }
+  .ft-desc{ margin-top:10px; max-width:34em; font-size:12.5px; line-height:1.6; color:#8f8a80; font-family:'Noto Serif KR',serif; }
+  .ft-cta{
+    align-self:flex-start; margin-top:18px; padding:8px 16px; border-radius:3px;
+    background:#efe9dd; color:#1a1714; font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:13px;
+    transition:background .2s ease;
+  }
+  .ft-cta em{ font-style:normal; display:inline-block; transition:transform .2s ease; }
+  .feature:hover .ft-cta{ background:#fff; }
+  .feature:hover .ft-cta em{ transform:translateX(4px); }
+
+  .ft-art{
+    position:relative; z-index:1; flex:0 0 auto; width:clamp(260px, 36%, 440px);
+    display:flex; align-items:flex-end; justify-content:center; gap:22px;
+    padding:0 clamp(18px, 3vw, 44px) 0 0;
+  }
+  .ft-page{
+    height:78%; align-self:center; width:auto; display:block;
+    transform:rotate(2.5deg); border-radius:1px;
+    box-shadow:0 18px 30px rgba(0,0,0,.6), 0 0 0 1px rgba(0,0,0,.3);
+    filter:grayscale(.15) sepia(.12);
+    transition:transform .4s ease;
+  }
+  .feature:hover .ft-page{ transform:rotate(0deg) translateY(-4px); }
+  /* 더미 보기를 닮은 작은 신문 더미 */
+  .ft-pile{ display:flex; flex-direction:column; width:clamp(80px, 9vw, 120px); margin-bottom:28px; }
+  .ft-pile i{
+    display:block; height:9px; margin-top:-1px;
+    background:linear-gradient(180deg,#dedcd6,#cfccc4 60%,#b9b5ab);
+    box-shadow:0 1px 0 rgba(0,0,0,.45);
+    border-left:12px solid #1c1a17;
+    transition:transform .3s ease;
+  }
+  .feature:hover .ft-pile i:nth-child(4){ transform:translateX(10px); }
+  .ft-base{
+    display:block; height:12px; margin-top:2px; border-radius:2px;
+    background:linear-gradient(180deg,#7a573c,#45301b);
+    box-shadow:0 6px 10px rgba(0,0,0,.5);
+  }
+  /* 서가 사이 매대: 오른쪽 4칸 × 2줄 */
+  .feature-wrap.as-block{ grid-column:-5 / -1; margin:0; }
+  .feature-wrap.as-block .feature{ height:100%; min-height:0; }
+  .feature-wrap.as-block .ft-text{ padding:0 0 0 clamp(20px, 2.6vw, 34px); }
+  .feature-wrap.as-block .ft-title{ font-size:clamp(30px, 3.3vw, 46px); }
+  .feature-wrap.as-block .ft-sub{ font-size:12px; white-space:nowrap; }
+  .feature-wrap.as-block .ft-stats{ gap:14px; margin-top:14px; }
+  .feature-wrap.as-block .ft-stats b{ font-size:21px; }
+  .feature-wrap.as-block .ft-desc, .feature-wrap.as-block .ft-pile{ display:none; }
+  .feature-wrap.as-block .ft-art{ width:46%; padding:0 clamp(14px, 2vw, 26px) 0 0; gap:0; justify-content:flex-end; }
+  .feature-wrap.as-block .ft-page{ height:auto; width:100%; max-height:82%; object-fit:contain; }
+  .feature-wrap.as-block .ft-bg{ background-position:60% 20%; }
+  @media (max-width:760px){
+    .feature{ height:auto; min-height:230px; }
+    .ft-text{ padding:26px 0 26px 22px; }
+    .ft-desc{ display:none; }
+    .ft-sub{ font-size:11.5px; white-space:nowrap; letter-spacing:-.01em; }
+    .ft-art{ width:42%; gap:0; padding-right:14px; }
+    .ft-pile{ display:none; }
+    .ft-page{ height:auto; width:100%; max-width:160px; }
   }
 
   .list-view{
@@ -622,6 +724,28 @@
     color:rgba(110,100,96,.38); white-space:nowrap;
   }
 
+  /* 디자인 책등: 한국의 사찰벽화 (권마다 파스텔 바탕) */
+  .spine-w{
+    width:calc(var(--spine-h) * .17);
+    background:linear-gradient(90deg, color-mix(in srgb, var(--c) 86%, #000) 0%, var(--c) 30%, color-mix(in srgb, var(--c) 92%, #fff) 60%, color-mix(in srgb, var(--c) 88%, #000) 100%);
+    display:flex; flex-direction:column; align-items:center; color:#2a2622;
+  }
+  .spine-w .sw-title{ width:40%; height:auto; margin-top:15%; display:block; opacity:.92; }
+  .spine-w .sw-sub{
+    margin-top:13%; display:flex; flex-direction:row-reverse; gap:2px;
+    font-family:'Noto Sans KR','Inter',sans-serif; line-height:1;
+  }
+  .spine-w .sw-sub > span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-w .sw-ser{ font-size:clamp(5.5px,.95vh,7.5px); color:rgba(42,38,34,.62); letter-spacing:-.08em; }
+  .spine-w .sw-reg{ font-size:clamp(6.5px,1.1vh,8.5px); color:#fff; font-weight:700; text-shadow:0 0 1px rgba(0,0,0,.25); }
+  .spine-w .sw-pub{
+    margin-top:auto; margin-bottom:7px; display:flex; flex-direction:row-reverse; align-items:flex-start; gap:1px;
+    font-family:'Noto Serif KR',serif; line-height:1;
+  }
+  .spine-w .sw-pub > span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-w .sw-cha{ font-size:clamp(6.5px,1.08vh,8px); font-weight:600; letter-spacing:.18em; color:#2a2622; }
+  .spine-w .sw-inst{ font-size:clamp(5px,.88vh,6.5px); color:rgba(42,38,34,.6); }
+
   /* 디자인 책등: 마하바라따 B안 */
   .spine-m{
     width:calc(var(--spine-h) * .205);
@@ -793,6 +917,169 @@
     text-align:center; font-size:12px; color:var(--text-dim);
     min-height:18px; margin:-12px 20px 16px;
   }
+
+  /* ===== 신문 책꽂이 (연도별 선반) ===== */
+  .modal-box.paper-mode{ width:min(1100px, 100%); max-height:92vh; }
+  .modal-box.paper-mode .modal-list{ padding:0 0 10px; }
+  .pp-bar{
+    position:sticky; top:0; z-index:3; background:var(--bg-raise);
+    padding:12px 20px 10px; border-bottom:1px solid rgba(255,255,255,.06);
+    display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px;
+  }
+  .pp-decades{ display:flex; flex-wrap:wrap; gap:5px; }
+  .pp-decades button{
+    background:none; border:1px solid rgba(255,255,255,.12); color:var(--text-dim);
+    font-family:'EB Garamond',Georgia,serif; font-size:13.5px; border-radius:14px;
+    padding:2px 10px; cursor:pointer;
+  }
+  .pp-decades button:hover{ color:var(--text); border-color:rgba(255,255,255,.3); }
+  .pp-decades button.on{ color:#fff; border-color:var(--accent); background:rgba(224,71,60,.18); }
+  .pp-search{
+    margin-left:auto; flex:0 1 220px; min-width:150px;
+    background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); color:var(--text);
+    border-radius:8px; padding:6px 10px; font-size:13px; font-family:'Noto Serif KR',sans-serif;
+  }
+  .pp-search:focus{ outline:none; border-color:rgba(255,255,255,.3); }
+  .pp-info{
+    flex-basis:100%; font-size:12px; color:var(--text-dim); min-height:16px;
+    font-family:'Noto Serif KR',sans-serif;
+  }
+  .pp-info b{ color:var(--text); font-weight:500; }
+  .pp-year{ padding:18px 24px 0; }
+  .pp-year-head{
+    display:flex; align-items:baseline; gap:10px; margin:0 6px 2px;
+    font-family:'EB Garamond',Georgia,serif; color:var(--text);
+  }
+  .pp-year-head strong{ font-size:24px; font-weight:500; letter-spacing:.02em; }
+  .pp-year-head span{ font-size:12px; color:var(--text-dim); font-family:'Noto Serif KR',sans-serif; }
+  /* 줄이 넘어가도 줄마다 선반이 생기도록: 책등 높이 150 + 줄 간격 42 = 한 칸 192px */
+  .pp-shelf{
+    display:flex; flex-wrap:wrap; align-items:flex-end; gap:42px 2px;
+    padding:20px 12px 14px; position:relative;
+    background-image:linear-gradient(180deg,
+      transparent 0, transparent 150px,
+      #6b4a2f 150px, #53371f 157px, #3a2614 162px,
+      rgba(0,0,0,.35) 162px, transparent 172px, transparent 192px);
+    background-size:100% 192px; background-repeat:repeat-y; background-position:0 20px;
+  }
+  .spine-p{
+    --spine-h:150px;
+    width:27px;
+    background:linear-gradient(90deg,#d9ccb0 0%,#ece2cb 40%,#e4d8bd 75%,#cdbf9f 100%);
+    display:flex; flex-direction:column; align-items:center;
+    color:#2a2520; cursor:pointer;
+    box-shadow:inset -2px 0 4px rgba(0,0,0,.14), inset 1px 0 2px rgba(255,255,255,.5), 0 2px 5px rgba(0,0,0,.5);
+  }
+  .spine-p .sp-date{
+    margin-top:8px; font-family:'EB Garamond',Georgia,serif; font-size:10px;
+    line-height:1; letter-spacing:-.02em; white-space:nowrap; color:#5a4d3e;
+  }
+  .spine-p .sp-rule{ width:14px; height:1px; background:#a8987c; margin:7px 0 6px; flex:0 0 auto; }
+  .spine-p .sp-no{
+    display:flex; flex-direction:column; align-items:center;
+    font-family:'EB Garamond',Georgia,serif; font-size:15px; line-height:1.02; color:#1d1915;
+  }
+  .spine-p .sp-no2{ margin-top:2px; font-family:'EB Garamond',Georgia,serif; font-size:11px; line-height:1; color:#5a4d3e; white-space:nowrap; }
+  .spine-p .sp-gw{
+    display:flex; flex-direction:column; align-items:center; margin-top:2px;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:13px; line-height:1.15; color:#a3271f;
+  }
+  .spine-p.sp-extra{ background:linear-gradient(90deg,#d6c6a6 0%,#eadcc0 40%,#e1d1b2 75%,#c9b794 100%); }
+  .spine-p .sp-ho{ margin-top:3px; font-family:'Noto Serif TC','Noto Serif KR',serif; font-size:10px; color:#5a4d3e; }
+  .spine-p .sp-mark{
+    margin-top:auto; margin-bottom:6px; width:20px; padding:3px 0;
+    background:#1f1b17; color:#efe6d2; border-radius:1px;
+    display:flex; flex-direction:column; align-items:center;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:10px; line-height:1.15;
+  }
+  .spine-p .sp-name{
+    writing-mode:vertical-rl; font-size:10px; font-family:'Noto Serif KR',serif;
+    margin-top:8px; overflow:hidden; max-height:60%;
+  }
+  .spine-p:hover, .spine-p:focus-visible{ transform:translateY(-12px); }
+  /* 보기 전환 (연표 / 책장) */
+  .pp-view{ display:flex; border:1px solid rgba(255,255,255,.12); border-radius:14px; overflow:hidden; margin-left:auto; }
+  .pp-view button{
+    background:none; border:0; color:var(--text-dim); font-family:'Noto Serif KR',sans-serif;
+    font-size:12px; padding:3px 11px; cursor:pointer;
+  }
+  .pp-view button + button{ border-left:1px solid rgba(255,255,255,.12); }
+  .pp-view button.on{ color:#fff; background:rgba(255,255,255,.1); }
+  .pp-bar .pp-search{ margin-left:0; }
+  .pp-shelfview[hidden]{ display:none; }
+
+  /* ===== 더미 보기 ===== */
+  .pp-pileview[hidden]{ display:none; }
+  .pp-pileview{ padding:22px 22px 24px; }
+  .pl-pile[hidden]{ display:none; }
+  .pl-group{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(184px, 1fr));
+    gap:34px 22px; align-items:end;
+  }
+  .pl-pile{ display:flex; flex-direction:column; align-items:stretch; }
+  .pl-stack{ display:flex; flex-direction:column; padding:0 8px; }
+  .pl-band{
+    /* 갱지 느낌의 회색 신문지 (오래된 해일수록 살짝 누렇게) */
+    --paper: color-mix(in srgb, #cdc6b6 calc(var(--age) * 100%), #d9d8d3);
+    position:relative; display:flex; align-items:center; gap:8px;
+    height:19px; padding:0 9px 0 0; margin-top:-1px;
+    background:
+      repeating-linear-gradient(90deg, rgba(0,0,0,.018) 0 1px, transparent 1px 3px),
+      linear-gradient(180deg, color-mix(in srgb, var(--paper) 92%, #fff) 0%, var(--paper) 55%, color-mix(in srgb, var(--paper) 86%, #4a443a) 100%);
+    color:#1e1c19; text-decoration:none; border-radius:1px;
+    box-shadow:0 1px 0 rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.35);
+    line-height:1; white-space:nowrap; overflow:hidden;
+    transition:transform .18s ease, background .18s ease, box-shadow .18s ease;
+  }
+  .pl-band.twin{ height:23px; }
+  .pl-band:hover, .pl-band:focus-visible{
+    transform:translateX(14px); z-index:2; outline:none;
+    background:#ecebe7; box-shadow:0 3px 8px rgba(0,0,0,.6);
+  }
+  .pb-mast{
+    align-self:stretch; display:flex; align-items:center; padding:0 5px;
+    background:#1c1a17; color:#e4e2dc;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:500; font-size:9px; letter-spacing:.06em;
+  }
+  .pl-band.extra .pb-mast{ background:#a3271f; color:#f4ece8; }
+  .pb-no{ display:flex; align-items:baseline; gap:2px; font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:500; font-size:8.5px; color:#6b6760; }
+  /* 숫자: 가늘고 또렷한 고정폭 숫자 */
+  .pb-no b{
+    font-family:'Inter',sans-serif; font-weight:400; font-size:11.5px; letter-spacing:.01em;
+    font-variant-numeric:tabular-nums lining-nums; font-feature-settings:'tnum' 1, 'lnum' 1; color:#1e1c19;
+  }
+  .pb-no b.gw{ font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:10px; color:#a3271f; letter-spacing:.1em; }
+  .pb-date{
+    margin-left:auto; font-family:'Inter',sans-serif; font-size:9px; font-weight:400;
+    font-variant-numeric:tabular-nums lining-nums; font-feature-settings:'tnum' 1, 'lnum' 1; letter-spacing:.03em; color:#3d3a35;
+  }
+  .pl-base{
+    height:24px; margin:3px 0 0; padding:0 11px;
+    display:flex; align-items:center; justify-content:flex-start; gap:6px;
+    background:linear-gradient(180deg,#7a573c 0%,#634329 55%,#45301b 100%);
+    border-radius:2px 2px 3px 3px; box-shadow:0 8px 14px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.14);
+    font-family:'Noto Sans KR','Inter',sans-serif; line-height:1;
+  }
+  /* 나무에 새긴 놋쇠 글자: 위쪽은 어두운 그림자(파인 홈), 아래쪽은 옅은 빛 */
+  .pl-base strong{
+    font-weight:700; font-size:14px; letter-spacing:.07em; font-variant-numeric:tabular-nums;
+    color:#c9a467;
+    text-shadow:0 -1px 0 rgba(25,14,5,.85), 0 1px 0 rgba(255,226,170,.22);
+  }
+  .pl-base span{
+    font-size:10px; font-weight:500; font-variant-numeric:tabular-nums;
+    color:#a88552; text-shadow:0 -1px 0 rgba(25,14,5,.7);
+  }
+  @media (max-width:600px){
+    .pp-pileview{ padding:18px 12px 16px; }
+    .pl-group{ grid-template-columns:repeat(2, 1fr); gap:26px 12px; }
+    .pl-band{ gap:5px; }
+    .pb-no{ font-size:0; } .pb-no b{ font-size:11px; }
+    .pb-date{ font-size:8.5px; letter-spacing:0; }
+  }
+
+  .pp-empty{ padding:40px 20px; text-align:center; color:var(--text-dim); font-size:13px; }
+  .pp-loading{ padding:60px 20px; text-align:center; color:var(--text-dim); font-size:13px; }
 
   /* ===== 오프닝 인트로 (전부 CSS/벡터 기반 — 해상도 무관 항상 선명) ===== */
   #app-content{ opacity:0; }
@@ -2167,6 +2454,34 @@
         { label: '제10권', vno: 10, sub: '補遺 (Ⅱ)', title: '望月佛教大辭典 10 · 補遺 Ⅱ (9~10권 합본 파일)', url: 'https://drive.google.com/file/d/1v4aBvyBsh8wbMqB0PvRkZ2H-eR64Iw8r/view?usp=sharing' },
         { label: '부록', vno: '附', sub: '中文索引', noEd: true, title: '望月大辭典中文冠字筆畫索引 (중국에서 따로 만든 한자 획수 색인 · 원본에는 없음)', url: 'https://drive.google.com/file/d/1-GCaqDsHbWI3mqK5tTXZG-f6ijTCZLvr/view?usp=sharing' }
       ]
+    },
+    {
+      title: '한국의 사찰벽화',
+      badge: '사찰건축물 벽화조사보고서 · 문화재청 · 성보문화재연구원 · 2006~2014 · 전 9권',
+      category: ['02-0004'],
+      poster: 'covers/0135.jpg',
+      spineDesign: { kind: 'sbwh', titleImg: 'spines/sbwh-title.png' },
+      volumes: [
+        { label: '제1권', year: '2006', region: '인천·경기·강원', color: '#c9b86e', title: '한국의 사찰벽화 1 · 인천광역시 · 경기도 · 강원도 (2006)', url: 'https://drive.google.com/file/d/1DbmqJleMYj444jO-dvSAuFh3SdWGKW4j/view?usp=sharing' },
+        { label: '제2권', year: '2007', region: '충남·충북', color: '#cbbfc3', title: '한국의 사찰벽화 2 · 충청남도 · 충청북도 (2007)', url: 'https://drive.google.com/file/d/13Z37dr_P-jndeWqW1o_-KtkaD_19RTSG/view?usp=sharing' },
+        { label: '제3권', year: '2008', region: '경남 ①', color: '#bdccb1', title: '한국의 사찰벽화 3 · 경상남도 ① (2008)', url: 'https://drive.google.com/file/d/1K9MXZkdr5E_O7pYYgfN_yYv4_auYceB6/view?usp=sharing' },
+        { label: '제4권', year: '2009', region: '부산·경남 ②', color: '#bac1cd', title: '한국의 사찰벽화 4 · 부산광역시 · 경상남도 ② (2009)', url: 'https://drive.google.com/file/d/1IT0kZxcqTjQZv8m5vjtCxDbba14OP3Ku/view?usp=sharing' },
+        { label: '제5권', year: '2010', region: '대구·경북 ①', color: '#ddbebd', title: '한국의 사찰벽화 5 · 대구광역시 · 경상북도 ① (2010)', url: 'https://drive.google.com/file/d/1erN2eAz361gKp_U9DkxNiKpqIPxxijZQ/view?usp=sharing' },
+        { label: '제6권', year: '2011', region: '경북 ②', color: '#c6c996', title: '한국의 사찰벽화 6 · 경상북도 ② (2011)', url: 'https://drive.google.com/file/d/1WMJ-XNhXIQfPuaX7tplXuh9WhWST2p9X/view?usp=sharing' },
+        { label: '제7권', year: '2012', region: '전남', color: '#cdcfd1', title: '한국의 사찰벽화 7 · 전라남도 (2012)', url: 'https://drive.google.com/file/d/1u9eEtMXzRT3HtAAtTDck_KVwWxELNZvM/view?usp=sharing' },
+        { label: '제8권', year: '2013', region: '전북', color: '#dcbdb2', title: '한국의 사찰벽화 8 · 전라북도 (2013)', url: 'https://drive.google.com/file/d/1OWw215AgfWkxc9WIf45agAeFcL4ptmUc/view?usp=sharing' },
+        { label: '제9권', year: '2014', region: '전국', color: '#bfd7c1', title: '한국의 사찰벽화 9 · 전국 (2014)', url: 'https://drive.google.com/file/d/1lkKociIvMTLUmk4FfiSm9B2M-HQMoCVu/view?usp=sharing' }
+      ]
+    },
+    {
+      title: '東大新聞 (동대신문)',
+      badge: '동국대학교 학보 · 1950 創刊',
+      category: ['01-0006'],
+      poster: 'covers/0134.jpg',
+      // 신문: 목록은 newspaper.js에 따로 (열 때만 불러옴), PDF는 R2
+      newspaper: { key: 'dongdae', src: 'newspaper.js', mark: '東大' },
+      // 메인 화면 매대(홍보 배너)로 크게 보여 줌
+      feature: { kicker: 'ARCHIVE · 學報', title: '東大新聞', sub: '동국대학교 학보 · 1950 — 2010', stats: [['60', '년'], ['1,466', '호']], desc: '창간호부터 2010년까지, 육십 년 학보를 한 호씩 꺼내 읽는 신문 서고', cta: '열람하기' }
     }
   ];
 
@@ -2358,6 +2673,13 @@
         leaf.style.backgroundImage = `url("${c.leaf}")`;
         leaf.style.backgroundSize = `${c.n * 100}% 100%`;
         leaf.style.backgroundPosition = `${c.n > 1 ? (vol.vno - 1) / (c.n - 1) * 100 : 0}% 50%`;
+      } else if (b.spineDesign && b.spineDesign.kind === 'sbwh') {
+        // 한국의 사찰벽화: 권마다 다른 파스텔 바탕 + 표지 붓글씨 제목 + 보고서명·지역 + 문화재청
+        a.className = 'spine spine-w';
+        a.style.setProperty('--c', vol.color || '#c9c7bd');
+        a.innerHTML = `<img class="sw-title" alt=""><span class="sw-sub"><span class="sw-ser">사찰건축물 벽화조사보고서</span><span class="sw-reg"></span></span><span class="sw-pub"><span class="sw-cha">문화재청</span><span class="sw-inst">성보문화재연구원</span></span>`;
+        a.querySelector('.sw-title').src = b.spineDesign.titleImg;
+        a.querySelector('.sw-reg').textContent = vol.region || '';
       } else if (b.spineDesign && b.spineDesign.kind === 'mbrt') {
         // 마하바라따 B안: 표지 손글씨 제목 + 권 번호 + 장 이름 + 아래 그림 띠(권을 넘어 이어짐)
         a.className = 'spine spine-m';
@@ -2443,6 +2765,8 @@
 
   function openVolumesModal(b) {
     modalBook = b;
+    modalBox.classList.remove('paper-mode');
+    modalList.onscroll = null;
     modalTitle.textContent = b.title;
     modalSub.textContent = b.badge || '';   // 제목 아래 작은 글씨: 저자·역자·출판사 등
     modalShelf = hasSpines(b);
@@ -2457,6 +2781,284 @@
   function closeVolumesModal() {
     modalOverlay.classList.remove('open');
   }
+  // ===== 신문 책꽂이 =====
+  // newspaper.js 는 처음 열 때 한 번만 불러옴 (메인 화면 속도에 영향 없음)
+  const paperLoads = {};
+  function loadPaper(np) {
+    const have = () => (window.NEWSPAPER_DATA || {})[np.key];
+    if (have()) return Promise.resolve(have());
+    if (!paperLoads[np.src]) {
+      paperLoads[np.src] = new Promise((res, rej) => {
+        const sc = document.createElement('script');
+        sc.src = np.src + '?v=' + Date.now();
+        sc.onload = () => res();
+        sc.onerror = () => { delete paperLoads[np.src]; rej(new Error('load')); };
+        document.head.appendChild(sc);
+      });
+    }
+    return paperLoads[np.src].then(() => {
+      if (!have()) throw new Error('nodata');
+      return have();
+    });
+  }
+
+  // 파일 이름 예: 1959년_제118호(1959.10.22).pdf
+  // 합병호(제991ㆍ2호), 호외, 띄어쓰기·오타가 섞인 이름도 최대한 읽어 냄
+  // 연도는 파일 이름 맨 앞(=폴더)의 연도를 기준으로 함
+  function parsePaper(path, base, norm) {
+    path = path.normalize(norm || 'NFC');
+    const parts = path.split('/');
+    const name = parts[parts.length - 1];
+    const clean = name.normalize('NFC').replace(/\.pdf$/i, '');
+    const ym = clean.match(/^(\d{4})\s*년/) || (parts[0].normalize('NFC').match(/(\d{4})/));
+    const year = ym ? +ym[1] : null;
+    const nm = clean.match(/제\s*(\d+)(?:\s*ㆍ\s*(\d+))?\s*호/);
+    const extra = /호외/.test(clean);
+    const after = nm ? clean.slice(nm.index + nm[0].length) : clean.replace(/^\d{4}\s*년/, '');
+    const dm = after.match(/(\d{4,5})\s*\.\s*(\d{1,2})\s*[.ㆍ]\s*(\d{1,2})/);
+    const it = {
+      path, name: clean,
+      url: base + parts.map(encodeURIComponent).join('/'),
+      year,
+      no: nm ? +nm[1] : null,
+      no2: nm && nm[2] ? nm[2] : '',
+      extra,
+      mo: dm ? +dm[2] : null,
+      dd: dm ? +dm[3] : null
+    };
+    it.date = dm && year ? `${year}.${it.mo}.${it.dd}` : '';
+    const noTxt = it.no ? `제${it.no}${it.no2 ? 'ㆍ' + it.no2 : ''}호` : (extra ? '호외' : '');
+    const iso = dm && year ? `${year}-${String(it.mo).padStart(2,'0')}-${String(it.dd).padStart(2,'0')}` : '';
+    it.label = noTxt ? `${year}년 ${noTxt}${iso ? ' · ' + iso : ''}` : clean;
+    const full2 = it.no2 ? String(it.no).slice(0, String(it.no).length - it.no2.length) + it.no2 : '';
+    it.full2 = full2;
+    it.search = [clean, noTxt, it.no ? `${it.no}호 ${it.no}` : '', full2 ? `제${full2}호 ${full2}호 ${full2}` : '',
+      extra ? '호외 號外' : '', it.date,
+      dm ? `${year}년 ${it.mo}월 ${it.dd}일 ${year}.${String(it.mo).padStart(2,'0')}.${String(it.dd).padStart(2,'0')}` : ''].join(' ').toLowerCase();
+    return it;
+  }
+
+  function openNewspaperModal(b) {
+    modalBook = b; modalShelf = false;
+    modalTitle.textContent = b.title;
+    modalSub.textContent = b.badge || '';
+    modalViewBtn.hidden = true;
+    modalBox.classList.remove('shelf-mode');
+    modalBox.classList.add('paper-mode');
+    modalList.innerHTML = '<div class="pp-loading">신문 목록을 불러오는 중…</div>';
+    modalOverlay.classList.add('open');
+    loadPaper(b.newspaper)
+      .then(data => { if (modalBook === b) renderPaper(b, data); })
+      .catch(() => { if (modalBook === b) modalList.innerHTML = '<div class="pp-empty">신문 목록(newspaper.js)을 불러오지 못했습니다.</div>'; });
+  }
+
+  let paperView = 'pile';   // 'pile'(더미) | 'shelf'(책장)
+  const paperTip = document.createElement('div');
+  paperTip.className = 'pp-tip';
+  document.body.appendChild(paperTip);
+  const hideTip = () => { paperTip.classList.remove('show'); };
+  modalOverlay.addEventListener('click', hideTip);
+
+  function renderPaper(b, data) {
+    const mark = b.newspaper.mark || '';
+    const items = data.files.map(p => parsePaper(p, data.base, data.norm))
+      .sort((x, y) => (x.year || 9999) - (y.year || 9999) || (x.mo || 0) - (y.mo || 0) || (x.dd || 0) - (y.dd || 0) || (x.no || 0) - (y.no || 0) || x.name.localeCompare(y.name));
+    const byYear = new Map();
+    items.forEach(it => {
+      const k = it.year || '기타';
+      if (!byYear.has(k)) byYear.set(k, []);
+      byYear.get(k).push(it);
+    });
+    const years = [...byYear.keys()];
+    const decadeOf = y => typeof y === 'number' ? Math.floor(y / 10) * 10 : null;
+    const decades = [...new Set(years.map(decadeOf).filter(d => d !== null))];
+
+    modalList.innerHTML = '';
+    modalList.scrollTop = 0;
+
+    // ---- 위쪽 막대: 연대 버튼 · 보기 전환 · 검색 · 안내 ----
+    const bar = document.createElement('div');
+    bar.className = 'pp-bar';
+    const decWrap = document.createElement('div');
+    decWrap.className = 'pp-decades';
+    const viewSw = document.createElement('div');
+    viewSw.className = 'pp-view';
+    viewSw.innerHTML = '<button data-v="pile">더미</button><button data-v="shelf">책장</button>';
+    const search = document.createElement('input');
+    search.className = 'pp-search';
+    search.type = 'search';
+    search.placeholder = '호수·날짜 검색 (예: 118, 1959.10, 호외)';
+    const info = document.createElement('div');
+    info.className = 'pp-info';
+    const total = `총 <b>${items.length}</b>호 · ${years.length}년치`;
+    let curInfo = total;
+    info.innerHTML = total;
+    bar.append(decWrap, viewSw, search, info);
+    modalList.appendChild(bar);
+
+    const noTxt = it => it.no ? `第 <b>${it.no}${it.no2 ? 'ㆍ' + it.no2 : ''}</b> 號` : (it.extra ? '<b class="gw">號外</b>' : it.name);
+    const dateTxt = it => it.mo ? `${it.year}. ${it.mo}. ${it.dd}` : '';
+    const hoverOn = (el, it) => {
+      el.addEventListener('mouseenter', () => { info.textContent = it.label; });
+      el.addEventListener('focus', () => { info.textContent = it.label; });
+      el.addEventListener('mouseleave', () => { info.innerHTML = curInfo; });
+    };
+    const linkTo = (a, it) => {
+      a.href = it.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+      a.setAttribute('aria-label', it.label);
+    };
+
+    // ===== 책장 보기 (이전 디자인) =====
+    const shelfView = document.createElement('div');
+    shelfView.className = 'pp-shelfview';
+    const shRows = [];
+    byYear.forEach((list, y) => {
+      const sec = document.createElement('section');
+      sec.className = 'pp-year';
+      sec.dataset.year = y;
+      const head = document.createElement('div');
+      head.className = 'pp-year-head';
+      head.innerHTML = `<strong>${y}</strong><span>${list.length}호</span>`;
+      const shelf = document.createElement('div');
+      shelf.className = 'pp-shelf';
+      const spines = list.map(it => {
+        const a = document.createElement('a');
+        a.className = 'spine spine-p';
+        linkTo(a, it);
+        a.title = it.label;
+        const dTxt = it.mo ? `${it.mo}.${it.dd}` : '';
+        if (it.no) {
+          a.innerHTML = `<span class="sp-date">${dTxt}</span><span class="sp-rule"></span><span class="sp-no"></span>` +
+            (it.no2 ? `<span class="sp-no2">ㆍ${it.no2}</span>` : '') + `<span class="sp-ho">號</span>`;
+          stackChars(a.querySelector('.sp-no'), String(it.no));
+        } else if (it.extra) {
+          a.classList.add('sp-extra');
+          a.innerHTML = `<span class="sp-date">${dTxt}</span><span class="sp-rule"></span><span class="sp-gw"></span>`;
+          stackChars(a.querySelector('.sp-gw'), '號外');
+        } else {
+          a.innerHTML = `<span class="sp-name"></span>`;
+          a.querySelector('.sp-name').textContent = it.name;
+        }
+        if (mark) {
+          const mk = document.createElement('span');
+          mk.className = 'sp-mark';
+          stackChars(mk, mark);
+          a.appendChild(mk);
+        }
+        hoverOn(a, it);
+        shelf.appendChild(a);
+        return { el: a, it };
+      });
+      sec.append(head, shelf);
+      shelfView.appendChild(sec);
+      shRows.push({ sec, y, head, total: list.length, parts: spines });
+    });
+
+    // ===== 더미 보기: 해마다 신문을 가로로 눕혀 나란히 쌓은 더미 =====
+    const pileView = document.createElement('div');
+    pileView.className = 'pp-pileview';
+    const pileGroup = document.createElement('div');
+    pileGroup.className = 'pl-group';
+    pileView.appendChild(pileGroup);
+    const pileRows = [];
+    const pad2 = n => String(n).padStart(2, '0');
+    // 최신 해가 위, 옛날 해가 아래 · 한 더미 안에서도 최신 호가 위
+    [...byYear.entries()].reverse().forEach(([y, fwd]) => {
+      const list = [...fwd].reverse();
+      const age = typeof y === 'number' ? Math.min(1, Math.max(0, (2010 - y) / 60)) : .5;
+      const pile = document.createElement('section');
+      pile.className = 'pl-pile';
+      pile.dataset.year = y;
+      pile.style.setProperty('--age', age.toFixed(2));
+      const stack = document.createElement('div');
+      stack.className = 'pl-stack';
+      const bands = list.map(it => {
+        const a = document.createElement('a');
+        a.className = 'pl-band' + (it.extra ? ' extra' : '') + (it.no2 ? ' twin' : '');
+        linkTo(a, it);
+        const no = it.no ? `第<b>${it.no}${it.no2 ? 'ㆍ' + it.no2 : ''}</b>號` : (it.extra ? '<b class="gw">號外</b>' : it.name);
+        const iso = it.mo ? `${it.year}-${pad2(it.mo)}-${pad2(it.dd)}` : '';
+        a.innerHTML = `<span class="pb-mast">${it.extra ? '號外' : '東大'}</span><span class="pb-no">${no}</span><span class="pb-date">${iso}</span>`;
+        hoverOn(a, it);
+        stack.appendChild(a);
+        return { el: a, it };
+      });
+      // 받침: 고딕체 연도 + 작은 숫자(그해 호수)
+      const base = document.createElement('div');
+      base.className = 'pl-base';
+      base.innerHTML = `<strong>${y}</strong><span>${list.length}</span>`;
+      pile.append(stack, base);
+      pileGroup.appendChild(pile);
+      pileRows.push({ sec: pile, y, head: base, total: list.length, parts: bands });
+    });
+
+    const empty = document.createElement('div');
+    empty.className = 'pp-empty';
+    empty.textContent = '검색 결과가 없습니다.';
+    empty.hidden = true;
+    modalList.append(pileView, shelfView, empty);
+
+    const curRows = () => paperView === 'pile' ? pileRows : shRows;
+    const secTop = el => el.getBoundingClientRect().top - modalList.getBoundingClientRect().top + modalList.scrollTop;
+    [...decades].reverse().forEach(d => {
+      const btn = document.createElement('button');
+      btn.textContent = `${d}s`;
+      btn.addEventListener('click', () => {
+        const r = curRows().find(r => decadeOf(r.y) === d && !r.sec.hidden);
+        if (r) modalList.scrollTo({ top: secTop(r.sec) - bar.offsetHeight - 12, behavior: 'smooth' });
+      });
+      decWrap.appendChild(btn);
+    });
+    const markDecade = () => {
+      const top = modalList.scrollTop + bar.offsetHeight + 40;
+      const rows = curRows();
+      // 지금 화면 위쪽에 걸쳐 있는 첫 칸(아랫단이 기준선보다 아래인 것)
+      const cur = rows.find(r => !r.sec.hidden && secTop(r.sec) + r.sec.offsetHeight > top) || rows.find(r => !r.sec.hidden);
+      const d = cur ? decadeOf(cur.y) : null;
+      [...decWrap.children].forEach(btn => btn.classList.toggle('on', btn.textContent === `${d}s`));
+    };
+    modalList.onscroll = () => { hideTip(); markDecade(); };
+
+    const setView = v => {
+      paperView = v;
+      shelfView.hidden = v !== 'shelf';
+      pileView.hidden = v !== 'pile';
+      [...viewSw.children].forEach(btn => btn.classList.toggle('on', btn.dataset.v === v));
+      markDecade();
+    };
+    viewSw.addEventListener('click', e => {
+      const v = e.target.dataset && e.target.dataset.v;
+      if (v && v !== paperView) { modalList.scrollTop = 0; setView(v); }
+    });
+
+    search.addEventListener('input', () => {
+      const q = search.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+      const match = it => q.every(w => /^\d+$/.test(w)
+        ? (String(it.no) === w || it.full2 === w || String(it.year) === w)
+        : it.search.includes(w));
+      let shown = 0;
+      shRows.forEach(r => {
+        let n = 0;
+        r.parts.forEach(({ el, it }) => { const ok = match(it); el.style.display = ok ? '' : 'none'; if (ok) n++; });
+        r.sec.hidden = n === 0;
+        r.head.querySelector('span').textContent = q.length ? `${n} / ${r.total}호` : `${r.total}호`;
+      });
+      pileRows.forEach(r => {
+        let n = 0;
+        r.parts.forEach(({ el, it }) => { const ok = match(it); el.style.display = ok ? '' : 'none'; if (ok) n++; });
+        r.sec.hidden = n === 0;
+        r.head.querySelector('span').textContent = q.length ? `${n}/${r.total}` : r.total;
+        shown += n;
+      });
+      empty.hidden = shown > 0;
+      curInfo = q.length ? `검색 결과 <b>${shown}</b>호` : total;
+      info.innerHTML = curInfo;
+      markDecade();
+    });
+
+    setView(paperView);
+  }
+
   modalCloseBtn.addEventListener('click', closeVolumesModal);
   modalOverlay.addEventListener('click', (e) => {
     if (e.target === modalOverlay) closeVolumesModal();
@@ -2465,24 +3067,55 @@
     if (e.key === 'Escape') closeVolumesModal();
   });
 
+  // ===== 매대(홍보 배너) =====
+  function buildFeature(b, open) {
+    const f = b.feature;
+    const el = document.createElement('div');
+    el.className = 'feature';
+    el.setAttribute('role', 'button');
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('aria-label', `${b.title} 열람`);
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+    const bands = Array.from({ length: 9 }, (_, i) => `<i style="--k:${i}"></i>`).join('');
+    el.innerHTML = `
+      <div class="ft-bg" style="background-image:url('${b.poster}')"></div>
+      <div class="ft-shade"></div>
+      <div class="ft-text">
+        <span class="ft-kicker">${f.kicker || ''}</span>
+        <h2 class="ft-title">${f.title || b.title}</h2>
+        <p class="ft-sub">${f.sub || b.badge || ''}</p>
+        <p class="ft-stats">${(f.stats || []).map(([n, u]) => `<span><b>${n}</b>${u}</span>`).join('')}</p>
+        <p class="ft-desc">${f.desc || ''}</p>
+        <span class="ft-cta">${f.cta || '열람하기'} <em>→</em></span>
+      </div>
+      <div class="ft-art">
+        <div class="ft-pile">${bands}<span class="ft-base"></span></div>
+        <img class="ft-page" src="${b.poster}" alt="">
+      </div>`;
+    return el;
+  }
+
   const gridItems = [], listItems = [];
   // 검색 대상: 제목 + 부제(저자·역자·출판사·연도) + ISBN + 여러 권짜리의 각 권 제목
   const searchText = b => [b.title, b.badge, b.isbn, ...(b.volumes || []).map(v => `${v.label || ''} ${v.title || ''}`)]
     .filter(Boolean).join(' ').toLowerCase();
   BOOKS.forEach((b, idx) => {
     const isMultiVolume = Array.isArray(b.volumes);
+    const isPaper = !!b.newspaper;
+    const opener = isPaper ? () => openNewspaperModal(b) : () => openVolumesModal(b);
     const hasPoster = !!b.poster;
 
-    const a = document.createElement(isMultiVolume ? 'div' : 'a');
+    const a = document.createElement(isMultiVolume || isPaper ? 'div' : 'a');
     a.className = 'card' + (hasPoster ? ' has-poster' : '');
     a.dataset.category = catsOf(b).join(' ');
     a.dataset.title = (b.title || '').toLowerCase();
-    if (isMultiVolume) {
+    if (isMultiVolume || isPaper) {
       a.setAttribute('role', 'button');
       a.setAttribute('tabindex', '0');
-      a.addEventListener('click', () => openVolumesModal(b));
+      a.addEventListener('click', opener);
       a.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVolumesModal(b); }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); opener(); }
       });
     } else {
       a.href = b.url;
@@ -2530,19 +3163,24 @@
 
     grid.appendChild(wrap);
     gridItems[idx] = wrap;
+    if (b.feature) {
+      wrap.classList.add('feature-wrap');
+      wrap.innerHTML = '';
+      wrap.appendChild(buildFeature(b, opener));
+    }
 
     // ---- 목록형 아이템 ----
-    const row = document.createElement(isMultiVolume ? 'div' : 'a');
+    const row = document.createElement(isMultiVolume || isPaper ? 'div' : 'a');
     row.className = 'list-item';
     row.dataset.category = catsOf(b).join(' ');
     row.dataset.title = (b.title || '').toLowerCase();
     row.dataset.search = searchText(b);
-    if (isMultiVolume) {
+    if (isMultiVolume || isPaper) {
       row.setAttribute('role', 'button');
       row.setAttribute('tabindex', '0');
-      row.addEventListener('click', () => openVolumesModal(b));
+      row.addEventListener('click', opener);
       row.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openVolumesModal(b); }
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); opener(); }
       });
     } else {
       row.href = b.url;
@@ -2576,6 +3214,12 @@
       catSpan.className = 'list-cat';
       catSpan.textContent = catLabel;
       rowMeta.appendChild(catSpan);
+    }
+    if (isPaper) {
+      const volSpan = document.createElement('span');
+      volSpan.className = 'list-vol-flag';
+      volSpan.textContent = '新聞';
+      rowMeta.appendChild(volSpan);
     }
     if (isMultiVolume) {
       const volSpan = document.createElement('span');
@@ -2682,8 +3326,23 @@
       const subOk = currentSub === 'all' || cats.includes(currentSub);
       const searchOk = !currentSearch || (card.dataset.search || card.dataset.title).includes(currentSearch);
       card.style.display = (mainOk && subOk && searchOk) ? '' : 'none';
+    });    placeFeatures();
+  }
+
+  // ===== 매대 자리 잡기 =====
+  // 한 줄에 5칸 이상이면 오른쪽에 4×2 매대(둘째 줄부터), 그보다 좁으면 맨 위 가로 배너
+  function placeFeatures(){
+    const cols = getComputedStyle(grid).gridTemplateColumns.split(' ').filter(Boolean).length;
+    const visible = [...grid.children].filter(w => w.style.display !== 'none');
+    const others = visible.filter(w => !w.classList.contains('feature-wrap')).length;
+    grid.querySelectorAll('.feature-wrap').forEach(w => {
+      const block = cols >= 5;
+      w.classList.toggle('as-block', block);
+      // 책이 한 줄도 안 되면 첫 줄부터
+      w.style.gridRow = block ? (others >= cols ? '2 / span 2' : '1 / span 2') : '';
     });
   }
+  window.addEventListener('resize', placeFeatures);
 
   renderMainTabs();
   renderSubTabs();
@@ -2734,6 +3393,8 @@
       if (gridItems[i]) grid.appendChild(gridItems[i]);
       if (listItems[i]) listView.appendChild(listItems[i]);
     });
+    // 매대는 정렬과 상관없이 항상 맨 앞
+    [...grid.querySelectorAll('.feature-wrap')].reverse().forEach(w => grid.prepend(w));
   }
 
   const sortToggle = document.getElementById('sortToggle');
@@ -2764,6 +3425,7 @@
     updateSortButtons();
   }
   applySort();
+  placeFeatures();
 
   const searchInput = document.getElementById('searchInput');
   if (searchInput) {
