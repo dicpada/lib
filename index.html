@@ -812,6 +812,49 @@
     line-height:1.35; letter-spacing:.06em; color:#1c1a18; white-space:nowrap;
   }
 
+  /* 디자인 책등: 붓다 (데츠카 오사무 걸작선 Ⅰ, 학산문화사) — 검붉은 가죽 · 금박 · 은박 테두리 붓글씨. 접두어 tz- */
+  .spine-tz{
+    width:calc(var(--spine-h) * .19);
+    background:
+      radial-gradient(ellipse 60% 40% at 50% 38%, rgba(120,40,50,.35), transparent 70%),
+      repeating-linear-gradient(115deg, rgba(255,255,255,.01) 0 1px, transparent 1px 4px),
+      linear-gradient(90deg,#1c0d10 0%,#341619 14%,#41191f 48%,#34151a 84%,#170a0c 100%);
+    display:flex; flex-direction:column; align-items:center; color:#c9a96a;
+  }
+  .spine-tz .tz-dots{
+    flex:0 0 auto; margin-top:calc(var(--spine-h) * .035);
+    display:grid; grid-template-columns:repeat(2,2px); gap:2px;
+  }
+  .spine-tz .tz-dots i{ width:2px; height:2px; background:#c9a96a; border-radius:50%; }
+  .spine-tz .tz-ser{
+    flex:0 0 auto; margin-top:calc(var(--spine-h) * .018);
+    display:flex; flex-direction:column; align-items:center; line-height:1.25;
+    font-family:'Noto Sans KR',sans-serif; font-weight:500; font-size:clamp(5.5px,.9vh,7px); letter-spacing:.02em; white-space:nowrap;
+    background:linear-gradient(180deg,#e6cf96,#a8834a); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .spine-tz .tz-ser b{ font-weight:500; }
+  .spine-tz .tz-en{
+    flex:0 0 auto; margin-top:2px;
+    font-family:'EB Garamond','Noto Serif KR',serif; font-size:clamp(4.5px,.75vh,6px); color:#a88a58; letter-spacing:.04em; white-space:nowrap;
+  }
+  .spine-tz .tz-box{
+    flex:0 0 auto; margin-top:calc(var(--spine-h) * .07);
+    width:72%; padding:calc(var(--spine-h) * .016) 8%;
+    border:1px solid #d8d2c6; box-shadow:0 0 0 .5px rgba(0,0,0,.6), inset 0 0 6px rgba(0,0,0,.5);
+    background:rgba(12,4,6,.55); display:flex; justify-content:center;
+  }
+  .spine-tz .tz-box img{ width:100%; height:auto; display:block; }
+  .spine-tz .tz-no{
+    flex:0 0 auto; margin-top:calc(var(--spine-h) * .05);
+    font-family:'EB Garamond','Noto Serif KR',serif; font-weight:600; font-size:clamp(11px,1.9vh,15px);
+    background:linear-gradient(180deg,#f0dca6,#a8834a); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .spine-tz .tz-pub{
+    margin-top:auto; flex:0 0 auto; padding-bottom:calc(var(--spine-h) * .035);
+    font-family:'Noto Serif KR',serif; font-weight:600; font-size:clamp(5.5px,.95vh,7.5px); letter-spacing:.06em; white-space:nowrap;
+    background:linear-gradient(180deg,#e6cf96,#a8834a); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
   /* 디자인 책등: 비구계의 연구 (흰 줄 종이 · 붉은 로마 숫자 · 가사 주름) — 접두어 bq- */
   .spine-bq{
     width:calc(var(--spine-h) * .15);
@@ -2760,17 +2803,19 @@
       badge: '테즈카 오사무 (Osamu Tezuka) · 학산문화사 · 정식 한국어판 · 전 10권',
       category: ['03-0001'],
       poster: 'covers/0145.jpg',
+      // 책등: 검붉은 가죽 · 데츠카 오사무 걸작선 Ⅰ · 은박 테두리 안 붓글씨 붓다 · 권 번호 · 학산문화사
+      spineDesign: { kind: 'tzb', titleImg: 'spines/tzb-title.png' },
       volumes: [
-        { label: '제1권', title: '붓다 1', url: '', spine: 'spines/bdh-01.jpg' },
-        { label: '제2권', title: '붓다 2', url: '', spine: 'spines/bdh-02.jpg' },
-        { label: '제3권', title: '붓다 3', url: '', spine: 'spines/bdh-03.jpg' },
-        { label: '제4권', title: '붓다 4', url: '', spine: 'spines/bdh-04.jpg' },
-        { label: '제5권', title: '붓다 5', url: '', spine: 'spines/bdh-05.jpg' },
-        { label: '제6권', title: '붓다 6', url: '', spine: 'spines/bdh-06.jpg' },
-        { label: '제7권', title: '붓다 7', url: '', spine: 'spines/bdh-07.jpg' },
-        { label: '제8권', title: '붓다 8', url: '', spine: 'spines/bdh-08.jpg' },
-        { label: '제9권', title: '붓다 9', url: '', spine: 'spines/bdh-09.jpg' },
-        { label: '제10권', title: '붓다 10', url: '', spine: 'spines/bdh-10.jpg' }
+        { label: '제1권', title: '붓다 1', url: 'https://drive.google.com/file/d/1fJA7ti1j4XlMOPJDaJrL9V_CoyP6jBeY/view?usp=sharing', spine: 'spines/bdh-01.jpg' },
+        { label: '제2권', title: '붓다 2', url: 'https://drive.google.com/file/d/1tNM1f1Kmh456rN1xISioNHHd4DS3VRfb/view?usp=sharing', spine: 'spines/bdh-02.jpg' },
+        { label: '제3권', title: '붓다 3', url: 'https://drive.google.com/file/d/1MRobzKzslGVoVkoxNsPyB8U_7-FM3tfh/view?usp=sharing', spine: 'spines/bdh-03.jpg' },
+        { label: '제4권', title: '붓다 4', url: 'https://drive.google.com/file/d/1pKtW2yBmW9TkDSJV0k_3aqrm4vTFvFM8/view?usp=sharing', spine: 'spines/bdh-04.jpg' },
+        { label: '제5권', title: '붓다 5', url: 'https://drive.google.com/file/d/1Lj-J6Yq8GHBC8xyRoH3AG5SL3LQiP1xK/view?usp=sharing', spine: 'spines/bdh-05.jpg' },
+        { label: '제6권', title: '붓다 6', url: 'https://drive.google.com/file/d/1dwbK9HVuaclUDhKe3sIs-gG7v3rmRnJF/view?usp=sharing', spine: 'spines/bdh-06.jpg' },
+        { label: '제7권', title: '붓다 7', url: 'https://drive.google.com/file/d/1rRFIqNctRF5z7z5yGMxOJaNrDFOvYlue/view?usp=sharing', spine: 'spines/bdh-07.jpg' },
+        { label: '제8권', title: '붓다 8', url: 'https://drive.google.com/file/d/1P-_-VLs3hTsqkJJmvyO8dPIaLyoBSnRI/view?usp=sharing', spine: 'spines/bdh-08.jpg' },
+        { label: '제9권', title: '붓다 9', url: 'https://drive.google.com/file/d/1gNeBxVASJJLLHhg0gc7ueUqXWQoMPyrS/view?usp=sharing', spine: 'spines/bdh-09.jpg' },
+        { label: '제10권', title: '붓다 10', url: 'https://drive.google.com/file/d/1uaufFrzWeTxI88oFrHQKoYTtdepA5zWA/view?usp=sharing', spine: 'spines/bdh-10.jpg' }
       ]
     },
     {
@@ -3711,6 +3756,13 @@
         a.innerHTML = `<span class="se-name"></span><span class="se-no"></span>`;
         stackChars(a.querySelector('.se-name'), vol.name || vol.title);
         a.querySelector('.se-no').textContent = vol.vno || vol.label.replace(/^제|권$/g, '');
+      } else if (b.spineDesign && b.spineDesign.kind === 'tzb') {
+        // 붓다 (데츠카 오사무 걸작선 Ⅰ): 검붉은 가죽 · 금박 작은 글씨 · 은박 테두리 붓글씨 · 금박 권 번호 · 학산문화사
+        const no = b.volumes.indexOf(vol) + 1;
+        a.className = 'spine spine-tz';
+        a.innerHTML = `<span class="tz-dots"><i></i><i></i><i></i><i></i></span><span class="tz-ser"><b>데츠카 오사무</b><b>걸작선 Ⅰ</b></span><span class="tz-en">Osamu Tezuka</span><span class="tz-box"><img alt=""></span><span class="tz-no"></span><span class="tz-pub">학산문화사</span>`;
+        a.querySelector('.tz-box img').src = b.spineDesign.titleImg;
+        a.querySelector('.tz-no').textContent = no;
       } else if (b.spineDesign && b.spineDesign.kind === 'bgy') {
         // 비구계의 연구: 흰 줄 종이 · 세로 제목 · 붉은 권수 · 가사 주름 사진 띠 · 민족사
         const n = b.volumes.length, i = b.volumes.indexOf(vol);
