@@ -813,6 +813,49 @@
     line-height:1.35; letter-spacing:.06em; color:#1c1a18; white-space:nowrap;
   }
 
+  /* 디자인 책등: 깨달음총서 (민족사) — 접두어 kd- */
+  .spine-kd{
+    width:calc(var(--spine-h) * .125);
+    background:linear-gradient(180deg, #e9e6e0 0, #e4e1da 62%, #8e8270 62%, #8e8270 calc(62% + 1px), #d8cbb2 calc(62% + 1px), #d2c3a7 100%);
+    box-shadow:inset -3px 0 6px rgba(0,0,0,.14), inset 2px 0 3px rgba(255,255,255,.4), 0 2px 6px rgba(0,0,0,.5);
+    display:flex; flex-direction:column; align-items:center; color:#1f1c19;
+  }
+  /* 아래 베이지 부분의 점무늬 */
+  .spine-kd::before{
+    content:''; position:absolute; left:0; right:0; bottom:0; height:38%; pointer-events:none;
+    background:
+      radial-gradient(circle at 30% 40%, rgba(90,70,40,.24) 0 .7px, transparent 1.3px) 0 0 / 5px 6px,
+      radial-gradient(circle at 70% 70%, rgba(90,70,40,.16) 0 .6px, transparent 1.2px) 2px 3px / 7px 5px;
+  }
+  .spine-kd .kd-no{
+    flex:0 0 auto; margin-top:calc(var(--spine-h) * .045);
+    width:calc(var(--spine-h) * .06); height:calc(var(--spine-h) * .06); border-radius:50%;
+    display:flex; align-items:center; justify-content:center; background:#1f1c19; color:#f2efe8;
+    font-family:'Inter','Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(7px,1.15vh,9.5px); letter-spacing:-.03em;
+  }
+  .spine-kd .kd-title{
+    flex:0 0 auto; margin-top:calc(var(--spine-h) * .03);
+    display:flex; flex-direction:column; align-items:center; line-height:1.06;
+    font-family:'Noto Serif KR',serif; font-weight:700;
+    font-size:calc(var(--spine-h) * min(.052, .36 / var(--n)));
+  }
+  .spine-kd .kd-title .gap{ height:.35em; }
+  .spine-kd .kd-sub{
+    flex:0 0 auto; margin-top:calc(var(--spine-h) * .012);
+    display:flex; flex-direction:column; align-items:center; line-height:1.1;
+    font-family:'Noto Serif KR',serif; font-weight:500; font-size:calc(var(--spine-h) * .026); color:#5d554b;
+  }
+  .spine-kd .kd-sub .gap{ height:.3em; }
+  .spine-kd .kd-emb{
+    position:absolute; left:50%; top:62%; transform:translate(-50%,-50%);
+    width:82%; height:auto; z-index:1;
+  }
+  .spine-kd .kd-pub{
+    position:absolute; bottom:calc(var(--spine-h) * .03); left:0; right:0; text-align:center;
+    font-family:'Noto Serif KR',serif; font-weight:700; font-size:clamp(6px,1vh,8px); color:#2a2520; letter-spacing:.04em;
+  }
+  .spine-kd.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
+
   /* 디자인 책등: 붓다 (데츠카 오사무 걸작선 Ⅰ, 학산문화사) — 검붉은 가죽 · 금박 · 은박 테두리 붓글씨. 접두어 tz- */
   .spine-tz{
     width:calc(var(--spine-h) * .19);
@@ -3419,20 +3462,6 @@
       url: 'https://drive.google.com/file/d/1FQyls_p9M8cZ7awY8gqY_rN9er-Ahe3k/view?usp=sharing'
     },
     {
-      title: '인식과 초월 : 유식의 철학',
-      badge: '핫토리 마사아키 外 · 이만 옮김 · 민족사 · 깨달음총서 13',
-      category: ['05-0003'],
-      poster: 'covers/0194.jpg',
-      url: 'https://drive.google.com/file/d/19-S1IE7lwOeXCE9cgF5ojLeBjqctfhCt/view?usp=sharing'
-    },
-    {
-      title: '유식의 구조',
-      badge: '다케무라 마키오 · 정승석 옮김 · 민족사 · 깨달음총서 14',
-      category: ['05-0003'],
-      poster: 'covers/0195.jpg',
-      url: 'https://drive.google.com/file/d/17SoO0YyOgaMOpdwnmIlve-sLObo-x8pD/view?usp=sharing'
-    },
-    {
       title: '無我輪廻問題의 研究 (무아윤회문제의 연구)',
       badge: '尹浩眞 (윤호진) · 민족사 · 민족사학술총서 24',
       category: ['05-0000'],
@@ -4062,14 +4091,6 @@
       tags: ['역대고승전', '고승전', '김동화', '뇌허']
     },
     {
-      title: '한국불교인물사상사',
-      badge: '불교신문사 편 · 민족사 · 깨달음총서 39',
-      category: ['01-0001'],
-      poster: 'covers/0273.jpg',
-      url: 'https://drive.google.com/file/d/13PaJJVBr4c2FhpCf2D3GA_nnOUBoTRGR/view?usp=sharing',
-      tags: ['인물사상사', '불교신문사', '깨달음총서']
-    },
-    {
       title: '觀音禪院 芳啣錄 (관음선원 방함록)',
       badge: '佛紀二九六四年 丁丑 七月 (1937)',
       category: ['01-0001'],
@@ -4589,6 +4610,62 @@
       tags: ['범어사', '梵魚寺', '방함록', '芳啣錄', '선사방함록', '禪社芳啣錄', '부산', '안거']
     },
     {
+      title: '깨달음총서',
+      badge: '민족사 · 전 45권',
+      category: ['10-0000'],
+      poster: 'covers/0337.jpg',
+      // 책등: 위는 회백색 · 아래는 점무늬 베이지 (표지와 같음) · 동그라미 권 번호 · 세로 제목 · 사슴 문양 · 민족사
+      spineDesign: { kind: 'kdc', emblem: 'spines/kd-emblem.png' },
+      volumes: [
+        { label: '제1권', title: '한국불교사', author: '가마타 시게오 · 신현숙 옮김', url: '', missing: true },
+        { label: '제2권', title: '인도불교의 역사(上)', author: '히라카와 아키라 · 이호근 옮김', url: '', missing: true },
+        { label: '제3권', title: '인도불교의 역사(下)', author: '히라카와 아키라 · 이호근 옮김', url: '', missing: true },
+        { label: '제4권', title: '일본불교사', author: '石田瑞麿 · 이영자 옮김', url: '', missing: true },
+        { label: '제5권', title: '티베트불교사', author: '山口瑞鳳 · 矢崎正見 · 이호근 · 안영길 옮김', url: '', missing: true },
+        { label: '제6권', title: '인도불교사상사', author: '에드워드 콘즈 · 안성두 · 주민황 옮김', url: '', missing: true },
+        { label: '제7권', title: '중국불교사상사', author: '기무라 키요타카 · 장휘옥 옮김', url: '', missing: true },
+        { label: '제8권', title: '초기·부파불교의 역사', author: '후지타 고타츠 外 · 권오민 옮김', url: '', missing: true },
+        { label: '제9권', title: '인도사상의 역사', author: '早島鏡正 · 高崎直道 · 정호영 옮김', url: 'https://drive.google.com/file/d/1u0ZEQY82pt2Vt-fgOez4CPLhp-it37dS/view?usp=sharing' },
+        { label: '제10권', title: '선의 사상과 역사', author: '柳田聖山 · 안영길 · 추만호 옮김', url: '', missing: true },
+        { label: '제11권', title: '중국근세불교사상비판', author: '任繼愈 · 안영길 · 추만호 옮김', url: '', missing: true },
+        { label: '제12권', title: '대승불교의 사상', author: '우에다 요시부미 · 박태원 옮김', url: '', missing: true },
+        { label: '제13권', title: '천태법화의 사상', author: '타무라 시로우 · 이영자 옮김', url: 'https://drive.google.com/file/d/1esVRDaf773BC-EHC_qwxzZLjQMh7s0U1/view?usp=sharing' },
+        { label: '제14권', title: '유식의 구조', author: '다케무라 마키오 · 정승석 옮김', url: 'https://drive.google.com/file/d/17SoO0YyOgaMOpdwnmIlve-sLObo-x8pD/view?usp=sharing' },
+        { label: '제15권', title: '인도불교철학', author: '가지야마 유이치 · 권오민 옮김', url: '', missing: true },
+        { label: '제16권', title: '인도불교의 인식과 논리', author: '梶山雄一 · 전치수 옮김', url: '', missing: true },
+        { label: '제17권', title: '공의 논리 – 중관사상', author: '梶山雄一 · 上山春平 · 정호영 옮김', url: '', missing: true },
+        { label: '제18권', title: '아비달마의 철학', author: '櫻部建 · 上山春平 · 정호영 옮김', url: 'https://drive.google.com/file/d/1fqmT58aiyHfQC16s1NaZjV1L9glBylgW/view?usp=sharing' },
+        { label: '제19권', title: '중국불교의 사상', author: '中村元 · 玉城康四郎 · 정순일 옮김', url: '', missing: true },
+        { label: '제20권', title: '원효의 인식과 논리', author: '신현숙 지음', url: '', missing: true },
+        { label: '제21권', title: '해방자 붓다! 반항자 붓다!', author: '놀란 플리니 제이콥슨 · 주민황', url: 'https://drive.google.com/file/d/1K-qQg8kD5MLAmqCeTy710fDEpPpSm5Ie/view?usp=sharing' },
+        { label: '제22권', title: '초기대승불교의 종교생활', author: '平川彰 · 심법제 옮김', url: '', missing: true },
+        { label: '제23권', title: '인식과 초월 – 유식의 철학', author: '핫도리 마사아키 · 이만 옮김', url: 'https://drive.google.com/file/d/19-S1IE7lwOeXCE9cgF5ojLeBjqctfhCt/view?usp=sharing' },
+        { label: '제24권', title: '초기불교교단과 계율', author: '사토우 미츠오 · 김호성 옮김', url: 'https://drive.google.com/file/d/17Qd8vcXGrK1retyFwzN6z5zocGw-7IZN/view?usp=sharing' },
+        { label: '제25권', title: '선정쌍수의 전개', author: '藤吉慈海 · 한보광 옮김', url: '', missing: true },
+        { label: '제26권', title: '중국불교 – 역사와 문화', author: '케네스 첸 · 박해당 옮김', url: '', missing: true },
+        { label: '제27권', title: '밀교의 역사와 문화', author: '요리토미 모토히로 · 김무생 옮김', url: '', missing: true },
+        { label: '제28권', title: '민중불교의 탐구', author: '법성 · 황필호 外 지음', url: '', missing: true },
+        { label: '제29권', title: '딴뜨라불교입문', author: '다스굽따 · 정승석 옮김', url: '', missing: true },
+        { label: '제30권', title: '불교철학개론', author: '方立天 · 유영희 옮김', url: 'https://drive.google.com/file/d/1vghtsBT3D0_QTSPuLgQuoqvnRRNmUGzI/view?usp=sharing' },
+        { label: '제31권', title: '불교사상과 서양철학', author: '에드워드 콘즈 外 · 김종욱 옮김', url: 'https://drive.google.com/file/d/1FjFAC6s7GhWgLoDTmI8WjYzZulPtHYku/view?usp=sharing' },
+        { label: '제32권', title: '인도불교 – 문화사적 탐구', author: '나라 야스아키 · 정호영 옮김', url: '', missing: true },
+        { label: '제33권', title: '소승대승', author: '히로 사치야 · 강기희 옮김', url: '', missing: true },
+        { label: '제34권', title: '불교의 서구적 모색', author: '유다 유타카 · 이미령 옮김', url: '', missing: true },
+        { label: '제35권', title: '인도의 선·중국의 선', author: '田上太秀 · 阿部肇一 · 최현각 옮김', url: '', missing: true },
+        { label: '제36권', title: '달마', author: '야나기다 세이잔 · 김성환 옮김', url: '' },
+        { label: '제37권', title: '붓다와 다르마', author: '암베드카르 · 박희준 · 김기은 옮김', url: '', missing: true },
+        { label: '제38권', title: '불교의 현대적 조명', author: '교수불자연합회 편', url: '', missing: true },
+        { label: '제39권', title: '한국불교인물사상사', author: '불교신문사 편', url: 'https://drive.google.com/file/d/13PaJJVBr4c2FhpCf2D3GA_nnOUBoTRGR/view?usp=sharing' },
+        { label: '제40권', title: '중국불교학강의', author: '呂澂 · 각소 옮김', url: '', missing: true },
+        { label: '제41권', title: '중국문학과 선', author: '陳允吉 · 일지 옮김', url: '', missing: true },
+        { label: '제42권', title: '서양철학과 선', author: '존 스태프니 外 · 김종욱 편역', url: '', missing: true },
+        { label: '제43권', title: '붓다, 마르크스, 그리고 하느님', author: '트레버 링 · 안옥선 옮김', url: 'https://drive.google.com/file/d/1wbNIBHqH70pQfH1aIwI4Ma-hGaeOEJU9/view?usp=sharing' },
+        { label: '제44권', title: '민중불교철학', author: '여익구 지음', url: '', missing: true },
+        { label: '제45권', title: '논어와 선', author: '한토 다이가 · 야마다 구니오 · 최효선 옮김', url: '', missing: true }
+      ],
+      tags: ['깨달음총서', '민족사', '유식', '인물사상사', '아비달마', '달마']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -4766,6 +4843,19 @@
         a.innerHTML = `<span class="se-name"></span><span class="se-no"></span>`;
         stackChars(a.querySelector('.se-name'), vol.name || vol.title);
         a.querySelector('.se-no').textContent = vol.vno || vol.label.replace(/^제|권$/g, '');
+      } else if (b.spineDesign && b.spineDesign.kind === 'kdc') {
+        // 깨달음총서 (민족사): 회백색 + 점무늬 베이지 · 검은 동그라미 번호 · 세로 제목 · 사슴 문양 · 민족사
+        const no = b.volumes.indexOf(vol) + 1;
+        const [main, sub] = vol.title.split(/\s*–\s*/);
+        a.className = 'spine spine-kd';
+        a.innerHTML = `<span class="kd-no"></span><span class="kd-title"></span><span class="kd-sub"></span><img class="kd-emb" alt=""><span class="kd-pub">민족사</span>`;
+        a.querySelector('.kd-no').textContent = no;
+        const t = a.querySelector('.kd-title');
+        stackChars(t, main);
+        t.style.setProperty('--n', Math.max(5, main.replace(/\s/g, '').length + (sub ? 3 : 0)));   // 부제가 있으면 제목을 조금 작게
+        if (sub) stackChars(a.querySelector('.kd-sub'), sub); else a.querySelector('.kd-sub').remove();
+        a.querySelector('.kd-emb').src = b.spineDesign.emblem;
+        a.title = `제${no}권 · ${vol.title}${vol.author ? ' · ' + vol.author : ''}`;
       } else if (b.spineDesign && b.spineDesign.kind === 'tzb') {
         // 붓다 (데츠카 오사무 걸작선 Ⅰ): 검붉은 가죽 · 금박 작은 글씨 · 은박 테두리 붓글씨 · 금박 권 번호 · 학산문화사
         const no = b.volumes.indexOf(vol) + 1;
