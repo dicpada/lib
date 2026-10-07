@@ -177,6 +177,7 @@
   }
   .sort-btn:hover{ color:var(--text); }
   .sort-btn.active{ color:#fff; background:var(--accent); }
+  .sort-btn .lang-n{ font-size:11px; opacity:.6; margin-left:2px; }
   .search-wrap{
     position:relative;
     flex:0 1 260px;
@@ -1589,6 +1590,9 @@
   <div class="filter-row">
     <div class="genre-tabs" id="mainTabs"></div>
     <div class="filter-row-right">
+      <div class="sort-toggle" id="langToggle">
+        <button class="sort-btn" aria-pressed="false" title="한국어책만 보기 (한 번 더 누르면 전체)">한국어 <span class="lang-n"></span></button>
+      </div>
       <div class="sort-toggle" id="sortToggle" role="group" aria-label="정렬">
         <button class="sort-btn" data-sort="title" title="한 번 더 누르면 순서가 뒤집힙니다">제목순</button>
         <button class="sort-btn active" data-sort="year" title="한 번 더 누르면 순서가 뒤집힙니다">연도순 ↓</button>
@@ -1673,6 +1677,7 @@
     },
     {
       title: '眞臘風土記 (진랍풍토기)',
+      lang: 'etc',   // 언어 직접 지정 (ko = 한국어책)
       badge: '周達觀 撰 · 中華書局',
       category: '06-0003',
       poster: 'covers/0005.jpg',
@@ -2365,6 +2370,7 @@
     },
     {
       title: '朝鮮古蹟圖譜 (조선고적도보)',
+      lang: 'etc',   // 언어 직접 지정 (ko = 한국어책)
       badge: '朝鮮總督府 · 전 15권',
       category: ['01-0003', '01-0005'],
       poster: 'covers/0102.jpg',
@@ -2488,6 +2494,7 @@
   },
     {
       title: '韓國美術五千年展 桑港展示關係記事集 (한국미술오천년전 샌프란시스코 전시 관계 기사집) — 5000 Years of Korean Art',
+      lang: 'ko',   // 언어 직접 지정 (ko = 한국어책)
       badge: '文化公報部 海外公報館 · 展示期間 1979.5.1~9.30 · 1979',
       category: ['02-0000'],
       poster: 'covers/0110.jpg',
@@ -2705,6 +2712,7 @@
     },
     {
       title: '敦煌石窟全集 (돈황석굴전집)',
+      lang: 'etc',   // 언어 직접 지정 (ko = 한국어책)
       badge: '敦煌研究院 主編 · 上海人民出版社 · 1999– · 전 26권 (總卷 1 + 專題卷 25)',
       category: ['02-0004'],
       poster: 'covers/0131.jpg',
@@ -2742,6 +2750,7 @@
     },
     {
       title: '望月佛教大辭典 (망월불교대사전)',
+      lang: 'etc',   // 언어 직접 지정 (ko = 한국어책)
       badge: '望月信亨 · 世界聖典刊行協會 · 增訂版 · 전 10권 + 中文索引 1권',
       category: ['08-0002'],
       poster: 'covers/0133.jpg',
@@ -3222,6 +3231,7 @@
     },
     {
       title: '비구계의 연구 (比丘戒の研究)',
+      lang: 'ko',   // 언어 직접 지정 (ko = 한국어책)
       badge: '平川彰 (히라카와 아키라) 지음 · 釋慧能 옮김 · 민족사 · 전 4권',
       category: ['05-0001'],
       poster: 'covers/0170.jpg',
@@ -3466,6 +3476,7 @@
     },
     {
       title: '王右軍艸訣百韻歌 (왕우군초결백운가)',
+      lang: 'etc',   // 언어 직접 지정 (ko = 한국어책)
       badge: '王羲之 (왕희지) 草書 · 초결백운가 · 초서 입문서',
       category: ['10-0000'],
       poster: 'covers/0202.jpg',
@@ -3922,6 +3933,662 @@
       tags: ['서암', '西庵', '홍근', '봉암사']
     },
     {
+      title: '원감국사집 (圓鑑國師集)',
+      badge: '충지 · 이상현 옮김 · 동국대학교출판부 · 한글본 한국불교전서 고려 2',
+      category: ['01-0003'],
+      poster: 'covers/0257.jpg',
+      url: 'https://drive.google.com/file/d/1FbHfLM5plziWG4w62FD4grXDFYxn1eq9/view?usp=sharing',
+      tags: ['원감', '圓鑑', '충지', '冲止', '한국불교전서', '한글본', '고려']
+    },
+    {
+      title: '만공의 항일 정신 : 제8회 만공대선사 학술대회 기념 · 日帝下 만공선사 抗日 사자후',
+      badge: '덕숭총림 수덕사 · 경허·만공선양회',
+      category: ['01-0001'],
+      poster: 'covers/0258.jpg',
+      url: 'https://drive.google.com/file/d/1YOCHF1mAPRIZkjFtwMojIQfxM1NjYcrZ/view?usp=sharing',
+      tags: ['만공', '滿空', '월면', '항일', '독립운동', '수덕사', '덕숭총림', '학술대회']
+    },
+    {
+      title: '만공 : 일제의 총칼 앞에서 조선의 얼을 지킨 (제9회 만공대선사 학술대회 기념)',
+      badge: '덕숭총림 수덕사 · 경허·만공선양회',
+      category: ['01-0001'],
+      poster: 'covers/0259.jpg',
+      url: 'https://drive.google.com/file/d/189VXNeeS5FS7mShK64xLnuIretHaJc4C/view?usp=sharing',
+      tags: ['만공', '滿空', '월면', '항일', '독립운동', '수덕사', '덕숭총림', '학술대회']
+    },
+    {
+      title: '임석정 불화는 신심으로부터지 : 국가무형문화재 전승자 구술 자서전 009',
+      badge: '제118호 불화장 · 국립무형유산원',
+      category: ['01-0001'],
+      poster: 'covers/0260.jpg',
+      url: 'https://drive.google.com/file/d/1J_eAqPCMdYxOtUBeOKzXhVV041BXd5_k/view?usp=sharing',
+      tags: ['임석정', '해봉', '석정', '불화장', '불화', '구술', '무형문화재']
+    },
+    {
+      title: '경허 · 만공의 선풍과 법맥',
+      badge: '대한불교조계종 교육원 불학연구소 편저 · 조계종출판사 · 불학연구총서 2',
+      category: ['01-0001'],
+      poster: 'covers/0261.jpg',
+      url: 'https://drive.google.com/file/d/1_0Z0Bn10ilhUioFotEe2M8ReNPYiyPf8/view?usp=sharing',
+      tags: ['경허', '만공', '선풍', '법맥', '불학연구소']
+    },
+    {
+      title: '고승열전 (高僧列傳) : 傳燈의 歷史 · Buddhist Eminent Monks',
+      badge: '정병삼 · 가산불교문화연구원',
+      category: ['01-0001'],
+      poster: 'covers/0262.jpg',
+      url: 'https://drive.google.com/file/d/1dPS1-3iiNM2W0MuGP1vJZmoKoPbjSzpS/view?usp=sharing',
+      tags: ['고승열전', '전등', '傳燈', '정병삼', '가산']
+    },
+    {
+      title: '속리산 법주사 비문',
+      badge: '금오문도 장학회',
+      category: ['01-0001'],
+      poster: 'covers/0263.jpg',
+      url: 'https://drive.google.com/file/d/1jCvuKqz1Hy8cbfi7aIQF-a7AkIJ6GFau/view?usp=sharing',
+      tags: ['법주사', '속리산', '비문', '금석문', '금오']
+    },
+    {
+      title: '콧구멍 없는 소 : 경허대사와 5대 제자',
+      badge: '김성우 엮음 · 비움과소통 · 선지식 총서 01',
+      category: ['01-0001'],
+      poster: 'covers/0264.jpg',
+      url: 'https://drive.google.com/file/d/18ZhxlvJz1b4f8frDlSeO_4vw261svxs3/view?usp=sharing',
+      tags: ['경허', '鏡虛', '5대 제자', '만공', '수월', '혜월', '선지식']
+    },
+    {
+      title: '경허와 만공의 禪思想',
+      badge: '태진스님 지음 · 민족사',
+      category: ['01-0001'],
+      poster: 'covers/0265.jpg',
+      url: 'https://drive.google.com/file/d/18AInznRAr0NxTqFFXhDlb13Xx8ySbfDC/view?usp=sharing',
+      tags: ['경허', '만공', '선사상', '태진']
+    },
+    {
+      title: '韓國佛敎人名辭典 (한국불교인명사전) · The Korean Buddhist Biographical Dictionary',
+      lang: 'ko',   // 언어 직접 지정 (ko = 한국어책)
+      badge: '李政 (이정) 編 · 불교시대사 · 부록: 한국불교 찬술문헌 목록 · 한국불교 인물 연표',
+      category: ['01-0001'],
+      poster: 'covers/0266.jpg',
+      url: 'https://drive.google.com/file/d/1F3SCgMDtj8JYtechQ3uLiGLtkj0zlE6o/view?usp=sharing',
+      tags: ['인명사전', '사전', '이정', '찬술문헌', '연표']
+    },
+    {
+      title: '해안 선사 서문집 : 해안 큰스님 유묵·서첩 모음',
+      badge: '',
+      category: ['01-0001'],
+      poster: 'covers/0267.jpg',
+      url: 'https://drive.google.com/file/d/1Fo_sb3SRsPA3nMTJ-tmaTHpX6SZ_V_uf/view?usp=sharing',
+      tags: ['해안', '海眼', '봉수', '서문집', '유묵']
+    },
+    {
+      title: '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)',
+      badge: '웅산 편저 · 혜민기획',
+      category: ['01-0001'],
+      poster: 'covers/0268.jpg',
+      url: 'https://drive.google.com/file/d/1SoIkOWiRyB6LxqECQjwOfyqh2y6ADru_/view?usp=sharing',
+      tags: ['경허', '만공', '천장암', '도인']
+    },
+    {
+      title: '이 수행길에서 이루지 못한다면 (此道不成 被毛戴角) : 慧春스님 영첩',
+      badge: '한국의 근대불교문화사진 아카이브 편 · 도서출판 고래 · 전자불전문화콘텐츠연구소 자료시리즈',
+      category: ['01-0001'],
+      poster: 'covers/0269.jpg',
+      url: 'https://drive.google.com/file/d/1zb483TMICH_Z_M9zqzuMMLfi2aVZ3mPt/view?usp=sharing',
+      tags: ['혜춘', '慧春', '영첩', '비구니', '사진']
+    },
+    {
+      title: '韓國佛敎의 法脈 (한국불교의 법맥)',
+      badge: '退翁 性徹 (퇴옹 성철) 著 · 藏經閣 · 성철스님 법어집 2집 4권',
+      category: ['01-0001'],
+      poster: 'covers/0270.jpg',
+      url: 'https://drive.google.com/file/d/1ha8Rd7GeRX7yAYJLjv4bxw05CdrcMxIs/view?usp=sharing',
+      tags: ['성철', '性徹', '퇴옹', '법맥', '法脈', '장경각']
+    },
+    {
+      title: '海印僧伽大學 同門手帖 (해인승가대학 동문수첩) 1955年~2006年',
+      badge: '海印僧伽大學同門會',
+      category: ['01-0001'],
+      poster: 'covers/0271.jpg',
+      url: 'https://drive.google.com/file/d/1h0DZXJBJZ9CcQDv4dzGgeNAJ7vL-dJz1/view?usp=sharing',
+      tags: ['해인승가대학', '해인사', '강원', '동문', '동문수첩']
+    },
+    {
+      title: '韓國歷代高僧傳 (한국역대고승전)',
+      badge: '雷虛 金東華 (뇌허 김동화) · 雷虛 金東華 全集 12 · 雷虛佛敎學術院',
+      category: ['01-0001'],
+      poster: 'covers/0272.jpg',
+      url: 'https://drive.google.com/file/d/1BWQoQk7FEHsZVo-1f5k6ZwkcYa1U82sN/view?usp=sharing',
+      tags: ['역대고승전', '고승전', '김동화', '뇌허']
+    },
+    {
+      title: '한국불교인물사상사',
+      badge: '불교신문사 편 · 민족사 · 깨달음총서 39',
+      category: ['01-0001'],
+      poster: 'covers/0273.jpg',
+      url: 'https://drive.google.com/file/d/13PaJJVBr4c2FhpCf2D3GA_nnOUBoTRGR/view?usp=sharing',
+      tags: ['인물사상사', '불교신문사', '깨달음총서']
+    },
+    {
+      title: '觀音禪院 芳啣錄 (관음선원 방함록)',
+      badge: '佛紀二九六四年 丁丑 七月 (1937)',
+      category: ['01-0001'],
+      poster: 'covers/0274.jpg',
+      url: 'https://drive.google.com/file/d/11_se7E9wKWo_I1aiO-46Gdk-yL9Ixbdd/view?usp=sharing',
+      tags: ['관음선원', '방함록', '芳啣錄', '안거', '1937']
+    },
+    {
+      title: '잊혀진 한국의 불교사상가',
+      badge: '금강대학교 불교문화연구소 · 동국대학교 불교문화연구원 공편 · 동국대학교출판부 · 금강대-동국대 공동학술총서 1',
+      category: ['01-0001'],
+      poster: 'covers/0275.jpg',
+      url: 'https://drive.google.com/file/d/1GKiB_Uzc8xE_UpxRxhcy5eSGILZNr_kP/view?usp=sharing',
+      tags: ['불교사상가', '금강대', '동국대']
+    },
+    {
+      title: '萬日禪會 芳啣錄 (만일선회 방함록)',
+      badge: '世尊應化 二九五二年 乙丑 十月 十五日 (1925) · 丙寅(1926) · 丁卯(1927)',
+      category: ['01-0001'],
+      poster: 'covers/0276.jpg',
+      url: 'https://drive.google.com/file/d/1qF4IsnkaKUw0rQh0TUYfunma2bC_Vahs/view?usp=sharing',
+      tags: ['만일선회', '萬日禪會', '방함록', '芳啣錄', '안거', '1925']
+    },
+    {
+      title: '영규대사와 800의승 자료집',
+      badge: '대한불교조계종 미래본부 불교사회연구소',
+      category: ['01-0001'],
+      poster: 'covers/0277.jpg',
+      url: 'https://drive.google.com/file/d/1HfOZPWn4QxM3XVO8AxtPhBkDkU56WXzO/view?usp=sharing',
+      tags: ['영규', '騎虛', '기허', '의승', '승병', '임진왜란', '금산']
+    },
+    {
+      title: 'Makers of Modern Korean Buddhism',
+      badge: 'ed. Jin Y. Park · SUNY Press · 2010',
+      category: ['01-0001'],
+      poster: 'covers/0278.jpg',
+      url: 'https://drive.google.com/file/d/1FksmjC9sY_DhJc39bXDI_WNm8RfFEpJ3/view?usp=sharing',
+      tags: ['근대', '한국불교', 'Jin Y. Park', '박진영']
+    },
+    {
+      title: '海印寺 堆雪堂 芳啣錄 (해인사 퇴설당 방함록) · 自己亥至丙戌年度',
+      badge: '海印寺 堆雪禪院 · 1899–1967',
+      category: ['01-0001'],
+      poster: 'covers/0279.jpg',
+      url: 'https://drive.google.com/file/d/1Bvv_Ol9sJUAgkI_5K3cMEtNANMTcNy3W/view?usp=sharing',
+      tags: ['해인사', '퇴설당', '堆雪堂', '퇴설선원', '방함록', '芳啣錄', '안거']
+    },
+    {
+      title: '鏡虛滿空新出資料集 (경허만공신출자료집) 2 : 만공선사편',
+      badge: '경허록·만공법어 편찬위원회 · 불광출판사',
+      category: ['01-0001'],
+      poster: 'covers/0280.jpg',
+      url: '',
+      tags: ['경허', '만공', '신출자료', '자료집', '불광']
+    },
+    {
+      title: '鏡虛滿空新出資料集 (경허만공신출자료집) 1 : 경허선사편',
+      badge: '경허록·만공법어 편찬위원회 · 불광출판사',
+      category: ['01-0001'],
+      poster: 'covers/0281.jpg',
+      url: 'https://drive.google.com/file/d/1nB1-2sCS4c0SR2Ta_KRmYR09367GPc5H/view?usp=sharing',
+      tags: ['경허', '만공', '신출자료', '자료집', '불광']
+    },
+    {
+      title: '滿空法語 (만공법어) · 개정 증보판',
+      badge: '경허록·만공법어 편찬위원회 · 불광출판사',
+      category: ['01-0001'],
+      poster: 'covers/0282.jpg',
+      url: 'https://drive.google.com/file/d/1EfHAigmQBjKkLFoxumj8jCs299ADXUWI/view?usp=sharing',
+      tags: ['만공', '滿空', '법어', '불광']
+    },
+    {
+      title: '鏡虛錄 (경허록)',
+      badge: '경허록·만공법어 편찬위원회 · 불광출판사',
+      category: ['01-0001'],
+      poster: 'covers/0283.jpg',
+      url: 'https://drive.google.com/file/d/1PEvLBWjCSDA5OWbNpNFUwDdWicDQrlR2/view?usp=sharing',
+      tags: ['경허', '鏡虛', '경허록', '불광']
+    },
+    {
+      title: '新羅聖師 元曉 (신라성사 원효)',
+      badge: '朝鮮佛敎中央敎務院 企劃 · 朝鮮映画社 製作',
+      category: ['01-0001'],
+      poster: 'covers/0284.jpg',
+      url: 'https://drive.google.com/file/d/1zK8rNV5p2Fbjs4hlym7NtLcT0aXC3x_U/view?usp=sharing',
+      tags: ['원효', '元曉', '신라', '성사', '조선불교중앙교무원', '영화']
+    },
+    {
+      title: '단일계단 제1회 수계산림기념',
+      badge: '대한불교조계종 총무원',
+      category: ['01-0001'],
+      poster: 'covers/0285.jpg',
+      url: 'https://drive.google.com/file/d/1Y17tYKzo8lnYFbGSiymFli46W8mAm0qq/view?usp=sharing',
+      tags: ['단일계단', '수계', '수계산림', '계단', '조계종']
+    },
+    {
+      title: '雲山行錄 (운산행록)',
+      badge: '정각 지음 · 원각사',
+      category: ['01-0001'],
+      poster: 'covers/0286.jpg',
+      url: 'https://drive.google.com/file/d/1u7P3N0_Clmss3TQMoIJZgSDZv6XhBKJv/view?usp=sharing',
+      tags: ['운산', '雲山', '행록', '정각', '원각사']
+    },
+    {
+      title: '海東佛祖源流 (해동불조원류)',
+      badge: '전 4책 · 常 · 樂 · 我 · 淨',
+      category: ['01-0001'],
+      poster: 'covers/0287.jpg',
+      // 책 이름이 常樂我淨 네 글자로 매겨짐
+      volumes: [
+        { label: '常', title: '海東佛祖源流 常 (1)', url: 'https://drive.google.com/file/d/1coApQS4iXzF5imuGA_v7OkL1Wb1zEBAl/view?usp=sharing' },
+        { label: '樂', title: '海東佛祖源流 樂 (2)', url: 'https://drive.google.com/file/d/1CgT8K2fn5AB2A7yN7QTVNdlWg18a-tgy/view?usp=sharing' },
+        { label: '我', title: '海東佛祖源流 我 (3)', url: 'https://drive.google.com/file/d/1MSu8NFoG_tz7ISwWKTpGRXlvmAjrbGlg/view?usp=sharing' },
+        { label: '淨', title: '海東佛祖源流 淨 (4)', url: 'https://drive.google.com/file/d/1S6bvfGPekOIQ6C3rl8AmNrCp83sA4F-j/view?usp=sharing' }
+      ],
+      tags: ['해동불조원류', '불조원류', '법맥', '계보', '상락아정', '常樂我淨']
+    },
+    {
+      title: '북한산 삼천사지 탑비구역 발굴조사 약보고서',
+      badge: '서울역사박물관 · 학술조사보고 제5책 · 2008',
+      category: ['01-0002'],
+      poster: 'covers/0288.jpg',
+      url: 'https://drive.google.com/file/d/1hKPkQHlnr4t5kZtedZT1tPlQ4Kkj13Qg/view?usp=sharing',
+      tags: ['삼천사', '三川寺', '북한산', '탑비', '발굴', '서울역사박물관']
+    },
+    {
+      title: '여주 신륵사 (Shilluksa Temple)',
+      badge: '1984',
+      category: ['01-0002'],
+      poster: 'covers/0289.jpg',
+      url: 'https://drive.google.com/file/d/1c40ZRBclclcJt0aeOpM16ALs3TVOwiCQ/view?usp=sharing',
+      tags: ['신륵사', '神勒寺', '여주']
+    },
+    {
+      title: '實相寺誌 (실상사지)',
+      badge: '實相寺 留鎭',
+      category: ['01-0002'],
+      poster: 'covers/0290.jpg',
+      url: 'https://drive.google.com/file/d/1skHlRFCu9uA0g3UmSA09uuJNLfBH8mfW/view?usp=sharing',
+      tags: ['실상사', '實相寺', '사지', '寺誌', '남원']
+    },
+    {
+      title: '예산 수덕사 대웅전 : 목조건축문화재 수리이력 자료집',
+      badge: '국립문화재연구소',
+      category: ['01-0002'],
+      poster: 'covers/0291.jpg',
+      url: 'https://drive.google.com/file/d/1z9_OCCMPSHOKUGoCptvnsr-UvGSV6rcx/view?usp=sharing',
+      tags: ['수덕사', '修德寺', '대웅전', '예산', '수리이력', '목조건축']
+    },
+    {
+      title: '석굴암 기초자료집성 (石窟庵 基礎資料集成) · Sources for Seokguram',
+      badge: '경주시 · 불국사박물관 · 미술사와 시각문화학회 · 석굴암 학술총서 제1권',
+      category: ['01-0002'],
+      poster: 'covers/0292.jpg',
+      url: 'https://drive.google.com/file/d/1137ss-1TMRJApzzqGKE53plXoncS2_9B/view?usp=sharing',
+      tags: ['석굴암', '石窟庵', 'Seokguram', '불국사', '경주']
+    },
+    {
+      title: '선학원 연구',
+      badge: '덕숭총림 수덕사 기획 · 김광식 지음 · 도서출판 中道',
+      category: ['01-0004'],
+      poster: 'covers/0293.jpg',
+      url: 'https://drive.google.com/file/d/1JsVk25oZGsyrhSVT6afip5XptDu_Oc39/view?usp=sharing',
+      tags: ['선학원', '禪學院', '김광식', '수덕사', '만공', '근대불교']
+    },
+    {
+      title: '芳啣錄 (방함록) · 수덕사 방함록 1910–1967',
+      badge: '修德寺',
+      category: ['01-0001'],
+      poster: 'covers/0294.jpg',
+      url: 'https://drive.google.com/file/d/1lx1Zd_5e59y9dqCqwV1IgXH00yvGPwmC/view?usp=sharing',
+      tags: ['방함록', '芳啣錄', '수덕사', '修德寺', '안거']
+    },
+    {
+      title: '예산 수덕사 대웅전 : 2014 중요목조문화재 단청기록화 정밀조사',
+      badge: '문화재청 · 2014',
+      category: ['01-0002'],
+      poster: 'covers/0295.jpg',
+      url: 'https://drive.google.com/file/d/1twYfptspGaYWBOMGemh8ZaNLQfneOD4e/view?usp=sharing',
+      tags: ['수덕사', '修德寺', '대웅전', '예산', '단청', '기록화']
+    },
+    {
+      title: '釋王寺誌 (석왕사지)',
+      badge: '',
+      category: ['01-0002'],
+      poster: 'covers/0296.jpg',
+      url: 'https://drive.google.com/file/d/1ORH5Jj8mxdCRjdg20EgliotjvtMXqg7P/view?usp=sharing',
+      tags: ['석왕사', '釋王寺', '사지', '寺誌', '안변']
+    },
+    {
+      title: '修德寺 本·末寺 佛畵 調査報告書 (수덕사 본·말사 불화 조사보고서)',
+      badge: '聖寶文化財研究院 · 文化財廳 · 全國 寺刹所藏 佛畵 調査報告 第6輯 · 2002',
+      category: ['01-0002'],
+      poster: 'covers/0297.jpg',
+      url: 'https://drive.google.com/file/d/1AKasJXJK-vEOUXwmtaizQz4QZfDNNGp4/view?usp=sharing',
+      tags: ['수덕사', '修德寺', '불화', '佛畵', '본말사', '조사보고서']
+    },
+    {
+      title: '북한산 삼천사지 (三川寺址) 발굴조사보고서',
+      badge: '서울역사박물관 · 발굴조사편',
+      category: ['01-0002'],
+      poster: 'covers/0298.jpg',
+      url: 'https://drive.google.com/file/d/1uUoaGbb3ytVxLXTaO24mphWfpqYPDZhh/view?usp=sharing',
+      tags: ['삼천사', '三川寺', '북한산', '발굴', '서울역사박물관']
+    },
+    {
+      title: '觀光 金山寺 (관광 금산사) · Tour of Kŭmsan-sa Temple',
+      badge: '1985',
+      category: ['01-0002'],
+      poster: 'covers/0299.jpg',
+      url: 'https://drive.google.com/file/d/1SPQA_lhDbFkkOV7OowYIGg0rrEDCYitO/view?usp=sharing',
+      tags: ['금산사', '金山寺', '김제', '미륵전']
+    },
+    {
+      title: '見性庵 芳啣錄 (견성암 방함록)',
+      badge: '滿空 書 · 佛紀二九五三年 戊辰 正月 十五日 (1928)',
+      category: ['01-0001'],
+      poster: 'covers/0300.jpg',
+      url: '',
+      tags: ['견성암', '見性庵', '방함록', '芳啣錄', '만공', '수덕사', '비구니']
+    },
+    {
+      title: '팔공산 동화사',
+      badge: '대한불교진흥원 · 한국의 명찰 시리즈 8',
+      category: ['01-0002'],
+      poster: 'covers/0301.jpg',
+      url: 'https://drive.google.com/file/d/1aDnSW0_6SVPe0zgWw1vWK2ByevTxWzQD/view?usp=sharing',
+      tags: ['동화사', '桐華寺', '팔공산', '대구']
+    },
+    {
+      title: '고창 문수사 목조지장보살좌상 및 시왕상 일괄 : 보존상태 진단 및 기록화',
+      badge: '문화재청 · 고창군 · 보물 제1920호',
+      category: ['01-0002'],
+      poster: 'covers/0302.jpg',
+      url: 'https://drive.google.com/file/d/1qdSguCct0on1iPXnDJVk7jNcCBAJdp_R/view?usp=sharing',
+      tags: ['문수사', '文殊寺', '고창', '지장보살', '시왕', '명부전']
+    },
+    {
+      title: '洛山寺 (낙산사)',
+      badge: '',
+      category: ['01-0002'],
+      poster: 'covers/0303.jpg',
+      url: 'https://drive.google.com/file/d/1AVOX9OQHKl5Ph5oItAJ1-Ky-7_bZSFF9/view?usp=sharing',
+      tags: ['낙산사', '洛山寺', '양양', '범종', '동종']
+    },
+    {
+      title: '高城 乾鳳寺 III (고성 건봉사 3) : 고성 건봉사 능파교 주변유적 1~3차 발굴조사 보고서',
+      badge: '江原考古文化研究院 · 고성군 · 學術叢書 70 · 2019',
+      category: ['01-0002'],
+      poster: 'covers/0304.jpg',
+      url: 'https://drive.google.com/file/d/1pzDWt-sqq_gL4fZU2ou8YbH9Pzd5w6Nu/view?usp=sharing',
+      tags: ['건봉사', '乾鳳寺', '고성', '능파교', '발굴']
+    },
+    {
+      title: '해남 대흥사 표충사 (海南 大興寺 表忠祠)',
+      badge: '대한불교조계종 불교사회연구소',
+      category: ['01-0002'],
+      poster: 'covers/0305.jpg',
+      url: 'https://drive.google.com/file/d/1D9f811DeaFW-xWwHiWIiJDdjQlkkEXAa/view?usp=sharing',
+      tags: ['대흥사', '大興寺', '해남', '표충사', '表忠祠', '서산대사', '휴정']
+    },
+    {
+      title: '桃李寺 芳啣錄 (도리사 방함록) 1930–1967',
+      badge: '桃李寺',
+      category: ['01-0001'],
+      poster: 'covers/0306.jpg',
+      url: 'https://drive.google.com/file/d/1xSLhjoLE3vb3laJmgd2YSRsmwYsrQpZz/view?usp=sharing',
+      tags: ['도리사', '桃李寺', '방함록', '芳啣錄', '구미', '안거']
+    },
+    {
+      title: '扶餘 金剛寺址 II (부여 금강사지 2) · The Geumgangsa Temple Site in Buyeo',
+      badge: '국립부여문화재연구소 · 學術研究叢書 第102輯 · 2023',
+      category: ['01-0002'],
+      poster: 'covers/0307.jpg',
+      url: 'https://drive.google.com/file/d/12gfPsqPhROofYqwArtDQTdZwhufFHDL8/view?usp=sharing',
+      tags: ['금강사지', '金剛寺址', '부여', '백제', '발굴']
+    },
+    {
+      title: '보문시현의 날들 — 관음사 80年史 1940~2020',
+      badge: '성보문화재연구원 편 · 대한불교조계종 송광사 부산분원 관음사',
+      category: ['01-0002'],
+      poster: 'covers/0308.jpg',
+      url: 'https://drive.google.com/file/d/1bQT5mMj6m1G8eRlvpF8-nK2UjxRBpzlq/view?usp=sharing',
+      tags: ['관음사', '觀音寺', '부산', '송광사', '80년사']
+    },
+    {
+      title: '역주 만덕사지 (萬德寺志)',
+      badge: '동국대학교 불교학술원 불교기록문화유산아카이브 사업단 편 · 사지자료집 9',
+      category: ['01-0002'],
+      poster: 'covers/0309.jpg',
+      url: 'https://drive.google.com/file/d/1gTUVl-_bXIYCjlXvXFabT-WwvyiVVB2U/view?usp=sharing',
+      tags: ['만덕사', '萬德寺', '백련사', '강진', '사지', '寺志']
+    },
+    {
+      title: '갑사 표충원 (表忠院)',
+      badge: '이철헌 · 조규환 지음 · 대한불교조계종 불교사회연구소',
+      category: ['01-0002'],
+      poster: 'covers/0310.jpg',
+      url: 'https://drive.google.com/file/d/1NaSdUPhDKhDWOLP2oqdW768Y0LmkkbwV/view?usp=sharing',
+      tags: ['갑사', '甲寺', '표충원', '表忠院', '공주', '영규', '의승']
+    },
+    {
+      title: '傳仁容寺址 (전인용사지) 발굴조사 보고서',
+      badge: '국립경주문화재연구소 · 경주시 · 전 2권',
+      category: ['01-0002'],
+      poster: 'covers/0311.jpg',
+      volumes: [
+        { label: 'I', title: '傳仁容寺址 발굴조사 보고서 I', url: 'https://drive.google.com/file/d/1hkwcyBpdPmYio5bEtGUhmCNQnAuql6z3/view?usp=sharing' },
+        { label: 'II', title: '傳仁容寺址 발굴조사 보고서 II', url: 'https://drive.google.com/file/d/1Nm9FFvdxJB9_G5Lm4N-9bCNDtmTqOdn-/view?usp=sharing' }
+      ],
+      tags: ['인용사', '仁容寺', '경주', '발굴']
+    },
+    {
+      title: '瑞山 普願寺址 (서산 보원사지)',
+      badge: '국립부여문화재연구소 · 학술연구총서 · 전 2권',
+      category: ['01-0002'],
+      poster: 'covers/0312.jpg',
+      volumes: [
+        { label: 'I', title: '瑞山 普願寺址 I (학술연구총서 제57집)', url: 'https://drive.google.com/file/d/1mmyLZe119pqiRIb2dtbgk9ATkN_b_aUi/view?usp=sharing' },
+        { label: 'II', title: '瑞山 普願寺址 II', url: 'https://drive.google.com/file/d/165zRdcQ6yaqn7P3eFPoatKHPp_gABZk8/view?usp=sharing' }
+      ],
+      tags: ['보원사', '普願寺', '서산', '발굴']
+    },
+    {
+      title: '直指寺 千佛禪院 芳啣錄 (직지사 천불선원 방함록)',
+      badge: '世尊應化 二九六七年 四月 (1940) · 1940–1967 · 대한불교조계종 교육원 불학연구소 간행 · 2006',
+      category: ['01-0001'],
+      poster: 'covers/0313.jpg',
+      url: 'https://drive.google.com/file/d/1kN9x2RxTyXg4rHq-EXO4snoZpR5wRl-n/view?usp=sharing',
+      tags: ['직지사', '直指寺', '천불선원', '방함록', '芳啣錄', '김천', '안거']
+    },
+    {
+      title: '海印寺事蹟 全 (해인사사적)',
+      badge: '光武十年 (1906) · 서울대학교 규장각 소장',
+      category: ['01-0002'],
+      poster: 'covers/0314.jpg',
+      url: 'https://drive.google.com/file/d/10E7Qxbr4A8nayptTskQ6m3lf5OihKD1M/view?usp=sharing',
+      tags: ['해인사', '海印寺', '사적', '事蹟', '규장각']
+    },
+    {
+      title: '梵魚寺事蹟 (범어사사적)',
+      badge: '',
+      category: ['01-0002'],
+      poster: 'covers/0315.jpg',
+      url: 'https://drive.google.com/file/d/1ZEipFispDeps1aQeFHRDU1aCq7GdsPD9/view?usp=sharing',
+      tags: ['범어사', '梵魚寺', '사적', '事蹟', '부산']
+    },
+    {
+      title: '호거산 운문사',
+      badge: '대한불교진흥원 · 한국의 명찰 시리즈 10',
+      category: ['01-0002'],
+      poster: 'covers/0316.jpg',
+      url: 'https://drive.google.com/file/d/192tl6ZOFjpzJnXg8do9uMXlDme_xb5bJ/view?usp=sharing',
+      tags: ['운문사', '雲門寺', '청도', '비구니']
+    },
+    {
+      title: '고성 연화산 옥천사 사적기',
+      badge: '최선일 · 원명 편 · 도해 번역 · 고경 감수 · 이인혜 윤문 · 사찰문헌집 002',
+      category: ['01-0002'],
+      poster: 'covers/0317.jpg',
+      url: 'https://drive.google.com/file/d/1AKDbImJr5HcojAO3I-xutngQVAgoBHMf/view?usp=sharing',
+      tags: ['옥천사', '玉泉寺', '고성', '연화산', '사적기']
+    },
+    {
+      title: '국보 부석사 조사당 벽화 보존 (浮石寺 祖師堂 壁畫 保存)',
+      badge: '국립문화재연구원 문화재보존과학센터 · Conservation of Mural Painting in Josadang Shrine of Buseoksa Temple',
+      category: ['01-0002'],
+      poster: 'covers/0318.jpg',
+      volumes: [
+        { label: '문헌조사 편', title: '부석사 조사당 벽화 보존 : 문헌조사 편', url: '' },
+        { label: '보존상태 조사 편', title: '부석사 조사당 벽화 보존 : 보존상태 조사 편', url: 'https://drive.google.com/file/d/1Y3H1XAhPpdHs-leMJ0WvQi9MwqJbWFij/view?usp=sharing' }
+      ],
+      tags: ['부석사', '浮石寺', '조사당', '벽화', '영주']
+    },
+    {
+      title: '흥국사 (興國寺)',
+      badge: '대한불교조계종 미래본부 불교사회연구소 · 불교사찰총서 11',
+      category: ['01-0002'],
+      poster: 'covers/0319.jpg',
+      url: 'https://drive.google.com/file/d/1peSoInHrxMnkCHR8s6TiEP-OP48iTCic/view?usp=sharing',
+      tags: ['흥국사', '興國寺', '여수', '의승수군']
+    },
+    {
+      title: '부석사 괘불 (Buddhist Hanging Scroll at Buseoksa)',
+      badge: '국립중앙박물관',
+      category: ['02-0003'],
+      poster: 'covers/0320.jpg',
+      url: 'https://drive.google.com/file/d/16e2gSpgsZMlpvqncGja2KDsM1HFrb0s2/view?usp=sharing',
+      tags: ['부석사', '浮石寺', '괘불', '掛佛', '영주']
+    },
+    {
+      title: '智異山 大華嚴寺 事蹟 (지리산 대화엄사 사적)',
+      badge: '',
+      category: ['01-0002'],
+      poster: 'covers/0321.jpg',
+      url: 'https://drive.google.com/file/d/18TfVeAPo12tgnwEa_ELSH1dzVxyy6nGu/view?usp=sharing',
+      tags: ['화엄사', '華嚴寺', '지리산', '구례', '사적']
+    },
+    {
+      title: '설악산 百潭寺 (백담사)',
+      badge: '최병헌 지음 · 인제문화원 부설 향토사연구소',
+      category: ['01-0002'],
+      poster: 'covers/0322.jpg',
+      url: 'https://drive.google.com/file/d/1JXUpeoIJlXsESIrxLDgc8SwQf5R5Ytib/view?usp=sharing',
+      tags: ['백담사', '百潭寺', '설악산', '인제', '만해']
+    },
+    {
+      title: '海印寺 (해인사) · 韓國의 寺刹 7',
+      badge: '韓國佛教研究院 著 · 一志社',
+      category: ['01-0002'],
+      poster: 'covers/0323.jpg',
+      url: 'https://drive.google.com/file/d/1sobe0hCWSiH2jjMW9ID1RN6p8N6OqKuP/view?usp=sharing',
+      tags: ['해인사', '海印寺', '한국의 사찰', '장경판전']
+    },
+    {
+      title: '돌에 새겨진 梵魚寺 (The History of Beomeosa Carved in Stone)',
+      badge: '범어사 성보박물관 특별기획전',
+      category: ['01-0002'],
+      poster: 'covers/0324.jpg',
+      url: 'https://drive.google.com/file/d/1AolW-04dpMmZcF7oId4UvTvIO715Lg67/view?usp=sharing',
+      tags: ['범어사', '梵魚寺', '금석문', '부산']
+    },
+    {
+      title: '伽倻山 海印寺 (Haeinsa Temple in Kayasan)',
+      badge: '',
+      category: ['01-0002'],
+      poster: 'covers/0325.jpg',
+      url: 'https://drive.google.com/file/d/13iCZsCwoEkFrL8Wblk1RJlzQJ1WgPbTK/view?usp=sharing',
+      tags: ['해인사', '海印寺', '가야산', '伽倻山']
+    },
+    {
+      title: '해인사안내기 (Haeinsa Temple)',
+      badge: '1970',
+      category: ['01-0002'],
+      poster: 'covers/0326.jpg',
+      url: 'https://drive.google.com/file/d/18dnEcGy2ioye-sVinAygBGeFRrhloLtL/view?usp=sharing',
+      tags: ['해인사', '海印寺', '안내기']
+    },
+    {
+      title: '法住寺 (법주사) · 韓國의 寺刹 5',
+      badge: '韓國佛教研究院 著 · 一志社',
+      category: ['01-0002'],
+      poster: 'covers/0327.jpg',
+      url: 'https://drive.google.com/file/d/1iXEXNzvbcv1U4IW18gsnLOIe3FmakX2d/view?usp=sharing',
+      tags: ['법주사', '法住寺', '속리산', '보은', '한국의 사찰']
+    },
+    {
+      title: '傳統寺刹 曹溪寺古文獻集 (조계사 고문헌집)',
+      badge: '法雲 柳基松 (법운 유기송) 編 · 傳統寺刹研究會',
+      category: ['01-0002'],
+      poster: 'covers/0328.jpg',
+      url: '',
+      tags: ['조계사', '曹溪寺', '고문헌', '유기송']
+    },
+    {
+      title: '고성 옥천사 유적 : 고성 북평리(산50-1) 옥천사 정비사업부지 내',
+      badge: '재단법인 수도문물연구원 · 유적조사보고 5 · 2019',
+      category: ['01-0002'],
+      poster: 'covers/0329.jpg',
+      url: '',
+      tags: ['옥천사', '玉泉寺', '고성', '발굴', '유적']
+    },
+    {
+      title: '扶餘 扶蘇山 寺址 (부여 부소산 사지) · The Busosan Buddhist Temple Site in Buyeo',
+      badge: '국립부여박물관 · 日帝强占期 資料調査 報告 24輯',
+      category: ['01-0002'],
+      poster: 'covers/0330.jpg',
+      url: 'https://drive.google.com/file/d/1wkD5dfUn7H4LFlCn3iKTAfW8PAbdi7mr/view?usp=sharing',
+      tags: ['부소산', '扶蘇山', '부여', '사지', '백제', '일제강점기']
+    },
+    {
+      title: '합천 해인사 정밀실측조사보고서 (상)',
+      badge: '문화재청',
+      category: ['01-0002'],
+      poster: 'covers/0331.jpg',
+      url: 'https://drive.google.com/file/d/1tcQf6HghVXCMiHYK4QuGRGBjJsuniTKW/view?usp=sharing',
+      tags: ['해인사', '海印寺', '합천', '실측', '정밀실측']
+    },
+    {
+      title: '伽倻山 海印寺誌 (가야산 해인사지)',
+      badge: '',
+      category: ['01-0002'],
+      poster: 'covers/0333.jpg',
+      url: 'https://drive.google.com/file/d/1lR_Uc50lO4ugD0sCLIjzyCJSwO_60Yz_/view?usp=sharing',
+      tags: ['해인사', '海印寺', '가야산', '사지', '寺誌']
+    },
+    {
+      title: '奉恩本末寺誌 (봉은본말사지) · 本寺篇',
+      badge: '',
+      category: ['01-0002'],
+      poster: 'covers/0334.jpg',
+      url: 'https://drive.google.com/file/d/1ui9mqHr_PTO7XAuAhQ66lWB6E0Qn7Ix8/view?usp=sharing',
+      tags: ['봉은사', '奉恩寺', '본말사', '사지', '寺誌', '서울']
+    },
+    {
+      title: '帝釋寺址 (제석사지) 폐기유적 발굴조사보고서 III',
+      badge: '국립부여문화재연구소 · 학술연구총서 89',
+      category: ['01-0002'],
+      poster: 'covers/0335.jpg',
+      url: 'https://drive.google.com/file/d/1B9eQoNAJP0cVswGIbLJMCckug5Pmhrkq/view?usp=sharing',
+      tags: ['제석사', '帝釋寺', '익산', '백제', '발굴']
+    },
+    {
+      title: '진관사 (津寬寺)',
+      badge: '김광식 · 한상길 지음 · 대한불교조계종 불교사회연구소 · 불교사찰총서 6',
+      category: ['01-0002'],
+      poster: 'covers/0336.jpg',
+      url: 'https://drive.google.com/file/d/1yeN4UiNAi3MmoYnCYq2iEeJsSCOGKbyM/view?usp=sharing',
+      tags: ['진관사', '津寬寺', '서울', '은평', '태극기', '독립운동']
+    },
+    {
+      title: '梵魚寺 禪社芳啣錄 (범어사 선사방함록) 1909–1957',
+      badge: '梵魚寺',
+      category: ['01-0001'],
+      poster: 'covers/0332.jpg',
+      url: 'https://drive.google.com/file/d/1owDC018e9Q1raHMYneiZJQhwqKbYB1AJ/view?usp=sharing',
+      tags: ['범어사', '梵魚寺', '방함록', '芳啣錄', '선사방함록', '禪社芳啣錄', '부산', '안거']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -3938,7 +4605,7 @@
     'korean-monks': {
       title: '韓國高僧 · 한국 고승',
       people: [
-        { name: '원효', hanja: '元曉', born: 617, died: 686, books: ['정선 원효 (精選 元曉)', '三聖賢 삼성현과 경산의 역사 인물 연구'] },
+        { name: '원효', hanja: '元曉', born: 617, died: 686, books: ['정선 원효 (精選 元曉)', '三聖賢 삼성현과 경산의 역사 인물 연구', '新羅聖師 元曉 (신라성사 원효)'] },
         { name: '보조지눌', hanja: '普照知訥', born: 1158, died: 1210, books: ['정선 지눌 (精選 知訥)'] },
         { name: '보각일연', hanja: '普覺一然', born: 1206, died: 1289, books: ['三聖賢 삼성현과 경산의 역사 인물 연구'] },
         { name: '청허휴정', hanja: '淸虛休靜', born: 1520, died: 1604, books: ['정선 휴정 (精選 休靜)'] },
@@ -3951,13 +4618,16 @@
         { name: '연담묘순', hanja: '', born: 1946, books: ['묘순 스님 사진집'] },
         { name: '운허용하', hanja: '耘虛龍夏', born: 1892, died: 1980, books: ['耘虛禪師語文集 (운허선사어문집)'] },
         { name: '전강영신', hanja: '田岡永信', born: 1898, died: 1975, books: ['전강선사일대기 (田岡禪師一代記) · 전강선사 법어'] },
-        { name: '경허성우', hanja: '鏡虛惺牛', born: 1849, died: 1912, books: ['착한 일 많이 하게 그대가 부처일세 : 경허큰스님'] },
+        { name: '경허성우', hanja: '鏡虛惺牛', born: 1849, died: 1912, books: ['착한 일 많이 하게 그대가 부처일세 : 경허큰스님', '경허 · 만공의 선풍과 법맥', '콧구멍 없는 소 : 경허대사와 5대 제자', '경허와 만공의 禪思想', '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)', '鏡虛錄 (경허록)', '鏡虛滿空新出資料集 (경허만공신출자료집) 1 : 경허선사편'] },
         { name: '경봉정석', hanja: '鏡峰靖錫', born: 1892, died: 1982, books: ['三笑窟 (삼소굴) : 경봉선사 열반 30주기 특별전'] },
         { name: '경해법인', hanja: '鏡海法印', born: 1931, died: 2026, books: ['태조산 각원사 개산 · 동경 생활 40년 · 교학과 포교 : 鏡海 法印 회고록'] },
-        { name: '만공월면', hanja: '滿空月面', born: 1871, died: 1946, books: ['사랑하는 사람 못만나서 괴롭고 미워하는 사람 만나서 괴롭나니 : 求道小說 만공큰스님', 'The Teachings of Zen Master Man Gong'] },
+        { name: '만공월면', hanja: '滿空月面', born: 1871, died: 1946, books: ['사랑하는 사람 못만나서 괴롭고 미워하는 사람 만나서 괴롭나니 : 求道小說 만공큰스님', 'The Teachings of Zen Master Man Gong', '만공의 항일 정신 : 제8회 만공대선사 학술대회 기념 · 日帝下 만공선사 抗日 사자후', '만공 : 일제의 총칼 앞에서 조선의 얼을 지킨 (제9회 만공대선사 학술대회 기념)', '경허 · 만공의 선풍과 법맥', '경허와 만공의 禪思想', '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)', '滿空法語 (만공법어) · 개정 증보판', '鏡虛滿空新出資料集 (경허만공신출자료집) 2 : 만공선사편', '見性庵 芳啣錄 (견성암 방함록)'] },
         { name: '만화희찬', hanja: '萬化喜燦', born: 1922, died: 1983, books: ['오대산의 버팀목 : 만화 희찬선사의 수행과 가르침'] },
         { name: '보광성주', hanja: '', born: 1941, books: ['보광 큰스님 삶 : 구술(口述) 기록'] },
         { name: '서암홍근', hanja: '西庵鴻根', born: 1917, died: 2003, books: ['그 노장, 그렇게 살다가 그렇게 갔다고 해라'] },
+        { name: '해봉석정', hanja: '', born: 1928, died: 2012, books: ['임석정 불화는 신심으로부터지 : 국가무형문화재 전승자 구술 자서전 009'] },
+        { name: '해안봉수', hanja: '', born: 1901, died: 1974, books: ['해안 선사 서문집 : 해안 큰스님 유묵·서첩 모음'] },
+        { name: '혜춘', hanja: '慧春', born: 1919, died: 1998, books: ['이 수행길에서 이루지 못한다면 (此道不成 被毛戴角) : 慧春스님 영첩'] },
         { name: '혜봉용하', hanja: '', born: 1874, died: 1956, books: ['혜봉선사 유집 (慧峰禪師遺集)'] },
         { name: '고송종협', hanja: '', born: 1906, died: 2003, books: ['푸른 솔 푸른 향기 : 古松대선사의 발자취'] },
         { name: '일엽하엽', hanja: '백련도엽', born: 1896, died: 1971, books: ['一葉禪文 (일엽선문) : 金一葉禪師 文集'] },
@@ -4022,7 +4692,7 @@
   const grid = document.getElementById('grid');
   const listView = document.getElementById('listView');
   const countEl = document.getElementById('count');
-  if (countEl) countEl.textContent = BOOKS.length;
+  if (countEl) countEl.textContent = BOOKS.reduce((n, b) => n + ((b.newspaper || b.collection) ? 0 : Array.isArray(b.volumes) ? b.volumes.filter(v => !v.missing).length : 1), 0);
 
   // category는 문자열 하나 또는 ['03-0003','05-0000'] 같은 배열(여러 분류)
   const catsOf = b => [].concat(b.category || []);
@@ -4779,6 +5449,16 @@
   // (한글은 다시 합쳐서 그대로 유지)
   const fold = t => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').normalize('NFC')
     .replace(/[’‘'`]/g, '').toLowerCase();
+  // 권수: 여러 권 묶음은 소장한 권(결본 제외)을 한 권씩, 신문·인물 서가는 세지 않음
+  const volCount = b => (b.newspaper || b.collection) ? 0 : Array.isArray(b.volumes) ? b.volumes.filter(v => !v.missing).length : 1;
+  // 한국어책 판별: lang 지정이 있으면 그대로, 없으면 제목(괄호 속 읽기 제외)에 한글이 있거나 한자만으로 된 제목이면 한국책
+  const isKo = b => {
+    if (b.lang) return b.lang === 'ko';
+    if (/[\u3040-\u30ff]/.test((b.title || '') + (b.badge || ''))) return false;   // 일본어
+    const core = (b.title || '').replace(/\([^)]*\)/g, '').split(' / ')[0];
+    if (/[\uac00-\ud7a3]/.test(core)) return true;
+    return /[\u4e00-\u9fff]/.test(core) && !/[A-Za-z]{3}/.test(core);
+  };
   const searchText = b => fold([b.title, b.badge, b.isbn, ...(b.tags || []), ...(b.volumes || []).map(v => `${v.label || ''} ${v.title || ''}`),
     ...(b.collection && COLLECTIONS[b.collection] ? COLLECTIONS[b.collection].people.map(pp => `${pp.name} ${pp.hanja || ''}`) : [])]
     .filter(Boolean).join(' '));
@@ -4837,6 +5517,7 @@
     const wrap = document.createElement('div');
     wrap.className = 'card-wrap';
     wrap.dataset.category = catsOf(b).join(' ');
+    wrap.dataset.lang = isKo(b) ? 'ko' : '';
     wrap.dataset.title = (b.title || '').toLowerCase();
     wrap.dataset.search = searchText(b);
     wrap.appendChild(a);
@@ -4859,6 +5540,7 @@
     const row = document.createElement(isMultiVolume || isPaper || isColl ? 'div' : 'a');
     row.className = 'list-item';
     row.dataset.category = catsOf(b).join(' ');
+    row.dataset.lang = isKo(b) ? 'ko' : '';
     row.dataset.title = (b.title || '').toLowerCase();
     row.dataset.search = searchText(b);
     if (isMultiVolume || isPaper || isColl) {
@@ -4927,8 +5609,25 @@
   const mainTabsEl = document.getElementById('mainTabs');
   const subTabsEl = document.getElementById('subTabs');
 
-  const countMain = m => BOOKS.filter(b => catsOf(b).some(c => c.startsWith(m + '-'))).length;
-  const countSub = code => BOOKS.filter(b => catsOf(b).includes(code)).length;
+  let koOnly = false;   // '한국어' 필터
+  const pool = () => koOnly ? BOOKS.filter(isKo) : BOOKS;
+  const sumVols = list => list.reduce((n, b) => n + volCount(b), 0);
+  const countAll = () => sumVols(pool());
+  const countMain = m => sumVols(pool().filter(b => catsOf(b).some(c => c.startsWith(m + '-'))));
+  const countSub = code => sumVols(pool().filter(b => catsOf(b).includes(code)));
+  // 필터가 바뀌면 탭 숫자만 다시 계산
+  function refreshCounts(){
+    mainTabsEl.querySelectorAll('.genre-tab').forEach(btn => {
+      const c = btn.querySelector('.tab-count'); if (!c) return;
+      c.textContent = btn.dataset.main === 'all' ? countAll() : countMain(btn.dataset.main);
+    });
+    subTabsEl.querySelectorAll('.genre-tab').forEach(btn => {
+      const c = btn.querySelector('.tab-count'); if (!c) return;
+      c.textContent = btn.dataset.sub === 'all' ? countMain(currentMain) : countSub(btn.dataset.sub);
+    });
+    const ln = document.querySelector('#langToggle .lang-n');
+    if (ln) ln.textContent = sumVols(BOOKS.filter(isKo));
+  }
   const setTabLabel = (btn, text, n) => {
     btn.textContent = text;
     const c = document.createElement('span');
@@ -4942,7 +5641,7 @@
     const allBtn = document.createElement('button');
     allBtn.className = 'genre-tab active';
     allBtn.dataset.main = 'all';
-    setTabLabel(allBtn, '전체', BOOKS.length);
+    setTabLabel(allBtn, '전체', countAll());
     mainTabsEl.appendChild(allBtn);
 
     CATEGORIES.forEach(cat => {
@@ -4961,6 +5660,7 @@
         currentMain = tab.dataset.main;
         currentSub = 'all';
         renderSubTabs();
+        refreshCounts();
         applyFilters();
       });
     });
@@ -5011,7 +5711,8 @@
       const mainOk = currentMain === 'all' || cats.some(c => c.startsWith(currentMain + '-'));
       const subOk = currentSub === 'all' || cats.includes(currentSub);
       const searchOk = !currentSearch || (card.dataset.search || card.dataset.title).includes(currentSearch);
-      card.style.display = (mainOk && subOk && searchOk) ? '' : 'none';
+      const langOk = !koOnly || card.dataset.lang === 'ko';
+      card.style.display = (mainOk && subOk && searchOk && langOk) ? '' : 'none';
     });    placeFeatures();
   }
 
@@ -5034,6 +5735,17 @@
 
   renderMainTabs();
   renderSubTabs();
+  refreshCounts();
+
+  // ===== 한국어책 필터 =====
+  const langBtn = document.querySelector('#langToggle .sort-btn');
+  if (langBtn) langBtn.addEventListener('click', () => {
+    koOnly = !koOnly;
+    langBtn.classList.toggle('active', koOnly);
+    langBtn.setAttribute('aria-pressed', koOnly);
+    refreshCounts();
+    applyFilters();
+  });
 
   // ===== 그리드/목록 뷰 전환 =====
   const viewToggle = document.getElementById('viewToggle');
