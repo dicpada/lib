@@ -813,6 +813,55 @@
     line-height:1.35; letter-spacing:.06em; color:#1c1a18; white-space:nowrap;
   }
 
+  /* 디자인 책등: 韓國의 佛畵 畵記集 (속표지처럼 흰 종이 · 굵은 검은 테두리) — 접두어 hg- */
+  .spine-hg{
+    width:calc(var(--spine-h) * .3);
+    background:linear-gradient(90deg,#e6e4df 0%,#f7f6f2 10%,#fbfaf7 50%,#f5f4f0 90%,#e2e0da 100%);
+    box-shadow:inset -5px 0 8px rgba(0,0,0,.12), inset 3px 0 4px rgba(255,255,255,.6), 0 2px 8px rgba(0,0,0,.55);
+    display:flex; flex-direction:column; align-items:center; color:#141414;
+  }
+  .spine-hg .hg-box{
+    margin-top:calc(var(--spine-h) * .05); width:62%;
+    padding:calc(var(--spine-h) * .02) 0;
+    border:calc(var(--spine-h) * .011) solid #161616;
+    display:flex; flex-direction:column; align-items:center;
+  }
+  .spine-hg .hg-small{
+    display:flex; flex-direction:column; align-items:center; line-height:1.05;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:700; font-size:calc(var(--spine-h) * .03);
+  }
+  .spine-hg .hg-small .gap{ height:.35em; }
+  .spine-hg .hg-title{
+    margin-top:calc(var(--spine-h) * .012);
+    display:flex; flex-direction:column; align-items:center; line-height:1;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:900; font-size:calc(var(--spine-h) * .066);
+  }
+  .spine-hg .hg-ko{
+    margin-top:calc(var(--spine-h) * .012);
+    display:flex; flex-direction:column; align-items:center; line-height:1.12;
+    font-family:'Noto Serif KR',serif; font-weight:500; font-size:calc(var(--spine-h) * .016); color:#333;
+  }
+  .spine-hg .hg-pg{
+    margin-top:calc(var(--spine-h) * .022);
+    display:flex; flex-direction:column; align-items:center; line-height:1.05;
+    font-family:'EB Garamond','Noto Serif KR',serif;
+  }
+  .spine-hg .hg-pg b{ font-weight:600; font-size:calc(var(--spine-h) * .036); letter-spacing:.02em; }
+  .spine-hg .hg-pg i{ font-style:normal; font-size:calc(var(--spine-h) * .016); color:#888; }
+  .spine-hg .hg-topics{
+    margin-top:calc(var(--spine-h) * .016); width:84%;
+    display:flex; flex-wrap:wrap; justify-content:center; gap:1px 5px;
+    font-family:'Noto Sans KR',sans-serif; font-weight:400; font-size:calc(var(--spine-h) * .017); line-height:1.3; color:#555;
+  }
+  .spine-hg .hg-topics i{ font-style:normal; white-space:nowrap; }
+  .spine-hg .hg-logo{
+    margin-top:auto; width:22%; height:auto; opacity:.9;
+  }
+  .spine-hg .hg-pub{
+    margin:calc(var(--spine-h) * .01) 0 calc(var(--spine-h) * .03); white-space:nowrap; letter-spacing:.02em;
+    font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:calc(var(--spine-h) * .017); color:#222;
+  }
+
   /* 디자인 책등: 깨달음총서 (민족사) — 접두어 kd- */
   .spine-kd{
     width:calc(var(--spine-h) * .125);
@@ -3540,8 +3589,7 @@
       badge: '국립중앙박물관 · 특별전 도록 · 2010',
       category: ['02-0002'],
       poster: 'covers/0206.jpg',
-      // Drive 폴더 링크 (PDF 파일 링크를 받으면 바꿀 것)
-      url: 'https://drive.google.com/drive/folders/1bdFJ3vXWtlWzyMosKsBJjGUVyXxuAfK1?usp=sharing'
+      url: 'https://drive.google.com/file/d/19whX0mT9Yp9a92buQdaid60FY2HQspMZ/view?usp=sharing'
     },
     {
       title: '연꽃 향기로 오신 묘엄 스님 : 만화로 읽는 한국불교의 큰 스승 묘엄 스님의 삶',
@@ -4666,6 +4714,385 @@
       tags: ['깨달음총서', '민족사', '유식', '인물사상사', '아비달마', '달마']
     },
     {
+      title: '그곳, 寺 : 그때와 지금',
+      badge: '정종섭 지음',
+      category: ['01-0002'],
+      poster: 'covers/0338.jpg',
+      url: 'https://drive.google.com/file/d/13UwgHdGc4CYtCOIfe4X5aoNQmlk4ZW-g/view?usp=sharing',
+      tags: ['그곳 사', '그곳 절', '절', '사찰', '정종섭']
+    },
+    {
+      title: '韓國의 佛畵 畵記集 (한국의 불화 화기집) · A Collection of Records from Buddhist Paintings of Korea',
+      badge: '고경스님 校勘 · 송천스님 · 이종수 · 허상호 · 김정민 編著 · 성보문화재연구원 · 원래 한 권 (1,547쪽) · PDF 5분책',
+      category: ['02-0002'],
+      poster: 'covers/0339.jpg',
+      // 원래 한 권을 쪽수로 다섯 개로 나눔. 책등: 속표지처럼 흰 종이 · 검은 굵은 테두리 안 제목 · 쪽수 · 수록 주제 · 로고
+      spineDesign: { kind: 'hgj', logo: 'spines/hgj-logo.png' },
+      volumes: [
+        { label: '1분책', pages: '0018–0400', title: '한국의 불화 화기집 0018–0400 · 괘불 · 비로자나 · 석가모니 · 노사나 · 약사 · 아미타 · 미륵', topics: '괘불 · 비로자나 · 석가모니 · 노사나 · 약사 · 아미타 · 미륵', url: 'https://drive.google.com/file/d/133PM5WSKWpPGFfd0cPDSX7La4iyn-H7H/view?usp=sharing' },
+        { label: '2분책', pages: '0402–0642', title: '한국의 불화 화기집 0402–0642 · 삼신불 · 삼세불 · 화엄 · 구품 · 천불 · 53불 · 삼장 · 관음 · 지장', topics: '삼신불 · 삼세불 · 화엄 · 구품 · 천불 · 53불 · 삼장 · 관음 · 지장', url: 'https://drive.google.com/file/d/10VDAF0tSiqRL7pk_xBiCcIUwuSfGlxvb/view?usp=sharing' },
+        { label: '3분책', pages: '0644–1023', title: '한국의 불화 화기집 0644–1023 · 신중 · 사천왕 · 팔상 · 나한 · 33조사 · 시왕 · 감로 · 현왕', topics: '신중 · 사천왕 · 팔상 · 나한 · 33조사 · 시왕 · 감로 · 현왕', url: 'https://drive.google.com/file/d/10a47fMi-Rz-CyYMrHU-V_il5Y9twCYep/view?usp=sharing' },
+        { label: '4분책', pages: '1025–1251', title: '한국의 불화 화기집 1025–1251 · 칠성 · 독성 · 산신 · 조왕 · 용왕', topics: '칠성 · 독성 · 산신 · 조왕 · 용왕', url: 'https://drive.google.com/file/d/1Kj7xZsbBJv9TU08xcaabqlrIBvUiGFxu/view?usp=sharing' },
+        { label: '5분책', pages: '1254–1547', title: '한국의 불화 화기집 1254–1547 · 진영 · 도량장엄 · 기타 · 부록 · 색인', topics: '진영 · 도량장엄 · 기타 · 부록 · 색인', url: 'https://drive.google.com/file/d/1kcbgFduihREOvXsiJLrwX-Q5I_F_ZnAP/view?usp=sharing' }
+      ],
+      tags: ['화기집', '화기', '畵記', '불화', '佛畵', '성보문화재연구원', '고경', '송천', '이종수', '허상호', '김정민', '괘불', '신중', '칠성', '산신', '진영']
+    },
+    {
+      title: 'Problems of Chronology in Gandhāran Art',
+      badge: 'ed. Wannaporn Rienjang, Peter Stewart · Archaeopress · 2018',
+      category: ['02-0002'],
+      poster: 'covers/0340.jpg',
+      url: 'https://drive.google.com/file/d/1shW-M8SEfBl290tzLE3aOel_Oe6oUdIh/view?usp=sharing',
+      tags: ['간다라', 'Gandhara', '불상', '연대']
+    },
+    {
+      title: 'The Art of Southeast Asia : Cambodia · Vietnam · Thailand · Laos · Burma · Java · Bali',
+      badge: 'Philip Rawson · Thames & Hudson',
+      category: ['02-0002'],
+      poster: 'covers/0341.jpg',
+      url: 'https://drive.google.com/file/d/18Ef-k6GaHQvGMFhj_LX7HyenqtrCJ9lR/view?usp=sharing',
+      tags: ['동남아시아', '미술', '캄보디아', '태국', '자바']
+    },
+    {
+      title: '신중 (神衆) : 불교의 수호신들 · Buddhist Guardian Deities of Late Joseon',
+      badge: '국립중앙박물관 · 2013 서화관 테마전',
+      category: ['02-0002'],
+      poster: 'covers/0342.jpg',
+      url: 'https://drive.google.com/file/d/1n024a04cUHsxqRyrOiF5ua1ClZF5TbGr/view?usp=sharing',
+      tags: ['신중', '神衆', '신중도', '수호신', '국립중앙박물관']
+    },
+    {
+      title: '실크로드 미술사전 : 서부 – 중앙아시아 · 서투르키스탄',
+      badge: '국립문화재연구소',
+      category: ['02-0002'],
+      poster: 'covers/0343.jpg',
+      url: 'https://drive.google.com/file/d/1AWfiASf3h1Uf2EutdAi-Op8eChYq2xYg/view?usp=sharing',
+      tags: ['실크로드', '미술사전', '중앙아시아', '투르키스탄', '사전']
+    },
+    {
+      title: '謙齋 鄭敾 (겸재 정선)',
+      badge: '대구간송미술관 · 2025',
+      category: ['02-0002'],
+      poster: 'covers/0344.jpg',
+      url: 'https://drive.google.com/file/d/1sdLQGxrDEbw6utTX65gDDXz33qot1NCx/view?usp=sharing',
+      tags: ['겸재', '정선', '鄭敾', '진경산수', '금강산']
+    },
+    {
+      title: '성남 약사사 지장시왕도 보고서',
+      badge: '한국불교여래종 약사사 · 2017',
+      category: ['02-0002'],
+      poster: 'covers/0345.jpg',
+      url: 'https://drive.google.com/file/d/13_aDmPCW1zkcF7HD_B-y8tp8sGi1D-1h/view?usp=sharing',
+      tags: ['약사사', '성남', '지장시왕도', '지장', '시왕']
+    },
+    {
+      title: '押出仏と仏像型 (압출불과 불상형)',
+      badge: '奈良国立博物館',
+      category: ['02-0002'],
+      poster: 'covers/0346.jpg',
+      url: 'https://drive.google.com/file/d/1xjRMauayvudJ8_OTMB0uMqg1kmG9EQEZ/view?usp=sharing',
+      tags: ['압출불', '押出仏', '불상형', '나라국립박물관']
+    },
+    {
+      title: 'Dictionary of South & Southeast Asian Art (2nd Ed.)',
+      badge: 'Gwyneth Chaturachinda, Sunanda Krishnamurty, Pauline W. Tabtiang · Silkworm Books',
+      category: ['02-0002'],
+      poster: 'covers/0347.jpg',
+      url: 'https://drive.google.com/file/d/19MlMcVIqYjXYPYoFWdPgWv51ZYxjiEk2/view?usp=sharing',
+      tags: ['미술사전', '사전', '남아시아', '동남아시아']
+    },
+    {
+      title: '미술관에 간 붓다 : 명법 스님의 불교미학산책',
+      badge: '명법 지음 · 나무를 심는 사람들',
+      category: ['02-0002'],
+      poster: 'covers/0348.jpg',
+      url: 'https://drive.google.com/file/d/15821nvF7_8zMHCC8y8eWHjzCI8EQAMlB/view?usp=sharing',
+      tags: ['명법', '불교미학', '미술관', '반가사유상']
+    },
+    {
+      title: '佛像圖彙 (불상도휘) : 如来 · 明王 · 菩薩',
+      badge: '西山美香 編 · 禅研究会影印叢刊 2',
+      category: ['02-0002'],
+      poster: 'covers/0349.jpg',
+      url: 'https://drive.google.com/file/d/1nq5otbsz1V01SASI1tdzevk72ZRJkcQw/view?usp=sharing',
+      tags: ['불상도휘', '佛像圖彙', '도상', '여래', '명왕', '보살']
+    },
+    {
+      title: '佛敎儀式具 (불교의식구)',
+      badge: '동국대학교박물관 · 통도사 · 국립민속박물관 · 도서출판 신유',
+      category: ['02-0002'],
+      poster: 'covers/0350.jpg',
+      url: 'https://drive.google.com/file/d/1RMYu65fuqszCQ9kR-fatVKQgLFS2hhY0/view?usp=sharing',
+      tags: ['의식구', '儀式具', '불교공예', '통도사']
+    },
+    {
+      title: '宋元仏画 : 蒼海を越えたほとけたち (송원불화) · 特別展',
+      badge: '京都国立博物館 (교토국립박물관) · 特別展',
+      category: ['02-0002'],
+      poster: 'covers/0351.jpg',
+      url: 'https://drive.google.com/file/d/19M0Z_bZ1oCx1hmS5l-sp7-dvvOGkJOzL/view?usp=sharing',
+      tags: ['송원불화', '宋元', '불화', '특별전']
+    },
+    {
+      title: 'The New Guide to the National Museum Phnom Penh',
+      badge: 'Khun Samen',
+      category: ['02-0002'],
+      poster: 'covers/0352.jpg',
+      url: 'https://drive.google.com/file/d/1NSYWS3AG790w_FGQnH9Cp0KZT9ip40hk/view?usp=sharing',
+      tags: ['프놈펜', '국립박물관', '캄보디아', '크메르']
+    },
+    {
+      title: 'Transmitting the Forms of Divinity : Early Buddhist Art from Korea and Japan',
+      badge: 'Japan Society · 2003',
+      category: ['02-0002'],
+      poster: 'covers/0353.jpg',
+      url: 'https://drive.google.com/file/d/1lQFObXz5D3dm3QSZ5LxpwKHX1HXJDPEB/view?usp=sharing',
+      tags: ['한국', '일본', '초기불교미술', '불상']
+    },
+    {
+      title: 'Indian Court Painting : 16th–19th Century',
+      badge: 'Steven Kossak · The Metropolitan Museum of Art · 1997',
+      category: ['02-0002'],
+      poster: 'covers/0354.jpg',
+      url: 'https://drive.google.com/file/d/11XivlgTTGfMkk4G7EO4D-asWzooV2gox/view?usp=sharing',
+      tags: ['인도', '궁정회화', '세밀화', '메트로폴리탄']
+    },
+    {
+      title: '염원을 담아 실로 새겨 부처에 이르다 · Sacred Stitches Leading to Nirvana',
+      badge: '서울공예박물관 · 대한불교조계종',
+      category: ['02-0002'],
+      poster: 'covers/0355.jpg',
+      url: 'https://drive.google.com/file/d/1rfE-fuh-VOT8kARBnpEWdUvpd4zIfOTv/view?usp=sharing',
+      tags: ['자수', '불교자수', '서울공예박물관', '실로 새겨']
+    },
+    {
+      title: '보물 寶物 : 조선불화 朝鮮佛畵',
+      badge: '문화재청 · 전 2권',
+      category: ['02-0004'],
+      poster: 'covers/0356.jpg',
+      volumes: [
+        { label: 'I', title: '보물 조선불화 I', url: 'https://drive.google.com/file/d/16rRYcpi3qo1ko9sPaCQXq59DuxAg96Jc/view?usp=sharing' },
+        { label: 'II', title: '보물 조선불화 II', url: 'https://drive.google.com/file/d/1PogPvTgshOXJiL2u-xzC2sIfMPZcnS8l/view?usp=sharing' }
+      ],
+      tags: ['보물', '조선불화', '朝鮮佛畵', '불화', '문화재청']
+    },
+    {
+      title: '韓國의 石造美術 (한국의 석조미술)',
+      badge: '秦弘燮 (진홍섭) 著 · 文藝出版社',
+      category: ['02-0002'],
+      poster: 'covers/0357.jpg',
+      url: 'https://drive.google.com/file/d/1YwjREv9F4A4MvRRxjKy3fngVOL7Djo3l/view?usp=sharing',
+      tags: ['석조미술', '석탑', '석불', '진홍섭']
+    },
+    {
+      title: '拓本技法図典 (탁본기법도전)',
+      badge: '内田弘慈 · 創元社',
+      category: ['02-0002'],
+      poster: 'covers/0358.jpg',
+      url: 'https://drive.google.com/file/d/1LM6KR5oOhyPfd0s9xWYCJswXLyFR5rGz/view?usp=sharing',
+      tags: ['탁본', '拓本', '기법']
+    },
+    {
+      title: '法 : THE DHARMA (2nd Special Exhibition)',
+      badge: '',
+      category: ['02-0002'],
+      poster: 'covers/0359.jpg',
+      url: 'https://drive.google.com/file/d/1fC-gy5YDkSa_UBCvqFhuyGcA5b07_whJ/view?usp=sharing',
+      tags: ['법', '특별전', '불족', '佛足']
+    },
+    {
+      title: '명작 : 흙 속에서 찾은 불교문화 — 못다 한 이야기 · The Masterpieces : Unfinished Story',
+      badge: '국립경주문화재연구소 · 불교중앙박물관 · 불교문화재연구소 · 2023 신라 절터 발굴 유물 속보전',
+      category: ['02-0002'],
+      poster: 'covers/0360.jpg',
+      url: 'https://drive.google.com/file/d/10FBb_PV2THlJ27ER2pBRVk-QfIAgZL37/view?usp=sharing',
+      tags: ['명작', '신라', '절터', '발굴', '경주']
+    },
+    {
+      title: '천년의 지혜 천년의 그릇 · Millennium of Buddhist Korea',
+      badge: '',
+      category: ['02-0002'],
+      poster: 'covers/0361.jpg',
+      url: 'https://drive.google.com/file/d/1QmKBbLCVo2DW7r9Ru9IewLHNgWd_ZcLp/view?usp=sharing',
+      tags: ['천년', '특별전', '불교문화재']
+    },
+    {
+      title: '영원한 생명의 울림 : 통일신라 조각 · Echoes of Life',
+      badge: '국립중앙박물관',
+      category: ['02-0002'],
+      poster: 'covers/0362.jpg',
+      url: 'https://drive.google.com/file/d/12VLy_Y7MqBI_7rTViZk8LfI9HxsbJfqI/view?usp=sharing',
+      tags: ['통일신라', '조각', '불상', '국립중앙박물관']
+    },
+    {
+      title: '아잔타 미술로 떠나는 불교여행',
+      badge: '하진희 지음 · 인문산책 · 인문여행시리즈 12',
+      category: ['02-0002'],
+      poster: 'covers/0363.jpg',
+      url: 'https://drive.google.com/file/d/1PwP07hGM-7hp7BtaMvSYtey7eQ1gN5Ow/view?usp=sharing',
+      tags: ['아잔타', 'Ajanta', '자타카', '인도', '벽화']
+    },
+    {
+      title: '스투파의 숲, 신비로운 인도이야기 · Tree & Serpent: Early Buddhist Art in India',
+      badge: '국립중앙박물관',
+      category: ['02-0002'],
+      poster: 'covers/0364.jpg',
+      url: 'https://drive.google.com/file/d/1sCqtvh7FvcTDC0S7jUv3y_ToikqM4z_m/view?usp=sharing',
+      tags: ['스투파', '인도', '초기불교미술', 'Tree & Serpent']
+    },
+    {
+      title: '동양미술사',
+      badge: '마츠바라 사브로 편 · 김원동 外 옮김 · 예경',
+      category: ['02-0002'],
+      poster: 'covers/0365.jpg',
+      url: 'https://drive.google.com/file/d/1_D0N274SWViiHmPD4KdJXTnGaGkPfFlI/view?usp=sharing',
+      tags: ['동양미술사', '미술사', '예경']
+    },
+    {
+      title: 'INDIA : Art and Culture 1300–1900',
+      badge: 'Stuart Cary Welch · The Metropolitan Museum of Art',
+      category: ['02-0002'],
+      poster: 'covers/0366.jpg',
+      url: 'https://drive.google.com/file/d/1n-b-8pXZRvVR0-55DmMsyL0Q9E2OVuMF/view?usp=sharing',
+      tags: ['인도', '미술', '메트로폴리탄']
+    },
+    {
+      title: '中国の仏像展 : 細川家コレクションを中心とした (중국의 불상전)',
+      badge: '',
+      category: ['02-0002'],
+      poster: 'covers/0367.jpg',
+      url: 'https://drive.google.com/file/d/1SVAUIWvrCJiqPFC-5uzJln4W-s-fwLw6/view?usp=sharing',
+      tags: ['중국', '불상', '호소카와']
+    },
+    {
+      title: '인도미술',
+      badge: '비드야 데헤자 지음 · 이숙희 옮김 · 한길아트 · Art & Ideas',
+      category: ['02-0002'],
+      poster: 'covers/0368.jpg',
+      url: 'https://drive.google.com/file/d/1NHVVkkvNl9uFh2X6f-lNsKrk7hjcA0MV/view?usp=sharing',
+      tags: ['인도미술', '데헤자', '한길아트']
+    },
+    {
+      title: '한국의 석비 (石碑) : 고려 (국보·보물)',
+      badge: '국립문화재연구소 · 한국 금석문 학술정보 자료집',
+      category: ['02-0002'],
+      poster: 'covers/0369.jpg',
+      url: 'https://drive.google.com/file/d/1str3Pc7pQjqK6KRoszv9kYQTVi9HuJnB/view?usp=sharing',
+      tags: ['석비', '石碑', '고려', '금석문', '비문']
+    },
+    {
+      title: 'The Art of Buddhism (Art of the World)',
+      badge: 'Dietrich Seckel',
+      category: ['02-0002'],
+      poster: 'covers/0370.jpg',
+      url: 'https://drive.google.com/file/d/1Cu3JfrwhWjEyow6XbhyCKHRyu4rjj17C/view?usp=sharing',
+      tags: ['불교미술', 'Art of the World']
+    },
+    {
+      title: 'The Flame and the Lotus : Indian and Southeast Asian Art from the Kronos Collections',
+      badge: 'The Metropolitan Museum of Art',
+      category: ['02-0002'],
+      poster: 'covers/0371.jpg',
+      url: 'https://drive.google.com/file/d/1jSC4sllSxumDhIWPeEjnsD8BoWrZmtmJ/view?usp=sharing',
+      tags: ['인도', '동남아시아', '크로노스']
+    },
+    {
+      title: '되찾은 문화재 되살린 문화재 : 불교문화재 다시 읽기',
+      badge: '불교중앙박물관',
+      category: ['02-0002'],
+      poster: 'covers/0372.jpg',
+      url: 'https://drive.google.com/file/d/1BdxLSRpsu4cZTj6j09FjNIahY7HxQV7s/view?usp=sharing',
+      tags: ['되찾은 문화재', '환수', '불교중앙박물관']
+    },
+    {
+      title: '槿域 內浦를 품다 (근역, 내포를 품다) · 이전 신축 개관 특별전',
+      badge: '수덕사 근역성보관',
+      category: ['02-0002'],
+      poster: 'covers/0373.jpg',
+      url: 'https://drive.google.com/file/d/1VfXoBINd_sxwLDp347rr4AI_vN7zsOz_/view?usp=sharing',
+      tags: ['근역', '내포', '수덕사', '근역성보관']
+    },
+    {
+      title: '한국의 불상',
+      badge: '장충식 저 · 동국역경원 · 니르바나총서 5',
+      category: ['02-0002'],
+      poster: 'covers/0374.jpg',
+      url: 'https://drive.google.com/file/d/1FKX71JTDlq7R3xwtCDLNEDPkM2Q6Q4w0/view?usp=sharing',
+      tags: ['불상', '장충식', '니르바나총서']
+    },
+    {
+      title: '불교를 빛내고 나라에 공헌한 해인사 스님들 : 창건(802년)부터 해방(1945년)까지',
+      badge: '해인사 성보박물관 · 해인사출판부 · 해인사 개산 1219주년 기념 해인사 역대고승 특별전',
+      category: ['01-0001'],
+      poster: 'covers/0375.jpg',
+      url: 'https://drive.google.com/file/d/1sxTYJBLyt4Pxjrf1kOnGmyesQoTbklQs/view?usp=sharing',
+      tags: ['해인사', '역대고승', '성보박물관', '특별전']
+    },
+    {
+      title: '범종 (梵鐘) — 빛깔있는 책들 42',
+      badge: '이호관 글 · 손재식 사진 · 대원사',
+      category: ['02-0002'],
+      poster: 'covers/0376.jpg',
+      url: 'https://drive.google.com/file/d/1cbrTSBK5JRRvZ9MrCDLVhQp3MYuNQD13/view?usp=sharing',
+      tags: ['범종', '梵鐘', '종', '빛깔있는 책들', '대원사']
+    },
+    {
+      title: '독일 라이프치히그라시민속박물관 소장 한국문화재 · Korean Art Collection, GRASSI Museum für Völkerkunde zu Leipzig',
+      badge: '국립문화재연구소 · 국외소재문화재',
+      category: ['02-0002'],
+      poster: 'covers/0377.jpg',
+      url: 'https://drive.google.com/file/d/1oCTPRKOLgomU-zI4mZhHOpSes5pwV3sz/view?usp=sharing',
+      tags: ['라이프치히', '그라시', '독일', '국외소재', '한국문화재']
+    },
+    {
+      title: '고려 미·상, 지광국사탑을 보다 · Insight into Stupa of State Preceptor Jigwang',
+      badge: '국립중앙박물관',
+      category: ['02-0001'],
+      poster: 'covers/0378.jpg',
+      url: 'https://drive.google.com/file/d/1rHbIWsb6XY1TT8zx3hq54MXdi6wYYnlU/view?usp=sharing',
+      tags: ['지광국사탑', '법천사', '승탑', '부도', '고려']
+    },
+    {
+      title: 'Silla : Korea\'s Golden Kingdom',
+      badge: 'Soyoung Lee, Denise Patry Leidy · The Metropolitan Museum of Art · 2013',
+      category: ['02-0002'],
+      poster: 'covers/0379.jpg',
+      url: '',
+      tags: ['신라', 'Silla', '메트로폴리탄', '황금']
+    },
+    {
+      title: '현대예술 속의 불교',
+      badge: '동국대학교 불교문화연구원 엮음 · 예문서원 · 불교총서 13',
+      category: ['02-0002'],
+      poster: 'covers/0380.jpg',
+      url: 'https://drive.google.com/file/d/16aFzJinOKQqodu-NGdLo1VJ3LI4qdHMm/view?usp=sharing',
+      tags: ['현대예술', '불교총서', '예문서원']
+    },
+    {
+      title: '동국대학교 건학 100주년 기념 소장품도록',
+      badge: '동국대학교박물관',
+      category: ['02-0002'],
+      poster: 'covers/0381.jpg',
+      url: 'https://drive.google.com/file/d/1K7hn15-Jwq-h18XCuIHSLVn_nRkkiMNZ/view?usp=sharing',
+      tags: ['동국대학교', '박물관', '소장품', '도록']
+    },
+    {
+      title: '석굴암, 그 사진',
+      badge: '',
+      category: ['02-0002'],
+      poster: 'covers/0382.jpg',
+      url: 'https://drive.google.com/file/d/144LirqrNHVryAHQBQu0nuzWeBIBltt4F/view?usp=sharing',
+      tags: ['석굴암', '石窟庵', '사진', '경주']
+    },
+    {
+      title: '사찰의 구석구석 불교미술의 해학',
+      badge: '권중서 글·사진',
+      category: ['02-0002'],
+      poster: 'covers/0383.jpg',
+      url: 'https://drive.google.com/file/d/15ZajCmwnKfXauDuE8lP9uL9MjsWiHCw8/view?usp=sharing',
+      tags: ['해학', '불교미술', '사찰', '권중서']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -4843,6 +5270,20 @@
         a.innerHTML = `<span class="se-name"></span><span class="se-no"></span>`;
         stackChars(a.querySelector('.se-name'), vol.name || vol.title);
         a.querySelector('.se-no').textContent = vol.vno || vol.label.replace(/^제|권$/g, '');
+      } else if (b.spineDesign && b.spineDesign.kind === 'hgj') {
+        // 한국의 불화 화기집: 속표지처럼 흰 종이 · 검은 굵은 테두리 상자 안 세로 제목 · 쪽수 · 주제 · 로고 · 성보문화재연구원
+        a.className = 'spine spine-hg';
+        a.innerHTML = `<span class="hg-box"><span class="hg-small"></span><span class="hg-title"></span><span class="hg-ko"></span></span><span class="hg-pg"><b></b><i>|</i><b></b></span><span class="hg-topics"></span><img class="hg-logo" alt=""><span class="hg-pub"></span>`;
+        stackChars(a.querySelector('.hg-small'), '韓國의 佛畵');
+        stackChars(a.querySelector('.hg-title'), '畵記集');
+        stackChars(a.querySelector('.hg-ko'), '한국의불화화기집');
+        const [p1, p2] = (vol.pages || '').split('–');
+        const pb = a.querySelectorAll('.hg-pg b'); pb[0].textContent = p1 || ''; pb[1].textContent = p2 || '';
+        const tp = a.querySelector('.hg-topics');
+        (vol.topics || '').split(' · ').forEach(w => { const i = document.createElement('i'); i.textContent = w; tp.appendChild(i); });
+        a.querySelector('.hg-logo').src = b.spineDesign.logo;
+        a.querySelector('.hg-pub').textContent = '성보문화재연구원';
+        a.title = `${vol.label} · ${vol.pages}쪽 · ${vol.topics || ''}`;
       } else if (b.spineDesign && b.spineDesign.kind === 'kdc') {
         // 깨달음총서 (민족사): 회백색 + 점무늬 베이지 · 검은 동그라미 번호 · 세로 제목 · 사슴 문양 · 민족사
         const no = b.volumes.indexOf(vol) + 1;
