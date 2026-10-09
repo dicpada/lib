@@ -99,24 +99,112 @@
     background:var(--accent);
     border-color:var(--accent);
   }
+  .cat-nav{ display:flex; flex-direction:column; gap:0; }
+  .tab-code{
+    font-family:'EB Garamond',Georgia,serif; font-weight:600; font-size:12px;
+    margin-right:7px; opacity:.45; font-variant-numeric:tabular-nums; letter-spacing:.02em;
+  }
+  .genre-tab.active .tab-code{ opacity:.75; }
+  /* 선택한 대분류 밑에 붙는 세부 분류 줄 */
   .subcat-tabs{
-    padding:10px 14px;
-    background:rgba(255,255,255,.03);
-    border:1px solid rgba(255,255,255,.06);
-    border-radius:14px;
+    position:relative; align-items:center; gap:6px 4px;
+    margin-top:10px; padding:10px 14px 10px 12px;
+    background:rgba(255,255,255,.025);
+    border:1px solid rgba(255,255,255,.07);
+    border-left:3px solid var(--accent);
+    border-radius:4px 12px 12px 4px;
   }
   .subcat-tabs[hidden]{ display:none; }
-  .subcat-tabs .genre-tab{
-    font-size:12px;
-    font-weight:500;
-    padding:5px 13px;
-    background:transparent;
-    border-color:rgba(255,255,255,.1);
+  .sub-head{
+    display:inline-flex; align-items:baseline; gap:6px;
+    margin-right:10px; padding-right:14px;
+    border-right:1px solid rgba(255,255,255,.1);
+    font-family:'Inter',sans-serif; font-size:12px; font-weight:700;
+    letter-spacing:.08em; text-transform:uppercase; color:var(--accent);
   }
+  .sub-head b{ font-family:'EB Garamond',Georgia,serif; font-weight:600; font-size:13px; opacity:.7; letter-spacing:0; }
+  .subcat-tabs .genre-tab{
+    font-size:12.5px; font-weight:500;
+    padding:5px 11px; border-radius:8px;
+    background:transparent; border-color:transparent;
+  }
+  .subcat-tabs .genre-tab:hover{ background:rgba(255,255,255,.04); border-color:transparent; }
+  .subcat-tabs .genre-tab .tab-code{ font-size:11px; margin-right:6px; }
   .subcat-tabs .genre-tab.active{
-    color:#fff;
-    background:var(--accent);
-    border-color:var(--accent);
+    color:var(--text); background:rgba(255,255,255,.07);
+    border-color:rgba(255,255,255,.14);
+    box-shadow:inset 0 -2px 0 var(--accent);
+  }
+  /* ===== 대분류는 가로 · 세부 분류는 그 아래 세로 ===== */
+  .lib-body{ padding:0 6vw; }
+  .lib-main .filter-bar{ padding:0 0 24px; }
+  .lib-main main{ padding:0 0 80px; }
+  .cat-side{ padding-bottom:18px; }
+  .cat-side #mainTabs{ gap:2px 4px; border-bottom:1px solid rgba(255,255,255,.07); padding-bottom:8px; }
+  .cat-side #mainTabs > .genre-tab{
+    display:flex; align-items:baseline;
+    padding:8px 14px 8px 11px; border:0; border-left:3px solid transparent; border-radius:0 8px 8px 0;
+    background:transparent; color:var(--text-dim);
+    font-size:12.5px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  }
+  .cat-side #mainTabs > .genre-tab .tab-code{ font-size:13px; letter-spacing:0; }
+  .cat-side .tab-count{ letter-spacing:0; }
+  .cat-side #mainTabs > .genre-tab:hover{ color:var(--text); background:rgba(255,255,255,.03); }
+  .cat-side #mainTabs > .genre-tab.active{ color:var(--accent); background:rgba(255,255,255,.035); border-left-color:var(--accent); }
+  .cat-side #mainTabs > .genre-tab.active .tab-count{ color:var(--text-dim); opacity:.8; }
+  .cat-side .subcat-tabs{
+    flex-direction:column; flex-wrap:nowrap; align-items:stretch; gap:1px;
+    width:max-content; min-width:200px; max-width:100%;
+    margin-top:6px; padding:4px 0 4px 10px;
+    background:none; border:0; border-left:1px solid rgba(255,255,255,.12); border-radius:0;
+  }
+  .cat-side .sub-head{ display:none; }
+  .cat-side .subcat-tabs .genre-tab{
+    display:flex; align-items:baseline; text-align:left;
+    padding:6px 12px 6px 10px; border-radius:6px; font-size:12.5px;
+  }
+  .cat-side .subcat-tabs .genre-tab .tab-count{ margin-left:auto; padding-left:18px; }
+  .cat-side .subcat-tabs .genre-tab.active{ background:rgba(255,255,255,.06); border-color:transparent; box-shadow:inset 2px 0 0 var(--accent); }
+  /* ===== 분류 상자 ===== */
+  .catbox-btn{
+    display:inline-flex; align-items:center; gap:7px; height:34px; padding:0 15px 0 12px;
+    border-radius:20px; border:1px solid rgba(255,255,255,.12); background:var(--bg-raise);
+    color:var(--text); font:600 12.5px 'Inter',sans-serif; cursor:pointer;
+  }
+  .catbox-btn svg{ width:16px; height:16px; color:var(--accent); }
+  .catbox-btn:hover{ border-color:rgba(255,255,255,.28); }
+  .catbox-overlay{ position:fixed; inset:0; z-index:60; display:flex; align-items:flex-start; justify-content:center;
+    padding:9vh 16px 16px; background:rgba(0,0,0,.6); backdrop-filter:blur(3px); }
+  .catbox-overlay[hidden]{ display:none; }
+  .catbox{ width:min(900px, 100%); max-height:82vh; overflow:auto; background:#141519;
+    border:1px solid rgba(255,255,255,.09); border-radius:14px; box-shadow:0 30px 70px rgba(0,0,0,.6); }
+  .catbox-head{ position:sticky; top:0; z-index:1; display:flex; align-items:center; justify-content:space-between;
+    padding:16px 22px; background:#141519; border-bottom:1px solid rgba(255,255,255,.07);
+    font:700 12px 'Inter',sans-serif; letter-spacing:.14em; color:var(--text-dim); }
+  .catbox-x{ background:none; border:0; color:var(--text-dim); font-size:15px; cursor:pointer; padding:4px 6px; }
+  .catbox-x:hover{ color:var(--text); }
+  .catbox-body{ padding:8px 12px 14px; }
+  .cb-row{ display:grid; grid-template-columns:230px minmax(0,1fr); align-items:start; gap:4px 14px;
+    padding:6px 0; border-bottom:1px solid rgba(255,255,255,.05); }
+  .cb-row:last-child{ border-bottom:0; }
+  .cb-main{ display:flex; align-items:baseline; width:100%; text-align:left; cursor:pointer;
+    padding:8px 12px 8px 11px; border:0; border-left:3px solid transparent; border-radius:0 8px 8px 0; background:transparent;
+    color:var(--text-dim); font:700 12.5px 'Inter',sans-serif; letter-spacing:.08em; text-transform:uppercase; }
+  .cb-main .tab-code{ font-size:13px; letter-spacing:0; min-width:24px; }
+  .cb-main .tab-count{ margin-left:auto; padding-left:10px; letter-spacing:0; }
+  .cb-main:hover{ color:var(--text); background:rgba(255,255,255,.03); }
+  .cb-main.active{ color:var(--accent); border-left-color:var(--accent); background:rgba(255,255,255,.035); }
+  .cb-subs{ display:flex; flex-wrap:wrap; gap:4px; padding-top:3px; }
+  .cb-sub{ display:inline-flex; align-items:baseline; cursor:pointer; padding:5px 11px; border-radius:7px;
+    border:1px solid rgba(255,255,255,.07); background:transparent; color:var(--text-dim); font:500 12.5px 'Inter',sans-serif; }
+  .cb-sub .tab-code{ font-size:11px; margin-right:6px; }
+  .cb-sub:hover{ color:var(--text); border-color:rgba(255,255,255,.2); }
+  .cb-sub.active{ color:var(--text); background:rgba(255,255,255,.07); border-color:rgba(255,255,255,.14); box-shadow:inset 0 -2px 0 var(--accent); }
+  @media (max-width:640px){
+    .catbox-overlay{ padding:12px; align-items:stretch; }
+    .catbox{ max-height:none; }
+    .cb-row{ grid-template-columns:1fr; }
+    .cb-subs{ padding:0 0 4px 14px; }
   }
   .filter-row-right{
     display:flex;
@@ -818,12 +906,12 @@
   .pl-search{ flex:0 1 240px; height:30px; padding:0 12px; border-radius:16px; border:1px solid rgba(255,255,255,.12); background:var(--bg-raise); color:var(--text); }
   .pl-info{ color:var(--text-dim); font-size:13px; }
   .pl-info b{ color:var(--text); }
-  .pl-wrap{ display:flex; align-items:flex-end; flex-wrap:wrap; justify-content:center; row-gap:30px; padding:28px 24px 30px; }
-  .pl-wrap .pl-pile{ display:flex; flex-direction:column; width:210px; padding:0 9px; box-sizing:border-box; position:relative; }
-  .pl-wrap .pl-pile::after{ content:''; height:12px; margin:0 -9px; background:linear-gradient(180deg,#6b4a2f 0%,#53371f 55%,#3a2614 100%); box-shadow:0 8px 14px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.12); }
+  .pl-wrap{ display:flex; align-items:flex-end; flex-wrap:wrap; justify-content:center; gap:36px 34px; padding:30px 24px 34px; }
+  .pl-wrap .pl-pile{ display:flex; flex-direction:column; width:min(290px, 80vw); padding:0 12px; box-sizing:border-box; position:relative; }
+  .pl-wrap .pl-pile::after{ content:''; height:12px; margin:0 -12px; background:linear-gradient(180deg,#6b4a2f 0%,#53371f 55%,#3a2614 100%); box-shadow:0 8px 14px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.12); }
   .pl-book{
     position:relative; display:flex; align-items:center; gap:8px; box-sizing:border-box;
-    width:100%; height:22px; padding:0 9px; border-radius:1px; text-decoration:none; white-space:nowrap; overflow:hidden;
+    width:100%; height:24px; padding:0 11px; border-radius:1px; text-decoration:none; white-space:nowrap; overflow:hidden;
     transition:transform .15s ease, box-shadow .15s ease;
   }
   .pl-book.has{
@@ -1711,10 +1799,21 @@
   <p class="tagline">Welcome to <em>la librairie</em>, the world's largest members-only library of the Buddhadharma. To hold a pass to these stacks is to be counted among the world's foremost Buddhist scholars.</p>
 </header>
 
+<div class="lib-body">
+<aside class="cat-side">
+  <nav class="cat-nav" aria-label="분류">
+    <div class="genre-tabs" id="mainTabs"></div>
+    <div class="genre-tabs subcat-tabs" id="subTabs" hidden></div>
+  </nav>
+</aside>
+<div class="lib-main">
 <div class="filter-bar">
   <div class="filter-row">
-    <div class="genre-tabs" id="mainTabs"></div>
     <div class="filter-row-right">
+      <button class="catbox-btn" id="catBoxBtn" type="button" aria-haspopup="dialog" title="분류 한눈에 보기">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="9" y2="6"/><line x1="13" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="9" y2="12"/><line x1="13" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="9" y2="18"/><line x1="13" y1="18" x2="20" y2="18"/></svg>
+        분류
+      </button>
       <div class="sort-toggle" id="langToggle">
         <button class="sort-btn" aria-pressed="false" title="한국어책만 보기 (한 번 더 누르면 전체)">한국어 <span class="lang-n"></span></button>
       </div>
@@ -1737,18 +1836,26 @@
       </div>
     </div>
   </div>
-  <div class="genre-tabs subcat-tabs" id="subTabs" hidden></div>
 </div>
 
 <main>
   <div class="grid" id="grid"></div>
   <div class="list-view" id="listView"></div>
 </main>
+</div>
+</div>
 
 <footer>
   <p class="foot-title">佛法圖書館 DB 祥佛庫 ･ BUDDHAPADA PROJECT</p>
   <p class="foot-note">본 페이지는 思惟空間이며 권한이 없는 자의 출입은 통제됩니다.</p>
 </footer>
+
+<div class="catbox-overlay" id="catBox" hidden>
+  <div class="catbox" role="dialog" aria-label="분류 한눈에 보기">
+    <div class="catbox-head"><span>분류</span><button type="button" class="catbox-x" aria-label="닫기">✕</button></div>
+    <div class="catbox-body" id="catBoxBody"></div>
+  </div>
+</div>
 
 <div class="modal-overlay" id="modalOverlay">
   <div class="modal-box">
@@ -2000,7 +2107,7 @@
     {
       title: 'The Hindu World',
       badge: 'Ed. Sushil Mittal & Gene R. Thursby · Routledge',
-      category: '07-0001',
+      category: ['07-0001', '05-0005'],
       poster: 'covers/0034.jpg',
       url: 'https://drive.google.com/file/d/1S0eFnsY4-P-w_AxzBOergnmtr0B2xjSh/view?usp=sharing'
     },
@@ -2119,7 +2226,7 @@
     {
       title: 'The Two Sources of Indian Asceticism (2nd Ed.)',
       badge: 'Johannes Bronkhorst',
-      category: '07-0001',
+      category: ['07-0001', '05-0005'],
       poster: 'covers/0051.jpg',
       url: 'https://drive.google.com/file/d/1_z0whr6psSw4RL6YrRStedAEJzbTeAQO/view?usp=sharing'
     },
@@ -2360,14 +2467,14 @@
     {
       title: 'Classical Hindu Mythology: A Reader in the Sanskrit Purāṇas',
       badge: 'Ed. & Trans. Cornelia Dimmitt & J.A.B. van Buitenen',
-      category: '05-0002',
+      category: ['05-0005'],
       poster: 'covers/0085.jpg',
       url: 'https://drive.google.com/file/d/1Is5XWI_kIQ5F29asV3iijAclBsINiuQh/view?usp=sharing'
     },
     {
       title: 'The Gheranda Samhita: The Original Sanskrit and an English Translation',
       badge: 'James Mallinson',
-      category: '06-0003',
+      category: ['06-0003', '05-0005'],
       poster: 'covers/0086.jpg',
       url: 'https://drive.google.com/file/d/14eHIfhU3R-mZJpRgvaCfzMK3hcG8XXGt/view?usp=sharing'
     },
@@ -3651,7 +3758,7 @@
     {
       title: '인도철학사 (Indian Philosophy)',
       badge: '라다크리슈난 (Sarvepalli Radhakrishnan) 지음 · 이거룡 옮김 · 한길사 · 한길그레이트북스 · 전 4권',
-      category: ['05-0000'],
+      category: ['05-0005'],
       poster: 'covers/0210.jpg',
       volumes: [
         { label: '제1권', title: '인도철학사 I', url: '' },
@@ -3702,7 +3809,7 @@
     {
       title: '인도철학의 완전한 행복',
       badge: '김진영 지음 · 커뮤니케이션북스 · 행복총서',
-      category: ['07-0001'],
+      category: ['07-0001', '05-0005'],
       poster: 'covers/0215.jpg',
       url: 'https://drive.google.com/file/d/1dnUOdGH1nXH5o1HGfazOJ_JjedOslJ_R/view?usp=sharing',
       tags: ['인도철학', '행복', '우파니샤드', 'Upanishad']
@@ -4737,7 +4844,7 @@
         { label: '제44권', title: '민중불교철학', author: '여익구 지음', url: '', missing: true },
         { label: '제45권', title: '논어와 선', author: '한토 다이가 · 야마다 구니오 · 최효선 옮김', url: '', missing: true }
       ],
-      tags: ['깨달음총서', '민족사', '유식', '인물사상사', '아비달마', '달마']
+      tags: ['깨달음총서', '민족사', '유식', '인물사상사', '아비달마', '달마', '인도철학', '인도사상']
     },
     {
       title: '그곳, 寺 : 그때와 지금',
@@ -5131,9 +5238,56 @@
         { label: '890-1', no: '890-1', title: '十誦律 ①', ko: '십송율 1', url: 'https://drive.google.com/file/d/15GAgcT9UnJ0t6XFyf_m-kzp8-k3FDLe4/view?usp=sharing' },
         { label: '890-2', no: '890-2', title: '十誦律 ②', ko: '십송율 2', url: 'https://drive.google.com/file/d/1bmx89AYpAfgz_nZuE3zyqKKOTGw6H0V9/view?usp=sharing' },
         { label: '890-3', no: '890-3', title: '十誦律 ③', ko: '십송율 3', url: 'https://drive.google.com/file/d/19DxDto6ZnJb7GlM0Rd9eDs7q9ms_RXgq/view?usp=sharing' },
-        { label: '890-4', no: '890-4', title: '十誦律 ④', ko: '십송율 4', url: 'https://drive.google.com/file/d/1qh2UPySVuw8UdPu57hAmS2r_SKRrNdsC/view?usp=sharing' }
+        { label: '890-4', no: '890-4', title: '十誦律 ④', ko: '십송율 4', url: 'https://drive.google.com/file/d/1qh2UPySVuw8UdPu57hAmS2r_SKRrNdsC/view?usp=sharing' },
+        { label: '892', no: '892', title: '根本說一切有部苾芻尼毗奈耶', ko: '근본설일체유부필추니비나야', url: 'https://drive.google.com/file/d/1Vqg1stDGwGc1lghbXER7bIvdNA6NELOj/view?usp=sharing' },
+        { label: '893-1', no: '893-1', title: '根本說一切有部毗奈耶雜事 ①', ko: '근본설일체유부비나야잡사 1', url: 'https://drive.google.com/file/d/1EChTVwGcaOq1zM2RxDnuDnh81-Zk2mW8/view?usp=sharing' },
+        { label: '893-2', no: '893-2', title: '根本說一切有部毗奈耶雜事 ②', ko: '근본설일체유부비나야잡사 2', url: 'https://drive.google.com/file/d/1UsKpT7vOJt8gQQ9NeqL8RxhShDblZsJP/view?usp=sharing' },
+        { label: '895-2', no: '895-2', title: '彌沙塞部和醯五分律 ②', ko: '미사색부화혜오분율 2', url: 'https://drive.google.com/file/d/1i5rqr2WfO4IEu_3LdtyeWJ0Za7QpeJ1K/view?usp=sharing' },
+        { label: '896-1', no: '896-1', title: '四分律 ①', ko: '사분율 1', url: 'https://drive.google.com/file/d/1Zihh47ZfAw8r0rJsnx9yRzjBRmpipal3/view?usp=sharing' },
+        { label: '896-2', no: '896-2', title: '四分律 ②', ko: '사분율 2', url: 'https://drive.google.com/file/d/1Eulryu_DeoV2BqpUTCAOxBkuq2wAYD6k/view?usp=sharing' },
+        { label: '896-3', no: '896-3', title: '四分律 ③', ko: '사분율 3', url: 'https://drive.google.com/file/d/1lPJy74XhNWThdnYTWuZ3fHixixd1tcaL/view?usp=sharing' }
       ],
-      tags: ['한글대장경', '대장경', '동국역경원', '譯經院', '대지도론', '大智度論', '십송율', '十誦律']
+      tags: ['한글대장경', '대장경', '동국역경원', '譯經院', '대지도론', '大智度論', '십송율', '十誦律', '사분율', '四分律', '오분율', '五分律', '비나야', '毗奈耶', '율장']
+    },
+    {
+      title: '新インド学 (신인도학)',
+      badge: '長田俊樹 (오사다 도시키) · 角川叢書 23 · 角川書店',
+      category: ['05-0005', '07-0001'],
+      poster: 'covers/0385.jpg',
+      url: 'https://drive.google.com/file/d/1iw6Z0VIkY_6oeIfH8YRVEgu13DInIgAB/view?usp=sharing',
+      tags: ['인도학', 'インド学', '신인도학', '長田俊樹', '오사다 도시키', '角川叢書', '인도철학', '일본어']
+    },
+    {
+      title: 'インド哲学10講 (인도철학 10강)',
+      badge: '赤松明彦 (아카마쓰 아키히코) · 岩波新書 1709 · 岩波書店',
+      category: ['05-0005'],
+      poster: 'covers/0386.jpg',
+      url: 'https://drive.google.com/file/d/1AzPLzKuPf7lEmTfSyvCTYiHZg83RqQUn/view?usp=sharing',
+      tags: ['인도철학', 'インド哲学', '인도철학10강', '赤松明彦', '아카마쓰 아키히코', '岩波新書', '일본어']
+    },
+    {
+      title: 'インドの文学 (인도의 문학)',
+      badge: 'ルイ・ルヌー (Louis Renou) 著 · 我妻和男 · 渡辺重朗 訳 · 文庫クセジュ · 白水社',
+      category: ['07-0001', '05-0005'],
+      poster: 'covers/0387.jpg',
+      url: 'https://drive.google.com/file/d/1T3x2Sw8OeQ9uk3SnqRdMiKspWfEfY8NZ/view?usp=sharing',
+      tags: ['인도문학', 'インドの文学', '인도의 문학', 'Louis Renou', '르누', '文庫クセジュ', 'Que sais-je', '산스크리트 문학', '일본어']
+    },
+    {
+      title: '미란타왕문경 (彌蘭陀王問經)',
+      badge: '이시카미 젠오 (石上善應) 지음 · 이원섭 옮김 · 현암사 · 알기 쉬운 불교',
+      category: ['06-0003'],
+      poster: 'covers/0388.jpg',
+      url: 'https://drive.google.com/file/d/1vJZ2bmf0k693KJyvAT9BCoNisBKvsmSn/view?usp=sharing',
+      tags: ['미란타왕문경', '彌蘭陀王問經', '밀린다왕문경', '밀린다팡하', 'Milindapañha', '나가세나', '那先比丘經', '나선비구경', '이원섭', '현암사', '알기 쉬운 불교']
+    },
+    {
+      title: '密敎 (밀교) — 大乘佛敎의 最深層',
+      badge: '釋智賢 (석지현) 著 · 玄岩社 · 玄岩新書',
+      category: ['05-0002'],
+      poster: 'covers/0389.jpg',
+      url: 'https://drive.google.com/file/d/1dkGeEjC3MSwPEUlTRAmtdULDCgUiF_kC/view?usp=sharing',
+      tags: ['밀교', '密敎', '密教', '대승불교의 최심층', '석지현', '釋智賢', '현암사', '玄岩社', '현암신서', '만다라', '탄트라', 'Esoteric Buddhism']
     },
     {
       title: '韓國高僧 · 한국 고승',
@@ -5213,9 +5367,10 @@
     ]},
     { code:'05-0000', label:'Philosophy', subs:[
         {code:'05-0001', label:'vinaya'},
-        {code:'05-0002', label:'ritual'},
+        {code:'05-0002', label:'ritual-esoteric'},
         {code:'05-0003', label:'Mahayana'},
-          {code:'05-0004', label:'Meditation'}
+        {code:'05-0004', label:'Meditation'},
+        {code:'05-0005', label:'Indian Philosophy'}
     ]},
     { code:'06-0000', label:'Tripitaka', subs:[
         {code:'06-0003', label:'text'},
@@ -7817,7 +7972,7 @@
   const countSub = code => sumVols(pool().filter(b => catsOf(b).includes(code)));
   // 필터가 바뀌면 탭 숫자만 다시 계산
   function refreshCounts(){
-    mainTabsEl.querySelectorAll('.genre-tab').forEach(btn => {
+    mainTabsEl.querySelectorAll(':scope > .genre-tab').forEach(btn => {
       const c = btn.querySelector('.tab-count'); if (!c) return;
       c.textContent = btn.dataset.main === 'all' ? countAll() : countMain(btn.dataset.main);
     });
@@ -7828,8 +7983,10 @@
     const ln = document.querySelector('#langToggle .lang-n');
     if (ln) ln.textContent = sumVols(BOOKS.filter(isKo));
   }
-  const setTabLabel = (btn, text, n) => {
-    btn.textContent = text;
+  const setTabLabel = (btn, text, n, code) => {
+    btn.textContent = '';
+    if (code) { const k = document.createElement('span'); k.className = 'tab-code'; k.textContent = code; btn.appendChild(k); }
+    btn.appendChild(document.createTextNode(text));
     const c = document.createElement('span');
     c.className = 'tab-count';
     c.textContent = n;
@@ -7849,22 +8006,35 @@
       const btn = document.createElement('button');
       btn.className = 'genre-tab';
       btn.dataset.main = mainCode;
-      setTabLabel(btn, `${mainCode} · ${cat.label}`, countMain(mainCode));
+      setTabLabel(btn, cat.label, countMain(mainCode), mainCode);
       mainTabsEl.appendChild(btn);
     });
 
-    mainTabsEl.querySelectorAll('.genre-tab').forEach(tab => {
+    mainTabsEl.querySelectorAll(':scope > .genre-tab').forEach(tab => {
       tab.addEventListener('click', () => {
-        mainTabsEl.querySelectorAll('.genre-tab').forEach(t => t.classList.remove('active'));
+        mainTabsEl.querySelectorAll(':scope > .genre-tab').forEach(t => t.classList.remove('active'));
         tab.classList.add('active');
         currentMain = tab.dataset.main;
         currentSub = 'all';
         renderSubTabs();
         refreshCounts();
         applyFilters();
+        syncCatBox();
       });
     });
   }
+
+  // 세부 분류 세로 목록을 고른 대분류 바로 아래에 맞춰 놓기
+  function placeSubTabs(){
+    if (subTabsEl.hidden) return;
+    const act = mainTabsEl.querySelector(':scope > .genre-tab.active');
+    if (!act) return;
+    const nav = mainTabsEl.parentElement;
+    const x = act.getBoundingClientRect().left - nav.getBoundingClientRect().left;
+    const room = nav.clientWidth - 240;
+    subTabsEl.style.marginLeft = Math.max(0, Math.min(x, room)) + 'px';
+  }
+  window.addEventListener('resize', placeSubTabs);
 
   function renderSubTabs(){
     if (currentMain === 'all') {
@@ -7880,26 +8050,29 @@
     }
     subTabsEl.hidden = false;
     subTabsEl.innerHTML = '';
-    const allBtn = document.createElement('button');
-    allBtn.className = 'genre-tab active';
-    allBtn.dataset.sub = 'all';
-    setTabLabel(allBtn, '전체', countMain(currentMain));
-    subTabsEl.appendChild(allBtn);
-
+    placeSubTabs();
+    const head = document.createElement('span');
+    head.className = 'sub-head';
+    head.innerHTML = `<b>${currentMain}</b>`;
+    head.appendChild(document.createTextNode(cat.label));
+    subTabsEl.appendChild(head);
     cat.subs.forEach(sub => {
       const btn = document.createElement('button');
       btn.className = 'genre-tab';
       btn.dataset.sub = sub.code;
-      setTabLabel(btn, `${sub.code} · ${sub.label}`, countSub(sub.code));
+      setTabLabel(btn, sub.label, countSub(sub.code), sub.code.split('-')[1].replace(/^00/, ''));
       subTabsEl.appendChild(btn);
     });
 
     subTabsEl.querySelectorAll('.genre-tab').forEach(tab => {
       tab.addEventListener('click', () => {
+        // 이미 고른 세부 분류를 한 번 더 누르면 큰 분류 전체로
+        const off = tab.classList.contains('active');
         subTabsEl.querySelectorAll('.genre-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        currentSub = tab.dataset.sub;
+        if (!off) tab.classList.add('active');
+        currentSub = off ? 'all' : tab.dataset.sub;
         applyFilters();
+        syncCatBox();
       });
     });
   }
@@ -7932,6 +8105,59 @@
     });
   }
   window.addEventListener('resize', placeFeatures);
+
+
+  // ===== 분류 상자: 큰 분류는 세로, 세부 분류는 가로 =====
+  const catBox = document.getElementById('catBox');
+  const catBoxBody = document.getElementById('catBoxBody');
+  function buildCatBox(){
+    catBoxBody.innerHTML = '';
+    const row = (mainCode, label, subs) => {
+      const r = document.createElement('div');
+      r.className = 'cb-row';
+      const m = document.createElement('button');
+      m.type = 'button'; m.className = 'cb-main'; m.dataset.main = mainCode;
+      m.innerHTML = `<span class="tab-code"></span><span class="cb-name"></span><span class="tab-count"></span>`;
+      m.querySelector('.tab-code').textContent = mainCode === 'all' ? '' : mainCode;
+      m.querySelector('.cb-name').textContent = label;
+      m.querySelector('.tab-count').textContent = mainCode === 'all' ? countAll() : countMain(mainCode);
+      m.addEventListener('click', () => { pickCat(mainCode, 'all'); closeCatBox(); });
+      const s = document.createElement('div');
+      s.className = 'cb-subs';
+      (subs || []).forEach(sub => {
+        const b = document.createElement('button');
+        b.type = 'button'; b.className = 'cb-sub'; b.dataset.sub = sub.code;
+        b.innerHTML = `<span class="tab-code"></span><span></span><span class="tab-count"></span>`;
+        b.querySelector('.tab-code').textContent = sub.code.split('-')[1].replace(/^00/, '');
+        b.children[1].textContent = sub.label;
+        b.querySelector('.tab-count').textContent = countSub(sub.code);
+        b.addEventListener('click', () => { pickCat(mainCode, sub.code); closeCatBox(); });
+        s.appendChild(b);
+      });
+      r.append(m, s);
+      catBoxBody.appendChild(r);
+    };
+    row('all', '전체', []);
+    CATEGORIES.forEach(cat => row(cat.code.split('-')[0], cat.label, cat.subs));
+    syncCatBox();
+  }
+  function syncCatBox(){
+    if (!catBoxBody.children.length) return;
+    catBoxBody.querySelectorAll('.cb-main').forEach(b => b.classList.toggle('active', b.dataset.main === currentMain));
+    catBoxBody.querySelectorAll('.cb-sub').forEach(b => b.classList.toggle('active', b.dataset.sub === currentSub));
+    catBoxBody.querySelectorAll('.cb-row').forEach(r => r.classList.toggle('on', r.querySelector('.cb-main').dataset.main === currentMain));
+  }
+  function pickCat(mainCode, subCode){
+    const mb = mainTabsEl.querySelector(`:scope > .genre-tab[data-main="${mainCode}"]`);
+    if (mb && (mainCode !== currentMain || currentSub !== 'all')) mb.click();
+    if (subCode !== 'all') { const sb = subTabsEl.querySelector(`.genre-tab[data-sub="${subCode}"]`); if (sb && !sb.classList.contains('active')) sb.click(); }
+    syncCatBox();
+  }
+  function openCatBox(){ buildCatBox(); catBox.hidden = false; document.body.style.overflow = 'hidden'; }
+  function closeCatBox(){ catBox.hidden = true; document.body.style.overflow = ''; }
+  document.getElementById('catBoxBtn').addEventListener('click', openCatBox);
+  catBox.addEventListener('click', e => { if (e.target === catBox || e.target.closest('.catbox-x')) closeCatBox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !catBox.hidden) closeCatBox(); });
 
   renderMainTabs();
   renderSubTabs();
