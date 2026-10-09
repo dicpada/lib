@@ -28,9 +28,9 @@
   header{
     padding:56px 6vw 30px;
     display:flex;
-    align-items:baseline;
-    gap:18px;
-    flex-wrap:wrap;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
   }
   header h1{
     font-family:'Black Han Sans',sans-serif;
@@ -159,6 +159,9 @@
     background:none; border:0; border-left:1px solid rgba(255,255,255,.12); border-radius:0;
   }
   .cat-side .sub-head{ display:none; }
+  /* 세부 분류 자리는 늘 같은 높이(최대 6줄)로 잡아 두어 책장이 오르내리지 않게 */
+  .cat-side .subcat-tabs{ box-sizing:border-box; height:var(--sub-h, 196px); overflow:hidden; }
+  .cat-side .subcat-tabs[hidden]{ display:flex; visibility:hidden; }
   .cat-side .subcat-tabs .genre-tab{
     display:flex; align-items:baseline; text-align:left;
     padding:6px 12px 6px 10px; border-radius:6px; font-size:12.5px;
@@ -1208,6 +1211,26 @@
   }
 
   /* 디자인 책등: 고故 이건희 회장 기증품 목록집 (흰 바탕 + 양쪽 세로 겹줄) */
+  /* Encyclopaedia of Buddhism: 실물 책등처럼 흰 바탕 + 법륜 + 세로 글씨 */
+  .spine-eob{
+    width:calc(var(--spine-h) * .2); position:relative;
+    background:linear-gradient(90deg,#e4e1da 0%,#f8f7f3 12%,#fdfdfb 50%,#f6f5f0 88%,#e0ddd5 100%);
+    display:flex; flex-direction:column; align-items:center; color:#141414;
+    padding:calc(var(--spine-h) * .03) 0 calc(var(--spine-h) * .035);
+  }
+  .spine-eob .eb-wheel{ position:static; width:84%; height:auto; aspect-ratio:160 / 170; object-fit:contain; flex:0 0 auto; inset:auto; }
+  .spine-eob .eb-text{
+    flex:1 1 auto; min-height:0; margin-top:calc(var(--spine-h) * .03);
+    writing-mode:vertical-rl; transform:rotate(180deg);
+    display:flex; flex-direction:column; justify-content:flex-start; align-items:flex-start; gap:2px; padding-top:calc(var(--spine-h) * .02);
+    white-space:nowrap; overflow:hidden; font-family:'Noto Serif TC','Times New Roman',Times,serif;
+  }
+  .spine-eob .eb-ed{ font-size:clamp(4.5px,.78vh,6px); font-weight:600; letter-spacing:.06em; text-transform:uppercase; }
+  .spine-eob .eb-ed small{ font-size:.85em; }
+  .spine-eob .eb-title{ font-size:clamp(6.5px,1.12vh,8.6px); font-weight:600; letter-spacing:.03em; text-transform:uppercase; transform:scaleX(1.15); }
+  .spine-eob .eb-title b{ margin-left:.35em; font-size:1.18em; }
+  .spine-eob .eb-range{ font-size:clamp(8.5px,1.6vh,12.5px); font-weight:600; letter-spacing:-.01em; line-height:1.05; }
+  .spine-eob.multi .eb-range{ font-size:clamp(4.6px,.78vh,6px); letter-spacing:0; }
   .spine-k{
     width:calc(var(--spine-h) * .21); position:relative;
     background:linear-gradient(90deg,#e9e6e0 0%,#fbfaf7 14%,#fdfcfa 50%,#f7f5f1 86%,#e4e0d9 100%);
@@ -5290,6 +5313,468 @@
       tags: ['밀교', '密敎', '密教', '대승불교의 최심층', '석지현', '釋智賢', '현암사', '玄岩社', '현암신서', '만다라', '탄트라', 'Esoteric Buddhism']
     },
     {
+      title: '中國佛教醫藥全書 第二十三冊 (중국불교의약전서 23)',
+      badge: '中國佛教醫藥全書 · 許壽璋 題',
+      category: ['05-0002', '07-0002'],
+      poster: 'covers/0390.jpg',
+      url: 'https://drive.google.com/file/d/1xc5OkQgw0YLWfthYqcNUm17bPzfoZv4a/view?usp=sharing',
+      tags: ['중국불교의약전서', '中國佛教醫藥全書', '불교의학', '의약', '醫藥', '佛說金毘羅童子威德經', '深沙大將儀軌', '供養十二大威德天報恩品', '摩登伽經', '佛說北斗七星延命經', '北斗七星延命經', '佛說善樂長者經', '七曜攘災決', '북두칠성연명경', '밀교']
+    },
+    {
+      title: '한국학과 한국불교 : 한류의 근원 (Korean Studies & Korean Buddhism)',
+      badge: '문광 (Ven. Mun-Kwang) 지음 · 미주현대불교 창간 33주년 기념행사',
+      category: ['01-0004'],
+      poster: 'covers/0391.jpg',
+      url: 'https://drive.google.com/file/d/1k6A2dEq85CfnfmdYaoWZFqyJG1aCK2Em/view?usp=sharing',
+      tags: ['한국학', '한국불교', '한류', '문광', '문광스님', 'Mun-Kwang', 'Hallyu', 'Korean Wave', '미주현대불교']
+    },
+    {
+      title: '우리 토착신앙사 (土俗信仰史)',
+      badge: '강예달 지음 · 금림',
+      category: ['01-0004'],
+      poster: 'covers/0392.jpg',
+      url: 'https://drive.google.com/file/d/1bYm2NeCUQJ-8N3tiLx15fw0W_tAKPUpG/view?usp=sharing',
+      tags: ['토착신앙', '토속신앙', '土俗信仰', '민간신앙', '무속', '강예달', '금림', '신앙사']
+    },
+    {
+      title: '깨침을 향하여 : 근본불교의 가르침 (상권)',
+      badge: '강건기 지음 · 불일출판사 · 강건기 교수의 알기쉬운 불교강의',
+      category: ['10-0000'],
+      poster: 'covers/0393.jpg',
+      url: 'https://drive.google.com/file/d/1x_LJi7RmItXkawRDRMB-hRD_K66kR8tU/view?usp=sharing',
+      tags: ['깨침을 향하여', '근본불교', '초기불교', '강건기', '불일출판사', '불교강의', '상권']
+    },
+    {
+      title: '說 (설)',
+      badge: '성열 엮음 · 진영출판사 · 眞影叢書 8',
+      category: ['10-0001'],
+      poster: 'covers/0394.jpg',
+      url: 'https://drive.google.com/file/d/1zIdWUb3UWcpfCMXBGo1vsMJ8b9lCPt2-/view?usp=sharing',
+      tags: ['설', '說', '성열', '진영출판사', '眞影叢書', '진영총서', '법문', '경구']
+    },
+    {
+      title: 'Aśokan Sites and Artefacts : A Source-Book with Bibliography',
+      badge: 'Harry Falk · Philipp von Zabern · 2006',
+      category: ['07-0001', '02-0001'],
+      poster: 'covers/0396.jpg',
+      url: 'https://drive.google.com/file/d/1sOfa-EZMk6kNh8R68hwTX5zJ55ZlG6-N/view?usp=sharing',
+      tags: ['Asoka', 'Ashoka', '아소카', '아쇼카', 'Asokan', '석주', 'pillar', 'edict', '칙령', 'Harry Falk', '팔크', 'Monumenta Buddhica']
+    },
+    {
+      title: '文化財用語辭典 (문화재용어사전) · 改訂增補',
+      badge: '財團法人 京都府文化財保護基金 編 · 淡交社',
+      category: ['08-0002', '02-0000'],
+      lang: 'etc',
+      poster: 'covers/0397.jpg',
+      url: 'https://drive.google.com/file/d/1hLFXPmSvotUZkOgpl6M72UJBsv944Vpz/view?usp=sharing',
+      tags: ['문화재용어사전', '文化財用語辞典', '문화재', '용어사전', '京都府', '교토', '일본어', '불교미술']
+    },
+    {
+      title: '워싱턴대학교 소장 한국 고문헌 (Korean Collection of Books Published before 1945 in the University of Washington)',
+      badge: '국립중앙도서관 · 국외소재 한국 고문헌 조사보고서 7',
+      category: ['01-0003', '08-0001'],
+      poster: 'covers/0398.jpg',
+      url: 'https://drive.google.com/file/d/1xoCvQ5iMCfPBI7aUA_oBuquBmFB21mRw/view?usp=sharing',
+      tags: ['워싱턴대학교', 'University of Washington', '고문헌', '국외소재', '국립중앙도서관', '해제', '목록']
+    },
+    {
+      title: '高麗佛典目錄研究 (고려불전목록연구)',
+      badge: '정필모 (鄭駜謨) 지음 · 한국학술정보 · 淸浪 鄭駜謨 博士著作全集 6',
+      category: ['01-0003', '08-0001'],
+      poster: 'covers/0399.jpg',
+      url: 'https://drive.google.com/file/d/1nvwoDrtxu5Nt_6r4UYylTjmGUqFM2tdP/view?usp=sharing',
+      tags: ['고려불전목록연구', '고려', '불전', '목록', '교장', '의천', '정필모', '鄭駜謨', '서지학']
+    },
+    {
+      title: 'A Handbook of Pāli Literature',
+      badge: 'Oskar von Hinüber · De Gruyter · Indian Philology and South Asian Studies 2',
+      category: ['06-0004'],
+      poster: 'covers/0400.jpg',
+      url: 'https://drive.google.com/file/d/1jZKfrcOAolMpuBP-aMhI67LZrv9QX1yq/view?usp=sharing',
+      tags: ['Pali', '빠알리', '팔리', 'Pāli Literature', 'Hinüber', 'Hinuber', '힌위버', 'De Gruyter', 'Indian Philology']
+    },
+    {
+      title: '大正新脩大藏經 目錄 (대정신수대장경 목록)',
+      badge: '大正新脩大藏經',
+      category: ['06-0003', '08-0001'],
+      lang: 'etc',
+      poster: 'covers/0401.jpg',
+      url: 'https://drive.google.com/file/d/14L9n7mBthf_vxIw-Rr52C_UUqqt2UOC0/view?usp=sharing',
+      tags: ['대정신수대장경', '대정장', '大正藏', 'Taishō', 'Taisho', '목록', '目錄', '대장경']
+    },
+    {
+      title: '선본해제 18 : 불서류 (善本解題)',
+      badge: '국립중앙도서관',
+      category: ['01-0003', '08-0001'],
+      poster: 'covers/0402.jpg',
+      url: 'https://drive.google.com/file/d/1aq9r64cWFfbnvnjj4mbTV8mj1p6AuD08/view?usp=sharing',
+      tags: ['선본해제', '善本解題', '불서', '佛書', '국립중앙도서관', '고문헌', '해제', '經部']
+    },
+    {
+      title: '프랑스국립도서관 소장 한국 고문헌 (Korean Collections at the National Library of France)',
+      badge: '국립중앙도서관 · 국외소재 한국 고문헌 조사보고서 6',
+      category: ['01-0003', '08-0001'],
+      poster: 'covers/0403.jpg',
+      url: 'https://drive.google.com/file/d/1RZWuTgMChtymyg8bTV1SoffN0yCSIJte/view?usp=sharing',
+      tags: ['프랑스국립도서관', 'BnF', 'National Library of France', '고문헌', '국외소재', '국립중앙도서관', '해제', '목록']
+    },
+    {
+      title: 'Buddhist Dictionary : Manual of Buddhist Terms and Doctrines',
+      badge: 'Nyanatiloka',
+      category: ['08-0002', '06-0004'],
+      poster: 'covers/0404.jpg',
+      url: 'https://drive.google.com/file/d/11-ntuHguLYVyspoD59dQZ0520IX6V9nc/view?usp=sharing',
+      tags: ['Nyanatiloka', '냐나띨로까', '불교사전', 'Buddhist Dictionary', 'Pali', '용어']
+    },
+    {
+      title: 'The Cambridge Dictionary of Philosophy (2nd Ed.)',
+      badge: 'Robert Audi (ed.) · Cambridge University Press',
+      category: ['08-0002', '07-0004'],
+      poster: 'covers/0405.jpg',
+      url: 'https://drive.google.com/file/d/1e0PWPsTkslRlbd3vk50wtNjjx2gVgEEa/view?usp=sharing',
+      tags: ['Cambridge', '케임브리지', '철학사전', 'Philosophy', 'Robert Audi', '서양철학']
+    },
+    {
+      title: 'A Dictionary, English and Sanskrit',
+      badge: 'Monier Williams · Motilal Banarsidass',
+      category: ['04-0002', '08-0002'],
+      poster: 'covers/0406.jpg',
+      url: 'https://drive.google.com/file/d/1u5rD9_wqocmEbk4Ooxr-uUTaTPaOPUFa/view?usp=sharing',
+      tags: ['Monier-Williams', 'Monier Williams', '모니어 윌리엄스', '영범사전', 'English-Sanskrit', 'Sanskrit', '산스크리트', '범어사전']
+    },
+    {
+      title: '基本梵英和辭典 (Basic Sanskrit-English-Japanese Dictionary)',
+      badge: 'Bharat Bhushan Vidyalankar · Anil Vidyalankar · 中島巖 (Iwao Nakajima) · 東方出版',
+      category: ['04-0002', '08-0002'],
+      lang: 'etc',
+      poster: 'covers/0407.jpg',
+      url: 'https://drive.google.com/file/d/1N3rs7_7_1bCMqesWDjpGuSqIhbbbZhV9/view?usp=sharing',
+      tags: ['기본범영화사전', '基本梵英和辞典', '범영화사전', 'Sanskrit', '산스크리트', '범어사전', 'Vidyalankar', '中島巖', '東方出版', '일본어']
+    },
+    {
+      title: 'Encyclopaedia of Buddhism',
+      badge: 'Ed. G. P. Malalasekera · Government of Ceylon · 1961– · 전 8권',
+      category: ['08-0002'],
+      poster: 'covers/0408.jpg',
+      // 책등: 실물처럼 흰 바탕 · 위에 법륜 · 아래에서 위로 읽는 세로 글씨(편자 · 제목+권 · 수록 범위)
+      spineDesign: { kind: 'eob' },
+      volumes: [
+        { label: 'Vol. 1', vno: 'I', title: 'Volume I · A — Aoki, Bunkyo', ranges: ['A — Aoki, Bunkyo'], url: 'https://drive.google.com/file/d/1Md2bjXOQNSiySjFZcP_1EKb-thw6VCdX/view?usp=sharing' },
+        { label: 'Vol. 2', vno: 'II', title: 'Volume II · Āpa — Bhārhut', ranges: ['Āpa — Bhārhut'], url: 'https://drive.google.com/file/d/19bsFWBU7fvFIAavGkKMjGOF4ZVi4N9BP/view?usp=sharing' },
+        { label: 'Vol. 3', vno: 'III', title: 'Volume III · Bhāriṇi-deva — Caura-vidhvaṃsana', ranges: ['Bhāriṇi-deva — Caura-vidhvaṃsana'], url: 'https://drive.google.com/file/d/18ZMBzUr53J8MSi64C_6PS1Mjv1BHlitw/view?usp=sharing' },
+        { label: 'Vol. 4', vno: 'IV', title: 'Volume IV · Causality — Dveṣa', ranges: ['Causality — Dveṣa'], url: 'https://drive.google.com/file/d/1z0bHEf9fzODLpDZ8jlkw2FdFBXNRs7KH/view?usp=sharing' },
+        { label: 'Vol. 5', vno: 'V', title: 'Volume V · Earth — Japan', ranges: ['Earth — Japan'], url: 'https://drive.google.com/file/d/1ZHPf14HYkm92TupCytu0hNxW1Ri5r-ID/view?usp=sharing' },
+        { label: 'Vol. 6', vno: 'VI', title: 'Volume VI · Fascicle 1 : Jarā — Kāśyapīya', ranges: ['Fascicle 1 : Jarā — Kāśyapīya'], url: 'https://drive.google.com/file/d/1dlxL18L2TC7KF1Qz2Ty-FC0Llbz_mn43/view?usp=sharing' },
+        { label: 'Vol. 7', vno: 'VII', title: 'Volume VII · Fascicle 1 : Mind — Nyāyapravesa', ranges: ['Fascicle 1 : Mind — Nyāyapravesa'], url: '' },
+        { label: 'Vol. 8', vno: 'VIII', title: 'Volume VIII · Fascicle 1 : Sātavāhana — Syāmopāli Nikāya / Fascicle 2 : Taiwan — Uttarimanussadhamma / Fascicle 3 : Vācā — Zhong a-han', ranges: ['Fascicle 1 : Sātavāhana — Syāmopāli Nikāya', 'Fascicle 2 : Taiwan — Uttarimanussadhamma', 'Fascicle 3 : Vācā — Zhong a-han'], url: 'https://drive.google.com/file/d/1rrE-7z63f32P5p25fu0L6As6o-eJ3Ogh/view?usp=sharing' }
+      ],
+      tags: ['Encyclopaedia of Buddhism', 'Encyclopedia of Buddhism', '불교백과사전', '백과사전', 'Malalasekera', '말랄라세께라', 'Ceylon', 'Sri Lanka', '스리랑카', '실론']
+    },
+    {
+      title: 'Mien Relations : Mountain People and State Control in Thailand',
+      badge: 'Hjorleifur Jonsson · Cornell University Press',
+      category: ['07-0003'],
+      poster: 'covers/0409.jpg',
+      url: 'https://drive.google.com/file/d/1h2kl5aMAJwq7Y4dec_VQhpHedl1Ay35o/view?usp=sharing',
+      tags: ['Mien', '미엔', 'Yao', '고산족', 'Thailand', '태국', 'Jonsson']
+    },
+    {
+      title: 'A History of Ayutthaya : Siam in the Early Modern World',
+      badge: 'Chris Baker & Pasuk Phongpaichit · Cambridge University Press',
+      category: ['07-0003'],
+      poster: 'covers/0410.jpg',
+      url: 'https://drive.google.com/file/d/1Frkr9d8PBz4y2Lp4uLK5MVZ2_1fGej1B/view?usp=sharing',
+      tags: ['Ayutthaya', '아유타야', 'Siam', '시암', '태국', 'Thailand', 'Chris Baker', 'Pasuk Phongpaichit']
+    },
+    {
+      title: 'Angkor Vat and A Millennium of Khmer Art',
+      badge: '전시 도록',
+      category: ['02-0002', '07-0003'],
+      poster: 'covers/0411.jpg',
+      url: 'https://drive.google.com/file/d/1NkeS90ECZgqUxq6vkJ7W3pHcjKaKlxk7/view?usp=sharing',
+      tags: ['Angkor', '앙코르', '앙코르와트', 'Angkor Wat', 'Khmer', '크메르', '캄보디아', 'Cambodia']
+    },
+    {
+      title: 'Forest Recollections : Wandering Monks in Twentieth-century Thailand',
+      badge: 'Kamala Tiyavanich · University of Hawai‘i Press',
+      category: ['07-0003'],
+      poster: 'covers/0412.jpg',
+      url: 'https://drive.google.com/file/d/1zgqEDrWejSBKSgN5zeqOVOWXF2exR4cs/view?usp=sharing',
+      tags: ['Forest Recollections', '숲속 수행승', '두타', 'thudong', 'Forest tradition', '태국', 'Thailand', 'Kamala Tiyavanich', '까말라 띠야와닛']
+    },
+    {
+      title: 'Buddhism and Politics in Thailand',
+      badge: 'Somboon Suksamran · Institute of Southeast Asian Studies',
+      category: ['07-0003'],
+      poster: 'covers/0413.jpg',
+      url: 'https://drive.google.com/file/d/1ZWy7vH_54HzpNxvyWcDXaQejBIw9btxK/view?usp=sharing',
+      tags: ['태국', 'Thailand', '불교와 정치', 'Somboon Suksamran', 'ISEAS', '상가', 'Sangha']
+    },
+    {
+      title: 'The Politics of Thai Buddhism under the NCPO Junta',
+      badge: 'Katewadee Kulabkaew · ISEAS–Yusof Ishak Institute · Trends in Southeast Asia 2019 no. 8',
+      category: ['07-0003'],
+      poster: 'covers/0414.jpg',
+      url: 'https://drive.google.com/file/d/1V15h6E8lkBzoHuF9jEMXJcn8TDtktxJ6/view?usp=sharing',
+      tags: ['태국', 'Thailand', 'NCPO', '군사정부', 'Junta', 'Katewadee Kulabkaew', 'ISEAS', 'Trends in Southeast Asia']
+    },
+    {
+      title: 'The Palace Law of Ayutthaya and the Thammasat : Law and Kingship in Siam',
+      badge: 'Chris Baker & Pasuk Phongpaichit · Cornell Southeast Asia Program',
+      category: ['07-0003'],
+      poster: 'covers/0415.jpg',
+      url: 'https://drive.google.com/file/d/1yFd4r3Fsz3vuq292gzN_DHZmYc7StksM/view?usp=sharing',
+      tags: ['Ayutthaya', '아유타야', 'Thammasat', '탐마삿', 'Palace Law', 'Siam', '시암', '태국', 'Kingship', '왕권']
+    },
+    {
+      title: 'The King Never Smiles : A Biography of Thailand\'s Bhumibol Adulyadej',
+      badge: 'Paul M. Handley · Yale University Press',
+      category: ['07-0003', '03-0002'],
+      poster: 'covers/0416.jpg',
+      url: 'https://drive.google.com/file/d/1xTp2YjA4Bqly9-KaXvAB9Y9wcUPujR-A/view?usp=sharing',
+      tags: ['Bhumibol', '푸미폰', '태국 국왕', 'Thailand', '태국', 'Paul Handley', 'King Never Smiles']
+    },
+    {
+      title: 'Chaṭṭhasaṅgāyanā Mahāpāsāṇaguhā Sīmā and Buddhist Religious Edifices at Sirimaṅgalā Kaba-Aye Hillock',
+      badge: 'Trans. U Aung Thein Nyunt · Religious Affairs Department, Myanmar',
+      category: ['07-0003'],
+      poster: 'covers/0417.jpg',
+      url: 'https://drive.google.com/file/d/1XSZhsfuL8IqM4T1FRLYMNbrdoWOftdQK/view?usp=sharing',
+      tags: ['Chatthasangayana', '제6차 결집', '6차 결집', 'Mahapasana', '마하빠사나 동굴', 'Kaba-Aye', '까바에', 'Yangon', '양곤', 'Myanmar', '미얀마', 'Sima', '시마']
+    },
+    {
+      title: 'A Brief History of Thailand : Monarchy, War and Resilience',
+      badge: 'Richard A. Ruth · Tuttle',
+      category: ['07-0003'],
+      poster: 'covers/0418.jpg',
+      url: 'https://drive.google.com/file/d/1lrke9b5Ykb-nGt-gk__K9jUKc1nBo3k7/view?usp=sharing',
+      tags: ['태국', 'Thailand', '태국사', 'Richard Ruth', 'Tuttle']
+    },
+    {
+      title: 'Constitutional Bricolage : Thailand\'s Sacred Monarchy vs. the Rule of Law',
+      badge: 'Eugénie Mérieau · Hart Publishing · Constitutionalism in Asia',
+      category: ['07-0003'],
+      poster: 'covers/0419.jpg',
+      url: 'https://drive.google.com/file/d/1nyyVL9TfDyUeU2BNTthAjSKjqYa4aSbg/view?usp=sharing',
+      tags: ['태국', 'Thailand', '헌법', '군주제', 'Monarchy', 'Rule of Law', 'Mérieau', 'Merieau']
+    },
+    {
+      title: 'Education & Knowledge in Thailand : The Quality Controversy',
+      badge: 'Alain Mounier & Phasina Tangchuang (eds.)',
+      category: ['07-0003'],
+      poster: 'covers/0420.jpg',
+      url: 'https://drive.google.com/file/d/1ZuBEoquoXbe-kY25Mxe1DarswvHg8hKX/view?usp=sharing',
+      tags: ['태국', 'Thailand', '교육', 'Education', 'Mounier', 'Phasina Tangchuang']
+    },
+    {
+      title: 'Modern Buddhist Conjunctures in Myanmar : Cultural Narratives, Colonial Legacies, and Civil Society',
+      badge: 'Juliane Schober · University of Hawai‘i Press',
+      category: ['07-0003'],
+      poster: 'covers/0421.jpg',
+      url: 'https://drive.google.com/file/d/1Dj-yJD7O9vTKfxV4kqkjCaCWKaLdYigK/view?usp=sharing',
+      tags: ['미얀마', 'Myanmar', '버마', 'Burma', '근대불교', 'Juliane Schober', '식민지']
+    },
+    {
+      title: 'History of Southeast Asia : A Captivating Guide',
+      badge: 'Captivating History',
+      category: ['07-0003'],
+      poster: 'covers/0422.jpg',
+      url: 'https://drive.google.com/file/d/1rYBJJtwh7tJbb8EH9PErd7CkPsEB0q3i/view?usp=sharing',
+      tags: ['동남아시아', 'Southeast Asia', '역사', '캄보디아', '라오스', '태국', '인도네시아', '버마']
+    },
+    {
+      title: 'Siam\'s New Detectives : Visualizing Crime and Conspiracy in Modern Thailand',
+      badge: 'Samson Lim · University of Hawai‘i Press',
+      category: ['07-0003'],
+      poster: 'covers/0423.jpg',
+      url: 'https://drive.google.com/file/d/11UngCXUlE7T8iNALAdWCGljQmEO_WNS_/view?usp=sharing',
+      tags: ['태국', 'Thailand', 'Siam', '시암', '범죄', 'Samson Lim']
+    },
+    {
+      title: 'The Buddha in Lanna : Art, Lineage, Power, and Place in Northern Thailand',
+      badge: 'Angela S. Chiu · University of Hawai‘i Press',
+      category: ['07-0003', '02-0000'],
+      poster: 'covers/0424.jpg',
+      url: 'https://drive.google.com/file/d/18bxPoMLmPJ6lT-1z6S2eFp1Y9BLlAL25/view?usp=sharing',
+      tags: ['Lanna', '란나', '북부 태국', '치앙마이', 'Chiang Mai', '불상', 'Angela Chiu', '태국']
+    },
+    {
+      title: 'Subject Siam : Family, Law, and Colonial Modernity in Thailand',
+      badge: 'Tamara Loos · Cornell University Press',
+      category: ['07-0003'],
+      poster: 'covers/0425.jpg',
+      url: 'https://drive.google.com/file/d/1Ng1NXAba1k8Rj9ENnczeFQZDoO5hR4U1/view?usp=sharing',
+      tags: ['Siam', '시암', '태국', 'Thailand', '가족법', 'Tamara Loos', '근대']
+    },
+    {
+      title: 'Seeing Forests for Trees : Environment and Environmentalism in Thailand',
+      badge: 'Philip Hirsch (ed.)',
+      category: ['07-0003'],
+      poster: 'covers/0426.jpg',
+      url: 'https://drive.google.com/file/d/1QEGR1Megp1GP6j8j79Z-YlLABh2Mo7r-/view?usp=sharing',
+      tags: ['태국', 'Thailand', '숲', '환경', 'Environment', 'Philip Hirsch', '나무 출가']
+    },
+    {
+      title: 'State and Uncivil Society in Thailand at the Temple of Preah Vihear',
+      badge: 'Puangthong R. Pawakapan · ISEAS',
+      category: ['07-0003'],
+      poster: 'covers/0427.jpg',
+      url: 'https://drive.google.com/file/d/1ws4aebiZoVPlz5hiqzZXo4KIoqxjKS9d/view?usp=sharing',
+      tags: ['Preah Vihear', '프레아 비헤아르', '쁘라삿 프라위한', '캄보디아', '태국', 'Thailand', '민족주의', 'ISEAS']
+    },
+    {
+      title: 'Theravada Buddhism : The View of the Elders',
+      badge: 'Asanga Tilakaratne · University of Hawai‘i Press · Dimensions of Asian Spirituality',
+      category: ['10-0000', '07-0003'],
+      poster: 'covers/0428.jpg',
+      url: 'https://drive.google.com/file/d/1vWk7S5TA4PhuMMMmlkv0u6vNPvkqT-Sf/view?usp=sharing',
+      tags: ['테라와다', 'Theravada', '상좌부', '남방불교', 'Asanga Tilakaratne', '아상가 띨라까라뜨네']
+    },
+    {
+      title: 'Coming to Terms with Chinese Buddhism : A Reading of the Treasure Store Treatise',
+      badge: 'Robert H. Sharf · University of Hawai‘i Press · Kuroda Institute Studies in East Asian Buddhism 14',
+      category: ['07-0002'],
+      poster: 'covers/0429.jpg',
+      url: 'https://drive.google.com/file/d/1xIJIwCVuHavlQ8_762niW84Wtf_n4-lb/view?usp=sharing',
+      tags: ['Robert Sharf', '샤프', '寶藏論', '보장론', 'Treasure Store Treatise', '중국불교', 'Kuroda']
+    },
+    {
+      title: '다르마로드 2 (Dharma Road) : 진리의 길을 따라 퍼져나간 2,500년 불교 역사의 현장',
+      badge: '다르마로드 제2권',
+      category: ['07-0002'],
+      poster: 'covers/0430.jpg',
+      url: 'https://drive.google.com/file/d/18KxCYHlcdeCf2kcaUAdJTuh7oJUY7KsB/view?usp=sharing',
+      tags: ['다르마로드', 'Dharma Road', '불교 전파', '불교사', '석굴', '용문석굴']
+    },
+    {
+      title: 'Tibetan Buddhism without Mystification : The Buddhist Way from Original Tibetan Sources',
+      badge: 'Herbert V. Guenther · Leiden: E. J. Brill · 1966',
+      category: ['05-0003', '07-0002'],
+      poster: 'covers/0431.jpg',
+      url: 'https://drive.google.com/file/d/15HP9qwf41uegLom6Oh5UX80LRPpz5_E5/view?usp=sharing',
+      tags: ['티베트불교', 'Tibetan Buddhism', 'Guenther', '귄터', 'Brill']
+    },
+    {
+      title: 'The Spread of Tibetan Buddhism in China : Charisma, Money, Enlightenment',
+      badge: 'Dan Smyer Yü · Routledge Critical Studies in Buddhism',
+      category: ['07-0002'],
+      poster: 'covers/0432.jpg',
+      url: 'https://drive.google.com/file/d/1B3zVz1WOwc3VUe842NZT5E_WHvaLfno0/view?usp=sharing',
+      tags: ['티베트불교', '중국', 'Tibetan Buddhism', 'China', 'Dan Smyer Yü', 'Routledge']
+    },
+    {
+      title: 'Tibetan and Zen Buddhism in Britain : Transplantation, Development and Adaptation',
+      badge: 'David N. Kay · Routledge',
+      category: ['07-0004'],
+      poster: 'covers/0433.jpg',
+      url: 'https://drive.google.com/file/d/1MRHUEfROVCEzGRVy-mKF-LpNRX6_1Edv/view?usp=sharing',
+      tags: ['영국', 'Britain', '티베트불교', '선불교', 'Zen', '서양불교', 'David Kay']
+    },
+    {
+      title: '티베트 원정기',
+      badge: '스벤 헤딘 (Sven Hedin) 지음 · 윤준 · 이현숙 옮김 · 학고재',
+      category: ['07-0002'],
+      poster: 'covers/0434.jpg',
+      url: 'https://drive.google.com/file/d/1SN4lHVtrNNuOYHAyK1bzEdWGrjmPOSCJ/view?usp=sharing',
+      tags: ['티베트', '스벤 헤딘', 'Sven Hedin', '탐험', '원정기', '학고재', '중앙아시아']
+    },
+    {
+      title: 'Popular Buddhist Texts from Nepal : Narratives and Rituals of Newar Buddhism',
+      badge: 'Todd T. Lewis · with Subarna Man Tuladhar & Labh Ratna Tuladhar · foreword by Gregory Schopen · SUNY Press',
+      category: ['07-0001', '05-0002'],
+      poster: 'covers/0435.jpg',
+      url: '',
+      tags: ['네팔', 'Nepal', '네와르', 'Newar', 'Todd Lewis', 'Schopen']
+    },
+    {
+      title: 'Tibetan Buddhism : A Very Short Introduction',
+      badge: 'Matthew T. Kapstein · Oxford University Press',
+      category: ['05-0003', '07-0002'],
+      poster: 'covers/0436.jpg',
+      url: 'https://drive.google.com/file/d/1_qE898MIEY4ukLc4K5KPPnMnmf-zjmp3/view?usp=sharing',
+      tags: ['티베트불교', 'Tibetan Buddhism', 'Kapstein', '캅스타인', 'Very Short Introduction']
+    },
+    {
+      title: 'Presenting Japanese Buddhism to the West : Orientalism, Occidentalism, and the Columbian Exposition',
+      badge: 'Judith Snodgrass · University of North Carolina Press',
+      category: ['07-0002', '07-0004'],
+      poster: 'covers/0437.jpg',
+      url: 'https://drive.google.com/file/d/1RYbxLdwodCggssecZQNwNKAuB6MvVh8i/view?usp=sharing',
+      tags: ['일본불교', 'Japanese Buddhism', '오리엔탈리즘', '시카고 만국박람회', 'Columbian Exposition', 'Snodgrass']
+    },
+    {
+      title: 'Chinese Buddhism : A Volume of Sketches, Historical, Descriptive and Critical',
+      badge: 'Joseph Edkins',
+      category: ['07-0002'],
+      poster: 'covers/0438.jpg',
+      url: 'https://drive.google.com/file/d/17-4WPG1nzommWc75QcgzvMAhjKyDB2T1/view?usp=sharing',
+      tags: ['중국불교', 'Chinese Buddhism', 'Joseph Edkins', '에드킨스']
+    },
+    {
+      title: 'Chinese Buddhism : A Thematic History',
+      badge: 'Chün-fang Yü · University of Hawai‘i Press',
+      category: ['07-0002'],
+      poster: 'covers/0439.jpg',
+      url: 'https://drive.google.com/file/d/1KVsc7DlPgHpWEigX_icsRTSqbt5N2Rm-/view?usp=sharing',
+      tags: ['중국불교', 'Chinese Buddhism', 'Chün-fang Yü', '于君方', '우쥔팡']
+    },
+    {
+      title: 'Buddhism in Taiwan : Religion and the State, 1660–1990',
+      badge: 'Charles Brewer Jones · University of Hawai‘i Press',
+      category: ['07-0002'],
+      poster: 'covers/0440.jpg',
+      url: 'https://drive.google.com/file/d/16RGKM_9OWemKnyzwZu1zGyzMcUruszbg/view?usp=sharing',
+      tags: ['대만', '타이완', 'Taiwan', '대만불교', 'Charles Jones']
+    },
+    {
+      title: 'On the Cultural Revolution in Tibet : The Nyemo Incident of 1969',
+      badge: 'Melvyn C. Goldstein, Ben Jiao & Tanzen Lhundrup · University of California Press',
+      category: ['07-0002'],
+      poster: 'covers/0441.jpg',
+      url: 'https://drive.google.com/file/d/1T4resEIV_DQGauLhuLPe_vzP-K_SV3xp/view?usp=sharing',
+      tags: ['티베트', 'Tibet', '문화대혁명', 'Cultural Revolution', 'Nyemo', 'Goldstein']
+    },
+    {
+      title: 'The Tibetan Book of the Dead : A Biography',
+      badge: 'Donald S. Lopez, Jr. · Princeton University Press · Lives of Great Religious Books',
+      category: ['07-0002', '05-0002'],
+      poster: 'covers/0442.jpg',
+      url: 'https://drive.google.com/file/d/1auZoay4HCCgX4w8cN6hT6xUTK6EWFcZS/view?usp=sharing',
+      tags: ['티베트 사자의 서', 'Book of the Dead', '바르도', 'Bardo', 'Lopez', '로페즈']
+    },
+    {
+      title: 'Buddhism in China : A Historical Survey',
+      badge: 'Kenneth Ch\'en · Princeton University Press',
+      category: ['07-0002'],
+      poster: 'covers/0443.jpg',
+      url: 'https://drive.google.com/file/d/1MKWiZOiMLL9NJgwrHnB-AaStyUJebCKQ/view?usp=sharing',
+      tags: ['중국불교', 'Buddhism in China', 'Kenneth Chen', '케네스 첸', '陳觀勝']
+    },
+    {
+      title: 'Buddhism and Islam on the Silk Road',
+      badge: 'Johan Elverskog · University of Pennsylvania Press',
+      category: ['07-0002'],
+      poster: 'covers/0444.jpg',
+      url: 'https://drive.google.com/file/d/1OciEZw2dBzYjqFaj70yCr3JDK6_D2KOh/view?usp=sharing',
+      tags: ['실크로드', 'Silk Road', '이슬람', 'Islam', 'Elverskog', '엘버스코그']
+    },
+    {
+      title: 'Tibetan Zen : Discovering a Lost Tradition',
+      badge: 'Sam van Schaik · Snow Lion',
+      category: ['07-0002', '05-0004'],
+      poster: 'covers/0445.jpg',
+      url: 'https://drive.google.com/file/d/1F3gQfLHhHSjuNAZ_HjNYPIOr0LLHvC-f/view?usp=sharing',
+      tags: ['티베트', '선', 'Zen', '돈황', 'Dunhuang', 'Sam van Schaik', '禪']
+    },
+    {
+      title: 'Buddhism in the Sung',
+      badge: 'Peter N. Gregory & Daniel A. Getz, Jr. (eds.) · University of Hawai‘i Press · Kuroda Institute Studies in East Asian Buddhism 13',
+      category: ['07-0002'],
+      poster: 'covers/0446.jpg',
+      url: 'https://drive.google.com/file/d/15uMqrOSZVpjiHdQS-MMjuFUISq6EQ8Sp/view?usp=sharing',
+      tags: ['송대', 'Sung', 'Song', '宋', '중국불교', 'Kuroda', 'Peter Gregory']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -7240,6 +7725,13 @@
         stackChars(a.querySelector('.mc-han'), '名刹巡禮');
         a.querySelector('.mc-seal').textContent = HAN[no - 1] || no;
         stackChars(a.querySelector('.mc-au'), '崔完秀著');
+      } else if (b.spineDesign && b.spineDesign.kind === 'eob') {
+        // Encyclopaedia of Buddhism: 흰 책등 · 법륜 · 아래에서 위로 읽는 세로줄 (편자 / 제목+권 / 수록 범위)
+        a.className = 'spine spine-eob' + ((vol.ranges || []).length > 1 ? ' multi' : '');
+        a.innerHTML = `<img class="eb-wheel" src="spines/eob-wheel.png" alt=""><span class="eb-text"><span class="eb-ed">G. P. Malalasekera, <small>O.B.E.</small></span><span class="eb-title">Encyclopaedia of Buddhism <b></b></span></span>`;
+        a.querySelector('.eb-title b').textContent = vol.vno || '';
+        const tx = a.querySelector('.eb-text');
+        (vol.ranges || []).forEach(t => { const s = document.createElement('span'); s.className = 'eb-range'; s.textContent = t; tx.appendChild(s); });
       } else if (b.spineDesign && b.spineDesign.kind === 'lkh') {
         // 이건희 기증품 목록집: 흰 표지의 양쪽 세로 겹줄 안을 책등으로
         a.className = 'spine spine-k';
