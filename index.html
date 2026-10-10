@@ -1286,6 +1286,64 @@
   .spine-hb .hb-title span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
   .spine-hb.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
   .spine-hb .hb-pub{ margin:auto 0 calc(var(--spine-h) * .035); writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(4.5px,.78vh,6px); letter-spacing:.02em; }
+  /* 南傳大藏經 */
+  .spine-nd{
+    width:calc(var(--spine-h) * .15); position:relative;
+    background:linear-gradient(90deg,#cfc6b1 0%,#e9e2d0 14%,#f1ebdb 50%,#e7dfcc 86%,#cbc2ac 100%);
+    display:flex; flex-direction:column; align-items:center; color:#2a241d;
+    padding:calc(var(--spine-h) * .045) 0 calc(var(--spine-h) * .03);
+    font-family:'Noto Serif TC','Noto Serif CJK TC','Noto Serif KR',serif;
+  }
+  .spine-nd > *{ flex:0 0 auto; }
+  .spine-nd img.nd-title{ position:static; width:70%; height:auto; display:block; }
+  .spine-nd .nd-sub{ margin-top:calc(var(--spine-h) * .07); display:flex; flex-direction:row-reverse; gap:3px; min-height:0; flex:0 1 auto; overflow:hidden; }
+  .spine-nd .nd-sub > span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; font-size:clamp(5.5px,.92vh,7.5px); letter-spacing:.06em; line-height:1; }
+  .spine-nd .nd-part{ margin-top:1.4em; }
+  .spine-nd.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
+  /* 서가 칸 이름표 */
+  .shelf-sec{
+    flex:0 0 auto; align-self:flex-end; height:calc(var(--spine-h) * .78); width:22px; margin:0 6px 0 10px;
+    display:flex; align-items:center; justify-content:center;
+    writing-mode:vertical-rl; transform:rotate(180deg);
+    font:700 10px/1 'Inter',sans-serif; letter-spacing:.24em; color:#d8c9a3;
+    background:linear-gradient(90deg,#3a2a1a,#5a4128 50%,#3a2a1a); border-radius:2px 2px 0 0;
+    box-shadow:0 2px 6px rgba(0,0,0,.5);
+  }
+  .shelf-sec:first-child{ margin-left:0; }
+  /* PTS Pāli Texts */
+  .spine-pts{
+    width:calc(var(--spine-h) * .135); position:relative;
+    background:linear-gradient(90deg,#141b33 0%,#25305a 16%,#2b3766 50%,#232e56 84%,#121830 100%);
+    display:flex; flex-direction:column; align-items:center; color:#d9be72;
+    padding:calc(var(--spine-h) * .03) 0;
+  }
+  .spine-pts > *{ flex:0 0 auto; white-space:nowrap; }
+  .spine-pts .pt-rule{ width:100%; height:5px; border-top:1px solid #c9a552; border-bottom:1px solid #c9a552; }
+  .spine-pts .pt-title{
+    margin-top:calc(var(--spine-h) * .04); writing-mode:vertical-rl; transform:rotate(180deg);
+    flex:0 1 auto; min-height:0; overflow:hidden; text-overflow:ellipsis;
+    font-family:'EB Garamond',Georgia,serif; font-weight:600; font-size:clamp(7px,1.2vh,9.5px); letter-spacing:.06em; text-transform:uppercase;
+  }
+  .spine-pts .pt-ab{ margin-top:auto; display:flex; flex-direction:column; align-items:center; line-height:1.05; font-family:'EB Garamond',Georgia,serif; padding:3px 0; width:78%; border-top:1px solid #c9a552; border-bottom:1px solid #c9a552; }
+  .spine-pts .pt-ab b{ font-size:clamp(5.5px,.9vh,7.5px); letter-spacing:.02em; }
+  .spine-pts .pt-ab small{ font-size:clamp(6.5px,1.1vh,9px); font-weight:700; }
+  .spine-pts .pt-pub{ margin:calc(var(--spine-h) * .03) 0; font-family:'EB Garamond',Georgia,serif; font-size:clamp(4.5px,.75vh,6px); letter-spacing:.05em; opacity:.85; }
+  .spine-pts.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
+  /* Routledge Critical Concepts : Buddhism */
+  .spine-cc{
+    width:calc(var(--spine-h) * .17); position:relative;
+    background:linear-gradient(90deg,#4a1218 0%,#6e1d25 16%,#7a2129 50%,#6c1c24 84%,#46111a 100%);
+    display:flex; flex-direction:column; align-items:center; color:#c9c6c4;
+    padding:calc(var(--spine-h) * .05) 0 calc(var(--spine-h) * .035);
+    font-family:'Inter',Arial,sans-serif;
+  }
+  .spine-cc > *{ flex:0 0 auto; white-space:nowrap; }
+  .spine-cc .cc-sub, .spine-cc .cc-ed{ flex:0 1 auto; min-height:0; overflow:hidden; }
+  .spine-cc .cc-title{ writing-mode:vertical-rl; transform:rotate(180deg); font-weight:700; font-size:clamp(8px,1.35vh,10.5px); letter-spacing:.1em; color:#d8d6d4; }
+  .spine-cc .cc-sub{ margin-top:calc(var(--spine-h) * .025); writing-mode:vertical-rl; transform:rotate(180deg); font-size:clamp(4.5px,.72vh,5.5px); letter-spacing:.04em; text-transform:uppercase; opacity:.85; }
+  .spine-cc .cc-ed{ margin-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; transform:rotate(180deg); font-size:clamp(5px,.85vh,6.5px); letter-spacing:.1em; text-transform:uppercase; }
+  .spine-cc .cc-no{ margin-top:auto; flex:0 0 auto; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:clamp(9px,1.6vh,12.5px); color:#e2e0de; padding:3px 0; border-top:1px solid rgba(220,218,216,.6); border-bottom:1px solid rgba(220,218,216,.6); min-width:60%; text-align:center; }
+  .spine-cc .cc-pub{ margin-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; transform:rotate(180deg); font-size:clamp(4.5px,.75vh,6px); letter-spacing:.12em; opacity:.8; }
   .spine-k{
     width:calc(var(--spine-h) * .21); position:relative;
     background:linear-gradient(90deg,#e9e6e0 0%,#fbfaf7 14%,#fdfcfa 50%,#f7f5f1 86%,#e4e0d9 100%);
@@ -3852,7 +3910,7 @@
         { label: '제1권', title: '인도철학사 I', url: '' },
         { label: '제2권', title: '인도철학사 II', url: '' },
         { label: '제3권', title: '인도철학사 III', url: 'https://drive.google.com/file/d/1hWpb65147SsTDV42L9lyrA5vGX6fBIBg/view?usp=sharing' },
-        { label: '제4권', title: '인도철학사 IV', url: '' }
+        { label: '제4권', title: '인도철학사 IV', url: 'https://drive.google.com/file/d/1afQ1iYvGn9ahl4IvCnM57EOT3Nf-HjyH/view?usp=sharing' }
       ],
       tags: ['인도철학', 'Indian Philosophy', 'Radhakrishnan', '라다크리슈난', '이거룡']
     },
@@ -5321,9 +5379,11 @@
         { label: '895-2', no: '895-2', title: '彌沙塞部和醯五分律 ②', ko: '미사색부화혜오분율 2', url: 'https://drive.google.com/file/d/1i5rqr2WfO4IEu_3LdtyeWJ0Za7QpeJ1K/view?usp=sharing' },
         { label: '896-1', no: '896-1', title: '四分律 ①', ko: '사분율 1', url: 'https://drive.google.com/file/d/1Zihh47ZfAw8r0rJsnx9yRzjBRmpipal3/view?usp=sharing' },
         { label: '896-2', no: '896-2', title: '四分律 ②', ko: '사분율 2', url: 'https://drive.google.com/file/d/1Eulryu_DeoV2BqpUTCAOxBkuq2wAYD6k/view?usp=sharing' },
-        { label: '896-3', no: '896-3', title: '四分律 ③', ko: '사분율 3', url: 'https://drive.google.com/file/d/1lPJy74XhNWThdnYTWuZ3fHixixd1tcaL/view?usp=sharing' }
+        { label: '896-3', no: '896-3', title: '四分律 ③', ko: '사분율 3', url: 'https://drive.google.com/file/d/1lPJy74XhNWThdnYTWuZ3fHixixd1tcaL/view?usp=sharing' },
+        { label: '614', no: '614', title: '成唯識論 外', ko: '성유식론 외', url: 'https://drive.google.com/file/d/1JLrzhk5bTFWgSrHa_igznowNzKHInVsy/view?usp=sharing' },
+        { label: '1055', no: '1055', title: '歷代三寶紀 外', ko: '역대삼보기 외', url: 'https://drive.google.com/file/d/1-nFv2lC-GfNhpa5A_vjEmge-CVqpklwP/view?usp=sharing' }
       ],
-      tags: ['한글대장경', '대장경', '동국역경원', '譯經院', '대지도론', '大智度論', '십송율', '十誦律', '사분율', '四分律', '오분율', '五分律', '비나야', '毗奈耶', '율장']
+      tags: ['한글대장경', '대장경', '동국역경원', '譯經院', '대지도론', '大智度論', '십송율', '十誦律', '사분율', '四分律', '오분율', '五分律', '비나야', '毗奈耶', '율장', '성유식론', '成唯識論', '역대삼보기', '歷代三寶紀']
     },
     {
       title: '新インド学 (신인도학)',
@@ -6117,6 +6177,1067 @@
       tags: ['한국불교전서', '한글본', '韓國佛敎全書', '동국대학교', '불교학술원', '고려', '조선', '신라', '원감국사집', '충지', '석가여래행적송', '운묵', '경책', '백운화상어록', '白雲和尙語錄', '백운 경한', '직지', '작법귀감', '作法龜鑑', '백파 긍선', '정토보서', '淨土寶書', '백암 성총', '석문상의초', '釋門喪儀抄', '벽암 각성', '오종범음집', '五種梵音集', '범패', '석전유해', '釋典類解', '연담 유일', '김두재', '조영미']
     },
     {
+      title: 'Afghanistan : Forging Civilizations along the Silk Road',
+      badge: 'Ed. Joan Aruz & Elisabetta Valtz Fino · The Metropolitan Museum of Art Symposia',
+      category: ['02-0000', '07-0001'],
+      poster: 'covers/0467.jpg',
+      url: 'https://drive.google.com/file/d/1mQRLM3F_ALp5QX6OtEtswkukbLZZB1nC/view?usp=sharing',
+      tags: ['Afghanistan', '아프가니스탄', '실크로드', 'Silk Road', '박트리아', 'Bactria', '틸리야 테페', 'Tillya Tepe', '메트로폴리탄', 'Metropolitan']
+    },
+    {
+      title: '인도와 네팔의 불교성지 : 부처님 나라 인도·네팔 성지순례자들을 위한 길잡이',
+      badge: '정각 지음',
+      category: ['07-0001'],
+      poster: 'covers/0468.jpg',
+      url: 'https://drive.google.com/file/d/10hHjhIN2d_Mh4wqNpCqZDjMUcKG5rDJE/view?usp=sharing',
+      tags: ['인도', '네팔', '불교성지', '성지순례', '보드가야', '룸비니', '정각']
+    },
+    {
+      title: '동아시아 구법승과 인도의 불교 유적 : 인도로 떠난 순례자들의 발자취를 따라',
+      badge: '이주형 책임편집 · 사회평론',
+      category: ['07-0001', '02-0001'],
+      poster: 'covers/0469.jpg',
+      url: 'https://drive.google.com/file/d/17TqKfoOiMAH36z5Y67EEMjR9xwRaUmRB/view?usp=sharing',
+      tags: ['구법승', '법현', '현장', '의정', '혜초', '인도', '불교유적', '이주형', '순례']
+    },
+    {
+      title: 'Art and Architecture of Ancient India (Ancient Indian History, Culture and Archaeology)',
+      badge: 'Department of History, Archaeology, Culture & Tourism · Madhya Pradesh Bhoj (Open) University',
+      category: ['02-0000', '07-0001'],
+      poster: 'covers/0470.jpg',
+      url: 'https://drive.google.com/file/d/1SHXhnW_nD7fV5BIT1A9Y_Wg7Y6jQcZPq/view?usp=sharing',
+      tags: ['인도미술', '인도건축', 'Indian Art', 'Architecture', 'Ancient India', '고대인도']
+    },
+    {
+      title: 'Along the Ancient Silk Routes : Central Asian Art from the West Berlin State Museums',
+      badge: 'The Metropolitan Museum of Art · 1982',
+      category: ['02-0002', '07-0002'],
+      poster: 'covers/0471.jpg',
+      url: 'https://drive.google.com/file/d/1alVBGiuwDIOHf19w-cxYFkQNsOKted0Q/view?usp=sharing',
+      tags: ['실크로드', 'Silk Route', '중앙아시아', 'Central Asia', '투르판', 'Turfan', '키질', 'Kizil', '베를린', 'Berlin', '벽화', '메트로폴리탄']
+    },
+    {
+      title: '인도철학사',
+      badge: '길희성 지음 · 민음사',
+      category: ['05-0005'],
+      poster: 'covers/0472.jpg',
+      url: 'https://drive.google.com/file/d/1YBcsHEeONG-SvJ7iYDnK12XIZMxjBloC/view?usp=sharing',
+      tags: ['인도철학사', '인도철학', '길희성', '민음사']
+    },
+    {
+      title: 'The Religions of India : Brahmanism & Buddhism',
+      badge: 'Rev. Allan Menzies D.D. · J. M. Dent & Co. · The Temple Series of Bible Characters & Scripture Handbooks',
+      category: ['05-0005', '07-0001'],
+      poster: 'covers/0473.jpg',
+      url: 'https://drive.google.com/file/d/1tjUI_ND7j4qNw2QLM4bb4xFQNCVH7Cs5/view?usp=sharing',
+      tags: ['인도종교', 'Religions of India', 'Brahmanism', '브라만교', 'Allan Menzies', '멘지스']
+    },
+    {
+      title: 'スリランカの大乗仏教 : 文献・碑文・美術による解明 (스리랑카의 대승불교) · A Study of Mahāyāna Buddhism in Sri Lanka',
+      badge: '森祖道 (Mori Sodo) 著 · 大蔵出版',
+      category: ['07-0003', '05-0003'],
+      poster: 'covers/0474.jpg',
+      url: 'https://drive.google.com/file/d/1sNpWD6JaG4MH32OmiyRqhNrfez3l3Rfo/view?usp=sharing',
+      tags: ['스리랑카', 'Sri Lanka', '대승불교', 'Mahayana', '森祖道', '모리 소도', 'Mori Sodo', '大蔵出版', '일본어']
+    },
+    {
+      title: '南傳大藏經 (남전대장경)',
+      badge: '高楠順次郎 監修 · 大藏出版 · 1935–41 · 全65卷 70冊 + 總目錄',
+      category: ['06-0004'],
+      langs: ['일본어'],
+      poster: 'covers/0475.jpg',
+      // 책등: 미색 천 · 예서체 제목(실물 책등 사진에서 따옴) · 아래 세로로 권수 · 부명
+      spineDesign: { kind: 'ndj' },
+      volumes: [
+        { label: '第一卷', vno: '1', sub: '律部一', title: '南傳大藏經 第一卷 · 律藏 一', url: '', missing: true },
+        { label: '第二卷', vno: '2', sub: '律部二', title: '南傳大藏經 第二卷 · 律藏 二', url: '', missing: true },
+        { label: '第三卷', vno: '3', sub: '律部三', title: '南傳大藏經 第三卷 · 律藏 三', url: '', missing: true },
+        { label: '第四卷', vno: '4', sub: '律部四', title: '南傳大藏經 第四卷 · 律藏 四', url: '', missing: true },
+        { label: '第五卷', vno: '5', sub: '律部五', title: '南傳大藏經 第五卷 · 律藏 五', url: '', missing: true },
+        { label: '第六卷', vno: '6', sub: '長部經典一', title: '南傳大藏經 第六卷 · 長部經典 一', url: '', missing: true },
+        { label: '第七卷', vno: '7', sub: '長部經典二', title: '南傳大藏經 第七卷 · 長部經典 二', url: '', missing: true },
+        { label: '第八卷', vno: '8', sub: '長部經典三', title: '南傳大藏經 第八卷 · 長部經典 三', url: '', missing: true },
+        { label: '第九卷', vno: '9', sub: '中部經典一', title: '南傳大藏經 第九卷 · 中部經典 一', url: '', missing: true },
+        { label: '第十卷', vno: '10', sub: '中部經典二', title: '南傳大藏經 第十卷 · 中部經典 二', url: '', missing: true },
+        { label: '第十一卷上', vno: '11上', sub: '中部經典三', title: '南傳大藏經 第十一卷上 · 中部經典 三', url: '', missing: true },
+        { label: '第十一卷下', vno: '11下', sub: '中部經典四', title: '南傳大藏經 第十一卷下 · 中部經典 四', url: '', missing: true },
+        { label: '第十二卷', vno: '12', sub: '相應部經典一', title: '南傳大藏經 第十二卷 · 相應部經典 一', url: '', missing: true },
+        { label: '第十三卷', vno: '13', sub: '相應部經典二', title: '南傳大藏經 第十三卷 · 相應部經典 二', url: '', missing: true },
+        { label: '第十四卷', vno: '14', sub: '相應部經典三', title: '南傳大藏經 第十四卷 · 相應部經典 三', url: '', missing: true },
+        { label: '第十五卷', vno: '15', sub: '相應部經典四', title: '南傳大藏經 第十五卷 · 相應部經典 四', url: '', missing: true },
+        { label: '第十六卷上', vno: '16上', sub: '相應部經典五', title: '南傳大藏經 第十六卷上 · 相應部經典 五', url: '', missing: true },
+        { label: '第十六卷下', vno: '16下', sub: '相應部經典六', title: '南傳大藏經 第十六卷下 · 相應部經典 六', url: '', missing: true },
+        { label: '第十七卷', vno: '17', sub: '增支部經典一', title: '南傳大藏經 第十七卷 · 增支部經典 一', url: '', missing: true },
+        { label: '第十八卷', vno: '18', sub: '增支部經典二', title: '南傳大藏經 第十八卷 · 增支部經典 二', url: '', missing: true },
+        { label: '第十九卷', vno: '19', sub: '增支部經典三', title: '南傳大藏經 第十九卷 · 增支部經典 三', url: '', missing: true },
+        { label: '第二十卷', vno: '20', sub: '增支部經典四', title: '南傳大藏經 第二十卷 · 增支部經典 四', url: '', missing: true },
+        { label: '第二十一卷', vno: '21', sub: '增支部經典五', title: '南傳大藏經 第二十一卷 · 增支部經典 五', url: '', missing: true },
+        { label: '第二十二卷上', vno: '22上', sub: '增支部經典六', title: '南傳大藏經 第二十二卷上 · 增支部經典 六', url: '', missing: true },
+        { label: '第二十二卷下', vno: '22下', sub: '增支部經典七', title: '南傳大藏經 第二十二卷下 · 增支部經典 七', url: '', missing: true },
+        { label: '第二十三卷', vno: '23', sub: '小部經典一', title: '南傳大藏經 第二十三卷 · 小部經典 一', url: '', missing: true },
+        { label: '第二十四卷', vno: '24', sub: '小部經典二', title: '南傳大藏經 第二十四卷 · 小部經典 二', url: '', missing: true },
+        { label: '第二十五卷', vno: '25', sub: '小部經典三', title: '南傳大藏經 第二十五卷 · 小部經典 三', url: '', missing: true },
+        { label: '第二十六卷', vno: '26', sub: '小部經典四', title: '南傳大藏經 第二十六卷 · 小部經典 四', url: '', missing: true },
+        { label: '第二十七卷', vno: '27', sub: '小部經典五', title: '南傳大藏經 第二十七卷 · 小部經典 五', url: '', missing: true },
+        { label: '第二十八卷', vno: '28', sub: '小部經典六', title: '南傳大藏經 第二十八卷 · 小部經典 六', url: '', missing: true },
+        { label: '第二十九卷', vno: '29', sub: '小部經典七', title: '南傳大藏經 第二十九卷 · 小部經典 七', url: 'https://drive.google.com/file/d/1ALicqNckNe12ssDnEKM7ZYpeFw8YI5jH/view?usp=sharing' },
+        { label: '第三十卷', vno: '30', sub: '小部經典八', title: '南傳大藏經 第三十卷 · 小部經典 八', url: '', missing: true },
+        { label: '第三十一卷', vno: '31', sub: '小部經典九', title: '南傳大藏經 第三十一卷 · 小部經典 九', url: '', missing: true },
+        { label: '第三十二卷', vno: '32', sub: '小部經典十', title: '南傳大藏經 第三十二卷 · 小部經典 十', url: '', missing: true },
+        { label: '第三十三卷', vno: '33', sub: '小部經典十一', title: '南傳大藏經 第三十三卷 · 小部經典 十一', url: '', missing: true },
+        { label: '第三十四卷', vno: '34', sub: '小部經典十二', title: '南傳大藏經 第三十四卷 · 小部經典 十二', url: '', missing: true },
+        { label: '第三十五卷', vno: '35', sub: '小部經典十三', title: '南傳大藏經 第三十五卷 · 小部經典 十三', url: '', missing: true },
+        { label: '第三十六卷', vno: '36', sub: '小部經典十四', title: '南傳大藏經 第三十六卷 · 小部經典 十四', url: '', missing: true },
+        { label: '第三十七卷', vno: '37', sub: '小部經典十五', title: '南傳大藏經 第三十七卷 · 小部經典 十五', url: '', missing: true },
+        { label: '第三十八卷', vno: '38', sub: '小部經典十六', title: '南傳大藏經 第三十八卷 · 小部經典 十六', url: '', missing: true },
+        { label: '第三十九卷', vno: '39', sub: '小部經典十七', title: '南傳大藏經 第三十九卷 · 小部經典 十七', url: '', missing: true },
+        { label: '第四十卷', vno: '40', sub: '小部經典十八', title: '南傳大藏經 第四十卷 · 小部經典 十八', url: '', missing: true },
+        { label: '第四十一卷', vno: '41', sub: '小部經典十九', title: '南傳大藏經 第四十一卷 · 小部經典 十九', url: '', missing: true },
+        { label: '第四十二卷', vno: '42', sub: '小部經典二十', title: '南傳大藏經 第四十二卷 · 小部經典 二十', url: '', missing: true },
+        { label: '第四十三卷', vno: '43', sub: '小部經典二十一', title: '南傳大藏經 第四十三卷 · 小部經典 二十一', url: '', missing: true },
+        { label: '第四十四卷', vno: '44', sub: '小部經典二十二', title: '南傳大藏經 第四十四卷 · 小部經典 二十二', url: 'https://drive.google.com/file/d/12YPG_5FRg1O-LpqLjrIYYqb7u1UizHAI/view?usp=sharing' },
+        { label: '第四十五卷', vno: '45', sub: '法集論', title: '南傳大藏經 第四十五卷 · 法集論', url: '', missing: true },
+        { label: '第四十六卷', vno: '46', sub: '分別論一', title: '南傳大藏經 第四十六卷 · 分別論 一', url: '', missing: true },
+        { label: '第四十七卷', vno: '47', sub: '分別論二·界論·人施設論', title: '南傳大藏經 第四十七卷 · 分別論 二 · 界論 · 人施設論', url: '', missing: true },
+        { label: '第四十八卷上', vno: '48上', sub: '雙論一', title: '南傳大藏經 第四十八卷上 · 雙論 一', url: '', missing: true },
+        { label: '第四十八卷下', vno: '48下', sub: '雙論二', title: '南傳大藏經 第四十八卷下 · 雙論 二', url: '', missing: true },
+        { label: '第四十九卷', vno: '49', sub: '雙論三', title: '南傳大藏經 第四十九卷 · 雙論 三', url: '', missing: true },
+        { label: '第五十卷', vno: '50', sub: '發趣論一', title: '南傳大藏經 第五十卷 · 發趣論 一', url: '', missing: true },
+        { label: '第五十一卷', vno: '51', sub: '發趣論二', title: '南傳大藏經 第五十一卷 · 發趣論 二', url: '', missing: true },
+        { label: '第五十二卷', vno: '52', sub: '發趣論三', title: '南傳大藏經 第五十二卷 · 發趣論 三', url: '', missing: true },
+        { label: '第五十三卷', vno: '53', sub: '發趣論四', title: '南傳大藏經 第五十三卷 · 發趣論 四', url: '', missing: true },
+        { label: '第五十四卷', vno: '54', sub: '發趣論五', title: '南傳大藏經 第五十四卷 · 發趣論 五', url: '', missing: true },
+        { label: '第五十五卷', vno: '55', sub: '發趣論六', title: '南傳大藏經 第五十五卷 · 發趣論 六', url: '', missing: true },
+        { label: '第五十六卷', vno: '56', sub: '發趣論七', title: '南傳大藏經 第五十六卷 · 發趣論 七', url: '', missing: true },
+        { label: '第五十七卷', vno: '57', sub: '論事一', title: '南傳大藏經 第五十七卷 · 論事 一', url: '', missing: true },
+        { label: '第五十八卷', vno: '58', sub: '論事二', title: '南傳大藏經 第五十八卷 · 論事 二', url: '', missing: true },
+        { label: '第五十九卷上', vno: '59上', sub: '彌蘭王問經上', title: '南傳大藏經 第五十九卷上 · 彌蘭王問經 上', url: '', missing: true },
+        { label: '第五十九卷下', vno: '59下', sub: '彌蘭王問經下', title: '南傳大藏經 第五十九卷下 · 彌蘭王問經 下', url: '', missing: true },
+        { label: '第六十卷', vno: '60', sub: '島王統史·大王統史', title: '南傳大藏經 第六十卷 · 島王統史 · 大王統史', url: '', missing: true },
+        { label: '第六十一卷', vno: '61', sub: '小王統史', title: '南傳大藏經 第六十一卷 · 小王統史', url: '', missing: true },
+        { label: '第六十二卷', vno: '62', sub: '淸淨道論一', title: '南傳大藏經 第六十二卷 · 淸淨道論 一', url: '', missing: true },
+        { label: '第六十三卷', vno: '63', sub: '淸淨道論二', title: '南傳大藏經 第六十三卷 · 淸淨道論 二', url: '', missing: true },
+        { label: '第六十四卷', vno: '64', sub: '淸淨道論三', title: '南傳大藏經 第六十四卷 · 淸淨道論 三', url: '', missing: true },
+        { label: '第六十五卷', vno: '65', sub: '一切善見律註序·攝阿毘達磨義論·阿育王刻文', title: '南傳大藏經 第六十五卷 · 一切善見律註序 · 攝阿毘達磨義論 · 阿育王刻文', url: '', missing: true },
+        { label: '別卷', vno: '索引', sub: '總目錄', title: '南傳大藏經 別卷 · 南傳大藏經 總目錄 (パーリ原典對照)', url: '', missing: true }
+      ],
+      tags: ['남전대장경', '南傳大藏經', '南伝大蔵経', '빠알리 삼장', 'Pali Canon', '일역', '大藏出版', '高楠順次郎', '율장', '장부', '중부', '상응부', '증지부', '소부', '아비달마', '논장', '청정도론', '밀린다왕문경', '도사', '대사']
+    },
+    {
+      title: 'PTS Pāli Texts (Pali Text Society 빠알리 원전 · 주석서)',
+      badge: 'The Pali Text Society, London · Tipiṭaka · Aṭṭhakathā',
+      category: ['06-0004'],
+      langs: ['빠알리어'],
+      poster: 'covers/0476.jpg',
+      // 책등: 짙은 남색 천 · 금박 세로 제목 · 약호와 권수 · PTS · 율장/경장/논장/주석서 칸 나눔
+      spineDesign: { kind: 'pts', sections: true },
+      volumes: [
+        { label: 'Vin I', sec: 'VINAYA', abbr: 'Vin', name: 'Vinaya Piṭaka', vno: 'I', title: 'Vinaya Piṭaka I (율장)', url: '', missing: true },
+        { label: 'Vin II', sec: 'VINAYA', abbr: 'Vin', name: 'Vinaya Piṭaka', vno: 'II', title: 'Vinaya Piṭaka II (율장)', url: '', missing: true },
+        { label: 'Vin III', sec: 'VINAYA', abbr: 'Vin', name: 'Vinaya Piṭaka', vno: 'III', title: 'Vinaya Piṭaka III (율장)', url: '', missing: true },
+        { label: 'Vin IV', sec: 'VINAYA', abbr: 'Vin', name: 'Vinaya Piṭaka', vno: 'IV', title: 'Vinaya Piṭaka IV (율장)', url: '', missing: true },
+        { label: 'Vin V', sec: 'VINAYA', abbr: 'Vin', name: 'Vinaya Piṭaka', vno: 'V', title: 'Vinaya Piṭaka V (율장)', url: '', missing: true },
+        { label: 'DN I', sec: 'SUTTA', abbr: 'DN', name: 'Dīgha Nikāya', vno: 'I', title: 'Dīgha Nikāya I (디가 니까야)', url: '', missing: true },
+        { label: 'DN II', sec: 'SUTTA', abbr: 'DN', name: 'Dīgha Nikāya', vno: 'II', title: 'Dīgha Nikāya II (디가 니까야)', url: '', missing: true },
+        { label: 'DN III', sec: 'SUTTA', abbr: 'DN', name: 'Dīgha Nikāya', vno: 'III', title: 'Dīgha Nikāya III (디가 니까야)', url: '', missing: true },
+        { label: 'MN I', sec: 'SUTTA', abbr: 'MN', name: 'Majjhima Nikāya', vno: 'I', title: 'Majjhima Nikāya I (맛지마 니까야)', url: '', missing: true },
+        { label: 'MN II', sec: 'SUTTA', abbr: 'MN', name: 'Majjhima Nikāya', vno: 'II', title: 'Majjhima Nikāya II (맛지마 니까야)', url: '', missing: true },
+        { label: 'MN III', sec: 'SUTTA', abbr: 'MN', name: 'Majjhima Nikāya', vno: 'III', title: 'Majjhima Nikāya III (맛지마 니까야)', url: '', missing: true },
+        { label: 'SN I', sec: 'SUTTA', abbr: 'SN', name: 'Saṃyutta Nikāya', vno: 'I', title: 'Saṃyutta Nikāya I (상윳따 니까야)', url: '', missing: true },
+        { label: 'SN II', sec: 'SUTTA', abbr: 'SN', name: 'Saṃyutta Nikāya', vno: 'II', title: 'Saṃyutta Nikāya II (상윳따 니까야)', url: '', missing: true },
+        { label: 'SN III', sec: 'SUTTA', abbr: 'SN', name: 'Saṃyutta Nikāya', vno: 'III', title: 'Saṃyutta Nikāya III (상윳따 니까야)', url: '', missing: true },
+        { label: 'SN IV', sec: 'SUTTA', abbr: 'SN', name: 'Saṃyutta Nikāya', vno: 'IV', title: 'Saṃyutta Nikāya IV (상윳따 니까야)', url: '', missing: true },
+        { label: 'SN V', sec: 'SUTTA', abbr: 'SN', name: 'Saṃyutta Nikāya', vno: 'V', title: 'Saṃyutta Nikāya V (상윳따 니까야)', url: '', missing: true },
+        { label: 'AN I', sec: 'SUTTA', abbr: 'AN', name: 'Aṅguttara Nikāya', vno: 'I', title: 'Aṅguttara Nikāya I (앙굿따라 니까야)', url: '', missing: true },
+        { label: 'AN II', sec: 'SUTTA', abbr: 'AN', name: 'Aṅguttara Nikāya', vno: 'II', title: 'Aṅguttara Nikāya II (앙굿따라 니까야)', url: '', missing: true },
+        { label: 'AN III', sec: 'SUTTA', abbr: 'AN', name: 'Aṅguttara Nikāya', vno: 'III', title: 'Aṅguttara Nikāya III (앙굿따라 니까야)', url: '', missing: true },
+        { label: 'AN IV', sec: 'SUTTA', abbr: 'AN', name: 'Aṅguttara Nikāya', vno: 'IV', title: 'Aṅguttara Nikāya IV (앙굿따라 니까야)', url: '', missing: true },
+        { label: 'AN V', sec: 'SUTTA', abbr: 'AN', name: 'Aṅguttara Nikāya', vno: 'V', title: 'Aṅguttara Nikāya V (앙굿따라 니까야)', url: '', missing: true },
+        { label: 'Khp', sec: 'SUTTA', abbr: 'Khp', name: 'Khuddakapāṭha', vno: '', title: 'Khuddakapāṭha (쿳다까빠타)', url: '', missing: true },
+        { label: 'Dhp', sec: 'SUTTA', abbr: 'Dhp', name: 'Dhammapada', vno: '', title: 'Dhammapada (법구경)', url: '', missing: true },
+        { label: 'Ud', sec: 'SUTTA', abbr: 'Ud', name: 'Udāna', vno: '', title: 'Udāna (우다나)', url: '', missing: true },
+        { label: 'It', sec: 'SUTTA', abbr: 'It', name: 'Itivuttaka', vno: '', title: 'Itivuttaka (이띠웃따까)', url: '', missing: true },
+        { label: 'Sn', sec: 'SUTTA', abbr: 'Sn', name: 'Sutta-nipāta', vno: '', title: 'Sutta-nipāta (숫따니빠따)', url: '', missing: true },
+        { label: 'Vv-Pv', sec: 'SUTTA', abbr: 'Vv-Pv', name: 'Vimānavatthu · Petavatthu', vno: '', title: 'Vimānavatthu · Petavatthu (천궁사 · 아귀사)', url: '', missing: true },
+        { label: 'Th-Thī', sec: 'SUTTA', abbr: 'Th-Thī', name: 'Theragāthā · Therīgāthā', vno: '', title: 'Theragāthā · Therīgāthā (장로게 · 장로니게)', url: '', missing: true },
+        { label: 'Ap I', sec: 'SUTTA', abbr: 'Ap', name: 'Apadāna', vno: 'I', title: 'Apadāna I (아빠다나)', url: '', missing: true },
+        { label: 'Ap II', sec: 'SUTTA', abbr: 'Ap', name: 'Apadāna', vno: 'II', title: 'Apadāna II (아빠다나)', url: '', missing: true },
+        { label: 'Bv-Cp', sec: 'SUTTA', abbr: 'Bv-Cp', name: 'Buddhavaṃsa · Cariyāpiṭaka', vno: '', title: 'Buddhavaṃsa · Cariyāpiṭaka (불종성 · 소행장)', url: '', missing: true },
+        { label: 'Ja I', sec: 'SUTTA', abbr: 'Ja', name: 'Jātaka', vno: 'I', title: 'Jātaka I (자따까)', url: '', missing: true },
+        { label: 'Ja II', sec: 'SUTTA', abbr: 'Ja', name: 'Jātaka', vno: 'II', title: 'Jātaka II (자따까)', url: '', missing: true },
+        { label: 'Ja III', sec: 'SUTTA', abbr: 'Ja', name: 'Jātaka', vno: 'III', title: 'Jātaka III (자따까)', url: '', missing: true },
+        { label: 'Ja IV', sec: 'SUTTA', abbr: 'Ja', name: 'Jātaka', vno: 'IV', title: 'Jātaka IV (자따까)', url: '', missing: true },
+        { label: 'Ja V', sec: 'SUTTA', abbr: 'Ja', name: 'Jātaka', vno: 'V', title: 'Jātaka V (자따까)', url: '', missing: true },
+        { label: 'Ja VI', sec: 'SUTTA', abbr: 'Ja', name: 'Jātaka', vno: 'VI', title: 'Jātaka VI (자따까)', url: '', missing: true },
+        { label: 'Nidd I I', sec: 'SUTTA', abbr: 'Nidd I', name: 'Mahāniddesa', vno: 'I', title: 'Mahāniddesa I (대의석)', url: '', missing: true },
+        { label: 'Nidd I II', sec: 'SUTTA', abbr: 'Nidd I', name: 'Mahāniddesa', vno: 'II', title: 'Mahāniddesa II (대의석)', url: '', missing: true },
+        { label: 'Nidd II', sec: 'SUTTA', abbr: 'Nidd II', name: 'Cullaniddesa', vno: '', title: 'Cullaniddesa (소의석)', url: '', missing: true },
+        { label: 'Paṭis I', sec: 'SUTTA', abbr: 'Paṭis', name: 'Paṭisambhidāmagga', vno: 'I', title: 'Paṭisambhidāmagga I (무애해도)', url: '', missing: true },
+        { label: 'Paṭis II', sec: 'SUTTA', abbr: 'Paṭis', name: 'Paṭisambhidāmagga', vno: 'II', title: 'Paṭisambhidāmagga II (무애해도)', url: '', missing: true },
+        { label: 'Dhs', sec: 'ABHIDHAMMA', abbr: 'Dhs', name: 'Dhammasaṅgaṇi', vno: '', title: 'Dhammasaṅgaṇi (법집론)', url: '', missing: true },
+        { label: 'Vibh', sec: 'ABHIDHAMMA', abbr: 'Vibh', name: 'Vibhaṅga', vno: '', title: 'Vibhaṅga (분별론)', url: '', missing: true },
+        { label: 'Dhātuk', sec: 'ABHIDHAMMA', abbr: 'Dhātuk', name: 'Dhātukathā', vno: '', title: 'Dhātukathā (계론)', url: '', missing: true },
+        { label: 'Pp', sec: 'ABHIDHAMMA', abbr: 'Pp', name: 'Puggalapaññatti', vno: '', title: 'Puggalapaññatti (인시설론)', url: '', missing: true },
+        { label: 'Kv I', sec: 'ABHIDHAMMA', abbr: 'Kv', name: 'Kathāvatthu', vno: 'I', title: 'Kathāvatthu I (논사)', url: '', missing: true },
+        { label: 'Kv II', sec: 'ABHIDHAMMA', abbr: 'Kv', name: 'Kathāvatthu', vno: 'II', title: 'Kathāvatthu II (논사)', url: '', missing: true },
+        { label: 'Yam I', sec: 'ABHIDHAMMA', abbr: 'Yam', name: 'Yamaka', vno: 'I', title: 'Yamaka I (쌍론)', url: '', missing: true },
+        { label: 'Yam II', sec: 'ABHIDHAMMA', abbr: 'Yam', name: 'Yamaka', vno: 'II', title: 'Yamaka II (쌍론)', url: '', missing: true },
+        { label: 'Paṭṭh I', sec: 'ABHIDHAMMA', abbr: 'Paṭṭh', name: 'Tikapaṭṭhāna · Dukapaṭṭhāna', vno: 'I', title: 'Tikapaṭṭhāna · Dukapaṭṭhāna I (발취론)', url: '', missing: true },
+        { label: 'Paṭṭh II', sec: 'ABHIDHAMMA', abbr: 'Paṭṭh', name: 'Tikapaṭṭhāna · Dukapaṭṭhāna', vno: 'II', title: 'Tikapaṭṭhāna · Dukapaṭṭhāna II (발취론)', url: '', missing: true },
+        { label: 'Paṭṭh III', sec: 'ABHIDHAMMA', abbr: 'Paṭṭh', name: 'Tikapaṭṭhāna · Dukapaṭṭhāna', vno: 'III', title: 'Tikapaṭṭhāna · Dukapaṭṭhāna III (발취론)', url: '', missing: true },
+        { label: 'Paṭṭh IV', sec: 'ABHIDHAMMA', abbr: 'Paṭṭh', name: 'Tikapaṭṭhāna · Dukapaṭṭhāna', vno: 'IV', title: 'Tikapaṭṭhāna · Dukapaṭṭhāna IV (발취론)', url: '', missing: true },
+        { label: 'Sp I', sec: 'AṬṬHAKATHĀ', abbr: 'Sp', name: 'Samantapāsādikā', vno: 'I', title: 'Samantapāsādikā I (율장 주석)', url: 'https://drive.google.com/file/d/1YbT_2ARY1GxTJO98nsKAfadhKwEASNVy/view?usp=sharing' },
+        { label: 'Sp II', sec: 'AṬṬHAKATHĀ', abbr: 'Sp', name: 'Samantapāsādikā', vno: 'II', title: 'Samantapāsādikā II (율장 주석)', url: 'https://drive.google.com/file/d/1xL6o4EqPXDm19w9Q8qLVpivCrg9E8jpJ/view?usp=sharing' },
+        { label: 'Sp III', sec: 'AṬṬHAKATHĀ', abbr: 'Sp', name: 'Samantapāsādikā', vno: 'III', title: 'Samantapāsādikā III (율장 주석)', url: 'https://drive.google.com/file/d/1eIYADS-AF5z87IAmJ6ITuX-D00--xko6/view?usp=sharing' },
+        { label: 'Sp IV', sec: 'AṬṬHAKATHĀ', abbr: 'Sp', name: 'Samantapāsādikā', vno: 'IV', title: 'Samantapāsādikā IV (율장 주석)', url: 'https://drive.google.com/file/d/1aQhy1qI9Sb0OIyMeDquc9zZJMcYRNlNI/view?usp=sharing' },
+        { label: 'Sp V', sec: 'AṬṬHAKATHĀ', abbr: 'Sp', name: 'Samantapāsādikā', vno: 'V', title: 'Samantapāsādikā V (율장 주석)', url: 'https://drive.google.com/file/d/1mLCMsbTGNQY5tpnypJ0IcO-kA9XMG7cv/view?usp=sharing' },
+        { label: 'Sp VI', sec: 'AṬṬHAKATHĀ', abbr: 'Sp', name: 'Samantapāsādikā', vno: 'VI', title: 'Samantapāsādikā VI (율장 주석)', url: 'https://drive.google.com/file/d/1zBdOKyO7CGZwG3N3rFyPNW-atZ4zpo7i/view?usp=sharing' },
+        { label: 'Sp VII', sec: 'AṬṬHAKATHĀ', abbr: 'Sp', name: 'Samantapāsādikā', vno: 'VII', title: 'Samantapāsādikā VII (율장 주석)', url: 'https://drive.google.com/file/d/1zcyW1Kf4Mb0XYbuy4BUOYaXXwKbWnHpc/view?usp=sharing' },
+        { label: 'Sp VIII', sec: 'AṬṬHAKATHĀ', abbr: 'Sp', name: 'Samantapāsādikā', vno: 'VIII', title: 'Samantapāsādikā VIII (율장 주석)', url: 'https://drive.google.com/file/d/1wH-HfE6gi1-nHlc8AdVdTfCSJshWF53B/view?usp=sharing' },
+        { label: 'Kkh', sec: 'AṬṬHAKATHĀ', abbr: 'Kkh', name: 'Kaṅkhāvitaraṇī', vno: '', title: 'Kaṅkhāvitaraṇī (계본 주석)', url: '', missing: true },
+        { label: 'Sv I', sec: 'AṬṬHAKATHĀ', abbr: 'Sv', name: 'Sumaṅgalavilāsinī', vno: 'I', title: 'Sumaṅgalavilāsinī I (디가 주석)', url: '', missing: true },
+        { label: 'Sv II', sec: 'AṬṬHAKATHĀ', abbr: 'Sv', name: 'Sumaṅgalavilāsinī', vno: 'II', title: 'Sumaṅgalavilāsinī II (디가 주석)', url: '', missing: true },
+        { label: 'Sv III', sec: 'AṬṬHAKATHĀ', abbr: 'Sv', name: 'Sumaṅgalavilāsinī', vno: 'III', title: 'Sumaṅgalavilāsinī III (디가 주석)', url: '', missing: true },
+        { label: 'Ps I', sec: 'AṬṬHAKATHĀ', abbr: 'Ps', name: 'Papañcasūdanī', vno: 'I', title: 'Papañcasūdanī I (맛지마 주석)', url: '', missing: true },
+        { label: 'Ps II', sec: 'AṬṬHAKATHĀ', abbr: 'Ps', name: 'Papañcasūdanī', vno: 'II', title: 'Papañcasūdanī II (맛지마 주석)', url: '', missing: true },
+        { label: 'Ps III', sec: 'AṬṬHAKATHĀ', abbr: 'Ps', name: 'Papañcasūdanī', vno: 'III', title: 'Papañcasūdanī III (맛지마 주석)', url: '', missing: true },
+        { label: 'Ps IV', sec: 'AṬṬHAKATHĀ', abbr: 'Ps', name: 'Papañcasūdanī', vno: 'IV', title: 'Papañcasūdanī IV (맛지마 주석)', url: '', missing: true },
+        { label: 'Ps V', sec: 'AṬṬHAKATHĀ', abbr: 'Ps', name: 'Papañcasūdanī', vno: 'V', title: 'Papañcasūdanī V (맛지마 주석)', url: '', missing: true },
+        { label: 'Spk I', sec: 'AṬṬHAKATHĀ', abbr: 'Spk', name: 'Sāratthappakāsinī', vno: 'I', title: 'Sāratthappakāsinī I (상윳따 주석)', url: '', missing: true },
+        { label: 'Spk II', sec: 'AṬṬHAKATHĀ', abbr: 'Spk', name: 'Sāratthappakāsinī', vno: 'II', title: 'Sāratthappakāsinī II (상윳따 주석)', url: '', missing: true },
+        { label: 'Spk III', sec: 'AṬṬHAKATHĀ', abbr: 'Spk', name: 'Sāratthappakāsinī', vno: 'III', title: 'Sāratthappakāsinī III (상윳따 주석)', url: '', missing: true },
+        { label: 'Mp I', sec: 'AṬṬHAKATHĀ', abbr: 'Mp', name: 'Manorathapūraṇī', vno: 'I', title: 'Manorathapūraṇī I (앙굿따라 주석)', url: '', missing: true },
+        { label: 'Mp II', sec: 'AṬṬHAKATHĀ', abbr: 'Mp', name: 'Manorathapūraṇī', vno: 'II', title: 'Manorathapūraṇī II (앙굿따라 주석)', url: '', missing: true },
+        { label: 'Mp III', sec: 'AṬṬHAKATHĀ', abbr: 'Mp', name: 'Manorathapūraṇī', vno: 'III', title: 'Manorathapūraṇī III (앙굿따라 주석)', url: '', missing: true },
+        { label: 'Mp IV', sec: 'AṬṬHAKATHĀ', abbr: 'Mp', name: 'Manorathapūraṇī', vno: 'IV', title: 'Manorathapūraṇī IV (앙굿따라 주석)', url: '', missing: true },
+        { label: 'Mp V', sec: 'AṬṬHAKATHĀ', abbr: 'Mp', name: 'Manorathapūraṇī', vno: 'V', title: 'Manorathapūraṇī V (앙굿따라 주석)', url: 'https://drive.google.com/file/d/11LtGeag0aN2YwuDifMtMYjpctHSC9q-b/view?usp=sharing' },
+        { label: 'Pj I', sec: 'AṬṬHAKATHĀ', abbr: 'Pj I', name: 'Paramatthajotikā I (Khp-a)', vno: '', title: 'Paramatthajotikā I (Khp-a) (쿳다까빠타 주석)', url: '', missing: true },
+        { label: 'Dhp-a I', sec: 'AṬṬHAKATHĀ', abbr: 'Dhp-a', name: 'Dhammapada-aṭṭhakathā', vno: 'I', title: 'Dhammapada-aṭṭhakathā I (법구경 주석)', url: '', missing: true },
+        { label: 'Dhp-a II', sec: 'AṬṬHAKATHĀ', abbr: 'Dhp-a', name: 'Dhammapada-aṭṭhakathā', vno: 'II', title: 'Dhammapada-aṭṭhakathā II (법구경 주석)', url: '', missing: true },
+        { label: 'Dhp-a III', sec: 'AṬṬHAKATHĀ', abbr: 'Dhp-a', name: 'Dhammapada-aṭṭhakathā', vno: 'III', title: 'Dhammapada-aṭṭhakathā III (법구경 주석)', url: '', missing: true },
+        { label: 'Dhp-a IV', sec: 'AṬṬHAKATHĀ', abbr: 'Dhp-a', name: 'Dhammapada-aṭṭhakathā', vno: 'IV', title: 'Dhammapada-aṭṭhakathā IV (법구경 주석)', url: '', missing: true },
+        { label: 'Ud-a', sec: 'AṬṬHAKATHĀ', abbr: 'Ud-a', name: 'Udāna-aṭṭhakathā', vno: '', title: 'Udāna-aṭṭhakathā (우다나 주석)', url: '', missing: true },
+        { label: 'It-a I', sec: 'AṬṬHAKATHĀ', abbr: 'It-a', name: 'Itivuttaka-aṭṭhakathā', vno: 'I', title: 'Itivuttaka-aṭṭhakathā I (이띠웃따까 주석)', url: '', missing: true },
+        { label: 'It-a II', sec: 'AṬṬHAKATHĀ', abbr: 'It-a', name: 'Itivuttaka-aṭṭhakathā', vno: 'II', title: 'Itivuttaka-aṭṭhakathā II (이띠웃따까 주석)', url: '', missing: true },
+        { label: 'Pj II I', sec: 'AṬṬHAKATHĀ', abbr: 'Pj II', name: 'Paramatthajotikā II (Sn-a)', vno: 'I', title: 'Paramatthajotikā II (Sn-a) I (숫따니빠따 주석)', url: '', missing: true },
+        { label: 'Pj II II', sec: 'AṬṬHAKATHĀ', abbr: 'Pj II', name: 'Paramatthajotikā II (Sn-a)', vno: 'II', title: 'Paramatthajotikā II (Sn-a) II (숫따니빠따 주석)', url: '', missing: true },
+        { label: 'Pj II III', sec: 'AṬṬHAKATHĀ', abbr: 'Pj II', name: 'Paramatthajotikā II (Sn-a)', vno: 'III', title: 'Paramatthajotikā II (Sn-a) III (숫따니빠따 주석)', url: '', missing: true },
+        { label: 'Vv-a', sec: 'AṬṬHAKATHĀ', abbr: 'Vv-a', name: 'Vimānavatthu-aṭṭhakathā', vno: '', title: 'Vimānavatthu-aṭṭhakathā (천궁사 주석)', url: '', missing: true },
+        { label: 'Pv-a', sec: 'AṬṬHAKATHĀ', abbr: 'Pv-a', name: 'Petavatthu-aṭṭhakathā', vno: '', title: 'Petavatthu-aṭṭhakathā (아귀사 주석)', url: '', missing: true },
+        { label: 'Th-a I', sec: 'AṬṬHAKATHĀ', abbr: 'Th-a', name: 'Theragāthā-aṭṭhakathā', vno: 'I', title: 'Theragāthā-aṭṭhakathā I (장로게 주석)', url: '', missing: true },
+        { label: 'Th-a II', sec: 'AṬṬHAKATHĀ', abbr: 'Th-a', name: 'Theragāthā-aṭṭhakathā', vno: 'II', title: 'Theragāthā-aṭṭhakathā II (장로게 주석)', url: '', missing: true },
+        { label: 'Th-a III', sec: 'AṬṬHAKATHĀ', abbr: 'Th-a', name: 'Theragāthā-aṭṭhakathā', vno: 'III', title: 'Theragāthā-aṭṭhakathā III (장로게 주석)', url: '', missing: true },
+        { label: 'Thī-a', sec: 'AṬṬHAKATHĀ', abbr: 'Thī-a', name: 'Therīgāthā-aṭṭhakathā', vno: '', title: 'Therīgāthā-aṭṭhakathā (장로니게 주석)', url: '', missing: true },
+        { label: 'Ap-a', sec: 'AṬṬHAKATHĀ', abbr: 'Ap-a', name: 'Apadāna-aṭṭhakathā', vno: '', title: 'Apadāna-aṭṭhakathā (아빠다나 주석)', url: '', missing: true },
+        { label: 'Bv-a', sec: 'AṬṬHAKATHĀ', abbr: 'Bv-a', name: 'Buddhavaṃsa-aṭṭhakathā', vno: '', title: 'Buddhavaṃsa-aṭṭhakathā (불종성 주석)', url: '', missing: true },
+        { label: 'Cp-a', sec: 'AṬṬHAKATHĀ', abbr: 'Cp-a', name: 'Cariyāpiṭaka-aṭṭhakathā', vno: '', title: 'Cariyāpiṭaka-aṭṭhakathā (소행장 주석)', url: '', missing: true },
+        { label: 'Paṭis-a I', sec: 'AṬṬHAKATHĀ', abbr: 'Paṭis-a', name: 'Saddhammappakāsinī', vno: 'I', title: 'Saddhammappakāsinī I (무애해도 주석)', url: '', missing: true },
+        { label: 'Paṭis-a II', sec: 'AṬṬHAKATHĀ', abbr: 'Paṭis-a', name: 'Saddhammappakāsinī', vno: 'II', title: 'Saddhammappakāsinī II (무애해도 주석)', url: '', missing: true },
+        { label: 'Paṭis-a III', sec: 'AṬṬHAKATHĀ', abbr: 'Paṭis-a', name: 'Saddhammappakāsinī', vno: 'III', title: 'Saddhammappakāsinī III (무애해도 주석)', url: '', missing: true },
+        { label: 'As', sec: 'AṬṬHAKATHĀ', abbr: 'As', name: 'Atthasālinī', vno: '', title: 'Atthasālinī (법집론 주석)', url: '', missing: true },
+        { label: 'Vibh-a', sec: 'AṬṬHAKATHĀ', abbr: 'Vibh-a', name: 'Sammohavinodanī', vno: '', title: 'Sammohavinodanī (분별론 주석)', url: '', missing: true },
+        { label: 'Vism', sec: 'AṬṬHAKATHĀ', abbr: 'Vism', name: 'Visuddhimagga', vno: '', title: 'Visuddhimagga (청정도론)', url: '', missing: true },
+        { label: 'Mil', sec: 'AṬṬHAKATHĀ', abbr: 'Mil', name: 'Milindapañha', vno: '', title: 'Milindapañha (밀린다왕문경)', url: '', missing: true }
+      ],
+      tags: ['PTS', 'Pali Text Society', '빠알리', '팔리', 'Pāli', 'Tipiṭaka', '삼장', 'Aṭṭhakathā', '앗타까타', '주석서', 'Samantapāsādikā', '사만따빠사디까', '선견율비바사', 'Vinaya', 'Sutta', 'Abhidhamma', 'Visuddhimagga']
+    },
+    {
+      title: '마르코 폴로의 동방견문록 (완역결정본)',
+      badge: '마르코 폴로 · 김호동 역주 · 사계절',
+      category: ['07-0002'],
+      poster: 'covers/0477.jpg',
+      url: 'https://drive.google.com/file/d/1vXgcAVbNa1H-he-REGtT5ZVvMsI4asVI/view?usp=sharing',
+      tags: ['동방견문록', '마르코 폴로', 'Marco Polo', '김호동', '사계절', '몽골제국', '원나라']
+    },
+    {
+      title: '틱낫한 스님의 금강경 : The Diamond That Cuts Through Illusion',
+      badge: '틱낫한 지음 · 양미성 · 김동원 옮김 · 장경각',
+      category: ['05-0003'],
+      poster: 'covers/0478.jpg',
+      url: 'https://drive.google.com/file/d/1rGbaxuyAf56qCte1xv6eKhL8a7HnyOAc/view?usp=sharing',
+      tags: ['금강경', '틱낫한', 'Thich Nhat Hanh', '金剛經', '반야']
+    },
+    {
+      title: 'Visuddhimagga : The Path of Purification',
+      badge: 'Buddhaghosa · tr. Bhikkhu Ñāṇamoli · BPS Pariyatti',
+      category: ['06-0004', '05-0004'],
+      poster: 'covers/0479.jpg',
+      url: 'https://drive.google.com/file/d/13FpxuZgoSidBs_lAEMQ9l47rV2HRo0B6/view?usp=sharing',
+      tags: ['청정도론', 'Visuddhimagga', 'Path of Purification', 'Buddhaghosa', '붓다고사', 'Ñāṇamoli', '냐나몰리']
+    },
+    {
+      title: '인도의 지혜 히또빠데샤 (Hitopadeśa)',
+      badge: '나라야나 지음 · 이지수 옮김 · 도올 김용옥 서문 · 통나무',
+      category: ['05-0005', '04-0002'],
+      poster: 'covers/0480.jpg',
+      url: 'https://drive.google.com/file/d/1LR_pVXxnvEEoK9CYmUhbuVS3renvXMlr/view?usp=sharing',
+      tags: ['히또빠데샤', 'Hitopadesha', 'Hitopadeśa', '나라야나', '이지수', '김용옥', '통나무', '우화']
+    },
+    {
+      title: '千手千眼觀自在菩薩廣大圓滿無碍大悲心大陀羅尼 (천수경)',
+      badge: '',
+      category: ['05-0002', '06-0003'],
+      langs: ['한국어'],
+      poster: 'covers/0481.jpg',
+      url: 'https://drive.google.com/file/d/1k1u5z1yML7Hokf7xcZOvj8rmtS-Ovd6O/view?usp=sharing',
+      tags: ['천수경', '千手經', '대비주', '신묘장구대다라니', '다라니', '관세음보살']
+    },
+    {
+      title: 'Invitation to Enlightenment : Letter to the Great King Kaniṣka by Mātṛceṭa · Letter to a Disciple by Candragomin',
+      badge: 'tr. Michael Hahn · Dharma Publishing · Tibetan Translation Series',
+      category: ['05-0003'],
+      poster: 'covers/0482.jpg',
+      url: 'https://drive.google.com/file/d/1OTDe8uQrFuhZkjOUPSItcuajdbW4jG3m/view?usp=sharing',
+      tags: ['Mātṛceṭa', '마뜨리쩨따', 'Candragomin', '짠드라고민', 'Kaniṣka', '까니슈까', '서간', 'Dharma Publishing']
+    },
+    {
+      title: 'Karmasiddhiprakaraṇa : The Treatise on Action by Vasubandhu',
+      badge: 'Étienne Lamotte · English tr. Leo M. Pruden · Asian Humanities Press',
+      category: ['05-0003'],
+      poster: 'covers/0484.jpg',
+      url: 'https://drive.google.com/file/d/17kJ2dEG3CWCnjZp_T-TPjt_JTV7pP-aJ/view?usp=sharing',
+      tags: ['Karmasiddhiprakarana', '대승성업론', '성업론', 'Vasubandhu', '세친', '바수반두', 'Lamotte', '라모뜨', 'Pruden']
+    },
+    {
+      title: 'Therīgāthāpāḷi : Book of Verses of Elder Bhikkhunis — A Contemporary Translation',
+      badge: 'Anāgārika Mahendra',
+      category: ['06-0004'],
+      poster: 'covers/0485.jpg',
+      url: 'https://drive.google.com/file/d/1GcSj5U7KH2dD8YH72_k2EKjDhn9FjBWu/view?usp=sharing',
+      tags: ['Therīgāthā', '장로니게', '테리가타', '비구니', 'Bhikkhuni', 'Mahendra']
+    },
+    {
+      title: '한 권으로 읽는 벽암록 (碧巖錄)',
+      badge: '원오 극근 편저 · 혜원 역해 · 김영사',
+      category: ['05-0004'],
+      poster: 'covers/0487.jpg',
+      url: 'https://drive.google.com/file/d/1vWpGUIFU5NBJLwZIADPgOMjC0Bf7A-yI/view?usp=sharing',
+      tags: ['벽암록', '碧巖錄', '원오극근', '圓悟克勤', '혜원', '김영사', '공안', '선']
+    },
+    {
+      title: '大唐西域記 (대당서역기)',
+      badge: '玄奘法師 · 권덕주 옮김 · 우리출판사',
+      category: ['07-0001', '03-0002'],
+      poster: 'covers/0488.jpg',
+      url: 'https://drive.google.com/file/d/1SdYq95pS-qlyFnibPwLvU7xWsKqNkKwM/view?usp=sharing',
+      tags: ['대당서역기', '大唐西域記', '현장', '玄奘', '권덕주', '우리출판사', '구법']
+    },
+    {
+      title: 'Vasubandhu\'s Pañcaskandhaka',
+      badge: 'Critically edited by Li Xuezhu & Ernst Steinkellner · Toru Tomabechi · China Tibetology Publishing House / Austrian Academy of Sciences Press · Sanskrit Texts from the Tibetan Autonomous Region 4',
+      category: ['05-0003', '04-0002'],
+      poster: 'covers/0486.jpg',
+      url: 'https://drive.google.com/file/d/1zNBarLudECAmJVXWSdDSp59sfVYglUs4/view?usp=sharing',
+      tags: ['Pañcaskandhaka', 'Pancaskandhaka', '대승오온론', '오온론', '세친', 'Vasubandhu', 'Steinkellner', 'Sanskrit', '범본']
+    },
+    {
+      title: '청정도론 (淸淨道論 · Visuddhimagga)',
+      badge: '붓다고사 스님 지음 · 대림 스님 옮김 · 초기불전연구원 · 전 3권 (1·2·3권 표지 확인)',
+      category: ['06-0004', '05-0004'],
+      poster: 'covers/0483.jpg',
+      volumes: [
+        { label: '제1권', title: '청정도론 1', url: 'https://drive.google.com/file/d/1KBRVd1rttGSpjB_b6U3cMKOSWmSSAqT3/view?usp=sharing' },
+        { label: '제2권', title: '청정도론 2', url: 'https://drive.google.com/file/d/1QnYpT6QcNeCY9XyPyxiprvFJKzVtHicK/view?usp=sharing' },
+        { label: '제3권', title: '청정도론 3', url: 'https://drive.google.com/file/d/1pDljLFscxPyygh7lpet5WKOZ5jiXpgB1/view?usp=sharing' }
+      ],
+      tags: ['청정도론', '淸淨道論', 'Visuddhimagga', '위숫디막가', '붓다고사', 'Buddhaghosa', '대림', '초기불전연구원']
+    },
+    {
+      title: '마음이 맑아지는 불교 이야기',
+      badge: '김형배 글·그림 · 자음과모음',
+      category: ['10-0000'],
+      poster: 'covers/0489.jpg',
+      volumes: [
+        { label: '제1권', title: '불교 이야기 1 · 화엄경 편', url: 'https://drive.google.com/file/d/1FPR5CimPSNsYeOKfAWJW7azq3pGrJBb7/view?usp=sharing' },
+        { label: '제3권', title: '불교 이야기 3 · 백유경 편', url: 'https://drive.google.com/file/d/1VZnJbxFl3Z7iwui-qCe1Qt_QmYTyXdV1/view?usp=sharing' }
+      ],
+      tags: ['불교 이야기', '마음이 맑아지는', '김형배', '자음과모음', '만화', '화엄경', '백유경', '어린이']
+    },
+    {
+      title: '치문 (緇門)',
+      badge: '원순 풀어씀 · 도서출판 법공양 · 전 3권',
+      category: ['05-0001', '01-0003'],
+      poster: 'covers/0490.jpg',
+      volumes: [
+        { label: '제1권', title: '치문 1 · 스님들이 가야 할 길 (경훈·면학·유계)', url: 'https://drive.google.com/file/d/1mBwkL65uxq6d3Du8TvR-XAiMrgHqjVoO/view?usp=sharing' },
+        { label: '제2권', title: '치문 2 · 수행은 중생의 복밭 (잠명·서장·기문·서문·원문)', url: 'https://drive.google.com/file/d/1eVr47t5xfWA7h5TDcZSA3zpJ-Q8I1Xa8/view?usp=sharing' },
+        { label: '제3권', title: '치문 3 · 모두 함께 깨달음을 (선문·시중·게찬·호법·잡록·부록)', url: 'https://drive.google.com/file/d/1y71TVhWx4wayVNtH_u7y-uBk4RA3LrBt/view?usp=sharing' }
+      ],
+      tags: ['치문', '緇門', '치문경훈', '원순', '법공양', '사미과', '강원']
+    },
+    {
+      title: 'The Laṅkāvatāra Sūtra (Bibliotheca Otaniensis I)',
+      badge: 'Ed. Bunyiu Nanjio (南條文雄) · Otani University Press, Kyoto · 1923',
+      category: ['06-0003', '04-0002'],
+      poster: 'covers/0491.jpg',
+      url: 'https://drive.google.com/file/d/1hocZg8XuT5oHJrVB50covNpFwX5rL1wo/view?usp=sharing',
+      tags: ['Lankavatara', '능가경', '楞伽經', 'Nanjio', '남조문웅', '南條文雄', 'Sanskrit', '범본', 'Otani']
+    },
+    {
+      title: 'The Refutation of the Self in Indian Buddhism : Candrakīrti on the Selflessness of Persons',
+      badge: 'James Duerlinger · Routledge Critical Studies in Buddhism',
+      category: ['05-0003'],
+      poster: 'covers/0492.jpg',
+      url: 'https://drive.google.com/file/d/10dvG3uUl8MbimCDdpHNRpQYYrC-lU1HD/view?usp=sharing',
+      tags: ['입중론', '入中論', 'Madhyamakāvatāra', 'Candrakirti', '월칭', '짠드라끼르띠', '무아', 'selflessness', 'Duerlinger', '중관', 'Madhyamaka']
+    },
+    {
+      title: 'Visuddhimagga : The Path to Purity — Khandhaniddesa (Explanation of the Aggregates)',
+      badge: 'Buddhaghosa · tr. Dr. Nandamālābhivaṃsa · Dhammavijjālaya, Sagaing Hills, Myanmar',
+      category: ['06-0004', '05-0004'],
+      poster: 'covers/0493.jpg',
+      url: 'https://drive.google.com/file/d/1n_Qxc5l5LfythIsqPEd1hrIAghbaBIcJ/view?usp=sharing',
+      tags: ['청정도론', 'Visuddhimagga', 'Khandhaniddesa', '오온', 'Nandamalabhivamsa', '난다말라빔사', 'Sagaing', '미얀마']
+    },
+    {
+      title: '붓다차리타 (Buddhacarita · 佛所行讚)',
+      badge: '馬鳴 (아슈바고샤) · 金達鎭 譯註 · 고려원 · 다르마 총서 1',
+      category: ['03-0001'],
+      poster: 'covers/0494.jpg',
+      url: 'https://drive.google.com/file/d/1nAbL_zOYOsV_JMzRWUQ1ROURE2SRRy8_/view?usp=sharing',
+      tags: ['붓다차리타', 'Buddhacarita', '불소행찬', '佛所行讚', '마명', '馬鳴', 'Aśvaghoṣa', '김달진', '고려원', '다르마총서']
+    },
+    {
+      title: '화엄경 이야기',
+      badge: '카마타 시게오 (鎌田茂雄) 지음 · 장휘옥 옮김 · 장승 · 대중불교신서 2',
+      category: ['05-0003'],
+      poster: 'covers/0495.jpg',
+      url: 'https://drive.google.com/file/d/1Lh7K2_jb6T29Sy-oOTls7IW1zMPeOx-W/view?usp=sharing',
+      tags: ['화엄경', '華嚴經', '카마타 시게오', '鎌田茂雄', '장휘옥', '장승', '대중불교신서']
+    },
+    {
+      title: 'Abhidharmakośabhāṣyam',
+      badge: 'Louis de La Vallée Poussin · English tr. Leo M. Pruden · Asian Humanities Press · 1988–90 · 4 vols',
+      category: ['05-0003', '06-0003'],
+      poster: 'covers/0497.jpg',
+      volumes: [
+        { label: 'Vol. I', title: 'Abhidharmakośabhāṣyam I', url: '', missing: true },
+        { label: 'Vol. II', title: 'Abhidharmakośabhāṣyam II', url: '', missing: true },
+        { label: 'Vol. III', title: 'Abhidharmakośabhāṣyam III (1989)', url: 'https://drive.google.com/file/d/1ZgDA1CDuU7pnyf6jJZFXgRwoNz0ME2uk/view?usp=sharing' },
+        { label: 'Vol. IV', title: 'Abhidharmakośabhāṣyam IV (1990)', url: 'https://drive.google.com/file/d/1ZO3eQxCQ-U_l37IubZGJGK1tdd3IXiAG/view?usp=sharing' }
+      ],
+      tags: ['구사론', '俱舍論', 'Abhidharmakosa', '아비달마구사론', 'Vasubandhu', '세친', 'Poussin', '뿌셍', 'Pruden']
+    },
+    {
+      title: '니까야로 읽는 반야심경',
+      badge: '이중표 역해 · 불광출판사',
+      category: ['05-0003', '06-0004'],
+      poster: 'covers/0498.jpg',
+      url: 'https://drive.google.com/file/d/1p_GAPfQi4JJosgBDTcajDNXmLXDwP4u-/view?usp=sharing',
+      tags: ['반야심경', '般若心經', '니까야', '이중표', '불광출판사']
+    },
+    {
+      title: '일백오십찬불송 (一百五十讚佛頌)',
+      badge: '마뗄리제타 존자 (Mātṛceṭa) 지음 · 운허스님 번역 · 土房',
+      category: ['05-0003'],
+      poster: 'covers/0499.jpg',
+      url: 'https://drive.google.com/file/d/1WFipcZtj_tdHAS9B64r6LjG4f9JvRHSj/view?usp=sharing',
+      tags: ['일백오십찬불송', '一百五十讚佛頌', 'Śatapañcāśatka', '마뗄리제타', 'Mātṛceṭa', '마뜨리쩨따', '운허', '耘虛', '토방']
+    },
+    {
+      title: '아비달마구사론 (阿毗達磨俱舍論) 1 · 분별계품·분별근품',
+      badge: '세친 (Vasubandhu) · 권오민 옮김 · 3역 한글대장경',
+      category: ['05-0003', '06-0003'],
+      poster: 'covers/0500.jpg',
+      url: '',
+      tags: ['아비달마구사론', '阿毗達磨俱舍論', '구사론', '俱舍論', '세친', '世親', '분별계품', '분별근품']
+    },
+    {
+      title: '佛說 大智度論 (대지도론)',
+      badge: '나가르주나 (龍樹) 著 · 徐京保 編譯 · 明文堂',
+      category: ['05-0003'],
+      langs: ['한국어'],
+      poster: 'covers/0501.jpg',
+      url: 'https://drive.google.com/file/d/1fwgkERmOtTIzcA2NW5giqvmyC22v5pS3/view?usp=sharing',
+      tags: ['대지도론', '大智度論', '용수', '龍樹', 'Nāgārjuna', '나가르주나', '서경보', '徐京保', '명문당']
+    },
+    {
+      title: '요가수트라 (Yoga-Sūtra)',
+      badge: '鄭泰爀 (정태혁) 지음 · 東文選 · 文藝新書 169',
+      category: ['05-0005'],
+      poster: 'covers/0502.jpg',
+      url: 'https://drive.google.com/file/d/1MIntLQeUDyUaCErVnmAQSZVy7mC54wrp/view?usp=sharing',
+      tags: ['요가수트라', 'Yoga Sutra', '파탄잘리', 'Patañjali', '정태혁', '鄭泰爀', '동문선', '문예신서', '요가']
+    },
+    {
+      title: '산스끄리뜨문 금강경 강의 (Vajracchedikā prajñāpāramitā sūtra)',
+      badge: '성열 지음 · 문화문고',
+      category: ['05-0003', '04-0002'],
+      poster: 'covers/0503.jpg',
+      url: 'https://drive.google.com/file/d/1ETSQ98Ac9HU988jc50o3fPKuijI4tt0S/view?usp=sharing',
+      tags: ['금강경', '金剛經', 'Vajracchedika', '산스끄리뜨', '범본', '성열']
+    },
+    {
+      title: '천수경 (부록: 법회예절)',
+      badge: '민희식 · 이진우',
+      category: ['05-0002'],
+      poster: 'covers/0504.jpg',
+      url: 'https://drive.google.com/file/d/1hqKRyjGUCBy0ErPk72VqpmuruFXN2aOZ/view?usp=sharing',
+      tags: ['천수경', '千手經', '법회예절', '의례', '신묘장구대다라니']
+    },
+    {
+      title: 'Nagarjuna\'s Letter to a Friend : with Commentary by Kyabje Kangyur Rinpoche',
+      badge: 'tr. Padmakara Translation Group · Snow Lion',
+      category: ['05-0003'],
+      poster: 'covers/0505.jpg',
+      url: '',
+      tags: ['용수', 'Nāgārjuna', 'Suhṛllekha', '권계왕송', 'Letter to a Friend', 'Kangyur Rinpoche', 'Padmakara']
+    },
+    {
+      title: '왕에게 보내는 편지 (Nagarjuna\'s Letter to a Friend)',
+      badge: '용수보살 원저 · 정공 한글 옮김 · Geshe Lobsang Tharchin & Artemus B. Engle 영역 · 하늘북',
+      category: ['05-0003'],
+      poster: 'covers/0506.jpg',
+      url: 'https://drive.google.com/file/d/17S-0P-AhvsKBLd2NXwoTRXKUg5qil3xP/view?usp=sharing',
+      tags: ['용수', '龍樹', 'Nāgārjuna', '권계왕송', 'Suhṛllekha', '왕에게 보내는 편지', '정공', '하늘북']
+    },
+    {
+      title: '釋氏六帖 (석씨육첩 · 義楚六帖)',
+      badge: '義楚 (의초) 撰 · 淺草文庫 소장 고판본',
+      category: ['06-0003', '08-0002'],
+      langs: ['한문'],
+      poster: 'covers/0507.jpg',
+      url: 'https://drive.google.com/file/d/1a_kT9ZLbAU99KGZm6epB7BLSol8o0J8l/view?usp=sharing',
+      tags: ['석씨육첩', '釋氏六帖', '의초육첩', '義楚六帖', '의초', '義楚', '불교유서', '淺草文庫', '고판본']
+    },
+    {
+      title: '만화 법구경 (法句經)',
+      badge: '채지충 (蔡志忠) 글·그림 · 대현출판사',
+      category: ['10-0000'],
+      langs: ['한국어'],
+      poster: 'covers/0508.jpg',
+      url: 'https://drive.google.com/file/d/1Q6rSFPmrRlGodW-6Lxc5vFvFBsOvnS9D/view?usp=sharing',
+      tags: ['법구경', '法句經', '만화', '채지충', '蔡志忠', '대현출판사']
+    },
+    {
+      title: '만화 반야심경 (般若心經)',
+      badge: '채지충 (蔡志忠) 글·그림 · 대현출판사',
+      category: ['10-0000'],
+      langs: ['한국어'],
+      poster: 'covers/0509.jpg',
+      url: 'https://drive.google.com/file/d/1byhTF1hwHAanHU7uCYDwh8A9UTfNwM91/view?usp=sharing',
+      tags: ['반야심경', '般若心經', '만화', '채지충', '蔡志忠', '대현출판사']
+    },
+    {
+      title: '藏本대조 梵·漢本 『아미타경』 역주해',
+      badge: '中山 慧南스님 停年退任紀念 獻書 · 중앙승가대학교 불전국역연구원 · 대승불전총서 1',
+      category: ['05-0003', '04-0002'],
+      langs: ['한국어'],
+      poster: 'covers/0510.jpg',
+      url: 'https://drive.google.com/file/d/1Nxu0AnH6yzPhNuL79GVekt7ywN0bpvxS/view?usp=sharing',
+      tags: ['아미타경', '阿彌陀經', '범본', '장본', '티베트본', 'Sukhāvatīvyūha', '혜남', '중앙승가대', '불전국역연구원', '대승불전총서', '정토']
+    },
+    {
+      title: '신심명 · 증도가',
+      badge: '혜원 역해 · 동국역경원 · 니르바나총서 8',
+      category: ['05-0004'],
+      poster: 'covers/0511.jpg',
+      url: 'https://drive.google.com/file/d/1mq9iT80yu91iKnN_na4-YLc2u5FnPEmM/view?usp=sharing',
+      tags: ['신심명', '信心銘', '증도가', '證道歌', '승찬', '영가현각', '혜원', '동국역경원', '니르바나총서']
+    },
+    {
+      title: '달마어록 II · 오성편 (悟性論)',
+      badge: '성열 · 강남포교원',
+      category: ['05-0004'],
+      poster: 'covers/0512.jpg',
+      url: 'https://drive.google.com/file/d/1JPN7XDnvGfGxjBgNxqNxT3zWDeBSSPd1/view?usp=sharing',
+      tags: ['달마어록', '달마', '達磨', '오성론', '悟性論', '선']
+    },
+    {
+      title: 'Śūraṃgamasamādhisūtra : The Concentration of Heroic Progress — An Early Mahāyāna Buddhist Scripture',
+      badge: 'Étienne Lamotte · tr. Sara Boin-Webb',
+      category: ['05-0003', '06-0003'],
+      poster: 'covers/0513.jpg',
+      url: 'https://drive.google.com/file/d/1PQIEpgs6IkJ918D3qVpqIK6ucUiKGqK0/view?usp=sharing',
+      tags: ['수릉엄삼매경', '首楞嚴三昧經', 'Śūraṃgamasamādhi', 'Suramgama', 'Lamotte', '라모뜨']
+    },
+    {
+      title: 'Buddhist Wisdom Books : The Diamond Sutra · The Heart Sutra',
+      badge: 'Edward Conze · Harper Torchbooks',
+      category: ['05-0003'],
+      poster: 'covers/0514.jpg',
+      url: 'https://drive.google.com/file/d/1sRFCshk9Ki5cK0t3FpS8Wou81CUk3_K9/view?usp=sharing',
+      tags: ['금강경', '반야심경', 'Diamond Sutra', 'Heart Sutra', 'Conze', '콘즈', '반야']
+    },
+    {
+      title: '금강경 역해 : 금강경 산스끄리뜨 원전 분석 및 주해',
+      badge: '각묵 스님 · 불광출판부',
+      category: ['05-0003', '04-0002'],
+      poster: 'covers/0515.jpg',
+      url: 'https://drive.google.com/file/d/1O76S4k6ifwWRmMiGv0unOLJpEEZbynqC/view?usp=sharing',
+      tags: ['금강경', '金剛經', '역해', '각묵', '산스끄리뜨', '범본', '불광']
+    },
+    {
+      title: '대승불교총설 : 대승불교에 관한 종합 안내서',
+      badge: '金岡秀友 (가나오카 슈유) 편저 · 안중철 옮김 · 불교시대사 · 만다라총서 5',
+      category: ['05-0003'],
+      poster: 'covers/0516.jpg',
+      url: 'https://drive.google.com/file/d/1-6DDCfLt2y3Dk3wc4Skssc9uvr4wzz-D/view?usp=sharing',
+      tags: ['대승불교', '총설', '金岡秀友', '가나오카', '안중철', '불교시대사', '만다라총서']
+    },
+    {
+      title: '空之哲學 (공의 철학)',
+      badge: '梶山雄一 (가지야마 유이치) 著 · 吳汝鈞 譯',
+      category: ['05-0003'],
+      langs: ['중국어'],
+      poster: 'covers/0517.jpg',
+      url: '',
+      tags: ['공의 철학', '空之哲學', '공', '중관', '梶山雄一', '가지야마 유이치', '吳汝鈞', '오여균']
+    },
+    {
+      title: '大乘起信論 思想研究 (I) (대승기신론 사상연구)',
+      badge: '朴太源 (박태원) 著 · 民族社 · 민족사학술총서 28 · 1994',
+      category: ['05-0003'],
+      langs: ['한국어'],
+      poster: 'covers/0518.jpg',
+      url: 'https://drive.google.com/file/d/1wXV7w5yWWZXsSfPXmOmO0bB-1TqSpb7D/view?usp=sharing',
+      tags: ['대승기신론', '大乘起信論', '기신론', '박태원', '朴太源', '민족사', '민족사학술총서']
+    },
+    {
+      title: 'Sexuality and the World\'s Religions',
+      badge: 'Ed. David W. Machacek & Melissa M. Wilcox · ABC-CLIO · 2003',
+      category: ['10-0000'],
+      poster: 'covers/0519.jpg',
+      url: 'https://drive.google.com/file/d/16SM1Nfxv6i8Ik_JhWp1nbijaBzq6vjI7/view?usp=sharing',
+      tags: ['Sexuality', '성', '섹슈얼리티', '종교', 'world religions', 'Machacek', 'Wilcox']
+    },
+    {
+      title: '神秘의 符籍 (신비의 부적) : 韓國符籍信仰 研究',
+      badge: '韓定燮 (한정섭) 著',
+      category: ['05-0002', '01-0004'],
+      langs: ['한국어'],
+      poster: 'covers/0520.jpg',
+      url: 'https://drive.google.com/file/d/1tfyBxSqSFZdvVDuXYoEjTBoq719JNlkh/view?usp=sharing',
+      tags: ['부적', '符籍', '신비의 부적', '한국부적신앙', '한정섭', '韓定燮']
+    },
+    {
+      title: '만다라 (빛깔있는 책들 135)',
+      badge: '홍윤식 글 · 홍윤식 · 윤열수 사진 · 대원사',
+      category: ['05-0002', '02-0004'],
+      poster: 'covers/0521.jpg',
+      url: 'https://drive.google.com/file/d/1Ow2qPEEqe-NBbiJSYl8u1Rn8tHmcPGEs/view?usp=sharing',
+      tags: ['만다라', '曼茶羅', 'Mandala', '빛깔있는 책들', '홍윤식', '윤열수', '대원사', '밀교']
+    },
+    {
+      title: '힌두교의 그림언어 : 인도 神들의 세계와 그들의 상징체계 (Die Bildsprache des Hinduismus)',
+      badge: '안넬리제 + 페터 카일하우어 · 全在星 (전재성) 옮김 · 東文選 · 文藝新書 39',
+      category: ['05-0005', '02-0000'],
+      poster: 'covers/0522.jpg',
+      url: 'https://drive.google.com/file/d/17eUbbGHc0e5VoFyolJD34DAyWFGqWVc6/view?usp=sharing',
+      tags: ['힌두교', 'Hinduism', '그림언어', '상징', '도상', 'Keilhauer', '카일하우어', '전재성', '동문선', '문예신서']
+    },
+    {
+      title: '세상을 보는 역학 : 쉽게 쓴 64괘 역점(易占) 보는법',
+      badge: '문명상 편저 · 도서출판 남희',
+      category: ['10-0000'],
+      poster: 'covers/0523.jpg',
+      url: 'https://drive.google.com/file/d/11I2rLV8rNM0fuch9xFOh1Fi10ESkVkeJ/view?usp=sharing',
+      tags: ['역학', '易學', '주역', '역점', '64괘', '문명상', '꿈해몽']
+    },
+    {
+      title: '낙화법과 수구즉득다라니 (落火法隨求卽得陀羅尼)',
+      badge: '이선이 · 정왕근 · 강향숙 · 이준환 · 오대혁 지음 · 경인문화사',
+      category: ['05-0002', '01-0004'],
+      poster: 'covers/0524.jpg',
+      url: 'https://drive.google.com/file/d/1q2LZdDBsRElQ-XvH1dOZD3ew_PZwlr4w/view?usp=sharing',
+      tags: ['낙화법', '落火法', '수구즉득다라니', '隨求卽得陀羅尼', '다라니', '밀교', '의례', '경인문화사']
+    },
+    {
+      title: '인도의 신화와 예술 (Myths and Symbols in Indian Art and Civilization)',
+      badge: '하인리히 침머 지음 · 조셉 캠벨 엮음 · 이숙종 옮김 · 대원사 · 대원동서문화총서 17',
+      category: ['05-0005', '02-0000'],
+      poster: 'covers/0525.jpg',
+      url: 'https://drive.google.com/file/d/1TY5pc92WSr3c_Dzws8W1fVAXlQ4_Fu54/view?usp=sharing',
+      tags: ['인도신화', '인도예술', 'Zimmer', '침머', 'Joseph Campbell', '캠벨', '이숙종', '대원사']
+    },
+    {
+      title: 'Sexuality in Classical South Asian Buddhism',
+      badge: 'José Ignacio Cabezón · Wisdom Publications · Studies in Indian and Tibetan Buddhism · 2017',
+      category: ['05-0000', '07-0001'],
+      poster: 'covers/0526.jpg',
+      url: 'https://drive.google.com/file/d/1K86W0oMVBxpZ3UMlD-aJ-3N6NlHVIvlh/view?usp=sharing',
+      tags: ['Sexuality', '성', '섹슈얼리티', 'Cabezón', 'Cabezon', '카베존', 'Wisdom', '남아시아 불교']
+    },
+    {
+      title: 'The Bloomsbury Research Handbook of Indian Philosophy and Gender',
+      badge: 'Ed. Veena R. Howard · Bloomsbury · 2020',
+      category: ['05-0005'],
+      poster: 'covers/0527.jpg',
+      url: 'https://drive.google.com/file/d/1bZbOVcJGxtcK4bKcyEgCRKKhqyqGL4LC/view?usp=sharing',
+      tags: ['Indian Philosophy', '인도철학', 'Gender', '젠더', 'Veena Howard', 'Bloomsbury']
+    },
+    {
+      title: '密教歷史 (밀교역사)',
+      badge: '松長有慶 (마쓰나가 유케이) 著 · 許一範 (허일범) 譯 · 경서원',
+      category: ['05-0002'],
+      langs: ['한국어'],
+      poster: 'covers/0528.jpg',
+      url: 'https://drive.google.com/file/d/1nT8gzFWeh3F3qUej442RxWRgnorn6SL-/view?usp=sharing',
+      tags: ['밀교', '密敎', '밀교역사', '松長有慶', '마쓰나가 유케이', '허일범', '許一範', '경서원']
+    },
+    {
+      title: 'Buddhism : Critical Concepts in Religious Studies',
+      badge: 'Ed. Paul Williams · Routledge · 2005 · 8 vols',
+      category: ['10-0000', '05-0000'],
+      poster: 'covers/0529.jpg',
+      // 책등: 짙은 자주 천 · 은박 세로 제목 · 권 번호 · ROUTLEDGE
+      spineDesign: { kind: 'ccrs' },
+      volumes: [
+        { label: 'Vol. I', vno: 'I', title: 'Buddhist Origins and the Early History of Buddhism in South and Southeast Asia', url: 'https://drive.google.com/file/d/1-6rMOtJqQzpQixPGdbmpWv9o0wczpvSD/view?usp=sharing' },
+        { label: 'Vol. II', vno: 'II', title: 'The Early Buddhist Schools and Doctrinal History; Theravāda Doctrine', url: 'https://drive.google.com/file/d/1-IGgpySQNaTqRKu1G7ij3L0GU0d9XTej/view?usp=sharing' },
+        { label: 'Vol. III', vno: 'III', title: 'The Origins and Nature of Mahāyāna Buddhism; Some Mahāyāna Religious Topics', url: 'https://drive.google.com/file/d/1-LGWpM24U0Pd1tzeMK_ZDdWz9bOMbitp/view?usp=sharing' },
+        { label: 'Vol. IV', vno: 'IV', title: 'Abhidharma and Madhyamaka', url: 'https://drive.google.com/file/d/1-NM2ZF_clKKFA4cko91fEcgLTsXW0URB/view?usp=sharing' },
+        { label: 'Vol. V', vno: 'V', title: 'Yogācāra, the Epistemological Tradition and Tathāgatagarbha', url: 'https://drive.google.com/file/d/1-Qf0ADJpDDIm9mhAtDk0gdBQ_8NjhFTv/view?usp=sharing' },
+        { label: 'Vol. VI', vno: 'VI', title: 'Tantric Buddhism (including China and Japan); Buddhism in Nepal and Tibet', url: 'https://drive.google.com/file/d/1-R4eMhAG9PDHDpav9Zn9rUBwPOw5AGP2/view?usp=sharing' },
+        { label: 'Vol. VII', vno: 'VII', title: 'Buddhism in South and Southeast Asia', url: 'https://drive.google.com/file/d/1-TgHE_r-dti7J4GaQf9-C6qEmx0W05gG/view?usp=sharing' },
+        { label: 'Vol. VIII', vno: 'VIII', title: 'Buddhism in China, East Asia, and Japan', url: 'https://drive.google.com/file/d/1-UeOJXjXeTgBLNIkUaewTH5mc455VVDb/view?usp=sharing' }
+      ],
+      tags: ['Paul Williams', '폴 윌리엄스', 'Critical Concepts', 'Routledge', '논문집', '불교학 논문', 'Abhidharma', 'Madhyamaka', 'Yogācāra', 'Tantric', 'Mahāyāna', 'Theravāda']
+    },
+    {
+      title: '불교 철학의 정수',
+      badge: '다카쿠스 준지로 (高楠順次郎) 지음 · 정승석 옮김 · 대원정사 · 1989',
+      category: ['05-0000'],
+      poster: 'covers/0530.jpg',
+      url: 'https://drive.google.com/file/d/1NcvHcR_At8CAuIaZqXGv5VZ9x52JZNAH/view?usp=sharing',
+      tags: ['불교철학', '불교 철학의 정수', '다카쿠스 준지로', '高楠順次郎', 'Takakusu', 'Essentials of Buddhist Philosophy', '정승석', '대원정사']
+    },
+    {
+      title: '신대중불교의 철학적 기초',
+      badge: '성열 지음 · 도서출판 법등',
+      category: ['05-0000', '01-0004'],
+      poster: 'covers/0531.jpg',
+      url: 'https://drive.google.com/file/d/1LJkss6xBHV3C9Oivj7pFEjxoOekO3DJF/view?usp=sharing',
+      tags: ['신대중불교', '대중불교', '성열', '법등', '철학적 기초']
+    },
+    {
+      title: 'Desire and Motivation in Indian Philosophy',
+      badge: 'Christopher G. Framarin · Routledge',
+      category: ['05-0005'],
+      poster: 'covers/0532.jpg',
+      url: 'https://drive.google.com/file/d/1NGaQG_oQDf_6zPao7VjvuJtGSO-59OMV/view?usp=sharing',
+      tags: ['Desire', 'Motivation', '욕망', 'Indian Philosophy', '인도철학', 'Framarin', 'Bhagavadgītā', 'niṣkāmakarma']
+    },
+    {
+      title: '지혜의 향연',
+      badge: '원각불교사상연구원 편 · 대한불교천태종 출판부 · 원각불교시리즈 5',
+      category: ['10-0000'],
+      poster: 'covers/0533.jpg',
+      url: 'https://drive.google.com/file/d/1N0mPnIouQnxG_9ODiauSrdLObrM2q53P/view?usp=sharing',
+      tags: ['지혜의 향연', '원각불교', '천태종', '원각불교사상연구원', '원각불교시리즈']
+    },
+    {
+      title: '법화경과 신약성서',
+      badge: '민희식 지음 · 불일출판사',
+      category: ['05-0003'],
+      poster: 'covers/0534.jpg',
+      url: '',
+      tags: ['법화경', '法華經', '신약성서', '기독교', '비교종교', '민희식', '불일출판사']
+    },
+    {
+      title: '사분비구니계본 (四分比丘尼戒本)',
+      badge: '大唐 沙門 懷素 編集 · 古天 釋慧能 監修 · 義淨 志炯 編譯 · 청암사율학승가대학원',
+      category: ['05-0001'],
+      langs: ['한국어'],
+      poster: 'covers/0535.jpg',
+      url: 'https://drive.google.com/file/d/17aNq11RNADjpwnZOi7h127hMKlnNQMKJ/view?usp=sharing',
+      tags: ['사분비구니계본', '四分比丘尼戒本', '비구니', '계본', '회소', '懷素', '청암사', '율학승가대학원', '율장', '계율']
+    },
+    {
+      title: '사미니율의요략역주 (沙彌尼律儀要略譯註)',
+      badge: '화산융창사사율학사문 독체 집집 · 혜안 역주 · 청암사율학승가대학원 공동번역 · 조계종출판사',
+      category: ['05-0001'],
+      langs: ['한국어'],
+      poster: 'covers/0536.jpg',
+      url: 'https://drive.google.com/file/d/1SVSUL5XpPzmm0IadVieFVTxPRnfrTaTN/view?usp=sharing',
+      tags: ['사미니율의요략', '沙彌尼律儀要略', '사미니', '율의', '독체', '혜안', '청암사', '율학승가대학원', '조계종출판사', '계율']
+    },
+    {
+      title: '계율학 개론',
+      badge: '목정배 저 · 장경각',
+      category: ['05-0001'],
+      poster: 'covers/0537.jpg',
+      url: '',
+      tags: ['계율학', '계율', '戒律', '목정배', '장경각']
+    },
+    {
+      title: '戒律 研究 論文集 (계율 연구 논문집)',
+      badge: '인환 · 마성 · 이자랑 편집 · 정우서적 · 韓國佛敎研究 論文選集叢書 1 · 韓日佛敎留學生交流會 企劃',
+      category: ['05-0001'],
+      langs: ['한국어'],
+      poster: 'covers/0538.jpg',
+      url: '',
+      tags: ['계율', '戒律', '계율연구', '논문집', '인환', '마성', '이자랑', '정우서적', '한일불교유학생교류회']
+    },
+    {
+      title: '戒律研究集成 (계율연구집성) · 별권',
+      badge: '민족사',
+      category: ['05-0001'],
+      langs: ['한국어'],
+      poster: 'covers/0539.jpg',
+      url: '',
+      tags: ['계율연구집성', '戒律研究集成', '계율', '민족사', '별권']
+    },
+    {
+      title: '虛辭辭典 (허사사전)',
+      badge: '孔在錫 監修 · 金元中 編著 · 玄岩社',
+      category: ['04-0001', '08-0002'],
+      langs: ['한국어'],
+      poster: 'covers/0540.jpg',
+      url: 'https://drive.google.com/file/d/1wWNsO-V6bpupdb-ffmxHCi_nertPtvN-/view?usp=sharing',
+      tags: ['허사사전', '虛辭辭典', '허사', '한문', '김원중', '공재석', '현암사']
+    },
+    {
+      title: '버전업! 굿모닝 독학 일본어 첫걸음 (개정 칼라판)',
+      badge: '동양문고',
+      category: ['04-0001'],
+      langs: ['한국어'],
+      poster: 'covers/0541.jpg',
+      url: 'https://drive.google.com/file/d/1gd5CWzU6RfOgTUq25ZQpkxKJ4op_Fx7q/view?usp=sharing',
+      tags: ['일본어', '독학', '첫걸음', '굿모닝', '동양문고', '어학']
+    },
+    {
+      title: 'EBS 중국어회화 (2003년 11월호)',
+      badge: 'EBS 한국교육방송공사 · 진행 정명숙',
+      category: ['04-0001'],
+      langs: ['한국어'],
+      poster: 'covers/0542.jpg',
+      url: 'https://drive.google.com/file/d/1mbaR2kag0tVtsZ8aZsNRQFQNozva9T51/view?usp=sharing',
+      tags: ['중국어', '중국어회화', 'EBS', '정명숙', '어학']
+    },
+    {
+      title: '가장 쉬운 일본어 회화',
+      badge: '최원호 지음 · 동양문고',
+      category: ['04-0001'],
+      poster: 'covers/0543.jpg',
+      url: 'https://drive.google.com/file/d/1bjBzIOg674NgAcmwIXB8xwIJn9GidDB-/view?usp=sharing',
+      tags: ['일본어', '회화', '최원호', '동양문고', '어학']
+    },
+    {
+      title: '漢字登龍門 (한자등용문) : 쉽고 빠른 한자 정복의 비결',
+      badge: '心溪 鄭周永 編著 · 學一出版社',
+      category: ['04-0001'],
+      langs: ['한국어'],
+      poster: 'covers/0544.jpg',
+      url: 'https://drive.google.com/file/d/1a81Utj79psrGAbIIc8uQI26nRFjwqmTl/view?usp=sharing',
+      tags: ['한자', '漢字', '한자등용문', '정주영', '학일출판사']
+    },
+    {
+      title: '篆刻入門 (전각입문)',
+      badge: '孔白云 編著',
+      category: ['02-0000', '04-0001'],
+      langs: ['중국어'],
+      poster: 'covers/0545.jpg',
+      url: 'https://drive.google.com/file/d/1X5tUrUdertXzKQXkSVrffum1BQ2cCsFx/view?usp=sharing',
+      tags: ['전각', '篆刻', '전각입문', '孔白云', '서예', '도장']
+    },
+    {
+      title: 'English Vocabulary in Use : Upper-intermediate & Advanced',
+      badge: 'Michael McCarthy & Felicity O\'Dell · Cambridge University Press',
+      category: ['04-0000'],
+      poster: 'covers/0546.jpg',
+      url: 'https://drive.google.com/file/d/1gJf3IFBsmQG3-ysLMQxxnX8uWNJQyra3/view?usp=sharing',
+      tags: ['English', '영어', 'Vocabulary', '어휘', 'Cambridge', 'McCarthy']
+    },
+    {
+      title: '2014년 문화재명칭 영문 표기 용례집 (English Names for Korean Cultural Heritage)',
+      badge: '문화재청',
+      category: ['08-0002', '01-0004'],
+      langs: ['한국어','영어'],
+      poster: 'covers/0547.jpg',
+      url: 'https://drive.google.com/file/d/196TBUZeabCmBhMPMalfr7QpyDA2jtsm8/view?usp=sharing',
+      tags: ['문화재', '영문표기', '용례집', 'English Names', 'Cultural Heritage', '문화재청', '번역']
+    },
+    {
+      title: '프랑스어 발달사 (Évolution et Structure de la langue française)',
+      badge: 'Walther von Wartburg 著 · 김현권 譯 · 한국문화사',
+      category: ['04-0000'],
+      poster: 'covers/0548.jpg',
+      url: 'https://drive.google.com/file/d/1vjqj840ZLb-Jeb_9bFab4xk6TDRTWt4j/view?usp=sharing',
+      tags: ['프랑스어', 'Wartburg', '발달사', '언어학', '김현권', '한국문화사']
+    },
+    {
+      title: '템플스테이 - 영문 용어 표준화를 위한 지침서',
+      badge: '템플스테이 (한국불교문화사업단)',
+      category: ['08-0002', '01-0002'],
+      langs: ['한국어','영어'],
+      poster: 'covers/0549.jpg',
+      url: 'https://drive.google.com/file/d/1jL3tCZ7aC59P8bcFMZrgcVTSi-fB3Gjz/view?usp=sharing',
+      tags: ['템플스테이', 'Templestay', '영문', '용어', '표준화', '번역', '지침서']
+    },
+    {
+      title: 'Sapiens : A Brief History of Humankind (เซเปียนส์ · 태국어판)',
+      badge: 'Yuval Noah Harari · tr. ดร.นำชัย ชีววิวรรธน์ · GYPZY',
+      category: ['10-0000'],
+      langs: ['태국어'],
+      poster: 'covers/0550.jpg',
+      url: 'https://drive.google.com/file/d/1b623YPSMhf7n_mvxBO0msjBsnQpatrrR/view?usp=sharing',
+      tags: ['Sapiens', '사피엔스', 'Harari', '하라리', '태국어', 'Thai']
+    },
+    {
+      title: '한국 고승 비문 이체자 서체 자전 (韓國高僧碑文 異體字 書體字典)',
+      badge: '국립문화재연구원 / 국립문화유산연구원',
+      category: ['08-0002', '01-0003'],
+      poster: 'covers/0551.jpg',
+      volumes: [
+        { label: '고대·고려', title: '한국 고승 비문 이체자 서체 자전 · 고대·고려', url: 'https://drive.google.com/file/d/1o2RIPlT3DlgBYd00L0-Kul15i_7nMcup/view?usp=sharing' },
+        { label: '조선', title: '한국 고승 비문 이체자 서체 자전 · 조선', url: 'https://drive.google.com/file/d/10KA3L_xK_RZ03lCUaUEACiWQqSnequab/view?usp=sharing' }
+      ],
+      tags: ['고승비문', '高僧碑文', '이체자', '異體字', '서체자전', '書體字典', '비문', '금석문', '국립문화재연구원']
+    },
+    {
+      title: '百濟佛教思想研究 (백제불교사상연구)',
+      badge: '金煐泰 (김영태) 著 · 東國大學校 出版部',
+      category: ['01-0004'],
+      langs: ['한국어'],
+      poster: 'covers/0552.jpg',
+      url: 'https://drive.google.com/file/d/1ImYBf4RxKrEdNY03qxQxh98m2ba8-HeO/view?usp=sharing',
+      tags: ['백제', '百濟', '백제불교', '김영태', '金煐泰', '동국대학교출판부']
+    },
+    {
+      title: '10·27 법난의 진실',
+      badge: '유응오 · 화남',
+      category: ['01-0004'],
+      poster: 'covers/0553.jpg',
+      url: 'https://drive.google.com/file/d/18yK73E2pRNl630fkXLtkrVFClZ4ij_mo/view?usp=sharing',
+      tags: ['10.27법난', '10·27법난', '법난', '신군부', '1980', '불교탄압', '유응오', '화남']
+    },
+    {
+      title: '韓國禪敎史 (한국선교사)',
+      badge: '忽滑谷快天 (누카리야 카이텐) 著 · 鄭湖鏡 譯 · 민족사',
+      category: ['01-0004', '05-0004'],
+      langs: ['한국어'],
+      poster: 'covers/0554.jpg',
+      url: 'https://drive.google.com/file/d/1w-bp8tDitTCwfh4jn543EFWy6DwGL3mQ/view?usp=sharing',
+      tags: ['한국선교사', '韓國禪敎史', '누카리야 카이텐', '忽滑谷快天', '정호경', '鄭湖鏡', '민족사', '선종사']
+    },
+    {
+      title: '이제, 승려의 입성을 許함이 어떨는지요 : 시련과 도전의 한국불교근세사',
+      badge: '박희승 지음 · 들녘',
+      category: ['01-0004'],
+      poster: 'covers/0555.jpg',
+      url: 'https://drive.google.com/file/d/1yBh07DQsJu81awWeO6wmjR3x4yzoR2bJ/view?usp=sharing',
+      tags: ['승려 입성', '도성출입', '한국불교근세사', '근대불교', '박희승', '들녘']
+    },
+    {
+      title: '10·27 불교법난',
+      badge: '원행 (遠行) 지음 · 에세이스트사 · 오대산 월정사',
+      category: ['01-0004'],
+      poster: 'covers/0556.jpg',
+      url: 'https://drive.google.com/file/d/1FpDLl9-dQIPDXBabFe8jWZtlgPEy3SKr/view?usp=sharing',
+      tags: ['10.27법난', '10·27법난', '법난', '원행', '월정사', '오대산']
+    },
+    {
+      title: '템플스테이 20년사 (Templestay 20th Anniversary 2002–2022)',
+      badge: '한국불교문화사업단',
+      category: ['01-0004', '01-0002'],
+      poster: 'covers/0557.jpg',
+      url: 'https://drive.google.com/file/d/106j0hoLEfy3mhrLRodQg3KN72D-wrFig/view?usp=sharing',
+      tags: ['템플스테이', 'Templestay', '20년사', '한국불교문화사업단']
+    },
+    {
+      title: '사진으로 본 東國大學校 80年 (Pictorial History of Dongguk University 1906–1986)',
+      badge: '동국대학교',
+      category: ['01-0004'],
+      langs: ['한국어'],
+      poster: 'covers/0558.jpg',
+      url: 'https://drive.google.com/file/d/1-iV6pzp3u6PtDITM9tpL8nDCQ9oegOJB/view?usp=sharing',
+      tags: ['동국대학교', '東國大學校', '80년', '사진', '교사', '1906']
+    },
+    {
+      title: '近代佛敎 淨化運動史 研究 (근대불교 정화운동사 연구) : 月誕의 割腹 50週年을 中心으로',
+      badge: '眞寬 (진관) 지음 · 경서원',
+      category: ['01-0004'],
+      langs: ['한국어'],
+      poster: 'covers/0559.jpg',
+      url: 'https://drive.google.com/file/d/1aBl4WfklXJAXQNVokVg2xQP1nrtR3l9g/view?usp=sharing',
+      tags: ['정화운동', '淨化運動', '근대불교', '월탄', '月誕', '할복', '진관', '眞寬', '경서원']
+    },
+    {
+      title: '교단정화운동과 조계종의 오늘 (한국근현대불교의 제문제 1)',
+      badge: '송월주 · 박포리 · 김광식 · 박승길 · 윤승용 · 선우도량 한국불교근현대사연구회 · 불교신문사',
+      category: ['01-0004'],
+      poster: 'covers/0560.jpg',
+      url: '',
+      tags: ['교단정화운동', '정화운동', '조계종', '송월주', '김광식', '선우도량', '한국불교근현대사연구회', '불교신문사']
+    },
+    {
+      title: '하룻밤에 읽는 한국사 (개정판)',
+      badge: '최용범 지음 · 페이퍼로드',
+      category: ['01-0004'],
+      poster: 'covers/0561.jpg',
+      url: 'https://drive.google.com/file/d/1XjPjcmrqVFI3_WGHIpjQtAfSPFAXcrpt/view?usp=sharing',
+      tags: ['한국사', '하룻밤에 읽는', '최용범', '페이퍼로드']
+    },
+    {
+      title: '한국불교사',
+      badge: '정병삼 지음 · 푸른역사',
+      category: ['01-0004'],
+      poster: 'covers/0562.jpg',
+      url: '',
+      tags: ['한국불교사', '정병삼', '푸른역사']
+    },
+    {
+      title: '韓國 現代佛敎史 日誌 (한국현대불교사일지)',
+      badge: '佛敎史學研究所 編 · 중앙승가대학 · 僧伽 제12호 별책 · 1995',
+      category: ['01-0004'],
+      langs: ['한국어'],
+      poster: 'covers/0563.jpg',
+      url: 'https://drive.google.com/file/d/1yHlWjsV4TgLmEN8oxGSPjw-KBqFYIjZl/view?usp=sharing',
+      tags: ['현대불교사', '일지', '日誌', '불교사학연구소', '중앙승가대학', '승가', '僧伽']
+    },
+    {
+      title: '朝鮮佛敎略史 (조선불교약사)',
+      badge: '權相老 (권상로) 著 · 1917',
+      category: ['01-0004'],
+      langs: ['한문'],
+      poster: 'covers/0564.jpg',
+      url: 'https://drive.google.com/file/d/13vkisJdg5durxVq4KRmQalTg_UCaGT7l/view?usp=sharing',
+      tags: ['조선불교약사', '朝鮮佛敎略史', '권상로', '權相老', '퇴경']
+    },
+    {
+      title: '국역 경성발달사 (京城發達史) · 종교부분',
+      badge: '서울역사편찬원 · 서울사료총서 11 · 1912년 원저',
+      category: ['01-0004'],
+      poster: 'covers/0565.jpg',
+      url: 'https://drive.google.com/file/d/1igKI_KHTYAVOH49En39gipsZZx3gk1Sv/view?usp=sharing',
+      tags: ['경성발달사', '京城發達史', '경성', '서울', '종교', '서울역사편찬원', '서울사료총서']
+    },
+    {
+      title: '曹溪宗史 (조계종사) · 근현대편',
+      badge: '대한불교조계종 교육원 編 · 조계종출판사',
+      category: ['01-0004'],
+      langs: ['한국어'],
+      poster: 'covers/0566.jpg',
+      url: 'https://drive.google.com/file/d/1K-K7SKqBGJ-V5kCTl8vW1x-1rBrg8dGZ/view?usp=sharing',
+      tags: ['조계종사', '曹溪宗史', '조계종', '근현대', '교육원', '조계종출판사']
+    },
+    {
+      title: '물처럼 살거래이 : 부산불교 100년의 발자취 1913–2013',
+      badge: '무량수',
+      category: ['01-0004'],
+      poster: 'covers/0567.jpg',
+      url: 'https://drive.google.com/file/d/1u4WAQBofjo8lQmWDkxpINS9WzlVB89zQ/view?usp=sharing',
+      tags: ['부산불교', '부산', '100년', '물처럼 살거래이']
+    },
+    {
+      title: '東大七十年史 (동대칠십년사) 1906–1976',
+      badge: '七十年史編纂委員會 · 東國大學校 出版部',
+      category: ['01-0004'],
+      langs: ['한국어'],
+      poster: 'covers/0568.jpg',
+      url: 'https://drive.google.com/file/d/1Qm1uEUQ62i65Q7r8blBE5_7lVPM_hwki/view?usp=sharing',
+      tags: ['동국대학교', '東國大學校', '70년사', '동대칠십년사']
+    },
+    {
+      title: '22인의 증언을 통해 본 근현대 불교사 (한국불교근현대사자료집 4)',
+      badge: '선우도량 한국불교근현대사연구회',
+      category: ['01-0004'],
+      poster: 'covers/0569.jpg',
+      url: 'https://drive.google.com/file/d/1qz_kYkgqpPQv5RH2HKVnSiGKK4n0kdBA/view?usp=sharing',
+      tags: ['근현대불교사', '증언', '구술', '선우도량', '한국불교근현대사연구회', '한국불교근현대사자료집']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -6144,7 +7265,7 @@
         { name: '월초거연', hanja: '月初巨淵', born: 1858, died: 1934, books: ['月初門徒祖派譜 (월초문도조파보)'] },
         { name: '월운해룡', hanja: '月雲海龍', born: 1929, died: 2023, books: ['못다 갚을 은혜 : 月雲堂 逸中事 월운스님회고담'] },
         { name: '연담묘순', hanja: '', born: 1946, books: ['묘순 스님 사진집'] },
-        { name: '운허용하', hanja: '耘虛龍夏', born: 1892, died: 1980, books: ['耘虛禪師語文集 (운허선사어문집)', '楞嚴經 註解 (능엄경 주해)'] },
+        { name: '운허용하', hanja: '耘虛龍夏', born: 1892, died: 1980, books: ['耘虛禪師語文集 (운허선사어문집)', '楞嚴經 註解 (능엄경 주해)', '일백오십찬불송 (一百五十讚佛頌)'] },
         { name: '전강영신', hanja: '田岡永信', born: 1898, died: 1975, books: ['전강선사일대기 (田岡禪師一代記) · 전강선사 법어'] },
         { name: '경허성우', hanja: '鏡虛惺牛', born: 1849, died: 1912, books: ['착한 일 많이 하게 그대가 부처일세 : 경허큰스님', '경허 · 만공의 선풍과 법맥', '콧구멍 없는 소 : 경허대사와 5대 제자', '경허와 만공의 禪思想', '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)', '鏡虛錄 (경허록)', '鏡虛滿空新出資料集 (경허만공신출자료집) 1 : 경허선사편'] },
         { name: '경봉정석', hanja: '鏡峰靖錫', born: 1892, died: 1982, books: ['三笑窟 (삼소굴) : 경봉선사 열반 30주기 특별전'] },
@@ -8104,6 +9225,24 @@
           cols.forEach(x => { const s = document.createElement('span'); s.textContent = x; ht.appendChild(s); });
         });
         a.title = `한글본 한국불교전서 ${vol.label} · ${vol.title}`;
+      } else if (b.spineDesign && b.spineDesign.kind === 'ndj') {
+        // 南傳大藏經: 미색 천 · 예서체 제목 · 권수 · 부명
+        a.className = 'spine spine-nd';
+        a.innerHTML = `<img class="nd-title" src="spines/nd-title.png" alt="南傳大藏經"><span class="nd-sub"><span class="nd-vol"></span><span class="nd-part"></span></span>`;
+        a.querySelector('.nd-vol').textContent = vol.label || '';
+        a.querySelector('.nd-part').textContent = vol.sub || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'pts') {
+        // PTS: 짙은 남색 천 · 금박 띠 · 세로 제목 · 약호/권수 · PTS
+        a.className = 'spine spine-pts';
+        a.innerHTML = `<span class="pt-rule"></span><span class="pt-title"></span><span class="pt-ab"><b></b><small></small></span><span class="pt-pub">P·T·S</span><span class="pt-rule"></span>`;
+        a.querySelector('.pt-title').textContent = vol.name || '';
+        a.querySelector('.pt-ab b').textContent = vol.abbr || '';
+        a.querySelector('.pt-ab small').textContent = vol.vno || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'ccrs') {
+        // Routledge Critical Concepts: 짙은 자주 천 · 은박 세로 제목 · 권 번호 · ROUTLEDGE
+        a.className = 'spine spine-cc';
+        a.innerHTML = `<span class="cc-title">BUDDHISM</span><span class="cc-sub">Critical Concepts</span><span class="cc-no"></span><span class="cc-pub">ROUTLEDGE</span>`;
+        a.querySelector('.cc-no').textContent = vol.vno || '';
       } else if (b.spineDesign && b.spineDesign.kind === 'lkh') {
         // 이건희 기증품 목록집: 흰 표지의 양쪽 세로 겹줄 안을 책등으로
         a.className = 'spine spine-k';
@@ -8165,6 +9304,14 @@
       a.addEventListener('focus', () => show(vol));
       a.addEventListener('mouseleave', () => show(null));
       if (vol.missing) { a.classList.add('is-missing'); a.title = `${vol.label} · ${vol.title} (소장하지 않음)`; }
+      // 칸 나눔: 율장 · 경장 · 논장 · 주석서처럼 부가 바뀌면 이름표 칸을 세움
+      if (b.spineDesign && b.spineDesign.sections && vol.sec && vol.sec !== shelf.dataset.sec) {
+        shelf.dataset.sec = vol.sec;
+        const tab = document.createElement('div');
+        tab.className = 'shelf-sec';
+        tab.textContent = vol.sec;
+        shelf.appendChild(tab);
+      }
       shelf.appendChild(a);
     });
     scroll.appendChild(shelf);
