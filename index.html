@@ -1231,6 +1231,61 @@
   .spine-eob .eb-title b{ margin-left:.35em; font-size:1.18em; }
   .spine-eob .eb-range{ font-size:clamp(8.5px,1.6vh,12.5px); font-weight:600; letter-spacing:-.01em; line-height:1.05; }
   .spine-eob.multi .eb-range{ font-size:clamp(4.6px,.78vh,6px); letter-spacing:0; }
+  /* 능엄경 강화 */
+  .spine-lng{
+    width:calc(var(--spine-h) * .17); position:relative;
+    background:linear-gradient(90deg,#8f8778 0%,#b4ab9b 16%,#bdb5a5 50%,#b0a796 84%,#8a8273 100%);
+    display:flex; flex-direction:column; align-items:center; color:#2f2a22;
+    padding:calc(var(--spine-h) * .05) 0 calc(var(--spine-h) * .04);
+  }
+  .spine-lng > *{ flex:0 0 auto; white-space:nowrap; height:max-content; }
+  .spine-lng .lg-ser{ writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-size:clamp(7px,1.15vh,9px); line-height:1.15; letter-spacing:.02em; padding:4px 2px; border:1px solid rgba(47,42,34,.55); }
+  .spine-lng .lg-title{ margin-top:calc(var(--spine-h) * .06); writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(9px,1.6vh,12.5px); letter-spacing:.08em; }
+  .spine-lng .lg-no{ margin-top:calc(var(--spine-h) * .035); font-family:'Times New Roman',serif; font-weight:700; font-size:clamp(10px,1.8vh,14px); }
+  .spine-lng .lg-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(7px,1.15vh,9px); line-height:1.1; letter-spacing:.02em; }
+  /* 민족사 불교경전 */
+  .spine-mj{
+    width:calc(var(--spine-h) * .15); position:relative;
+    background:linear-gradient(90deg,#a9bea1 0%,#c4d5bc 15%,#cddcc5 50%,#c2d3ba 85%,#a3b89b 100%);
+    display:flex; flex-direction:column; align-items:center; color:#3c4a36;
+    padding:calc(var(--spine-h) * .03) 0 calc(var(--spine-h) * .035);
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif;
+  }
+  .spine-mj > *{ flex:0 0 auto; white-space:nowrap; }
+  .spine-mj .mj-ser{ display:flex; flex-direction:column; align-items:center; font-family:'Noto Sans KR',sans-serif; font-size:clamp(4.5px,.75vh,6px); letter-spacing:-.02em; color:#5a6a52; }
+  .spine-mj .mj-ser b{ margin-top:1px; font-family:'Times New Roman',serif; font-style:italic; font-size:clamp(8px,1.4vh,11px); color:#a3262a; }
+  .spine-mj .mj-box{
+    margin-top:calc(var(--spine-h) * .025); width:76%; padding:6px 0 7px;
+    background:linear-gradient(90deg,#6f1f22,#8c2a2c 50%,#6d1e21); border:2px solid #e8eee4; outline:1px solid #6d8a63;
+    display:flex; justify-content:center;
+  }
+  .spine-mj .mj-name{ display:flex; flex-direction:column; align-items:center; color:#f6efe6; font-weight:700; font-size:clamp(9px,1.55vh,12.5px); line-height:1.12; }
+  .spine-mj .mj-name span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-mj .mj-name i{ font-style:normal; margin-top:3px; font-size:.9em; }
+  .spine-mj .mj-sub{ margin-top:calc(var(--spine-h) * .02); writing-mode:vertical-rl; text-orientation:upright; font-size:clamp(5px,.85vh,7px); color:#4c5c45; letter-spacing:.06em; }
+  .spine-mj.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
+  .spine-mj .mj-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; font-weight:700; font-size:clamp(6px,1vh,8px); color:#a3262a; border:1px solid #a3262a; padding:3px 1px; }
+  /* 한글본 한국불교전서 */
+  .spine-hb{
+    width:calc(var(--spine-h) * .165); position:relative;
+    display:flex; flex-direction:column; align-items:center; color:#2b2620;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif;
+  }
+  .spine-hb.look-g{ background:linear-gradient(90deg,#a98b55 0%,#c6a96f 15%,#cdb179 50%,#c3a66c 85%,#a5874f 100%); color:#fbf6ea; }
+  .spine-hb.look-t{ background:linear-gradient(90deg,#a6957a 0%,#c3b398 15%,#cbbca2 50%,#c0b095 85%,#a29175 100%); }
+  .spine-hb.look-o{ background:linear-gradient(90deg,#9a8f3e 0%,#b8ad5c 15%,#c0b565 50%,#b5aa58 85%,#968b3a 100%); }
+  .spine-hb.look-w{ background:linear-gradient(90deg,#dedbd2 0%,#f6f4ee 15%,#fbfaf6 50%,#f3f1ea 85%,#d9d6cc 100%); }
+  .spine-hb > *{ flex:0 0 auto; white-space:nowrap; }
+  .spine-hb .hb-band{ width:100%; height:calc(var(--spine-h) * .13); background-size:cover; background-position:center; box-shadow:inset 0 -1px 0 rgba(0,0,0,.25); }
+  .spine-hb .hb-ser{ margin-top:calc(var(--spine-h) * .025); writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Sans KR',sans-serif; font-size:clamp(4.5px,.75vh,6px); letter-spacing:-.02em; opacity:.85; }
+  .spine-hb .hb-no{ margin-top:calc(var(--spine-h) * .018); display:flex; flex-direction:column; align-items:center; padding:2px 3px; line-height:1.05; font-family:'Noto Sans KR',sans-serif; font-weight:700; background:#b4252b; color:#fff; border-radius:1px; }
+  .spine-hb.look-g .hb-no, .spine-hb.look-t .hb-no{ background:#e8dcc0; color:#3a2f1e; }
+  .spine-hb .hb-no small{ font-size:clamp(4.5px,.75vh,6px); }
+  .spine-hb .hb-no b{ font-size:clamp(6.5px,1.1vh,8.5px); }
+  .spine-hb .hb-title{ margin-top:calc(var(--spine-h) * .03); display:flex; flex-direction:row-reverse; gap:2px; min-height:0; flex:0 1 auto; overflow:hidden; font-weight:600; font-size:clamp(8.5px,1.45vh,11.5px); line-height:1.05; letter-spacing:.02em; }
+  .spine-hb .hb-title span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-hb.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
+  .spine-hb .hb-pub{ margin:auto 0 calc(var(--spine-h) * .035); writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(4.5px,.78vh,6px); letter-spacing:.02em; }
   .spine-k{
     width:calc(var(--spine-h) * .21); position:relative;
     background:linear-gradient(90deg,#e9e6e0 0%,#fbfaf7 14%,#fdfcfa 50%,#f7f5f1 86%,#e4e0d9 100%);
@@ -3912,14 +3967,6 @@
       tags: ['금어', '金魚', '불화', '畵僧', '화승', '계맥']
     },
     {
-      title: '석가여래행적송 (釋迦如來行蹟頌) · 천태말학운묵화상경책 (天台末學雲默和尙警策)',
-      badge: '운묵 무기 · 김성옥 · 박인석 옮김 · 동국대학교출판부 · 한글본 한국불교전서 고려 8',
-      category: ['01-0003'],
-      poster: 'covers/0224.jpg',
-      url: 'https://drive.google.com/file/d/1fO_YJJ1saY6d5O58krVcNXlAEf6XUgWg/view?usp=sharing',
-      tags: ['운묵', '무기', '한국불교전서', '석가여래행적송', '경책', '천태']
-    },
-    {
       title: '大摠相法門說註解 (대총상법문설주해)',
       badge: '法住寺講院 (법주사강원)',
       category: ['01-0003'],
@@ -4174,14 +4221,6 @@
       poster: 'covers/0256.jpg',
       url: 'https://drive.google.com/file/d/1c53VQ9EMFQuWRAIuAbcDoypTT21PZn7S/view?usp=sharing',
       tags: ['서암', '西庵', '홍근', '봉암사']
-    },
-    {
-      title: '원감국사집 (圓鑑國師集)',
-      badge: '충지 · 이상현 옮김 · 동국대학교출판부 · 한글본 한국불교전서 고려 2',
-      category: ['01-0003'],
-      poster: 'covers/0257.jpg',
-      url: 'https://drive.google.com/file/d/1FbHfLM5plziWG4w62FD4grXDFYxn1eq9/view?usp=sharing',
-      tags: ['원감', '圓鑑', '충지', '冲止', '한국불교전서', '한글본', '고려']
     },
     {
       title: '만공의 항일 정신 : 제8회 만공대선사 학술대회 기념 · 日帝下 만공선사 抗日 사자후',
@@ -5323,6 +5362,7 @@
       badge: '釋智賢 (석지현) 著 · 玄岩社 · 玄岩新書',
       category: ['05-0002'],
       poster: 'covers/0389.jpg',
+      codes: ['hj-098765'],
       url: 'https://drive.google.com/file/d/1dkGeEjC3MSwPEUlTRAmtdULDCgUiF_kC/view?usp=sharing',
       tags: ['밀교', '密敎', '密教', '대승불교의 최심층', '석지현', '釋智賢', '현암사', '玄岩社', '현암신서', '만다라', '탄트라', 'Esoteric Buddhism']
     },
@@ -5877,6 +5917,206 @@
       tags: ['자타카', '본생담', 'Jataka', 'Amar Chitra Katha', '아마르 치트라 카타', '만화', '원숭이 이야기', 'Monkey Stories', '어린이']
     },
     {
+      title: '능엄경 강화 (楞嚴經 講話)',
+      badge: '東國譯經院 · 佛敎叢書 · 전 3권',
+      category: ['05-0003', '06-0003'],
+      poster: 'covers/0456.jpg',
+      // 책등: 표지처럼 회갈색 바탕 · 위에 佛敎叢書 · 세로 제목 · 권 번호 · 東國譯經院
+      spineDesign: { kind: 'lng' },
+      volumes: [
+        { label: '제1권', vno: 'Ⅰ', title: '능엄경 강화 Ⅰ', url: 'https://drive.google.com/file/d/1YE2NFK0lB6lXK7Sx-yxEfTaEKSWvU7v0/view?usp=sharing' },
+        { label: '제2권', vno: 'Ⅱ', title: '능엄경 강화 Ⅱ', url: 'https://drive.google.com/file/d/1b6nN0tZ_OvTMq06Qrd9VlaV3Z8NaPerk/view?usp=sharing' },
+        { label: '제3권', vno: 'Ⅲ', title: '능엄경 강화 Ⅲ', url: 'https://drive.google.com/file/d/1LWTKqHo5Meuwj_rDUhMi2ZHKh8PVt0Ri/view?usp=sharing' }
+      ],
+      tags: ['능엄경', '楞嚴經', '수능엄경', '首楞嚴經', '강화', '講話', '동국역경원', '불교총서']
+    },
+    {
+      title: '민족사 불교경전',
+      badge: '불전간행회 엮음 · 민족사 · 1994– · 전 21권',
+      category: ['06-0003'],
+      poster: 'covers/0457.jpg',
+      // 책등: 연두빛 점무늬 천 · 위에 '불교경전'+번호 · 자주색 칸에 흰 세로 제목 · 부제 · 아래 민족사
+      spineDesign: { kind: 'mjsg' },
+      volumes: [
+        { label: '2', vno: '2', name: '유마경', sub: '', title: '불교경전 2 · 유마경 · 무비 옮김', url: '', missing: true },
+        { label: '5', vno: '5', name: '능엄경', sub: '청정한 깨달음', title: '불교경전 5 · 능엄경 — 청정한 깨달음 · 김두재 옮김', url: 'https://drive.google.com/file/d/1UOOf651SEX8ZIfWQz8EiPLNmZEeXaavJ/view?usp=sharing' },
+        { label: '6', vno: '6', name: '원각경 · 승만경', sub: '', title: '불교경전 6 · 원각경 · 승만경', url: 'https://drive.google.com/file/d/1niN_xopojPdQMY00d0PgRiaQsJiOFNK7/view?usp=sharing' },
+        { label: '7', vno: '7', name: '정토삼부경', sub: '', title: '불교경전 7 · 정토삼부경', url: '', missing: true },
+        { label: '9', vno: '9', name: '과거현재인과경', sub: '', title: '불교경전 9 · 과거현재인과경', url: '', missing: true },
+        { label: '10', vno: '10', name: '백유경', sub: '', title: '불교경전 10 · 백유경', url: '', missing: true },
+        { label: '13', vno: '13', name: '아함경 ①', sub: '', title: '불교경전 13 · 아함경 ①', url: '', missing: true },
+        { label: '14', vno: '14', name: '아함경 ②', sub: '', title: '불교경전 14 · 아함경 ②', url: '', missing: true },
+        { label: '15', vno: '15', name: '법구경', sub: '불멸의 언어', title: '불교경전 15 · 법구경 — 불멸의 언어 · 석지현 옮김', url: '', missing: true },
+        { label: '16', vno: '16', name: '숫타니파타', sub: '', title: '불교경전 16 · 숫타니파타', url: '', missing: true },
+        { label: '17', vno: '17', name: '밀린다왕문경 ①', sub: '', title: '불교경전 17 · 밀린다왕문경 ①', url: '', missing: true },
+        { label: '18', vno: '18', name: '밀린다왕문경 ②', sub: '', title: '불교경전 18 · 밀린다왕문경 ②', url: 'https://drive.google.com/file/d/1PYmm3xbVRq_9WztFL3kmIoBU7Sn2pCRi/view?usp=sharing' },
+        { label: '19', vno: '19', name: '본생경 ①', sub: '', title: '불교경전 19 · 본생경 ①', url: '', missing: true },
+        { label: '20', vno: '20', name: '본생경 ②', sub: '', title: '불교경전 20 · 본생경 ②', url: '', missing: true },
+        { label: '21', vno: '21', name: '미륵경전', sub: '', title: '불교경전 21 · 미륵경전', url: '', missing: true },
+        { label: '22', vno: '22', name: '해심밀경', sub: '', title: '불교경전 22 · 해심밀경', url: 'https://drive.google.com/file/d/1vL8Mz0_WKnhBesqXTlDXjS0QMGr3IxQ7/view?usp=sharing' },
+        { label: '?', vno: '?', name: '화엄경', sub: '', title: '불교경전 (번호 미확인) · 화엄경', url: '', missing: true },
+        { label: '?', vno: '?', name: '금강경', sub: '', title: '불교경전 (번호 미확인) · 금강경', url: '', missing: true },
+        { label: '?', vno: '?', name: '대반열반경', sub: '', title: '불교경전 (번호 미확인) · 대반열반경', url: '', missing: true },
+        { label: '?', vno: '?', name: '범망경 · 지장경', sub: '', title: '불교경전 (번호 미확인) · 범망경 · 지장경', url: '', missing: true },
+        { label: '?', vno: '?', name: '부모은중경 · 관음경 외', sub: '', title: '불교경전 (번호 미확인) · 부모은중경 · 관음경 외', url: '', missing: true }
+      ],
+      tags: ['민족사', '불교경전', '불전간행회', '아함경', '법구경', '유마경', '능엄경', '원각경', '승만경', '정토삼부경', '과거현재인과경', '백유경', '숫타니파타', '밀린다왕문경', '본생경', '미륵경전', '해심밀경', '화엄경', '금강경', '열반경', '범망경', '지장경', '부모은중경', '관음경']
+    },
+    {
+      title: '초기불교의 사회적 실천',
+      badge: '김재영 (金再泳) 지음 · 민족사 · 민족사학술총서 65',
+      category: ['05-0000'],
+      poster: 'covers/0458.jpg',
+      url: 'https://drive.google.com/file/d/1pppVfPJrhO2wxVxf85IFqhY5TzuDlGQE/view?usp=sharing',
+      tags: ['초기불교', '사회적 실천', '사회윤리', '김재영', '金再泳', '민족사', '민족사학술총서']
+    },
+    {
+      title: '불교와 인도사상',
+      badge: '東國譯經院 · 佛敎叢書 9',
+      category: ['05-0000', '05-0005'],
+      poster: 'covers/0459.jpg',
+      url: 'https://drive.google.com/file/d/1dXnfEcBgNDOKT_8xEmGCZNFIVRpiO4MM/view?usp=sharing',
+      tags: ['불교와 인도사상', '인도사상', '인도철학', '동국역경원', '東國譯經院', '불교총서', '佛敎叢書']
+    },
+    {
+      title: '楞嚴經 註解 (능엄경 주해)',
+      badge: '李耘虛 (운허 용하) 註解 · 東國譯經院',
+      category: ['05-0003', '06-0003'],
+      langs: ['한국어'],
+      poster: 'covers/0460.jpg',
+      url: 'https://drive.google.com/file/d/1cS5ROpiH9exvoCHvesfm3aQU7G7nIPex/view?usp=sharing',
+      tags: ['능엄경', '楞嚴經', '수능엄경', '首楞嚴經', '주해', '註解', '운허', '耘虛', '李耘虛', '이운허', '동국역경원', '東國譯經院']
+    },
+    {
+      title: '한글본 한국불교전서',
+      badge: '동국대학교 불교학술원 · 동국대학교출판부 / 출판문화원 · 신라 29 · 고려 15 · 조선 74 · 전 118권',
+      category: ['01-0003', '01-0005'],
+      poster: 'covers/0461.jpg',
+      // 책등: 위는 표지의 구름무늬 띠(고려=먹색, 조선=청록) · 시대+번호 칸 · 세로 제목 · 동국대학교
+      spineDesign: { kind: 'hbj' },
+      volumes: [
+        { label: '신라 1', era: '신라', vno: '1', name: '인왕경소', title: '인왕경소 (仁王經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 2', era: '신라', vno: '2', name: '범망경술기', title: '범망경술기 (梵網經述記) · 승장 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '신라 3', era: '신라', vno: '3', name: '대승기신론내의약탐기', title: '대승기신론내의약탐기 (大乘起信論內義略探記) · 태현 · 박인석 옮김', look: 't', url: '', missing: true },
+        { label: '신라 4', era: '신라', vno: '4', name: '해심밀경소 ①', title: '해심밀경소 제1 서품 (解深密經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 5', era: '신라', vno: '5', name: '해심밀경소 ②', title: '해심밀경소 제2 승의제상품 (解深密經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 6', era: '신라', vno: '6', name: '해심밀경소 ③', title: '해심밀경소 제3 심의식상품·제4 일체법상품 (解深密經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 7', era: '신라', vno: '7', name: '해심밀경소 ④', title: '해심밀경소 제5 무자성상품 (解深密經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 8', era: '신라', vno: '8', name: '해심밀경소 ⑤', title: '해심밀경소 제6 분별유가품(상) (解深密經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 9', era: '신라', vno: '9', name: '해심밀경소 ⑥', title: '해심밀경소 제6 분별유가품(하) (解深密經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 10', era: '신라', vno: '10', name: '해심밀경소 ⑦', title: '해심밀경소 제7 지바라밀다품 (解深密經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 11', era: '신라', vno: '11', name: '해심밀경소 ⑧', title: '해심밀경소 제8 여래성소작사품 (解深密經疏) · 원측 · 백진순 옮김', look: 't', url: '', missing: true },
+        { label: '신라 12', era: '신라', vno: '12', name: '무량수경연의술문찬', title: '무량수경연의술문찬 (無量壽經連義述文贊) · 경흥 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '신라 13', era: '신라', vno: '13', name: '범망경보살계본사기 상권', title: '범망경보살계본사기 상권 (梵網經菩薩戒本私記) · 원효 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '신라 14', era: '신라', vno: '14', name: '화엄일승성불묘의', title: '화엄일승성불묘의 (華嚴一乘成佛妙義) · 견등 · 김천학 옮김', look: 't', url: '', missing: true },
+        { label: '신라 15', era: '신라', vno: '15', name: '범망경고적기', title: '범망경고적기 (梵網經古迹記) · 태현 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '신라 16', era: '신라', vno: '16', name: '금강삼매경론', title: '금강삼매경론 (金剛三昧經論) · 원효 · 김호귀 옮김', look: 't', url: '', missing: true },
+        { label: '신라 17', era: '신라', vno: '17', name: '대승기신론소기회본', title: '대승기신론소기회본 (大乘起信論疏記會本) · 원효 · 은정희 옮김', look: 't', url: '', missing: true },
+        { label: '신라 18', era: '신라', vno: '18', name: '미륵상생경종요 외', title: '미륵상생경종요 외 (彌勒上生經宗要) · 원효 · 성재헌 외 옮김', look: 't', url: '', missing: true },
+        { label: '신라 19', era: '신라', vno: '19', name: '대혜도경종요 외', title: '대혜도경종요 외 (大慧度經宗要) · 원효 · 성재헌 외 옮김', look: 't', url: '', missing: true },
+        { label: '신라 20', era: '신라', vno: '20', name: '열반종요', title: '열반종요 (涅槃宗要) · 원효 · 이평래 옮김', look: 't', url: '', missing: true },
+        { label: '신라 21', era: '신라', vno: '21', name: '이장의', title: '이장의 (二障義) · 원효 · 안성두 옮김', look: 't', url: '', missing: true },
+        { label: '신라 22', era: '신라', vno: '22', name: '본업경소 하권 외', title: '본업경소 하권 외 (本業經疏) · 원효 · 최원섭 · 이정희 옮김', look: 't', url: '', missing: true },
+        { label: '신라 23', era: '신라', vno: '23', name: '중변분별론소 제3권 외', title: '중변분별론소 제3권 외 (中邊分別論疏) · 원효 · 박인성 외 옮김', look: 't', url: '', missing: true },
+        { label: '신라 24', era: '신라', vno: '24', name: '지범요기조람집', title: '지범요기조람집 (持犯要記助覽集) · 원효 · 진원 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '신라 25', era: '신라', vno: '25', name: '집일 금광명경소', title: '집일 금광명경소 (金光明經疏) · 원효 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '신라 26', era: '신라', vno: '26', name: '복원본 무량수경술의기', title: '복원본 무량수경술의기 (無量壽經述義記) · 의적 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '신라 27', era: '신라', vno: '27', name: '보살계본소', title: '보살계본소 (菩薩戒本疏) · 의적 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '신라 28', era: '신라', vno: '28', name: '집일 경론소기', title: '집일 경론소기 · 원효 · 원과 외 옮김', look: 't', url: '', missing: true },
+        { label: '신라 29', era: '신라', vno: '29', name: '무량수경의소 외', title: '무량수경의소 외 (無量壽經義疏) · 법위 · 태현 외 · 한명숙 옮김', look: 't', url: '', missing: true },
+        { label: '고려 1', era: '고려', vno: '1', name: '일승법계도원통기', title: '일승법계도원통기 (一乘法界圖圓通記) · 균여 · 최연식 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 2', era: '고려', vno: '2', name: '원감국사집', title: '원감국사집 (圓鑑國師集) · 충지 · 이상현 옮김', look: 'g', url: 'https://drive.google.com/file/d/1FbHfLM5plziWG4w62FD4grXDFYxn1eq9/view?usp=sharing' },
+        { label: '고려 3', era: '고려', vno: '3', name: '자비도량참법집해', title: '자비도량참법집해 (慈悲道場懺法集解) · 조구 · 성재헌 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 4', era: '고려', vno: '4', name: '천태사교의', title: '천태사교의 (天台四敎儀) · 제관 · 최기표 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 5', era: '고려', vno: '5', name: '대각국사집', title: '대각국사집 (大覺國師集) · 의천 · 이상현 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 6', era: '고려', vno: '6', name: '법계도기총수록', title: '법계도기총수록 (法界圖記叢髓錄) · 편자 미상 · 해주 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 7', era: '고려', vno: '7', name: '보제존자삼종가', title: '보제존자삼종가 (普濟尊者三種歌) · 고봉 법장 · 하혜정 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 8', era: '고려', vno: '8', name: '석가여래행적송·천태말학운묵화상경책', title: '석가여래행적송·천태말학운묵화상경책 (釋迦如來行蹟頌·天台末學雲默和尙警策) · 운묵 무기 · 김성옥 · 박인석 옮김', look: 'g', url: 'https://drive.google.com/file/d/1fO_YJJ1saY6d5O58krVcNXlAEf6XUgWg/view?usp=sharing' },
+        { label: '고려 9', era: '고려', vno: '9', name: '법화영험전', title: '법화영험전 (法華靈驗傳) · 요원 · 오지연 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 10', era: '고려', vno: '10', name: '남명천화상송증도가사실', title: '남명천화상송증도가사실 (南明泉和尙頌證道歌事實) · 성재헌 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 11', era: '고려', vno: '11', name: '백운화상어록', title: '백운화상어록 (白雲和尙語錄) · 백운 경한 · 조영미 옮김', look: 'g', url: 'https://drive.google.com/file/d/1eqkFVTLc5622AKMczQyxfxUO3YgBonzS/view?usp=sharing' },
+        { label: '고려 12', era: '고려', vno: '12', name: '선문염송·염송설화 ①', title: '선문염송 염송설화 회본 1 (禪門拈頌拈頌說話會本) · 혜심 · 각운 · 김영욱 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 13', era: '고려', vno: '13', name: '선문염송·염송설화 ②', title: '선문염송 염송설화 회본 2 (禪門拈頌拈頌說話會本) · 혜심 · 각운 · 김영욱 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 14', era: '고려', vno: '14', name: '선문염송·염송설화 ③', title: '선문염송 염송설화 회본 3 (禪門拈頌拈頌說話會本) · 혜심 · 각운 · 김영욱 옮김', look: 'g', url: '', missing: true },
+        { label: '고려 25', era: '고려', vno: '25', name: '백화도량발원문약해 외', title: '백화도량발원문약해 외 (白花道場發願文略解) · 체원 · 곽철환 · 박인석 옮김', look: 'g', url: '', missing: true },
+        { label: '조선 1', era: '조선', vno: '1', name: '작법귀감', title: '작법귀감 (作法龜鑑) · 백파 긍선 · 김두재 옮김', look: 'w', url: 'https://drive.google.com/file/d/1V6IWxUolEyYisbsB9YvJhC3NVGhcDYj5/view?usp=sharing' },
+        { label: '조선 2', era: '조선', vno: '2', name: '정토보서', title: '정토보서 (淨土寶書) · 백암 성총 · 김종진 옮김', look: 'o', url: 'https://drive.google.com/file/d/1G17gxQt6xtfsvWdgQCh6ckuu4Vl20-wz/view?usp=sharing' },
+        { label: '조선 3', era: '조선', vno: '3', name: '백암정토찬', title: '백암정토찬 (栢庵淨土讚) · 백암 성총 · 김종진 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 4', era: '조선', vno: '4', name: '일본표해록', title: '일본표해록 (日本漂海錄) · 풍계 현정 · 김상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 5', era: '조선', vno: '5', name: '기암집', title: '기암집 (奇巖集) · 기암 법견 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 6', era: '조선', vno: '6', name: '운봉선사심성론', title: '운봉선사심성론 (雲峰禪師心性論) · 운봉 대지 · 이종수 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 7', era: '조선', vno: '7', name: '추파집·추파수간', title: '추파집·추파수간 (秋波集·秋波手柬) · 추파 홍유 · 하혜정 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 8', era: '조선', vno: '8', name: '침굉집', title: '침굉집 (枕肱集) · 침굉 현변 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 9', era: '조선', vno: '9', name: '염불보권문', title: '염불보권문 (念佛普勸文) · 명연 · 정우영 · 김종진 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 10', era: '조선', vno: '10', name: '천지명양수륙재의범음산보집', title: '천지명양수륙재의범음산보집 (天地冥陽水陸齋儀梵音刪補集) · 지환 · 김두재 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 11', era: '조선', vno: '11', name: '삼봉집', title: '삼봉집 (三峰集) · 화악 지탁 · 김재희 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 12', era: '조선', vno: '12', name: '선문수경', title: '선문수경 (禪文手鏡) · 백파 긍선 · 신규탁 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 13', era: '조선', vno: '13', name: '선문사변만어', title: '선문사변만어 (禪門四辨漫語) · 초의 의순 · 김영욱 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 14', era: '조선', vno: '14', name: '부휴당대사집', title: '부휴당대사집 (浮休堂大師集) · 부휴 선수 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 15', era: '조선', vno: '15', name: '무경집', title: '무경집 (無竟集) · 무경 자수 · 김재희 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 16', era: '조선', vno: '16', name: '무경실중어록', title: '무경실중어록 (無竟室中語錄) · 무경 자수 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 17', era: '조선', vno: '17', name: '불조진심선격초', title: '불조진심선격초 (佛祖眞心禪格抄) · 무경 자수 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 18', era: '조선', vno: '18', name: '선학입문', title: '선학입문 (禪學入門) · 김대현 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 19', era: '조선', vno: '19', name: '사명당대사집', title: '사명당대사집 (四溟堂大師集) · 사명 유정 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 20', era: '조선', vno: '20', name: '송운대사분충서난록', title: '송운대사분충서난록 (松雲大師奮忠紓難錄) · 신유한 엮음 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 21', era: '조선', vno: '21', name: '의룡집', title: '의룡집 (義龍集) · 의룡 체훈 · 김석군 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 22', era: '조선', vno: '22', name: '응운공여대사유망록', title: '응운공여대사유망록 (應雲空如大師遺忘錄) · 응운 공여 · 이대형 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 23', era: '조선', vno: '23', name: '사경지험기', title: '사경지험기 (四經持驗記) · 백암 성총 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 24', era: '조선', vno: '24', name: '무용당유고', title: '무용당유고 (無用堂遺稿) · 무용 수연 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 25', era: '조선', vno: '25', name: '설담집', title: '설담집 (雪潭集) · 설담 자우 · 윤찬호 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 26', era: '조선', vno: '26', name: '동사열전', title: '동사열전 (東師列傳) · 범해 각안 · 김두재 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 27', era: '조선', vno: '27', name: '청허당집', title: '청허당집 (淸虛堂集) · 청허 휴정 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 28', era: '조선', vno: '28', name: '대각등계집', title: '대각등계집 (大覺登階集) · 백곡 처능 · 임재완 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 29', era: '조선', vno: '29', name: '반야바라밀다심경략소연주기회편', title: '반야바라밀다심경략소연주기회편 (般若波羅蜜多心經略疏連珠記會編) · 석실 명안 · 강찬국 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 30', era: '조선', vno: '30', name: '허정집', title: '허정집 (虛靜集) · 허정 법종 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 31', era: '조선', vno: '31', name: '호은집', title: '호은집 (好隱集) · 호은 유기 · 김종진 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 32', era: '조선', vno: '32', name: '월성집', title: '월성집 (月城集) · 월성 비은 · 이대형 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 33', era: '조선', vno: '33', name: '아암유집', title: '아암유집 (兒菴遺集) · 아암 혜장 · 김두재 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 34', era: '조선', vno: '34', name: '경허집', title: '경허집 (鏡虛集) · 경허 성우 · 이상하 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 35', era: '조선', vno: '35', name: '송계대선사문집·상월대사시집', title: '송계대선사문집·상월대사시집 (松桂大禪師文集·霜月大師詩集) · 송계 나식 · 상월 새봉 · 김종진 · 박재금 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 36', era: '조선', vno: '36', name: '선문오종강요·환성시집', title: '선문오종강요·환성시집 (禪門五宗綱要·喚惺詩集) · 환성 지안 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 37', era: '조선', vno: '37', name: '역산집', title: '역산집 (櫟山集) · 영허 선영 · 공근식 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 38', era: '조선', vno: '38', name: '함허당득통화상어록', title: '함허당득통화상어록 (涵虛堂得通和尙語錄) · 득통 기화 · 박해당 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 39', era: '조선', vno: '39', name: '가산고', title: '가산고 (伽山藁) · 월하 계오 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 40', era: '조선', vno: '40', name: '선원제전집도서과평', title: '선원제전집도서과평 (禪源諸詮集都序科評) · 설암 추붕 · 이정희 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 41', era: '조선', vno: '41', name: '함홍당집', title: '함홍당집 (涵弘堂集) · 함홍 치능 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 42', era: '조선', vno: '42', name: '백암집', title: '백암집 (栢庵集) · 백암 성총 · 유호선 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 43', era: '조선', vno: '43', name: '동계집', title: '동계집 (東溪集) · 동계 경일 · 김승호 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 44', era: '조선', vno: '44', name: '용암당유고·괄허집', title: '용암당유고·괄허집 (龍巖堂遺稿·括虛集) · 용암 체조 · 괄허 취여 · 김종진 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 45', era: '조선', vno: '45', name: '운곡집·허백집', title: '운곡집·허백집 (雲谷集·虛白集) · 운곡 충휘 · 허백 명조 · 김재희 · 김두재 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 46', era: '조선', vno: '46', name: '용담집·극암집', title: '용담집·극암집 (龍潭集·克庵集) · 용담 조관 · 극암 사성 · 성재헌 · 이대형 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 47', era: '조선', vno: '47', name: '경암집', title: '경암집 (鏡巖集) · 경암 응윤 · 김재희 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 48', era: '조선', vno: '48', name: '석문상의초 외', title: '석문상의초 외 (釋門喪儀抄 外) · 벽암 각성 · 나암 진일 · 허백 명조 · 계파 성능 · 김두재 옮김', look: 'w', url: 'https://drive.google.com/file/d/114GQ0Zg9le4NsUEBEU4b-IRvQjWpJtus/view?usp=sharing' },
+        { label: '조선 49', era: '조선', vno: '49', name: '월파집·해붕집', title: '월파집·해붕집 (月波集·海鵬集) · 월파 태율 · 해붕 전령 · 이상현 · 김두재 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 50', era: '조선', vno: '50', name: '몽암대사문집', title: '몽암대사문집 (夢庵大師文集) · 몽암 기영 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 51', era: '조선', vno: '51', name: '징월대사시집', title: '징월대사시집 (澄月大師詩集) · 징월 정훈 · 김재희 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 52', era: '조선', vno: '52', name: '통록촬요', title: '통록촬요 (通錄撮要) · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 53', era: '조선', vno: '53', name: '충허대사유집', title: '충허대사유집 (冲虛大師遺集) · 충허 지책 · 성재헌 · 오흥복 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 54', era: '조선', vno: '54', name: '백열록', title: '백열록 (栢悅錄) · 금명 보정 · 김종진 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 55', era: '조선', vno: '55', name: '조계고승전', title: '조계고승전 (曹溪高僧傳) · 금명 보정 · 김용태 · 김호귀 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 56', era: '조선', vno: '56', name: '범해선사시집', title: '범해선사시집 (梵海禪師詩集) · 범해 각안 · 김재희 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 57', era: '조선', vno: '57', name: '범해선사문집', title: '범해선사문집 (梵海禪師文集) · 범해 각안 · 김재희 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 58', era: '조선', vno: '58', name: '연담대사임하록', title: '연담대사임하록 (蓮潭大師林下錄) · 연담 유일 · 하혜정 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 59', era: '조선', vno: '59', name: '풍계집', title: '풍계집 (楓溪集) · 풍계 명찰 · 김두재 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 60', era: '조선', vno: '60', name: '혼원집·초엄유고', title: '혼원집·초엄유고 · 혼원 세환 · 초엄 복초 · 윤찬호 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 61', era: '조선', vno: '61', name: '청주집', title: '청주집 · 환공 치조 · 성재헌 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 62', era: '조선', vno: '62', name: '대동영선', title: '대동영선 (大東詠選) · 금명 보정 · 이상하 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 63', era: '조선', vno: '63', name: '현정론·유석질의론', title: '현정론·유석질의론 (顯正論·儒釋質疑論) · 득통 기화 · 박해당 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 64', era: '조선', vno: '64', name: '월봉집', title: '월봉집 (月峯集) · 월봉 책헌 · 이종수 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 65', era: '조선', vno: '65', name: '정토감주', title: '정토감주 (淨土紺珠) · 허주 덕진 엮음 · 김석군 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 66', era: '조선', vno: '66', name: '다송문고', title: '다송문고 (茶松文稿) · 금명 보정 · 이대형 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 67', era: '조선', vno: '67', name: '소요당집·취미대사시집', title: '소요당집·취미대사시집 (逍遙堂集·翠微大師詩集) · 소요 태능 · 취미 수초 · 이상현 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 68', era: '조선', vno: '68', name: '선원소류·선문재정록', title: '선원소류·선문재정록 (禪源遡流·禪門再正錄) · 설두 유형 · 진하 축원 · 조영미 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 69', era: '조선', vno: '69', name: '치문경훈주 상', title: '치문경훈주 상권 (緇門警訓註) · 백암 성총 · 선암 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 70', era: '조선', vno: '70', name: '치문경훈주 중', title: '치문경훈주 중권 (緇門警訓註) · 백암 성총 · 선암 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 71', era: '조선', vno: '71', name: '치문경훈주 하', title: '치문경훈주 하권 (緇門警訓註) · 백암 성총 · 선암 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 72', era: '조선', vno: '72', name: '월저당대사집', title: '월저당대사집 (月渚堂大師集) · 월저 도안 · 김두재 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 73', era: '조선', vno: '73', name: '오종범음집', title: '오종범음집 (五種梵音集) · 지선 · 김두재 옮김', look: 'w', url: 'https://drive.google.com/file/d/1xCz5rXLS50LSIdDQ7LRe3Tb5kqnn3mYs/view?usp=sharing' },
+        { label: '조선 74', era: '조선', vno: '74', name: '석전유해', title: '석전유해 (釋典類解) · 연담 유일 · 조영미 옮김', look: 't', url: 'https://drive.google.com/file/d/1ITGBkmT3QaTajiCS5OHJkFaY77P5i_xk/view?usp=sharing' }
+      ],
+      tags: ['한국불교전서', '한글본', '韓國佛敎全書', '동국대학교', '불교학술원', '고려', '조선', '신라', '원감국사집', '충지', '석가여래행적송', '운묵', '경책', '백운화상어록', '白雲和尙語錄', '백운 경한', '직지', '작법귀감', '作法龜鑑', '백파 긍선', '정토보서', '淨土寶書', '백암 성총', '석문상의초', '釋門喪儀抄', '벽암 각성', '오종범음집', '五種梵音集', '범패', '석전유해', '釋典類解', '연담 유일', '김두재', '조영미']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -5904,7 +6144,7 @@
         { name: '월초거연', hanja: '月初巨淵', born: 1858, died: 1934, books: ['月初門徒祖派譜 (월초문도조파보)'] },
         { name: '월운해룡', hanja: '月雲海龍', born: 1929, died: 2023, books: ['못다 갚을 은혜 : 月雲堂 逸中事 월운스님회고담'] },
         { name: '연담묘순', hanja: '', born: 1946, books: ['묘순 스님 사진집'] },
-        { name: '운허용하', hanja: '耘虛龍夏', born: 1892, died: 1980, books: ['耘虛禪師語文集 (운허선사어문집)'] },
+        { name: '운허용하', hanja: '耘虛龍夏', born: 1892, died: 1980, books: ['耘虛禪師語文集 (운허선사어문집)', '楞嚴經 註解 (능엄경 주해)'] },
         { name: '전강영신', hanja: '田岡永信', born: 1898, died: 1975, books: ['전강선사일대기 (田岡禪師一代記) · 전강선사 법어'] },
         { name: '경허성우', hanja: '鏡虛惺牛', born: 1849, died: 1912, books: ['착한 일 많이 하게 그대가 부처일세 : 경허큰스님', '경허 · 만공의 선풍과 법맥', '콧구멍 없는 소 : 경허대사와 5대 제자', '경허와 만공의 禪思想', '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)', '鏡虛錄 (경허록)', '鏡虛滿空新出資料集 (경허만공신출자료집) 1 : 경허선사편'] },
         { name: '경봉정석', hanja: '鏡峰靖錫', born: 1892, died: 1982, books: ['三笑窟 (삼소굴) : 경봉선사 열반 30주기 특별전'] },
@@ -7834,6 +8074,36 @@
         a.querySelector('.eb-title b').textContent = vol.vno || '';
         const tx = a.querySelector('.eb-text');
         (vol.ranges || []).forEach(t => { const s = document.createElement('span'); s.className = 'eb-range'; s.textContent = t; tx.appendChild(s); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'lng') {
+        // 능엄경 강화: 회갈색 천 · 佛敎叢書 · 세로 제목 · 권 번호 · 東國譯經院
+        a.className = 'spine spine-lng';
+        a.innerHTML = `<span class="lg-ser">佛敎叢書</span><span class="lg-title">능엄경 강화</span><span class="lg-no"></span><span class="lg-pub">東國譯經院</span>`;
+        a.querySelector('.lg-no').textContent = vol.vno || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'mjsg') {
+        // 민족사 불교경전: 연두빛 점무늬 천 · 불교경전+번호 · 자주색 칸 흰 세로 제목 · 부제 · 민족사
+        a.className = 'spine spine-mj';
+        a.innerHTML = `<span class="mj-ser">불교경전 <b></b></span><span class="mj-box"><span class="mj-name"></span></span><span class="mj-pub">민족사</span>`;
+        a.querySelector('.mj-ser b').textContent = vol.vno || '';
+        const nm = a.querySelector('.mj-name');
+        (vol.name || '').split(' · ').forEach((part, k) => {
+          const m = part.match(/^(.*?)\s*([①-⑳])$/);
+          const s = document.createElement('span'); s.textContent = (k ? '·' : '') + (m ? m[1] : part).replace(/\s+/g, ''); nm.appendChild(s);
+          if (m) { const c = document.createElement('i'); c.textContent = m[2]; nm.appendChild(c); }
+        });
+      } else if (b.spineDesign && b.spineDesign.kind === 'hbj') {
+        // 한글본 한국불교전서: 구름무늬 띠 · 한국불교전서 · 시대+번호 · 세로 제목 · 동국대학교
+        a.className = 'spine spine-hb look-' + (vol.look || 'w');
+        a.innerHTML = `<span class="hb-band"></span><span class="hb-ser">한국불교전서</span><span class="hb-no"><small></small><b></b></span><span class="hb-title"></span><span class="hb-pub">동국대학교</span>`;
+        a.querySelector('.hb-band').style.backgroundImage = `url(spines/hbj-${(vol.look === 'g' || vol.look === 't') ? 'goryeo' : 'joseon'}.jpg)`;
+        a.querySelector('.hb-no small').textContent = vol.era || '';
+        a.querySelector('.hb-no b').textContent = vol.vno || '';
+        const ht = a.querySelector('.hb-title');
+        (vol.name || '').split(/ · |·/).forEach(part => {
+          let t = part.replace(/\s+/g, '');
+          const cols = t.length > 11 ? [t.slice(0, Math.ceil(t.length / 2)), t.slice(Math.ceil(t.length / 2))] : [t];
+          cols.forEach(x => { const s = document.createElement('span'); s.textContent = x; ht.appendChild(s); });
+        });
+        a.title = `한글본 한국불교전서 ${vol.label} · ${vol.title}`;
       } else if (b.spineDesign && b.spineDesign.kind === 'lkh') {
         // 이건희 기증품 목록집: 흰 표지의 양쪽 세로 겹줄 안을 책등으로
         a.className = 'spine spine-k';
