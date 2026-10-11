@@ -1243,6 +1243,67 @@
   .spine-lng .lg-title{ margin-top:calc(var(--spine-h) * .06); writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(9px,1.6vh,12.5px); letter-spacing:.08em; }
   .spine-lng .lg-no{ margin-top:calc(var(--spine-h) * .035); font-family:'Times New Roman',serif; font-weight:700; font-size:clamp(10px,1.8vh,14px); }
   .spine-lng .lg-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(7px,1.15vh,9px); line-height:1.1; letter-spacing:.02em; }
+  /* 釋林 (동국대학교 석림회) */
+  .spine-srl{
+    width:calc(var(--spine-h) * .16); position:relative; overflow:hidden; color:#6a5428;
+    display:flex; flex-direction:column; align-items:center;
+    padding:calc(var(--spine-h) * .06) 0 calc(var(--spine-h) * .045);
+    font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif;
+    background:linear-gradient(90deg,#e4dcc5 0%,#f2ecd9 18%,#f6f1e1 50%,#f0e9d5 82%,#ded5bc 100%);
+  }
+  .spine-srl::before{ content:''; position:absolute; inset:0; z-index:0;
+    background:url(spines/srl-faces.jpg) center/100% auto repeat-y;
+    filter:sepia(.6) contrast(.8); opacity:.13; mix-blend-mode:multiply;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 30%,#000 70%,transparent 100%);
+            mask-image:linear-gradient(180deg,transparent 0%,#000 30%,#000 70%,transparent 100%); }
+  .spine-srl > *{ flex:0 0 auto; white-space:nowrap; height:max-content; position:relative; z-index:1; writing-mode:vertical-rl; text-orientation:upright; }
+  .spine-srl img.sr-big{ position:relative; z-index:1; width:70%; height:auto; writing-mode:horizontal-tb; }
+  .spine-srl .sr-no{ margin-top:calc(var(--spine-h) * .06); font-weight:600; font-size:clamp(10px,1.8vh,14px); letter-spacing:.03em; }
+  .spine-srl .sr-no i{ font-style:normal; text-combine-upright:all; }
+  .spine-srl .sr-pub{ margin-top:auto; font-size:clamp(6.5px,1.08vh,8.5px); letter-spacing:.02em; line-height:1.1; }
+  /* 李朝實錄佛敎鈔存 */
+  .spine-jo{
+    width:calc(var(--spine-h) * .19); position:relative; overflow:hidden;
+    background:#1f2a52 url(spines/jo-cloth.jpg) center/cover;
+    display:flex; flex-direction:column; align-items:center;
+    padding:calc(var(--spine-h) * .045) 0 calc(var(--spine-h) * .04);
+    box-shadow:inset 3px 0 5px rgba(255,255,255,.08), inset -4px 0 6px rgba(0,0,0,.45);
+  }
+  .spine-jo > *{ flex:0 0 auto; }
+  .spine-jo > .jo-box{ flex:1 1 auto; min-height:0; }
+  .spine-jo .jo-slip{ position:relative; width:60%; box-shadow:0 0 2px rgba(0,0,0,.5); }
+  .spine-jo .jo-slip img{ position:static; display:block; width:100%; height:auto; }
+  .spine-jo .jo-no{ position:absolute; top:75.5%; right:10%; writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+    font-family:'Noto Serif TC','Noto Serif KR','Noto Serif CJK KR',serif; font-weight:700; color:#1a1612; font-size:clamp(6px,1.08vh,8.5px); line-height:1; letter-spacing:.08em; }
+  .spine-jo .jo-box{ width:84%; box-sizing:border-box; padding:4px 2px;
+    background:#d9d6c8 url(spines/jo-paper.jpg) center/cover; border:1px solid #1a1612; outline:1px solid rgba(217,214,200,.85); outline-offset:1px;
+    writing-mode:vertical-rl; text-orientation:mixed; color:#1a1612;
+    font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-size:clamp(5.2px,.9vh,7px); line-height:1.3; display:flex; align-items:center; justify-content:center; letter-spacing:.01em;
+    margin-top:calc(var(--spine-h) * .03); overflow:hidden; }
+  /* Collected Works of Korean Buddhism (영문 한국전통사상총서) */
+  .spine-cwkb{
+    width:calc(var(--spine-h) * .2); position:relative; overflow:hidden;
+    background:linear-gradient(90deg,#d6d3cc 0%,#eceae4 14%,#f2f0eb 50%,#e9e6e0 86%,#d2cec7 100%);
+    display:flex; flex-direction:column; align-items:center; color:#4a4642;
+    box-shadow:inset -3px 0 5px rgba(0,0,0,.18);
+  }
+  .spine-cwkb > *{ flex:0 0 auto; }
+  .spine-cwkb .cw-band{ align-self:stretch; height:calc(var(--spine-h) * .2); display:flex; justify-content:center; align-items:flex-start;
+    padding-top:calc(var(--spine-h) * .03); box-sizing:border-box;
+    background:linear-gradient(90deg,#9a5232 0%,#b8693f 15%,#c4774c 50%,#b5653c 85%,#8f4b2d 100%);
+    border-bottom:2px solid #6c6762; color:#fbf3ea; font-family:'EB Garamond','Times New Roman',serif; font-size:clamp(11px,2vh,15.5px); font-weight:600; letter-spacing:.02em; }
+  .spine-cwkb .cw-hz{ margin-top:calc(var(--spine-h) * .05); writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+    font-family:'Noto Serif TC','Noto Serif KR','Noto Serif CJK KR',serif; font-size:clamp(7px,1.2vh,9.5px); letter-spacing:.06em; color:#5b5652; }
+  .spine-cwkb .cw-title{ margin-top:calc(var(--spine-h) * .025); writing-mode:vertical-rl; white-space:nowrap; display:block; min-height:0; flex:0 1 auto; overflow:hidden;
+    font-family:'EB Garamond','Times New Roman',serif; text-transform:uppercase; }
+  .spine-cwkb .cw-main, .spine-cwkb .cw-sub{ display:block; }
+  .spine-cwkb .cw-sub{ margin-right:2px; }
+  .spine-cwkb.long .cw-main{ font-size:clamp(7px,1.22vh,9.4px); letter-spacing:.04em; }
+  .spine-cwkb .cw-main{ font-size:clamp(8px,1.42vh,11px); letter-spacing:.07em; color:#3d3935; }
+  .spine-cwkb .cw-sub{ font-size:clamp(5.5px,.98vh,7.6px); letter-spacing:.09em; color:#6a6560; }
+  .spine-cwkb .cw-logo{ margin-top:auto; margin-bottom:calc(var(--spine-h) * .035); width:clamp(9px,1.6vh,12px); height:clamp(9px,1.6vh,12px); border:1px solid #6a6560; border-radius:50%; position:relative; }
+  .spine-cwkb .cw-logo::before{ content:''; position:absolute; left:50%; top:50%; width:2px; height:2px; border-radius:50%; background:#6a6560;
+    box-shadow:0 -3px 0 #6a6560, -2.6px 1.5px 0 #6a6560, 2.6px 1.5px 0 #6a6560; transform:translate(-50%,-50%); }
   /* 민족사 불교경전 */
   .spine-mj{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -2034,11 +2095,57 @@
   // 여러 권으로 된 시리즈/전집은 { title, poster, genre, volumes: [{label, title, url}] } 형태로 추가
   const BOOKS = [
     {
-      title: '석림 제33집',
-      badge: '불기 2543 · 동국대학교 석림회',
+      title: '釋林 (석림)',
+      badge: '東國大學校 釋林會 · 論叢',
       category: '01-0006',
       poster: 'covers/0001.jpg',
-      url: 'https://drive.google.com/file/d/1lfk_IntDBKT3i-I9x9sW138Gf3kEY_fP/view?usp=sharing'
+      // 책등: 크림색 바탕 · 은은한 나한 얼굴 무늬 · 금색 釋林 · 第N輯 · 東國大學校釋林會 (1~42집, 미소장 권은 흐리게)
+      spineDesign: { kind: 'srl' },
+      volumes: [
+        { label: '제1집', vno: '1', title: '釋林 第1輯', url: '', missing: true },
+        { label: '제2집', vno: '2', title: '釋林 第2輯', url: '', missing: true },
+        { label: '제3집', vno: '3', title: '釋林 第3輯', url: '', missing: true },
+        { label: '제4집', vno: '4', title: '釋林 第4輯', url: '', missing: true },
+        { label: '제5집', vno: '5', title: '釋林 第5輯', url: '', missing: true },
+        { label: '제6집', vno: '6', title: '釋林 第6輯', url: '', missing: true },
+        { label: '제7집', vno: '7', title: '釋林 第7輯', url: '', missing: true },
+        { label: '제8집', vno: '8', title: '釋林 第8輯', url: '', missing: true },
+        { label: '제9집', vno: '9', title: '釋林 第9輯', url: '', missing: true },
+        { label: '제10집', vno: '10', title: '釋林 第10輯', url: '', missing: true },
+        { label: '제11집', vno: '11', title: '釋林 第11輯', url: '', missing: true },
+        { label: '제12집', vno: '12', title: '釋林 第12輯', url: '', missing: true },
+        { label: '제13집', vno: '13', title: '釋林 第13輯', url: '', missing: true },
+        { label: '제14집', vno: '14', title: '釋林 第14輯', url: '', missing: true },
+        { label: '제15집', vno: '15', title: '釋林 第15輯', url: '', missing: true },
+        { label: '제16집', vno: '16', title: '釋林 第16輯', url: '', missing: true },
+        { label: '제17집', vno: '17', title: '釋林 第17輯', url: '', missing: true },
+        { label: '제18집', vno: '18', title: '釋林 第18輯', url: '', missing: true },
+        { label: '제19집', vno: '19', title: '釋林 第19輯', url: '', missing: true },
+        { label: '제20집', vno: '20', title: '釋林 第20輯', url: '', missing: true },
+        { label: '제21집', vno: '21', title: '釋林 第21輯', url: '', missing: true },
+        { label: '제22집', vno: '22', title: '釋林 第22輯', url: '', missing: true },
+        { label: '제23집', vno: '23', title: '釋林 第23輯', url: '', missing: true },
+        { label: '제24집', vno: '24', title: '釋林 第24輯', url: '', missing: true },
+        { label: '제25집', vno: '25', title: '釋林 第25輯', url: '', missing: true },
+        { label: '제26집', vno: '26', title: '釋林 第26輯', url: '', missing: true },
+        { label: '제27집', vno: '27', title: '釋林 第27輯', url: '', missing: true },
+        { label: '제28집', vno: '28', title: '釋林 第28輯', url: '', missing: true },
+        { label: '제29집', vno: '29', title: '釋林 第29輯', url: '', missing: true },
+        { label: '제30집', vno: '30', title: '釋林 第30輯', url: '', missing: true },
+        { label: '제31집', vno: '31', title: '釋林 第31輯 (불기 2541 · 1997)', url: 'https://drive.google.com/file/d/1PNxWkuN1Q2MycdxWu9m6GR160672OWhd/view?usp=sharing' },
+        { label: '제32집', vno: '32', title: '釋林 第32輯 (불기 2542 · 1998)', url: 'https://drive.google.com/file/d/1V-atvk7nDbiwoIz5ovEC2QNMNmz4hH68/view?usp=sharing' },
+        { label: '제33집', vno: '33', title: '釋林 第33輯 (불기 2543 · 1999)', url: 'https://drive.google.com/file/d/1lfk_IntDBKT3i-I9x9sW138Gf3kEY_fP/view?usp=sharing' },
+        { label: '제34집', vno: '34', title: '釋林 第34輯', url: '', missing: true },
+        { label: '제35집', vno: '35', title: '釋林 第35輯', url: '', missing: true },
+        { label: '제36집', vno: '36', title: '釋林 第36輯', url: '', missing: true },
+        { label: '제37집', vno: '37', title: '釋林 第37輯', url: '', missing: true },
+        { label: '제38집', vno: '38', title: '釋林 第38輯', url: '', missing: true },
+        { label: '제39집', vno: '39', title: '釋林 第39輯 (불기 2549 · 2005)', url: 'https://drive.google.com/file/d/1yCDZrH9k6N2u74iQIKX2CTDJGklzjUaO/view?usp=sharing' },
+        { label: '제40집', vno: '40', title: '釋林 第40輯', url: '', missing: true },
+        { label: '제41집', vno: '41', title: '釋林 第41輯', url: '', missing: true },
+        { label: '제42집', vno: '42', title: '釋林 第42輯 (불기 2552 · 2008)', url: 'https://drive.google.com/file/d/1nN5Xz-ajA_-5EC45h60TNXds3b6yuatL/view?usp=sharing' }
+      ],
+      tags: ['석림', '釋林', '석림회', '釋林會', '동국대학교', '논총', '論叢', '학인', '석림 제33집']
     },
     {
       title: '산중일지',
@@ -2795,6 +2902,31 @@
       ]
     },
     {
+      title: 'Collected Works of Korean Buddhism · 한국전통사상총서 (영문)',
+      badge: 'Jogye Order of Korean Buddhism · 2012 · 전 12권 13책',
+      category: ['01-0003', '01-0005'],
+      langs: ['영어'],
+      poster: 'covers/0619.jpg',
+      // 책등: 흰 바탕 · 위 테라코타 띠에 권 번호 · 한자 · 영문 제목 · 아래 조계종 법륜 (한글판 한국전통사상총서의 영역본)
+      spineDesign: { kind: 'cwkb' },
+      volumes: [
+        { label: 'Vol. 1', vno: '1', hz: '元曉', main: 'Wonhyo', sub: 'Selected Works', title: 'Wonhyo: Selected Works', url: 'https://drive.google.com/file/d/1IwQ-4NQa1nQAPnaH8zEzgcUIHCfyJBgs/view?usp=sharing' },
+        { label: 'Vol. 2', vno: '2', hz: '知訥', main: 'Chinul', sub: 'Selected Works', title: 'Chinul: Selected Works', url: 'https://drive.google.com/file/d/1J3dHfY_QDw2w8OKXoyHc2vU6rQtGUgva/view?usp=sharing' },
+        { label: 'Vol. 3', vno: '3', hz: '休靜', main: 'Hyujeong', sub: 'Selected Works', title: 'Hyujeong: Selected Works', url: 'https://drive.google.com/file/d/1c6bAKU7_NGhoJw2fFDDD8GBfAT0WcUVw/view?usp=sharing' },
+        { label: 'Vol. 4', vno: '4', hz: '華嚴', main: 'Hwaŏm I', sub: 'The Mainstream Tradition', title: 'Hwaŏm I: The Mainstream Tradition', url: 'https://drive.google.com/file/d/10kJAinTiNazAGWYSCgRIWr1Ufj-Dl1IW/view?usp=sharing' },
+        { label: 'Vol. 5', vno: '5', hz: '華嚴', main: 'Hwaŏm II', sub: 'Selected Works', title: 'Hwaŏm II: Selected Works', url: 'https://drive.google.com/file/d/1BZ_uOdPrzigR5q6WJjZSyQ_GDTxC98g5/view?usp=sharing' },
+        { label: 'Vol. 6', vno: '6', hz: '諸教學', main: 'Doctrinal Treatises', sub: 'Selected Works', title: 'Doctrinal Treatises: Selected Works', url: 'https://drive.google.com/file/d/1AdhmgQpXFhtSBOioxJBShd5a2ntMbH73/view?usp=sharing' },
+        { label: 'Vol. 7-1', vno: '7-1', hz: '公案集', main: 'Gongan Collections I', sub: '', title: 'Gongan Collections I', url: 'https://drive.google.com/file/d/17DTDyP1Ppr1w4q_8b49f9qUci8XU8de8/view?usp=sharing' },
+        { label: 'Vol. 7-2', vno: '7-2', hz: '公案集', main: 'Gongan Collections II', sub: '', title: 'Gongan Collections II', url: 'https://drive.google.com/file/d/19KRXnzBZwibc914aTakTs5dRzxhoMcEZ/view?usp=sharing' },
+        { label: 'Vol. 8', vno: '8', hz: '禪語錄', main: 'Seon Dialogues', sub: '', title: 'Seon Dialogues', url: 'https://drive.google.com/file/d/1C8ZDlC1Lg8u-FszrGxqlqtNfZ8Wncbae/view?usp=sharing' },
+        { label: 'Vol. 9', vno: '9', hz: '詩選集', main: 'Seon Poems', sub: 'Selected Works', title: 'Seon Poems: Selected Works', url: 'https://drive.google.com/file/d/12jkIXgcHaSzBn8HuG0hCoisrkWjimOYc/view?usp=sharing' },
+        { label: 'Vol. 10', vno: '10', hz: '文化', main: 'Korean Buddhist Culture', sub: 'Pilgrimage · Monuments · Monks', title: 'Korean Buddhist Culture: Accounts of a Pilgrimage, Monuments, and Eminent Monks', url: 'https://drive.google.com/file/d/1BtiRq9pkF_9p90juw4jjqKxc7SLORaSQ/view?usp=sharing' },
+        { label: 'Vol. 11', vno: '11', hz: '戒律', main: "Brahmā's Net Sutra", sub: 'Exposition', title: "Exposition of the Sutra of Brahmā's Net", url: 'https://drive.google.com/file/d/1v2CB1e7luhOUwNgsnwZsG1bi_PP3t71p/view?usp=sharing' },
+        { label: 'Vol. 12', vno: '12', hz: '高僧碑文', main: 'Stele Inscriptions', sub: 'of Eminent Korean Monks', title: 'Anthology of Stele Inscriptions of Eminent Korean Buddhist Monks', url: 'https://drive.google.com/file/d/1jk1nYFZfxJ2lqYVbZO7-75y40ixE8XoK/view?usp=sharing' }
+      ],
+      tags: ['Collected Works of Korean Buddhism', '한국전통사상총서', '영문판', '영역', 'Jogye Order', '조계종', 'Wonhyo', 'Chinul', 'Hyujeong', 'Hwaom', 'Gongan', 'Seon', 'Buswell', 'Muller', 'Jorgensen']
+    },
+    {
       title: '여천무비스님 전집 – 화중연화(火中蓮華)',
       badge: '여천 무비 · 불광출판사 · 2024 · 전 25권',
       category: ['01-0005'],
@@ -3383,7 +3515,7 @@
       category: ['04-0002', '08-0002'],
       langs: ['일본어'],
       poster: 'covers/0156.jpg',
-      url: 'https://drive.google.com/file/d/1py1DT6OP9ntcDq57hDzdWZh2WrQN_NpI/view?usp=sharing'
+      url: 'https://drive.google.com/file/d/16rkiYvVjAJeNUCgUcSi_qgL8xxgp5LpA/view?usp=sharing'
     },
     {
       title: '산스끄리뜨의 기초와 실천',
@@ -4271,7 +4403,7 @@
       badge: '여백미디어',
       category: ['01-0001'],
       poster: 'covers/0253.jpg',
-      url: 'https://drive.google.com/file/d/10cK-2i92GPNBOK6ELblXuZ5z9_wp5dZJ/view?usp=sharing',
+      url: 'https://drive.google.com/file/d/1k1s0srtyagAXX5SZyDdBlwMwc-L7pykz/view?usp=sharing',
       tags: ['경해', '鏡海', '법인', '法印', '각원사', '회고록', '동경']
     },
     {
@@ -7473,7 +7605,7 @@
       title: 'Wonhyo\'s Philosophy of Mind',
       badge: 'Ed. A. Charles Muller & Cuong T. Nguyen · University of Hawai‘i Press · Korean Classics Library',
       category: ['01-0001', '05-0003'],
-      poster: '',
+      poster: 'covers/0616.jpg',
       url: 'https://drive.google.com/file/d/1Mx9LRo6Nn2brIxpDs1U3tspSWC5GI41P/view?usp=sharing',
       tags: ['원효', '元曉', 'Wonhyo', 'Philosophy of Mind', '심식', 'Charles Muller', '뮬러', 'Korean Classics Library']
     },
@@ -7608,6 +7740,209 @@
       poster: 'covers/0597.jpg',
       url: 'https://drive.google.com/file/d/13YLxhRSIq3C6vJWd7A4b_lSywGUVwTcw/view?usp=sharing',
       tags: ['석가여래십지수행기', '十地修行記', '언어연구', '역주', '국어사', '학고방']
+    },
+    {
+      title: '달마, 서양으로 가다 : 서양의 신불교를 일군 별들의 이야기',
+      badge: '진우기 · 불교시대사',
+      category: ['07-0004'],
+      poster: 'covers/0598.jpg',
+      url: 'https://drive.google.com/file/d/1qfN8g-KBjSRJIrDHG_X5IM1Q4JwLiUh7/view?usp=sharing',
+      tags: ['서양불교', '신불교', '서양', '진우기', '불교시대사']
+    },
+    {
+      title: 'A History of Ancient and Early Medieval India : From the Stone Age to the 12th Century',
+      badge: 'Upinder Singh · Pearson',
+      category: ['07-0001'],
+      poster: 'covers/0599.jpg',
+      url: '',
+      tags: ['India', '인도사', '고대인도', 'Upinder Singh', 'Pearson']
+    },
+    {
+      title: '한국 사찰의 주련',
+      badge: '권영한 지음 · 전원문화사 · 전 2권',
+      category: ['01-0002'],
+      poster: 'covers/0600.jpg',
+      volumes: [
+        { label: 'I', title: '한국 사찰의 주련 I', url: 'https://drive.google.com/file/d/1hkAsCaoDokaqyhavmSPIZ56h0LrLnwny/view?usp=sharing' },
+        { label: 'II', title: '한국 사찰의 주련 II', url: '' }
+      ],
+      tags: ['주련', '柱聯', '사찰', '한국의 사찰', '권영한', '전원문화사']
+    },
+    {
+      title: '畿內寺院誌 (기내사원지)',
+      badge: '京畿道 (경기도)',
+      category: ['01-0002'],
+      poster: 'covers/0601.jpg',
+      url: 'https://drive.google.com/file/d/1Zy5sCP3Z9dRp7eRO35dVaBFyUDoPkT5-/view?usp=sharing',
+      tags: ['기내사원지', '畿內寺院誌', '경기도', '사찰', '사지', '한국의 사찰']
+    },
+    {
+      title: '남양주의 사찰',
+      badge: '남양주문화원 · 남양주 향토문화총서 9',
+      category: ['01-0002'],
+      poster: 'covers/0602.jpg',
+      url: 'https://drive.google.com/file/d/19opGipCBOF8TJ_DMia7m2Uk0mX1RXqD6/view?usp=sharing',
+      tags: ['남양주', '사찰', '향토문화총서', '남양주문화원', '한국의 사찰']
+    },
+    {
+      title: '전통사찰총서 6 : 전남의 전통사찰 I',
+      badge: '寺刹文化研究院 (사찰문화연구원)',
+      category: ['01-0002'],
+      poster: 'covers/0603.jpg',
+      url: 'https://drive.google.com/file/d/1R2C7W7xV_wzIxypLm4W8EalODFY_dY1h/view?usp=sharing',
+      tags: ['전통사찰총서', '전통사찰', '전남', '전라남도', '사찰문화연구원', '한국의 사찰']
+    },
+    {
+      title: 'Introduction to the History of Indian Buddhism',
+      badge: 'Eugène Burnouf · tr. Katia Buffetrille & Donald S. Lopez Jr. · University of Chicago Press',
+      category: ['07-0001'],
+      poster: 'covers/0604.jpg',
+      url: '',
+      tags: ['Burnouf', '뷔르누프', 'Indian Buddhism', '인도불교사', 'Lopez', 'Buffetrille']
+    },
+    {
+      title: '京畿道佛蹟資料集 (경기도불적자료집)',
+      badge: '경기도박물관 · 경기도박물관 학술총서 · 1999',
+      category: ['01-0002'],
+      poster: 'covers/0605.jpg',
+      url: 'https://drive.google.com/file/d/1t4U03XqKQeiKsCGEHAYfnAKsgdPqTRTh/view?usp=sharing',
+      tags: ['경기도', '京畿道', '불적', '佛蹟', '사지', '경기도박물관', '한국의 사찰']
+    },
+    {
+      title: 'The Art of Southeast Asia (World of Art)',
+      badge: 'Philip Rawson · Thames & Hudson · World of Art',
+      category: ['02-0002', '07-0003'],
+      poster: 'covers/0606.jpg',
+      url: 'https://drive.google.com/file/d/13RTse7LWkT9mGICpeIOPAK8AX0-G36o1/view?usp=sharing',
+      tags: ['동남아시아', '미술', 'Southeast Asia', 'Rawson', 'World of Art']
+    },
+    {
+      title: 'Guide to Korean Buddhist Temples',
+      badge: '영문 한국 사찰 안내서',
+      category: ['01-0002'],
+      poster: 'covers/0607.jpg',
+      url: 'https://drive.google.com/file/d/1svzSK7-kesooU_ZHkXrGqOQdJJI1DL76/view?usp=sharing',
+      tags: ['Korean Buddhist Temples', '사찰 안내', '영문', '한국의 사찰']
+    },
+    {
+      title: '韓國寺址總覽 (한국사지총람) · 2010',
+      badge: '문화재청 · (재)불교문화재연구소 · 2010 · 전 3권',
+      category: ['01-0002'],
+      poster: 'covers/0608.jpg',
+      volumes: [
+        { label: '上', title: '한국사지총람 上 (2010)', url: 'https://drive.google.com/file/d/1GSBbqNY7ngD1shV7bycpyk1tJ6_rL8hn/view?usp=sharing' },
+        { label: '下', title: '한국사지총람 下 (2010)', url: 'https://drive.google.com/file/d/11aY5r2GjTPYvfJ0tLQoN_F1WsRr2bhuP/view?usp=sharing' },
+        { label: '색인집', title: '한국사지총람 색인집 (2010)', url: 'https://drive.google.com/file/d/1BuxXMgk3DGuK5b4ZOF5FIWJw0u0RyZXl/view?usp=sharing' }
+      ],
+      tags: ['한국사지총람', '寺址總覽', '사지', '폐사지', '불교문화재연구소', '문화재청']
+    },
+    {
+      title: '韓國寺址總覽 (한국사지총람) · 증보판 2021',
+      badge: '문화재청 · (재)불교문화재연구소 · 2021 증보판 · 전 3권',
+      category: ['01-0002'],
+      poster: 'covers/0609.jpg',
+      volumes: [
+        { label: '上', title: '한국사지총람 증보판 上 (2021)', url: 'https://drive.google.com/file/d/18V6KbUc0SCTXg6el74lAe4x9wfmycOrB/view?usp=sharing' },
+        { label: '下', title: '한국사지총람 증보판 下 (2021)', url: 'https://drive.google.com/file/d/1TLWiWcIfPaJbIHEiTquXjOcCy1_RoYRj/view?usp=sharing' },
+        { label: '부록', title: '한국사지총람 증보판 부록 (2021)', url: 'https://drive.google.com/file/d/13nqgJQ4kDZLcivzzohYnm_E8WQn61q2T/view?usp=sharing' }
+      ],
+      tags: ['한국사지총람', '寺址總覽', '증보판', '사지', '폐사지', '불교문화재연구소', '문화재청']
+    },
+    {
+      title: '韓國의 寺址 시·발굴조사 보고서 : 보성 개흥사지',
+      badge: '문화재청 · (재)불교문화재연구소 · 학술총서 제43책 · 2019',
+      category: ['01-0002'],
+      poster: 'covers/0610.jpg',
+      url: 'https://drive.google.com/file/d/1ChgZuoOTP6UAoNXf6aqsnBoiRPTXQ96O/view?usp=sharing',
+      tags: ['한국의 사지', '寺址', '개흥사지', '보성', '발굴조사', '불교문화재연구소']
+    },
+    {
+      title: '韓國의 寺址 현황조사 보고서 · 2019 (경상도)',
+      badge: '문화재청 · (재)불교문화재연구소 · 2019 · 전 2권',
+      category: ['01-0002'],
+      poster: 'covers/0611.jpg',
+      volumes: [
+        { label: '上', title: '韓國의 寺址 현황조사 보고서 上 : 경상남도 (2019)', url: 'https://drive.google.com/file/d/1OgIQS7yvk9awglj0wpXfrAPZqYcnmNIu/view?usp=sharing' },
+        { label: '下', title: '韓國의 寺址 현황조사 보고서 下 : 대구·부산·울산·경상북도·부록 (2019)', url: '' }
+      ],
+      tags: ['한국의 사지', '寺址', '현황조사', '경상남도', '경상북도', '대구', '부산', '울산', '불교문화재연구소']
+    },
+    {
+      title: '한국의 전통사찰 : 2010 전국 전통사찰 현황조사 보고서',
+      badge: '대한불교조계종 총무원 · 2010 · 전 2권',
+      category: ['01-0002'],
+      poster: 'covers/0612.jpg',
+      volumes: [
+        { label: 'I', title: '한국의 전통사찰 I (2010)', url: 'https://drive.google.com/file/d/1y8rae0inAAxX75ZaUDObjK6LFe7hq4Iu/view?usp=sharing' },
+        { label: 'II', title: '한국의 전통사찰 II (2010)', url: 'https://drive.google.com/file/d/1tnb7iZq1qdBb_jMYN8ggTyHF5_7bZL6O/view?usp=sharing' }
+      ],
+      tags: ['전통사찰', '현황조사', '조계종', '총무원', '한국의 사찰']
+    },
+    {
+      title: '韓國寺刹事典 (한국사찰사전)',
+      badge: '退耕堂 權相老 (퇴경당 권상로) 著 · 전 2권',
+      category: ['01-0002', '08-0002'],
+      poster: 'covers/0613.jpg',
+      volumes: [
+        { label: '上', title: '韓國寺刹事典 上', url: 'https://drive.google.com/file/d/1qRmkBRL_N-Hg5pOnChxXm1K9kRPQhRVz/view?usp=sharing' },
+        { label: '下', title: '韓國寺刹事典 下', url: 'https://drive.google.com/file/d/1PCFsCY1SGItudGKTff00T2qa9c93KlKC/view?usp=sharing' }
+      ],
+      tags: ['한국사찰사전', '寺刹事典', '권상로', '權相老', '퇴경당', '사전', '한국의 사찰']
+    },
+    {
+      title: '신문으로 본 근대 공주불교 : 1900~1960년대',
+      badge: '자료수집 해월스님 · 공주불자연합회 · 사암연합회 · 공주시',
+      category: ['01-0004'],
+      poster: 'covers/0614.jpg',
+      url: 'https://drive.google.com/file/d/1lwxnVMgassj3UoURrBSwLb5S93BWWxPA/view?usp=sharing',
+      tags: ['공주', '근대불교', '신문', '해월', '공주불교']
+    },
+    {
+      title: '佛敎敎團發達史 (불교교단발달사)',
+      badge: '李智冠 (이지관) · 東國大學校 · 1982',
+      category: ['10-0000'],
+      poster: 'covers/0615.jpg',
+      url: '',
+      tags: ['교단', '敎團', '교단사', '지관', '智冠', '동국대학교']
+    },
+    {
+      title: '카자흐스탄 국립도서관 소장 한국본 목록 : 經部',
+      badge: '카자흐스탄 국립도서관 소장 한국본 목록 · 經部 (總經類)',
+      category: ['08-0001', '01-0003'],
+      poster: 'covers/0617.jpg',
+      url: 'https://drive.google.com/file/d/1lVQzX5GcK7fsOSPrkP0Q1QfprR3FDI8q/view?usp=sharing',
+      tags: ['카자흐스탄', 'Kazakhstan', '국립도서관', '한국본', '목록', '경부', '經部', '고서', '해외소장']
+    },
+    {
+      title: '李朝實錄佛敎鈔存 (이조실록불교초존)',
+      badge: '權相老(1879-1965)와 江田俊雄 等이 《朝鮮王朝實錄》에 있는 佛敎關係의 記事를 뽑아 編輯함 · 전 19책',
+      category: ['01-0004', '01-0003'],
+      langs: ['한문'],
+      poster: 'covers/0618.jpg',
+      // 책등: 쪽빛 천 표지 · 원본 제첨 · 권차(第一~第十九)
+      spineDesign: { kind: 'jo' },
+      volumes: [
+        { label: '제1책', vno: '一', title: '李朝實錄佛敎鈔存 第一', url: 'https://drive.google.com/file/d/1sKUIMFEFIy0gNCGsNNx-tuR3-QvaZXnN/view?usp=sharing' },
+        { label: '제2책', vno: '二', title: '李朝實錄佛敎鈔存 第二', url: 'https://drive.google.com/file/d/1y5vfBKFrYwlqJvGk9LcUWggWSYfDLdQ5/view?usp=sharing' },
+        { label: '제3책', vno: '三', title: '李朝實錄佛敎鈔存 第三', url: 'https://drive.google.com/file/d/1XNXesUvi2gLerVMaJh583niHi6gJIilq/view?usp=sharing' },
+        { label: '제4책', vno: '四', title: '李朝實錄佛敎鈔存 第四', url: 'https://drive.google.com/file/d/1OC6u7YPuAlDFMc5dIQt1mS_hEIkHGD0x/view?usp=sharing' },
+        { label: '제5책', vno: '五', title: '李朝實錄佛敎鈔存 第五', url: 'https://drive.google.com/file/d/1Fs85pin1IMFhjjjInxyb7Fmt8ZDzlnpj/view?usp=sharing' },
+        { label: '제6책', vno: '六', title: '李朝實錄佛敎鈔存 第六', url: 'https://drive.google.com/file/d/1qfCSq3g1WqP563g5ce2Hl_QPIyKiYKr_/view?usp=sharing' },
+        { label: '제7책', vno: '七', title: '李朝實錄佛敎鈔存 第七', url: 'https://drive.google.com/file/d/1-P6bfNeqSlwdVkRAQFOUduhiCCw_MnsW/view?usp=sharing' },
+        { label: '제8책', vno: '八', title: '李朝實錄佛敎鈔存 第八', url: 'https://drive.google.com/file/d/1_jtgimRt18OCOBeT0u6oqijzx4OxXRpH/view?usp=sharing' },
+        { label: '제9책', vno: '九', title: '李朝實錄佛敎鈔存 第九', url: 'https://drive.google.com/file/d/1S3aTuSxDNQqJDJY4xXmoKO_jetwOKXJV/view?usp=sharing' },
+        { label: '제10책', vno: '十', title: '李朝實錄佛敎鈔存 第十', url: 'https://drive.google.com/file/d/1bl3RilUOo1gtCkrFD4_Q88N17an6pMwJ/view?usp=sharing' },
+        { label: '제11책', vno: '十一', title: '李朝實錄佛敎鈔存 第十一', url: 'https://drive.google.com/file/d/19UbLGJCGb68NPusL_xlW3Uyhv6zb6Lrl/view?usp=sharing' },
+        { label: '제12책', vno: '十二', title: '李朝實錄佛敎鈔存 第十二', url: 'https://drive.google.com/file/d/1ztApqJRZmve8DQ2G7j6DWSl3Mybb0HBM/view?usp=sharing' },
+        { label: '제13책', vno: '十三', title: '李朝實錄佛敎鈔存 第十三', url: 'https://drive.google.com/file/d/1JaRfPE8EIbGEdbnqh4lOi4wk4pimeLvn/view?usp=sharing' },
+        { label: '제14책', vno: '十四', title: '李朝實錄佛敎鈔存 第十四', url: 'https://drive.google.com/file/d/1VXPMR7iPoEIlYq5oYy7vC77lbCC5vLZW/view?usp=sharing' },
+        { label: '제15책', vno: '十五', title: '李朝實錄佛敎鈔存 第十五', url: 'https://drive.google.com/file/d/1u2f5bqO0tgSA-ygfY7qLdM6AIps7l8oz/view?usp=sharing' },
+        { label: '제16책', vno: '十六', title: '李朝實錄佛敎鈔存 第十六', url: 'https://drive.google.com/file/d/1cJugy1pW_o9iwt1Pp-FQH1-mcO7FWwAq/view?usp=sharing' },
+        { label: '제17책', vno: '十七', title: '李朝實錄佛敎鈔存 第十七', url: 'https://drive.google.com/file/d/1RfJJH5oz9AFKCVZoinruXidMlRL2a6O2/view?usp=sharing' },
+        { label: '제18책', vno: '十八', title: '李朝實錄佛敎鈔存 第十八', url: 'https://drive.google.com/file/d/1CltQm35ykY9NqPxCeSUODeWd09erGN2n/view?usp=sharing' },
+        { label: '제19책', vno: '十九', title: '李朝實錄佛敎鈔存 第十九', url: 'https://drive.google.com/file/d/1U5i6x3m_-7s9KrF3MYlGxjO76tZZYwfx/view?usp=sharing' }
+      ],
+      tags: ['이조실록불교초존', '李朝實錄佛敎鈔存', '실록불교초', '實錄佛敎抄', '조선왕조실록', '朝鮮王朝實錄', '권상로', '權相老', '江田俊雄', '에다 도시오', '규장각', '조선불교', '불교사료']
     },
     {
       title: '韓國高僧 · 한국 고승',
@@ -9567,6 +9902,25 @@
         a.querySelector('.eb-title b').textContent = vol.vno || '';
         const tx = a.querySelector('.eb-text');
         (vol.ranges || []).forEach(t => { const s = document.createElement('span'); s.className = 'eb-range'; s.textContent = t; tx.appendChild(s); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'srl') {
+        // 釋林: 크림색 바탕 · 은은한 나한 얼굴 무늬 · 금색 釋林 · 第N輯 · 東國大學校釋林會
+        a.className = 'spine spine-srl';
+        a.innerHTML = `<img class="sr-big" src="spines/srl-title.png" alt="釋林"><span class="sr-no"><i></i></span><span class="sr-pub">東國大學校釋林會</span>`;
+        a.querySelector('.sr-no i').textContent = vol.vno || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'jo') {
+        // 李朝實錄佛敎鈔存: 쪽빛 천 표지 · 원본 제첨(題簽) · 권차 · 아래 해제 상자
+        a.className = 'spine spine-jo';
+        a.innerHTML = `<span class="jo-slip"><img src="spines/jo-slip.jpg" alt="李朝實錄佛敎鈔存"><span class="jo-no"></span></span>`;
+        a.querySelector('.jo-no').textContent = '第' + (vol.vno || '');
+      } else if (b.spineDesign && b.spineDesign.kind === 'cwkb') {
+        // Collected Works of Korean Buddhism: 흰 책등 · 위 테라코타 띠에 권 번호 · 한자 · 영문 제목(세로) · 아래 조계종 법륜
+        a.className = 'spine spine-cwkb';
+        a.innerHTML = `<span class="cw-band"></span><span class="cw-hz"></span><span class="cw-title"><span class="cw-main"></span><span class="cw-sub"></span></span><span class="cw-logo"></span>`;
+        a.querySelector('.cw-band').textContent = vol.vno || '';
+        a.querySelector('.cw-hz').textContent = vol.hz || '';
+        a.querySelector('.cw-main').textContent = vol.main || '';
+        if ((vol.main || '').length > 18) a.classList.add('long');
+        const sub = a.querySelector('.cw-sub'); if (vol.sub) sub.textContent = vol.sub; else sub.remove();
       } else if (b.spineDesign && b.spineDesign.kind === 'lng') {
         // 능엄경 강화: 회갈색 천 · 佛敎叢書 · 세로 제목 · 권 번호 · 東國譯經院
         a.className = 'spine spine-lng';
