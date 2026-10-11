@@ -1344,6 +1344,24 @@
   .spine-cc .cc-ed{ margin-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; transform:rotate(180deg); font-size:clamp(5px,.85vh,6.5px); letter-spacing:.1em; text-transform:uppercase; }
   .spine-cc .cc-no{ margin-top:auto; flex:0 0 auto; font-family:'EB Garamond',Georgia,serif; font-weight:700; font-size:clamp(9px,1.6vh,12.5px); color:#e2e0de; padding:3px 0; border-top:1px solid rgba(220,218,216,.6); border-bottom:1px solid rgba(220,218,216,.6); min-width:60%; text-align:center; }
   .spine-cc .cc-pub{ margin-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; transform:rotate(180deg); font-size:clamp(4.5px,.75vh,6px); letter-spacing:.12em; opacity:.8; }
+  /* 大正新脩大藏經 */
+  .spine-tsd{
+    width:calc(var(--spine-h) * .19); position:relative;
+    background:linear-gradient(90deg,#2a1714 0%,#4a2a24 15%,#55312a 50%,#48291f 85%,#271411 100%);
+    display:flex; flex-direction:column; align-items:center; color:#dcc488;
+    padding:calc(var(--spine-h) * .03) 0 calc(var(--spine-h) * .03);
+    font-family:'Noto Serif TC','Noto Serif CJK TC','Noto Serif KR',serif;
+  }
+  .spine-tsd > *{ flex:0 0 auto; white-space:nowrap; }
+  .spine-tsd img{ position:static; height:auto; display:block; }
+  .spine-tsd img.ts-ph{ width:62%; }
+  .spine-tsd .ts-sm{ margin-top:2px; display:flex; flex-direction:row-reverse; gap:1px; font-weight:600; font-size:clamp(5.5px,.92vh,7.5px); line-height:1.05; }
+  .spine-tsd .ts-sm i{ font-style:normal; writing-mode:vertical-rl; text-orientation:upright; }
+  .spine-tsd .ts-big{ margin-top:calc(var(--spine-h) * .012); writing-mode:vertical-rl; text-orientation:upright; font-weight:700; font-size:clamp(11px,2vh,16px); letter-spacing:.04em; line-height:1; text-shadow:0 1px 0 rgba(0,0,0,.5); }
+  .spine-tsd .ts-sub{ margin-top:calc(var(--spine-h) * .02); display:flex; flex-direction:row-reverse; gap:1px; flex:0 1 auto; min-height:0; overflow:hidden; }
+  .spine-tsd .ts-sub span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; font-weight:600; font-size:clamp(5px,.84vh,6.8px); line-height:1.05; letter-spacing:.02em; }
+  .spine-tsd img.ts-lo{ margin-top:auto; width:36%; }
+  .spine-tsd.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
   .spine-k{
     width:calc(var(--spine-h) * .21); position:relative;
     background:linear-gradient(90deg,#e9e6e0 0%,#fbfaf7 14%,#fdfcfa 50%,#f7f5f1 86%,#e4e0d9 100%);
@@ -4853,7 +4871,7 @@
     {
       title: '傳統寺刹 曹溪寺古文獻集 (조계사 고문헌집)',
       badge: '法雲 柳基松 (법운 유기송) 編 · 傳統寺刹研究會',
-      category: ['01-0002'],
+      category: ['01-0002', '01-0003'],
       poster: 'covers/0328.jpg',
       url: '',
       tags: ['조계사', '曹溪寺', '고문헌', '유기송']
@@ -6966,7 +6984,7 @@
       category: ['05-0001'],
       langs: ['한국어'],
       poster: 'covers/0538.jpg',
-      url: '',
+      url: 'https://drive.google.com/file/d/15h7sVtc1GYdoBRrZ-8PWjGUGBFS2OeSd/view?usp=sharing',
       tags: ['계율', '戒律', '계율연구', '논문집', '인환', '마성', '이자랑', '정우서적', '한일불교유학생교류회']
     },
     {
@@ -6975,7 +6993,7 @@
       category: ['05-0001'],
       langs: ['한국어'],
       poster: 'covers/0539.jpg',
-      url: '',
+      url: 'https://drive.google.com/file/d/1xZy_0CwB6qYwZyekcEPfDMtzTVR_Gds-/view?usp=sharing',
       tags: ['계율연구집성', '戒律研究集成', '계율', '민족사', '별권']
     },
     {
@@ -7108,7 +7126,7 @@
       category: ['01-0004', '05-0004'],
       langs: ['한국어'],
       poster: 'covers/0554.jpg',
-      url: 'https://drive.google.com/file/d/1w-bp8tDitTCwfh4jn543EFWy6DwGL3mQ/view?usp=sharing',
+      url: 'https://drive.google.com/file/d/1nSZ8qVIgbT0dHqVPpdug0aHwAsLTb2Ur/view?usp=sharing',
       tags: ['한국선교사', '韓國禪敎史', '누카리야 카이텐', '忽滑谷快天', '정호경', '鄭湖鏡', '민족사', '선종사']
     },
     {
@@ -7158,7 +7176,7 @@
       badge: '송월주 · 박포리 · 김광식 · 박승길 · 윤승용 · 선우도량 한국불교근현대사연구회 · 불교신문사',
       category: ['01-0004'],
       poster: 'covers/0560.jpg',
-      url: '',
+      url: 'https://drive.google.com/file/d/1XrqonscFSb76iFdBxUfwoq6WNpzwnhcz/view?usp=sharing',
       tags: ['교단정화운동', '정화운동', '조계종', '송월주', '김광식', '선우도량', '한국불교근현대사연구회', '불교신문사']
     },
     {
@@ -7174,7 +7192,7 @@
       badge: '정병삼 지음 · 푸른역사',
       category: ['01-0004'],
       poster: 'covers/0562.jpg',
-      url: '',
+      url: 'https://drive.google.com/file/d/1uow95BUU39_jGsmaqXkeaNYJ-WGCFdVL/view?usp=sharing',
       tags: ['한국불교사', '정병삼', '푸른역사']
     },
     {
@@ -7238,6 +7256,360 @@
       tags: ['근현대불교사', '증언', '구술', '선우도량', '한국불교근현대사연구회', '한국불교근현대사자료집']
     },
     {
+      title: '大正新脩大藏經 (대정신수대장경)',
+      badge: '高楠順次郎 · 渡邊海旭 監修 · 大正一切經刊行會 / 大藏出版 · 1924–34 · 全100卷',
+      category: ['06-0003'],
+      langs: ['한문'],
+      poster: 'covers/0570.jpg',
+      // 책등: 짙은 갈색 천 · 금박 봉황 · 大正新脩 / 大藏經 · 권수와 부명 · 아래 연꽃 향로
+      spineDesign: { kind: 'tsd' },
+      volumes: [
+        { label: '第一卷', vno: '1', sub: '阿含部 上', title: '大正新脩大藏經 第1卷 · 阿含部 上', url: 'https://drive.google.com/file/d/14d0u-yqObYbDABKK4dgZPxEA1ZZUGfPj/view?usp=sharing' },
+        { label: '第二卷', vno: '2', sub: '阿含部 下', title: '大正新脩大藏經 第2卷 · 阿含部 下', url: 'https://drive.google.com/file/d/1LWs-GVU1_NPz5Hx3PW6TD7OwJjf5IIHu/view?usp=sharing' },
+        { label: '第三卷', vno: '3', sub: '本緣部 上', title: '大正新脩大藏經 第3卷 · 本緣部 上', url: 'https://drive.google.com/file/d/1FivyUmMX0HSAcrdaKSdT6Ca65fytyPPF/view?usp=sharing' },
+        { label: '第四卷', vno: '4', sub: '本緣部 下', title: '大正新脩大藏經 第4卷 · 本緣部 下', url: 'https://drive.google.com/file/d/1unFqZBPkHBi7EZ3tLaZPQdk5RJXMz7DM/view?usp=sharing' },
+        { label: '第五卷', vno: '5', sub: '般若部 一', title: '大正新脩大藏經 第5卷 · 般若部 一', url: 'https://drive.google.com/file/d/1tK3rUwemA-gdPfesNf8xrD2qrMtIXWDI/view?usp=sharing' },
+        { label: '第六卷', vno: '6', sub: '般若部 二', title: '大正新脩大藏經 第6卷 · 般若部 二', url: 'https://drive.google.com/file/d/11wIy2owhG-zasYFQd6wbdkLA2-Rn-0ge/view?usp=sharing' },
+        { label: '第七卷', vno: '7', sub: '般若部 三', title: '大正新脩大藏經 第7卷 · 般若部 三', url: 'https://drive.google.com/file/d/1vtDsL6lEdT3fDYK5KQskyB53LLmT-Qti/view?usp=sharing' },
+        { label: '第八卷', vno: '8', sub: '般若部 四', title: '大正新脩大藏經 第8卷 · 般若部 四', url: 'https://drive.google.com/file/d/1U9_xd69e93T7NWjq4hL2dTV605JyjiFz/view?usp=sharing' },
+        { label: '第九卷', vno: '9', sub: '法華部 全 · 華嚴部 上', title: '大正新脩大藏經 第9卷 · 法華部 全 · 華嚴部 上', url: 'https://drive.google.com/file/d/1x87y-e8P75CdnjZvBoyes_F5-nfzwrsr/view?usp=sharing' },
+        { label: '第十卷', vno: '10', sub: '華嚴部 下', title: '大正新脩大藏經 第10卷 · 華嚴部 下', url: '', missing: true },
+        { label: '第十一卷', vno: '11', sub: '寶積部 上', title: '大正新脩大藏經 第11卷 · 寶積部 上', url: 'https://drive.google.com/file/d/1QbAreCadzW6tQPh3a7aq9tsQMnkWqyOI/view?usp=sharing' },
+        { label: '第十二卷', vno: '12', sub: '寶積部 下 · 涅槃部 全', title: '大正新脩大藏經 第12卷 · 寶積部 下 · 涅槃部 全', url: '', missing: true },
+        { label: '第十三卷', vno: '13', sub: '大集部 全', title: '大正新脩大藏經 第13卷 · 大集部 全', url: '', missing: true },
+        { label: '第十四卷', vno: '14', sub: '經集部 一', title: '大正新脩大藏經 第14卷 · 經集部 一', url: 'https://drive.google.com/file/d/17JtKgoAMWEe_1I8elDjzJSx0C2yMexlj/view?usp=sharing' },
+        { label: '第十五卷', vno: '15', sub: '經集部 二', title: '大正新脩大藏經 第15卷 · 經集部 二', url: '', missing: true },
+        { label: '第十六卷', vno: '16', sub: '經集部 三', title: '大正新脩大藏經 第16卷 · 經集部 三', url: '', missing: true },
+        { label: '第十七卷', vno: '17', sub: '經集部 四', title: '大正新脩大藏經 第17卷 · 經集部 四', url: '', missing: true },
+        { label: '第十八卷', vno: '18', sub: '密教部 一', title: '大正新脩大藏經 第18卷 · 密教部 一', url: '', missing: true },
+        { label: '第十九卷', vno: '19', sub: '密教部 二', title: '大正新脩大藏經 第19卷 · 密教部 二', url: '', missing: true },
+        { label: '第二十卷', vno: '20', sub: '密教部 三', title: '大正新脩大藏經 第20卷 · 密教部 三', url: '', missing: true },
+        { label: '第二十一卷', vno: '21', sub: '密教部 四', title: '大正新脩大藏經 第21卷 · 密教部 四', url: '', missing: true },
+        { label: '第二十二卷', vno: '22', sub: '律部 一', title: '大正新脩大藏經 第22卷 · 律部 一', url: '', missing: true },
+        { label: '第二十三卷', vno: '23', sub: '律部 二', title: '大正新脩大藏經 第23卷 · 律部 二', url: '', missing: true },
+        { label: '第二十四卷', vno: '24', sub: '律部 三', title: '大正新脩大藏經 第24卷 · 律部 三', url: '', missing: true },
+        { label: '第二十五卷', vno: '25', sub: '釋經論部 上', title: '大正新脩大藏經 第25卷 · 釋經論部 上', url: '', missing: true },
+        { label: '第二十六卷', vno: '26', sub: '釋經論部 下 · 毘曇部 一', title: '大正新脩大藏經 第26卷 · 釋經論部 下 · 毘曇部 一', url: '', missing: true },
+        { label: '第二十七卷', vno: '27', sub: '毘曇部 二', title: '大正新脩大藏經 第27卷 · 毘曇部 二', url: '', missing: true },
+        { label: '第二十八卷', vno: '28', sub: '毘曇部 三', title: '大正新脩大藏經 第28卷 · 毘曇部 三', url: '', missing: true },
+        { label: '第二十九卷', vno: '29', sub: '毘曇部 四', title: '大正新脩大藏經 第29卷 · 毘曇部 四', url: '', missing: true },
+        { label: '第三十卷', vno: '30', sub: '中觀部 全 · 瑜伽部 上', title: '大正新脩大藏經 第30卷 · 中觀部 全 · 瑜伽部 上', url: '', missing: true },
+        { label: '第三十一卷', vno: '31', sub: '瑜伽部 下', title: '大正新脩大藏經 第31卷 · 瑜伽部 下', url: '', missing: true },
+        { label: '第三十二卷', vno: '32', sub: '論集部 全', title: '大正新脩大藏經 第32卷 · 論集部 全', url: '', missing: true },
+        { label: '第三十三卷', vno: '33', sub: '經疏部 一', title: '大正新脩大藏經 第33卷 · 經疏部 一', url: '', missing: true },
+        { label: '第三十四卷', vno: '34', sub: '經疏部 二', title: '大正新脩大藏經 第34卷 · 經疏部 二', url: '', missing: true },
+        { label: '第三十五卷', vno: '35', sub: '經疏部 三', title: '大正新脩大藏經 第35卷 · 經疏部 三', url: '', missing: true },
+        { label: '第三十六卷', vno: '36', sub: '經疏部 四', title: '大正新脩大藏經 第36卷 · 經疏部 四', url: '', missing: true },
+        { label: '第三十七卷', vno: '37', sub: '經疏部 五', title: '大正新脩大藏經 第37卷 · 經疏部 五', url: '', missing: true },
+        { label: '第三十八卷', vno: '38', sub: '經疏部 六', title: '大正新脩大藏經 第38卷 · 經疏部 六', url: '', missing: true },
+        { label: '第三十九卷', vno: '39', sub: '經疏部 七', title: '大正新脩大藏經 第39卷 · 經疏部 七', url: '', missing: true },
+        { label: '第四十卷', vno: '40', sub: '律疏部 全 · 論疏部 一', title: '大正新脩大藏經 第40卷 · 律疏部 全 · 論疏部 一', url: '', missing: true },
+        { label: '第四十一卷', vno: '41', sub: '論疏部 二', title: '大正新脩大藏經 第41卷 · 論疏部 二', url: '', missing: true },
+        { label: '第四十二卷', vno: '42', sub: '論疏部 三', title: '大正新脩大藏經 第42卷 · 論疏部 三', url: '', missing: true },
+        { label: '第四十三卷', vno: '43', sub: '論疏部 四', title: '大正新脩大藏經 第43卷 · 論疏部 四', url: '', missing: true },
+        { label: '第四十四卷', vno: '44', sub: '論疏部 五 · 諸宗部 一', title: '大正新脩大藏經 第44卷 · 論疏部 五 · 諸宗部 一', url: '', missing: true },
+        { label: '第四十五卷', vno: '45', sub: '諸宗部 二', title: '大正新脩大藏經 第45卷 · 諸宗部 二', url: '', missing: true },
+        { label: '第四十六卷', vno: '46', sub: '諸宗部 三', title: '大正新脩大藏經 第46卷 · 諸宗部 三', url: '', missing: true },
+        { label: '第四十七卷', vno: '47', sub: '諸宗部 四', title: '大正新脩大藏經 第47卷 · 諸宗部 四', url: '', missing: true },
+        { label: '第四十八卷', vno: '48', sub: '諸宗部 五', title: '大正新脩大藏經 第48卷 · 諸宗部 五', url: '', missing: true },
+        { label: '第四十九卷', vno: '49', sub: '史傳部 一', title: '大正新脩大藏經 第49卷 · 史傳部 一', url: '', missing: true },
+        { label: '第五十卷', vno: '50', sub: '史傳部 二', title: '大正新脩大藏經 第50卷 · 史傳部 二', url: '', missing: true },
+        { label: '第五十一卷', vno: '51', sub: '史傳部 三', title: '大正新脩大藏經 第51卷 · 史傳部 三', url: '', missing: true },
+        { label: '第五十二卷', vno: '52', sub: '史傳部 四', title: '大正新脩大藏經 第52卷 · 史傳部 四', url: '', missing: true },
+        { label: '第五十三卷', vno: '53', sub: '事彙部 上', title: '大正新脩大藏經 第53卷 · 事彙部 上', url: '', missing: true },
+        { label: '第五十四卷', vno: '54', sub: '事彙部 下 · 外教部 全', title: '大正新脩大藏經 第54卷 · 事彙部 下 · 外教部 全', url: '', missing: true },
+        { label: '第五十五卷', vno: '55', sub: '目錄部 全', title: '大正新脩大藏經 第55卷 · 目錄部 全', url: '', missing: true },
+        { label: '第五十六卷', vno: '56', sub: '續經疏部 一', title: '大正新脩大藏經 第56卷 · 續經疏部 一', url: '', missing: true },
+        { label: '第五十七卷', vno: '57', sub: '續經疏部 二', title: '大正新脩大藏經 第57卷 · 續經疏部 二', url: 'https://drive.google.com/file/d/1S26QhwXCgSEhZiubvPLYeOSD6e4ds92S/view?usp=sharing' },
+        { label: '第五十八卷', vno: '58', sub: '續經疏部 三', title: '大正新脩大藏經 第58卷 · 續經疏部 三', url: '', missing: true },
+        { label: '第五十九卷', vno: '59', sub: '續經疏部 四', title: '大正新脩大藏經 第59卷 · 續經疏部 四', url: '', missing: true },
+        { label: '第六十卷', vno: '60', sub: '續經疏部 五', title: '大正新脩大藏經 第60卷 · 續經疏部 五', url: '', missing: true },
+        { label: '第六十一卷', vno: '61', sub: '續經疏部 六', title: '大正新脩大藏經 第61卷 · 續經疏部 六', url: '', missing: true },
+        { label: '第六十二卷', vno: '62', sub: '續律疏部 全', title: '大正新脩大藏經 第62卷 · 續律疏部 全', url: '', missing: true },
+        { label: '第六十三卷', vno: '63', sub: '續論疏部 一', title: '大正新脩大藏經 第63卷 · 續論疏部 一', url: '', missing: true },
+        { label: '第六十四卷', vno: '64', sub: '續論疏部 二', title: '大正新脩大藏經 第64卷 · 續論疏部 二', url: '', missing: true },
+        { label: '第六十五卷', vno: '65', sub: '續論疏部 三', title: '大正新脩大藏經 第65卷 · 續論疏部 三', url: '', missing: true },
+        { label: '第六十六卷', vno: '66', sub: '續論疏部 四', title: '大正新脩大藏經 第66卷 · 續論疏部 四', url: '', missing: true },
+        { label: '第六十七卷', vno: '67', sub: '續論疏部 五', title: '大正新脩大藏經 第67卷 · 續論疏部 五', url: '', missing: true },
+        { label: '第六十八卷', vno: '68', sub: '續論疏部 六', title: '大正新脩大藏經 第68卷 · 續論疏部 六', url: '', missing: true },
+        { label: '第六十九卷', vno: '69', sub: '續論疏部 七', title: '大正新脩大藏經 第69卷 · 續論疏部 七', url: '', missing: true },
+        { label: '第七十卷', vno: '70', sub: '續論疏部 八 · 續諸宗部 一', title: '大正新脩大藏經 第70卷 · 續論疏部 八 · 續諸宗部 一', url: '', missing: true },
+        { label: '第七十一卷', vno: '71', sub: '續諸宗部 二', title: '大正新脩大藏經 第71卷 · 續諸宗部 二', url: '', missing: true },
+        { label: '第七十二卷', vno: '72', sub: '續諸宗部 三', title: '大正新脩大藏經 第72卷 · 續諸宗部 三', url: '', missing: true },
+        { label: '第七十三卷', vno: '73', sub: '續諸宗部 四', title: '大正新脩大藏經 第73卷 · 續諸宗部 四', url: '', missing: true },
+        { label: '第七十四卷', vno: '74', sub: '續諸宗部 五', title: '大正新脩大藏經 第74卷 · 續諸宗部 五', url: '', missing: true },
+        { label: '第七十五卷', vno: '75', sub: '續諸宗部 六', title: '大正新脩大藏經 第75卷 · 續諸宗部 六', url: '', missing: true },
+        { label: '第七十六卷', vno: '76', sub: '續諸宗部 七', title: '大正新脩大藏經 第76卷 · 續諸宗部 七', url: '', missing: true },
+        { label: '第七十七卷', vno: '77', sub: '續諸宗部 八', title: '大正新脩大藏經 第77卷 · 續諸宗部 八', url: '', missing: true },
+        { label: '第七十八卷', vno: '78', sub: '續諸宗部 九', title: '大正新脩大藏經 第78卷 · 續諸宗部 九', url: 'https://drive.google.com/file/d/1_aSZvflNjM-pALVjz_PtjFnAiyn5-d5S/view?usp=sharing' },
+        { label: '第七十九卷', vno: '79', sub: '續諸宗部 十', title: '大正新脩大藏經 第79卷 · 續諸宗部 十', url: '', missing: true },
+        { label: '第八十卷', vno: '80', sub: '續諸宗部 十一', title: '大正新脩大藏經 第80卷 · 續諸宗部 十一', url: 'https://drive.google.com/file/d/1SFN4TbtuQk1SbK78kHTANzKbmHNllYAi/view?usp=sharing' },
+        { label: '第八十一卷', vno: '81', sub: '續諸宗部 十二', title: '大正新脩大藏經 第81卷 · 續諸宗部 十二', url: 'https://drive.google.com/file/d/1uRR1avuvsEqCANU29QB3b-TJ-3PwV9JO/view?usp=sharing' },
+        { label: '第八十二卷', vno: '82', sub: '續諸宗部 十三', title: '大正新脩大藏經 第82卷 · 續諸宗部 十三', url: 'https://drive.google.com/file/d/1hEmN4rOjnTaIRmBujc592Cc7gq83MvWr/view?usp=sharing' },
+        { label: '第八十三卷', vno: '83', sub: '續諸宗部 十四', title: '大正新脩大藏經 第83卷 · 續諸宗部 十四', url: '', missing: true },
+        { label: '第八十四卷', vno: '84', sub: '續諸宗部 十五 · 悉曇部 全', title: '大正新脩大藏經 第84卷 · 續諸宗部 十五 · 悉曇部 全', url: '', missing: true },
+        { label: '第八十五卷', vno: '85', sub: '古逸部 全 · 疑似部 全', title: '大正新脩大藏經 第85卷 · 古逸部 全 · 疑似部 全', url: '', missing: true },
+        { label: '第八十六卷', vno: '86', sub: '圖像部 一', title: '大正新脩大藏經 第86卷 · 圖像部 一', url: '', missing: true },
+        { label: '第八十七卷', vno: '87', sub: '圖像部 二', title: '大正新脩大藏經 第87卷 · 圖像部 二', url: '', missing: true },
+        { label: '第八十八卷', vno: '88', sub: '圖像部 三', title: '大正新脩大藏經 第88卷 · 圖像部 三', url: '', missing: true },
+        { label: '第八十九卷', vno: '89', sub: '圖像部 四', title: '大正新脩大藏經 第89卷 · 圖像部 四', url: '', missing: true },
+        { label: '第九十卷', vno: '90', sub: '圖像部 五', title: '大正新脩大藏經 第90卷 · 圖像部 五', url: '', missing: true },
+        { label: '第九十一卷', vno: '91', sub: '圖像部 六', title: '大正新脩大藏經 第91卷 · 圖像部 六', url: 'https://drive.google.com/file/d/1ruT43W9uZuEnZin-nYC1SUL_4hrlJFVR/view?usp=sharing' },
+        { label: '第九十二卷', vno: '92', sub: '圖像部 七', title: '大正新脩大藏經 第92卷 · 圖像部 七', url: '', missing: true },
+        { label: '第九十三卷', vno: '93', sub: '圖像部 八', title: '大正新脩大藏經 第93卷 · 圖像部 八', url: 'https://drive.google.com/file/d/13-_49bmaqRhyfyeS1Py1YwVnCFhh57tX/view?usp=sharing' },
+        { label: '第九十四卷', vno: '94', sub: '圖像部 九', title: '大正新脩大藏經 第94卷 · 圖像部 九', url: 'https://drive.google.com/file/d/1U3xgdpjYNmGv7r5HDchjcFE01ePVW56W/view?usp=sharing' },
+        { label: '第九十五卷', vno: '95', sub: '圖像部 十', title: '大正新脩大藏經 第95卷 · 圖像部 十', url: '', missing: true },
+        { label: '第九十六卷', vno: '96', sub: '圖像部 十一', title: '大正新脩大藏經 第96卷 · 圖像部 十一', url: '', missing: true },
+        { label: '第九十七卷', vno: '97', sub: '圖像部 十二', title: '大正新脩大藏經 第97卷 · 圖像部 十二', url: '', missing: true },
+        { label: '第九十八卷', vno: '98', sub: '昭和法寶總目錄 一', title: '大正新脩大藏經 第98卷 · 昭和法寶總目錄 一', url: 'https://drive.google.com/file/d/1PJTM1VB_7QH0lN3-69OxHpYhirhguV-3/view?usp=sharing' },
+        { label: '第九十九卷', vno: '99', sub: '昭和法寶總目錄 二', title: '大正新脩大藏經 第99卷 · 昭和法寶總目錄 二', url: '', missing: true },
+        { label: '第一百卷', vno: '100', sub: '昭和法寶總目錄 三', title: '大正新脩大藏經 第100卷 · 昭和法寶總目錄 三', url: 'https://drive.google.com/file/d/1QkHDIvGH9mKHkoR8KwqLPtZDVCKLqiwI/view?usp=sharing' }
+      ],
+      tags: ['대정신수대장경', '大正新脩大藏經', '大正藏', '대정장', 'Taishō', 'Taisho', 'T', '高楠順次郎', '대장경', '아함부', '반야부', '법화부', '화엄부', '밀교부', '율부', '비담부', '중관부', '유가부', '사전부', '도상부', '소화법보총목록']
+    },
+    {
+      title: '빨리율 (Pāli Vinaya) · 國譯',
+      badge: '釋普雲 (석보운) 國譯 · 혜안',
+      category: ['05-0001', '06-0004'],
+      poster: 'covers/0571.jpg',
+      volumes: [
+        { label: 'I', title: '빨리율 I', url: '', missing: true },
+        { label: 'II', title: '빨리율 II', url: '', missing: true },
+        { label: 'III', title: '빨리율 III', url: '' },
+        { label: 'IV', title: '빨리율 IV', url: 'https://drive.google.com/file/d/1l5EA9W5oqjkClZu2yFAM8gjLgroLUEph/view?usp=sharing' },
+        { label: 'V', title: '빨리율 V', url: 'https://drive.google.com/file/d/1xJqWXYBO1AIBFuYEWZOPawD7U4Ss_Kdx/view?usp=sharing' }
+      ],
+      tags: ['빨리율', '팔리율', 'Pāli Vinaya', 'Pali Vinaya', '율장', '계율', '석보운', '釋普雲', '보운', '혜안']
+    },
+    {
+      title: '전륜성왕 아쇼까 (ASHOKA)',
+      badge: '이거룡 지음 · 도피안사 · 대비구세 大悲救世 001',
+      category: ['03-0002', '07-0001'],
+      poster: 'covers/0572.jpg',
+      url: 'https://drive.google.com/file/d/1h7HQZLa4yIabLdsK-KR0QstQ_k3lhMem/view?usp=sharing',
+      tags: ['아쇼까', '아소카', 'Ashoka', '전륜성왕', '이거룡', '도피안사', '대비구세']
+    },
+    {
+      title: '부처님의 생애 (बुद्धचरिय)',
+      badge: '대한불교조계종 교육원 부처님의 생애 편찬위원회 · 조계종출판사',
+      category: ['03-0001'],
+      poster: 'covers/0573.jpg',
+      url: 'https://drive.google.com/file/d/1vv8I9KrJy0YOyunihvCAXDgU2RXbeia0/view?usp=sharing',
+      tags: ['부처님의 생애', '붓다', '석가모니', '조계종', '교육원', '조계종출판사']
+    },
+    {
+      title: 'Gotama Buddha : A Biography Based on the Most Reliable Texts',
+      badge: 'Hajime Nakamura (中村元) · tr. Gaynor Sekimori · Kosei Publishing',
+      category: ['03-0001'],
+      poster: 'covers/0574.jpg',
+      url: 'https://drive.google.com/file/d/1QoTQ7NKA0smStyqL09VbbNYvxE9FUTah/view?usp=sharing',
+      tags: ['Gotama Buddha', '고따마 붓다', 'Nakamura', '나카무라 하지메', '中村元', 'Kosei']
+    },
+    {
+      title: '고따마 붓다 : 역사와 설화',
+      badge: '성열 지음 · 문화문고',
+      category: ['03-0001'],
+      poster: 'covers/0575.jpg',
+      url: 'https://drive.google.com/file/d/1liVCrWbg0cnTtnv55Vpu4jR1Q8t2obOG/view?usp=sharing',
+      tags: ['고따마 붓다', '붓다', '역사와 설화', '성열', '문화문고']
+    },
+    {
+      title: 'Pathamasambodhi : The Life of the Lord Buddha',
+      badge: 'Wat Phrachetuphon (Wat Pho), Bangkok',
+      category: ['03-0001', '07-0003'],
+      poster: 'covers/0576.jpg',
+      url: 'https://drive.google.com/file/d/1eKR2jJA2jmL-s9LRdRa2fpFUqQDl9njf/view?usp=sharing',
+      tags: ['Pathamasambodhi', '빠타마삼보디', '불전', 'Wat Pho', '왓포', '태국', 'Thailand']
+    },
+    {
+      title: 'Buddhist Saints in India : A Study in Buddhist Values & Orientations',
+      badge: 'Reginald A. Ray · Oxford University Press',
+      category: ['03-0002', '07-0001'],
+      poster: 'covers/0577.jpg',
+      url: 'https://drive.google.com/file/d/1vpsRqDr8rXPMJLJPl3f1OJxjzh7DYPCD/view?usp=sharing',
+      tags: ['Buddhist Saints', '성자', '인도', 'Reginald Ray', '레지널드 레이']
+    },
+    {
+      title: 'Ashoka : The Search for India\'s Lost Emperor',
+      badge: 'Charles Allen · Little, Brown',
+      category: ['03-0002', '07-0001'],
+      poster: 'covers/0578.jpg',
+      url: 'https://drive.google.com/file/d/1RC2U6Ko9iq3n1ASU5NOIWdA8cmh65y8t/view?usp=sharing',
+      tags: ['Ashoka', '아쇼까', '아소카', 'Charles Allen', '찰스 앨런']
+    },
+    {
+      title: '달마대사 : 禪을 전한 승려 (불교를 전한 사람과 도 · 불교만화)',
+      badge: '히로 사치야 原作 · 다츠미 요시히로 漫畵 · 이강광 옮김',
+      category: ['03-0002', '10-0000'],
+      poster: 'covers/0579.jpg',
+      url: 'https://drive.google.com/file/d/1P334f1DOqwlAHQ6tSCxzdkvUszqIfhxe/view?usp=sharing',
+      tags: ['달마', '達磨', '달마대사', '만화', '히로 사치야', '다츠미 요시히로', '선']
+    },
+    {
+      title: 'Xuanzang : China\'s Legendary Pilgrim and Translator',
+      badge: 'Benjamin Brose · Shambhala · Lives of the Masters',
+      category: ['03-0002', '07-0002'],
+      poster: 'covers/0580.jpg',
+      url: 'https://drive.google.com/file/d/1m00qz19VDMTJ4h3gX1-hUZcrvfjyazGd/view?usp=sharing',
+      tags: ['Xuanzang', '현장', '玄奘', '삼장법사', 'Benjamin Brose', 'Lives of the Masters']
+    },
+    {
+      title: 'Ashoka : Portrait of a Philosopher King',
+      badge: 'Patrick Olivelle · Yale University Press',
+      category: ['03-0002', '07-0001'],
+      poster: 'covers/0581.jpg',
+      url: 'https://drive.google.com/file/d/171a5PUbwNJ581RY3_XMzUANT5Zh8KQRi/view?usp=sharing',
+      tags: ['Ashoka', '아쇼까', '아소카', 'Patrick Olivelle', '올리벨']
+    },
+    {
+      title: 'Nagarjuna : Buddhism\'s Most Important Philosopher (Revised and Expanded Edition)',
+      badge: 'Richard H. Jones',
+      category: ['05-0003', '03-0002'],
+      poster: 'covers/0582.jpg',
+      url: 'https://drive.google.com/file/d/17K_dFUYkx39XruIQvEhvvKlqhjF2Fv4C/view?usp=sharing',
+      tags: ['Nagarjuna', '나가르주나', '용수', '龍樹', '중관', 'Richard Jones']
+    },
+    {
+      title: 'Wonhyo\'s Philosophy of Mind',
+      badge: 'Ed. A. Charles Muller & Cuong T. Nguyen · University of Hawai‘i Press · Korean Classics Library',
+      category: ['01-0001', '05-0003'],
+      poster: '',
+      url: 'https://drive.google.com/file/d/1Mx9LRo6Nn2brIxpDs1U3tspSWC5GI41P/view?usp=sharing',
+      tags: ['원효', '元曉', 'Wonhyo', 'Philosophy of Mind', '심식', 'Charles Muller', '뮬러', 'Korean Classics Library']
+    },
+    {
+      title: '자현 스님이 들려주는 불교사 100장면',
+      badge: '자현 지음 · 불광출판사',
+      category: ['10-0000'],
+      poster: 'covers/0583.jpg',
+      url: 'https://drive.google.com/file/d/1b89uTDNRk-hc3F1vWJXsfF2RqhJescDY/view?usp=sharing',
+      tags: ['불교사', '100장면', '자현', '불광출판사', '인도', '중앙아시아', '중국', '한국']
+    },
+    {
+      title: '간추린 인도불교사 (시공불교총서 7)',
+      badge: '에띠엔 라모뜨 (Étienne Lamotte) 지음 · 호진 옮김 · 시공사',
+      category: ['07-0001'],
+      poster: 'covers/0584.jpg',
+      url: 'https://drive.google.com/file/d/1CWqdJx6Vg0UqzVE45S9wSQk0Qpjwg2yJ/view?usp=sharing',
+      tags: ['인도불교사', '간추린', 'Lamotte', '라모뜨', '호진', '시공사', '시공불교총서']
+    },
+    {
+      title: '현대불교학 연구사 : 문헌학을 중심으로',
+      badge: 'J. W. 드 용 (J. W. de Jong) 지음 · 강종원 편역 · 동국대학교출판부',
+      category: ['10-0000'],
+      poster: 'covers/0585.jpg',
+      url: 'https://drive.google.com/file/d/1wbSev_WBFIUVM7yH9RqYrKeaUi6AsFlA/view?usp=sharing',
+      tags: ['현대불교학', '연구사', '문헌학', 'de Jong', '드 용', '강종원', '동국대학교출판부']
+    },
+    {
+      title: '印度思想의 歷史 (인도사상의 역사) · 단행본',
+      badge: '早島鏡正 · 高崎直道 · 原實 · 前田專學 著 · 鄭鎬泳 (정호영) 譯 · 民族社',
+      category: ['05-0005'],
+      langs: ['한국어'],
+      poster: 'covers/0586.jpg',
+      url: 'https://drive.google.com/file/d/1JvUXz1WXShNVT-zHg5W2A1YqbpW-1nLL/view?usp=sharing',
+      tags: ['인도사상의 역사', '印度思想의 歷史', '인도사상', '인도철학', '早島鏡正', '高崎直道', '原實', '前田專學', '정호영', '鄭鎬泳', '민족사', '깨달음총서 9 이전 단행본']
+    },
+    {
+      title: '淸虛堂集 (청허당집)',
+      badge: '西山 休靜 (서산 휴정) 著 · 朴敬勛 (박경훈) 譯 · 東國大學校 譯經院',
+      category: ['01-0003'],
+      langs: ['한국어'],
+      poster: 'covers/0587.jpg',
+      url: 'https://drive.google.com/file/d/1dUcHPNKoVFQpc42cdpjZtDgnc5BkcT0W/view?usp=sharing',
+      tags: ['청허', '淸虛', '휴정', '休靜', '서산', '西山', '역경원', '문집']
+    },
+    {
+      title: '要經序說 (요경서설)',
+      badge: '李智冠 (이지관) 編 · 伽山佛敎文化研究院',
+      category: ['01-0003'],
+      langs: ['한문', '한국어'],
+      poster: 'covers/0588.jpg',
+      url: 'https://drive.google.com/file/d/1ZZ5wW_PrDcBdRJfxsC82RIL0GX3aAsXK/view?usp=sharing',
+      tags: ['요경서설', '經序', '서문', '지관', '智冠', '가산불교문화연구원']
+    },
+    {
+      title: '韓國高僧碑文總集 : 朝鮮朝·近現代 (한국고승비문총집 조선조·근현대)',
+      badge: '智冠 (지관) 編 · 伽山佛敎文化研究院',
+      category: ['01-0003'],
+      langs: ['한문', '한국어'],
+      poster: 'covers/0589.jpg',
+      url: 'https://drive.google.com/file/d/1hUp4uyvG8jiJTp6W5oY3a4d8q1vmqzyW/view?usp=sharing',
+      tags: ['고승비문', '高僧碑文', '비문', '금석문', '지관', '智冠', '가산불교문화연구원', '조선', '근현대']
+    },
+    {
+      title: '戒學約詮 註解 (계학약전 주해)',
+      badge: '朴漢永 (박한영) 撰 · 金曉呑 (김효탄) 註解 · 東國譯經院',
+      category: ['01-0003'],
+      langs: ['한문', '한국어'],
+      poster: 'covers/0590.jpg',
+      url: 'https://drive.google.com/file/d/1iXRLxSdxsN3L0ZaWp9VFSQG_pTE0dK5S/view?usp=sharing',
+      tags: ['계학약전', '戒學約詮', '계율', '박한영', '석전', '石顚', '김효탄', '역경원']
+    },
+    {
+      title: '鏡虛集 全 (경허집 · 한암 필사본)',
+      badge: '鏡虛 惺牛 (경허 성우) · 漢巖 (한암) 筆寫本',
+      category: ['01-0003'],
+      langs: ['한문', '한국어'],
+      poster: 'covers/0591.jpg',
+      url: 'https://drive.google.com/file/d/1us-NnpwrknoGyh0YFnpMQXKQBq9LM2V9/view?usp=sharing',
+      tags: ['경허', '鏡虛', '경허집', '한암', '漢巖', '필사본']
+    },
+    {
+      title: '鏡虛集 (경허집 · 석명정 역주)',
+      badge: '譯註 釋明正 (석명정) · 靈鷲叢林 通度寺 極樂禪院',
+      category: ['01-0003'],
+      langs: ['한국어', '한문'],
+      poster: 'covers/0592.jpg',
+      url: 'https://drive.google.com/file/d/1h1bEYmuzNBiUDiwDj-TH4CMy6TbJIkGf/view?usp=sharing',
+      tags: ['경허', '鏡虛', '경허집', '명정', '明正', '통도사', '극락선원']
+    },
+    {
+      title: '통일법요집',
+      badge: '대한불교조계종 포교원',
+      category: ['01-0003'],
+      langs: ['한국어'],
+      poster: 'covers/0593.jpg',
+      url: 'https://drive.google.com/file/d/1U__3psjV99eKfpSGrrWvCl_m6J4Og0Ve/view?usp=sharing',
+      tags: ['법요집', '의례', '의식', '조계종', '포교원']
+    },
+    {
+      title: '釋門儀式集 (석문의식집)',
+      badge: '日賢 (일현) 스님',
+      category: ['01-0003'],
+      langs: ['한문', '한국어'],
+      poster: 'covers/0594.jpg',
+      url: 'https://drive.google.com/file/d/1Sk-Q9I9JTWj4Di4qYrXHc8z_Y1EjFYyC/view?usp=sharing',
+      tags: ['석문의식', '釋門儀式', '의례', '의식', '일현']
+    },
+    {
+      title: '眞言集 (진언집)',
+      badge: '古本 · 木版本',
+      category: ['01-0003'],
+      langs: ['한문'],
+      poster: 'covers/0595.jpg',
+      url: 'https://drive.google.com/file/d/1EqZA0Jfo8LENSg4pkFM7-T69FVGCNkU3/view?usp=sharing',
+      tags: ['진언집', '眞言集', '진언', '다라니', '실담', '목판본', '고서']
+    },
+    {
+      title: '法海寶筏 (법해보벌)',
+      badge: '古本 · 木版本',
+      category: ['01-0003'],
+      langs: ['한문'],
+      poster: 'covers/0596.jpg',
+      url: 'https://drive.google.com/file/d/1PdrLOaJ8ZTpRbJVuk4FNkMv5tW2CEjAQ/view?usp=sharing',
+      tags: ['법해보벌', '法海寶筏', '목판본', '고서', '의례']
+    },
+    {
+      title: '《釋迦如來十地修行記》의 언어연구와 역주 (석가여래십지수행기)',
+      badge: '박원기 · 윤순일 · 한운진 · 이소화 · 김준수 (경완스님) 저 · 學古房',
+      category: ['01-0003'],
+      langs: ['한국어', '한문'],
+      poster: 'covers/0597.jpg',
+      url: 'https://drive.google.com/file/d/13YLxhRSIq3C6vJWd7A4b_lSywGUVwTcw/view?usp=sharing',
+      tags: ['석가여래십지수행기', '十地修行記', '언어연구', '역주', '국어사', '학고방']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -7254,10 +7626,10 @@
     'korean-monks': {
       title: '韓國高僧 · 한국 고승',
       people: [
-        { name: '원효', hanja: '元曉', born: 617, died: 686, books: ['정선 원효 (精選 元曉)', '三聖賢 삼성현과 경산의 역사 인물 연구', '新羅聖師 元曉 (신라성사 원효)'] },
+        { name: '원효', hanja: '元曉', born: 617, died: 686, books: ['정선 원효 (精選 元曉)', '三聖賢 삼성현과 경산의 역사 인물 연구', '新羅聖師 元曉 (신라성사 원효)', "Wonhyo's Philosophy of Mind"] },
         { name: '보조지눌', hanja: '普照知訥', born: 1158, died: 1210, books: ['정선 지눌 (精選 知訥)'] },
         { name: '보각일연', hanja: '普覺一然', born: 1206, died: 1289, books: ['三聖賢 삼성현과 경산의 역사 인물 연구'] },
-        { name: '청허휴정', hanja: '淸虛休靜', born: 1520, died: 1604, books: ['정선 휴정 (精選 休靜)'] },
+        { name: '청허휴정', hanja: '淸虛休靜', born: 1520, died: 1604, books: ['정선 휴정 (精選 休靜)', '淸虛堂集 (청허당집)'] },
         { name: '고산혜원', hanja: '杲山慧元', born: 1933, died: 2021, books: ['지리산의 무쇠소 — 고산 큰스님 회고록'] },
         { name: '여천무비', hanja: '如天無比', born: 1943, books: ['여천무비스님 전집 – 화중연화(火中蓮華)', '무비 스님과 함께하는 불교 공부'] },
         { name: '덕산각현', hanja: '', books: ['덕산당 각현 대종사 — 불교복지 선구자 각현 스님 행장'] },
@@ -7267,7 +7639,7 @@
         { name: '연담묘순', hanja: '', born: 1946, books: ['묘순 스님 사진집'] },
         { name: '운허용하', hanja: '耘虛龍夏', born: 1892, died: 1980, books: ['耘虛禪師語文集 (운허선사어문집)', '楞嚴經 註解 (능엄경 주해)', '일백오십찬불송 (一百五十讚佛頌)'] },
         { name: '전강영신', hanja: '田岡永信', born: 1898, died: 1975, books: ['전강선사일대기 (田岡禪師一代記) · 전강선사 법어'] },
-        { name: '경허성우', hanja: '鏡虛惺牛', born: 1849, died: 1912, books: ['착한 일 많이 하게 그대가 부처일세 : 경허큰스님', '경허 · 만공의 선풍과 법맥', '콧구멍 없는 소 : 경허대사와 5대 제자', '경허와 만공의 禪思想', '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)', '鏡虛錄 (경허록)', '鏡虛滿空新出資料集 (경허만공신출자료집) 1 : 경허선사편'] },
+        { name: '경허성우', hanja: '鏡虛惺牛', born: 1849, died: 1912, books: ['착한 일 많이 하게 그대가 부처일세 : 경허큰스님', '경허 · 만공의 선풍과 법맥', '콧구멍 없는 소 : 경허대사와 5대 제자', '경허와 만공의 禪思想', '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)', '鏡虛錄 (경허록)', '鏡虛滿空新出資料集 (경허만공신출자료집) 1 : 경허선사편', '鏡虛集 全 (경허집 · 한암 필사본)', '鏡虛集 (경허집 · 석명정 역주)'] },
         { name: '경봉정석', hanja: '鏡峰靖錫', born: 1892, died: 1982, books: ['三笑窟 (삼소굴) : 경봉선사 열반 30주기 특별전'] },
         { name: '경해법인', hanja: '鏡海法印', born: 1931, died: 2026, books: ['태조산 각원사 개산 · 동경 생활 40년 · 교학과 포교 : 鏡海 法印 회고록'] },
         { name: '만공월면', hanja: '滿空月面', born: 1871, died: 1946, books: ['사랑하는 사람 못만나서 괴롭고 미워하는 사람 만나서 괴롭나니 : 求道小說 만공큰스님', 'The Teachings of Zen Master Man Gong', '만공의 항일 정신 : 제8회 만공대선사 학술대회 기념 · 日帝下 만공선사 抗日 사자후', '만공 : 일제의 총칼 앞에서 조선의 얼을 지킨 (제9회 만공대선사 학술대회 기념)', '경허 · 만공의 선풍과 법맥', '경허와 만공의 禪思想', '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)', '滿空法語 (만공법어) · 개정 증보판', '鏡虛滿空新出資料集 (경허만공신출자료집) 2 : 만공선사편', '見性庵 芳啣錄 (견성암 방함록)'] },
@@ -9243,6 +9615,12 @@
         a.className = 'spine spine-cc';
         a.innerHTML = `<span class="cc-title">BUDDHISM</span><span class="cc-sub">Critical Concepts</span><span class="cc-no"></span><span class="cc-pub">ROUTLEDGE</span>`;
         a.querySelector('.cc-no').textContent = vol.vno || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'tsd') {
+        // 大正新脩大藏經: 짙은 갈색 천 · 금박 봉황 · 大正新脩 · 大藏經 · 권수/부명 · 연꽃 향로
+        a.className = 'spine spine-tsd';
+        a.innerHTML = `<img class="ts-ph" src="spines/tsd-phoenix.png" alt=""><span class="ts-sm"><i>大正</i><i>新脩</i></span><span class="ts-big">大藏經</span><span class="ts-sub"></span><img class="ts-lo" src="spines/tsd-lotus.png" alt="">`;
+        const sub = a.querySelector('.ts-sub');
+        [vol.label, ...(vol.sub || '').split(' · ')].forEach(t => { const s = document.createElement('span'); s.textContent = t.replace(/\s+/g, ''); sub.appendChild(s); });
       } else if (b.spineDesign && b.spineDesign.kind === 'lkh') {
         // 이건희 기증품 목록집: 흰 표지의 양쪽 세로 겹줄 안을 책등으로
         a.className = 'spine spine-k';
