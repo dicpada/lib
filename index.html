@@ -444,11 +444,13 @@
   .cp-era::after{ content:''; flex:1; height:1px; background:linear-gradient(90deg,rgba(201,164,103,.35),transparent); }
   .cp-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(210px, 1fr)); gap:16px; }
   .cp-card{
-    display:grid; grid-template-columns:auto 1fr; grid-template-rows:auto 1fr; gap:6px 14px;
+    display:grid; grid-template-columns:1fr; grid-template-rows:auto 1fr; gap:8px 14px;
     padding:14px; border-radius:6px; background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06);
   }
   .cp-card .cp-plq.big{ grid-row:1 / span 2; font-size:17px; min-height:0; padding:.75em .45em; align-self:start; }
   .cp-meta{ display:flex; flex-direction:column; gap:3px; padding-top:2px; }
+  .cp-name{ font-family:'Noto Serif KR',serif; font-weight:600; font-size:15px; color:var(--text); letter-spacing:.04em; }
+  .cp-hanja:empty{ display:none; }
   .cp-hanja{ font-family:'Noto Serif TC','Noto Serif KR',serif; font-size:14px; color:#d9c39a; letter-spacing:.06em; }
   .cp-life{ font-family:'Inter',sans-serif; font-variant-numeric:tabular-nums; font-size:12px; color:var(--text-dim); letter-spacing:.02em; }
   .cp-books{ display:flex; flex-direction:column; gap:6px; align-self:end; }
@@ -636,7 +638,7 @@
     -webkit-box-orient:vertical;
     overflow:hidden;
   }
-  .card-info .badge{
+  .card-info .badge{ word-spacing:-.08em;
     display:inline-block;
     margin-top:7px;
     font-size:11px;
@@ -716,7 +718,7 @@
   }
   .modal-head-text{ min-width:0; }
   .modal-sub{
-    margin-top:5px; font-family:'Inter','Noto Serif KR',sans-serif;
+    margin-top:5px; font-family:'Inter','Noto Sans KR',sans-serif; word-spacing:-.1em;
     font-size:12px; color:var(--text-dim); line-height:1.45;
   }
   .modal-sub:empty{ display:none; }
@@ -818,7 +820,7 @@
   .spine-text .st-label{
     background:#fff; border:3px double #b3a796;
     width:72%; padding:12px 0; white-space:nowrap;
-    writing-mode:vertical-rl; text-orientation:upright;
+    writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em;
     display:flex; align-items:center; justify-content:center;
     font-family:'Noto Serif KR',serif; font-size:clamp(11px, 1.9vh, 15px);
     color:#222; letter-spacing:.05em; overflow:hidden;
@@ -839,7 +841,7 @@
   .spine-d .sd-num{ font-family:Georgia,serif; font-size:12px; line-height:12px; height:12px; }
   .spine-d .sd-rule{ width:16px; height:1px; background:#cbb9a5; margin:8px 0 10px; flex:0 0 auto; }
   .spine-d .sd-head{
-    writing-mode:vertical-rl; text-orientation:upright; font-size:clamp(9px,1.4vh,11px);
+    writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-size:clamp(9px,1.4vh,11px);
     letter-spacing:.04em; white-space:nowrap;
   }
   .spine-d .sd-band{
@@ -848,7 +850,7 @@
   }
   .spine-d .sd-title{
     position:relative; z-index:2;
-    writing-mode:vertical-rl; text-orientation:upright;
+    writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em;
     font-family:'Noto Serif KR',serif; font-weight:600; color:#3a322c;
     font-size:clamp(8.5px,1.4vh,11.5px); line-height:1.3; letter-spacing:0;
     max-height:calc(100% - 22px); overflow:hidden;
@@ -887,7 +889,7 @@
     font-family:'Black Han Sans','Noto Sans KR',sans-serif; font-size:clamp(14px,2.45vh,19.5px);
     line-height:1.0; letter-spacing:-.03em; color:#1d2f6f;
   }
-  .spine-sj .sj-title b, .spine-sj .sj-name b{ display:block; font-weight:inherit; writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-sj .sj-title b, .spine-sj .sj-name b{ display:block; font-weight:inherit; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap; }
   .spine-sj .sj-no{
     margin-top:calc(var(--spine-h) * .05); padding:2px 4px 1px; background:#c8202a; color:#fff;
     font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(6.5px,1.1vh,8.5px); white-space:nowrap; border-radius:1px;
@@ -1239,10 +1241,10 @@
     padding:calc(var(--spine-h) * .05) 0 calc(var(--spine-h) * .04);
   }
   .spine-lng > *{ flex:0 0 auto; white-space:nowrap; height:max-content; }
-  .spine-lng .lg-ser{ writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-size:clamp(7px,1.15vh,9px); line-height:1.15; letter-spacing:.02em; padding:4px 2px; border:1px solid rgba(47,42,34,.55); }
-  .spine-lng .lg-title{ margin-top:calc(var(--spine-h) * .06); writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(9px,1.6vh,12.5px); letter-spacing:.08em; }
+  .spine-lng .lg-ser{ writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-size:clamp(7px,1.15vh,9px); line-height:1.15; letter-spacing:.02em; padding:4px 2px; border:1px solid rgba(47,42,34,.55); }
+  .spine-lng .lg-title{ margin-top:calc(var(--spine-h) * .06); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(9px,1.6vh,12.5px); letter-spacing:.08em; }
   .spine-lng .lg-no{ margin-top:calc(var(--spine-h) * .035); font-family:'Times New Roman',serif; font-weight:700; font-size:clamp(10px,1.8vh,14px); }
-  .spine-lng .lg-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(7px,1.15vh,9px); line-height:1.1; letter-spacing:.02em; }
+  .spine-lng .lg-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-family:'Noto Serif KR','Noto Serif TC','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(7px,1.15vh,9px); line-height:1.1; letter-spacing:.02em; }
   /* 釋林 (동국대학교 석림회) */
   .spine-srl{
     width:calc(var(--spine-h) * .16); position:relative; overflow:hidden; color:#6a5428;
@@ -1256,7 +1258,7 @@
     filter:sepia(.6) contrast(.8); opacity:.13; mix-blend-mode:multiply;
     -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 30%,#000 70%,transparent 100%);
             mask-image:linear-gradient(180deg,transparent 0%,#000 30%,#000 70%,transparent 100%); }
-  .spine-srl > *{ flex:0 0 auto; white-space:nowrap; height:max-content; position:relative; z-index:1; writing-mode:vertical-rl; text-orientation:upright; }
+  .spine-srl > *{ flex:0 0 auto; white-space:nowrap; height:max-content; position:relative; z-index:1; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; }
   .spine-srl img.sr-big{ position:relative; z-index:1; width:70%; height:auto; writing-mode:horizontal-tb; }
   .spine-srl .sr-no{ margin-top:calc(var(--spine-h) * .06); font-weight:600; font-size:clamp(10px,1.8vh,14px); letter-spacing:.03em; }
   .spine-srl .sr-no i{ font-style:normal; text-combine-upright:all; }
@@ -1273,8 +1275,8 @@
   .spine-jo > .jo-box{ flex:1 1 auto; min-height:0; }
   .spine-jo .jo-slip{ position:relative; width:60%; box-shadow:0 0 2px rgba(0,0,0,.5); }
   .spine-jo .jo-slip img{ position:static; display:block; width:100%; height:auto; }
-  .spine-jo .jo-no{ position:absolute; top:75.5%; right:10%; writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
-    font-family:'Noto Serif TC','Noto Serif KR','Noto Serif CJK KR',serif; font-weight:700; color:#1a1612; font-size:clamp(6px,1.08vh,8.5px); line-height:1; letter-spacing:.08em; }
+  .spine-jo .jo-no{ position:absolute; top:83%; left:0; right:0; text-align:center; white-space:nowrap;
+    font-family:'Noto Serif TC','Noto Serif KR','Noto Serif CJK KR',serif; font-weight:700; color:#1a1612; font-size:clamp(8px,1.5vh,12px); line-height:1; letter-spacing:0; }
   .spine-jo .jo-box{ width:84%; box-sizing:border-box; padding:4px 2px;
     background:#d9d6c8 url(spines/jo-paper.jpg) center/cover; border:1px solid #1a1612; outline:1px solid rgba(217,214,200,.85); outline-offset:1px;
     writing-mode:vertical-rl; text-orientation:mixed; color:#1a1612;
@@ -1292,7 +1294,7 @@
     padding-top:calc(var(--spine-h) * .03); box-sizing:border-box;
     background:linear-gradient(90deg,#9a5232 0%,#b8693f 15%,#c4774c 50%,#b5653c 85%,#8f4b2d 100%);
     border-bottom:2px solid #6c6762; color:#fbf3ea; font-family:'EB Garamond','Times New Roman',serif; font-size:clamp(11px,2vh,15.5px); font-weight:600; letter-spacing:.02em; }
-  .spine-cwkb .cw-hz{ margin-top:calc(var(--spine-h) * .05); writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+  .spine-cwkb .cw-hz{ margin-top:calc(var(--spine-h) * .05); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap;
     font-family:'Noto Serif TC','Noto Serif KR','Noto Serif CJK KR',serif; font-size:clamp(7px,1.2vh,9.5px); letter-spacing:.06em; color:#5b5652; }
   .spine-cwkb .cw-title{ margin-top:calc(var(--spine-h) * .025); writing-mode:vertical-rl; white-space:nowrap; display:block; min-height:0; flex:0 1 auto; overflow:hidden;
     font-family:'EB Garamond','Times New Roman',serif; text-transform:uppercase; }
@@ -1304,6 +1306,64 @@
   .spine-cwkb .cw-logo{ margin-top:auto; margin-bottom:calc(var(--spine-h) * .035); width:clamp(9px,1.6vh,12px); height:clamp(9px,1.6vh,12px); border:1px solid #6a6560; border-radius:50%; position:relative; }
   .spine-cwkb .cw-logo::before{ content:''; position:absolute; left:50%; top:50%; width:2px; height:2px; border-radius:50%; background:#6a6560;
     box-shadow:0 -3px 0 #6a6560, -2.6px 1.5px 0 #6a6560, 2.6px 1.5px 0 #6a6560; transform:translate(-50%,-50%); }
+  /* 테마 한국불교 (인문한국불교총서) */
+  .spine-thema{
+    width:calc(var(--spine-h) * .17); position:relative; overflow:hidden; color:#2b2420;
+    background:linear-gradient(90deg,#dcd9d2 0%,#f1efea 15%,#f7f6f2 50%,#efede7 85%,#d6d3cb 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -3px 0 5px rgba(0,0,0,.18);
+  }
+  .spine-thema > *{ flex:0 0 auto; }
+  .spine-thema .th-band{ align-self:stretch; height:calc(var(--spine-h) * .12); background:#2a2620 url(spines/thema-pat.jpg) center/180% auto; box-shadow:inset 0 -1px 0 rgba(0,0,0,.4); }
+  .spine-thema .th-band.bot{ height:calc(var(--spine-h) * .05); margin-top:calc(var(--spine-h) * .025); }
+  .spine-thema.gold .th-band{ background:#b09038 url(spines/thema-gold.jpg) center/100% auto repeat-y; }
+  .spine-thema .th-ser{ margin-top:calc(var(--spine-h) * .025); width:clamp(10px,1.7vh,13px); height:clamp(10px,1.7vh,13px); border-radius:50%; background:#2b2420; color:#e9d9a6;
+    display:flex; align-items:center; justify-content:center; font:700 clamp(6.5px,1.05vh,8.5px)/1 'Inter',sans-serif; }
+  .spine-thema .th-title{ margin-top:calc(var(--spine-h) * .022); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(8.5px,1.55vh,12px); letter-spacing:0; }
+  .spine-thema.red .th-title{ color:#7a2e1c; }
+  .spine-thema .th-no{ margin-top:calc(var(--spine-h) * .018); font-family:'EB Garamond','Times New Roman',serif; font-size:clamp(12px,2.2vh,17px); line-height:1; }
+  .spine-thema .th-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(5.4px,.9vh,7px); letter-spacing:0; color:#4a423b; }
+  /* 한국불상의 원류를 찾아서 (최완수 · 대원사) */
+  .spine-cws{
+    width:calc(var(--spine-h) * .22); position:relative; overflow:hidden; color:#1b1714;
+    background:#ece6d0 url(spines/cws-paper.jpg) center/cover;
+    display:flex; flex-direction:column; align-items:center;
+    padding:calc(var(--spine-h) * .035) 0 calc(var(--spine-h) * .03);
+    box-shadow:inset 3px 0 5px rgba(255,255,255,.25), inset -4px 0 6px rgba(0,0,0,.22);
+  }
+  .spine-cws > *{ flex:0 0 auto; position:relative; z-index:1; }
+  .spine-cws img{ position:relative; display:block; height:auto; }
+  .spine-cws .cw-no{ font-family:'EB Garamond','Times New Roman',serif; font-size:clamp(8px,1.25vh,10px); color:#c4463a; line-height:1; }
+  .spine-cws .cw-ti{ margin-top:calc(var(--spine-h) * .016); width:68%; }
+  .spine-cws .cw-au{ margin-top:calc(var(--spine-h) * .016); width:11.5%; }
+  .spine-cws .cw-sub{ margin-top:calc(var(--spine-h) * .016); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.6em; white-space:pre; line-height:1.25;
+    font-family:'Noto Serif KR','Noto Serif CJK KR','Noto Serif TC',serif; font-weight:600; font-size:clamp(5.6px,.94vh,7.4px); letter-spacing:0; }
+  .spine-cws .cw-bg{ position:absolute; z-index:0; left:0; right:0; bottom:8%; height:38%; background:center top/cover no-repeat; mix-blend-mode:multiply; opacity:.92;
+    -webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 26%,#000 80%,transparent 100%);
+            mask-image:linear-gradient(180deg,transparent 0%,#000 26%,#000 80%,transparent 100%); }
+  .spine-cws .cw-pub{ margin-top:auto; width:16%; }
+  /* 대방광불화엄경 강설 (여천 무비 · 담앤북스) */
+  .spine-hyg{
+    --c:#00686f; width:calc(var(--spine-h) * .15); position:relative; overflow:hidden; color:#2a2522;
+    background:linear-gradient(90deg,#e2e0db 0%,#f5f4f1 16%,#fbfaf8 50%,#f3f2ee 84%,#dcd9d3 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -3px 0 5px rgba(0,0,0,.16);
+  }
+  .spine-hyg > *{ flex:0 0 auto; position:relative; }
+  .spine-hyg .hy-band{ align-self:stretch; height:calc(var(--spine-h) * .38); background:var(--c); display:flex; justify-content:center; align-items:center; overflow:hidden; position:relative;
+    box-shadow:inset 3px 0 5px rgba(255,255,255,.12), inset -3px 0 5px rgba(0,0,0,.25); }
+  .spine-hyg .hy-band::before{ content:''; position:absolute; inset:0; opacity:.35;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 100' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23fff' stroke-width='.7'%3E%3Cpath d='M-6 104 C 2 60 14 30 20 -4'/%3E%3Cpath d='M46 104 C 38 60 26 30 20 -4'/%3E%3Cpath d='M-20 80 C -2 50 18 40 40 46'/%3E%3Cpath d='M60 80 C 42 50 22 40 0 46'/%3E%3C/g%3E%3C/svg%3E") center/100% 100% no-repeat; }
+  .spine-hyg .hy-band img{ position:relative; display:block; width:40%; height:auto; }
+  .spine-hyg .hy-title{ margin-top:calc(var(--spine-h) * .04); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.6em; white-space:nowrap;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(7.5px,1.3vh,10px); letter-spacing:0; }
+  .spine-hyg .hy-no{ margin-top:auto; width:clamp(13px,2.2vh,17px); height:clamp(13px,2.2vh,17px); border-radius:50%;
+    background:color-mix(in srgb, var(--c) 22%, #f3f6e6); color:#1d1a18; display:flex; align-items:center; justify-content:center;
+    font-family:'EB Garamond','Times New Roman',serif; font-weight:600; font-size:clamp(7.5px,1.25vh,10px); line-height:1; }
+  .spine-hyg .hy-pub{ margin:calc(var(--spine-h) * .02) 0 calc(var(--spine-h) * .03); writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+    font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(5.4px,.88vh,7px); color:#3a3431; }
   /* 민족사 불교경전 */
   .spine-mj{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -1321,11 +1381,11 @@
     display:flex; justify-content:center;
   }
   .spine-mj .mj-name{ display:flex; flex-direction:column; align-items:center; color:#f6efe6; font-weight:700; font-size:clamp(9px,1.55vh,12.5px); line-height:1.12; }
-  .spine-mj .mj-name span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-mj .mj-name span{ writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap; }
   .spine-mj .mj-name i{ font-style:normal; margin-top:3px; font-size:.9em; }
-  .spine-mj .mj-sub{ margin-top:calc(var(--spine-h) * .02); writing-mode:vertical-rl; text-orientation:upright; font-size:clamp(5px,.85vh,7px); color:#4c5c45; letter-spacing:.06em; }
+  .spine-mj .mj-sub{ margin-top:calc(var(--spine-h) * .02); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-size:clamp(5px,.85vh,7px); color:#4c5c45; letter-spacing:.06em; }
   .spine-mj.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
-  .spine-mj .mj-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; font-weight:700; font-size:clamp(6px,1vh,8px); color:#a3262a; border:1px solid #a3262a; padding:3px 1px; }
+  .spine-mj .mj-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-weight:700; font-size:clamp(6px,1vh,8px); color:#a3262a; border:1px solid #a3262a; padding:3px 1px; }
   /* 한글본 한국불교전서 */
   .spine-hb{
     width:calc(var(--spine-h) * .165); position:relative;
@@ -1338,15 +1398,15 @@
   .spine-hb.look-w{ background:linear-gradient(90deg,#dedbd2 0%,#f6f4ee 15%,#fbfaf6 50%,#f3f1ea 85%,#d9d6cc 100%); }
   .spine-hb > *{ flex:0 0 auto; white-space:nowrap; }
   .spine-hb .hb-band{ width:100%; height:calc(var(--spine-h) * .13); background-size:cover; background-position:center; box-shadow:inset 0 -1px 0 rgba(0,0,0,.25); }
-  .spine-hb .hb-ser{ margin-top:calc(var(--spine-h) * .025); writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Sans KR',sans-serif; font-size:clamp(4.5px,.75vh,6px); letter-spacing:-.02em; opacity:.85; }
+  .spine-hb .hb-ser{ margin-top:calc(var(--spine-h) * .025); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-family:'Noto Sans KR',sans-serif; font-size:clamp(4.5px,.75vh,6px); letter-spacing:-.02em; opacity:.85; }
   .spine-hb .hb-no{ margin-top:calc(var(--spine-h) * .018); display:flex; flex-direction:column; align-items:center; padding:2px 3px; line-height:1.05; font-family:'Noto Sans KR',sans-serif; font-weight:700; background:#b4252b; color:#fff; border-radius:1px; }
   .spine-hb.look-g .hb-no, .spine-hb.look-t .hb-no{ background:#e8dcc0; color:#3a2f1e; }
   .spine-hb .hb-no small{ font-size:clamp(4.5px,.75vh,6px); }
   .spine-hb .hb-no b{ font-size:clamp(6.5px,1.1vh,8.5px); }
   .spine-hb .hb-title{ margin-top:calc(var(--spine-h) * .03); display:flex; flex-direction:row-reverse; gap:2px; min-height:0; flex:0 1 auto; overflow:hidden; font-weight:600; font-size:clamp(8.5px,1.45vh,11.5px); line-height:1.05; letter-spacing:.02em; }
-  .spine-hb .hb-title span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-hb .hb-title span{ writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap; }
   .spine-hb.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
-  .spine-hb .hb-pub{ margin:auto 0 calc(var(--spine-h) * .035); writing-mode:vertical-rl; text-orientation:upright; font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(4.5px,.78vh,6px); letter-spacing:.02em; }
+  .spine-hb .hb-pub{ margin:auto 0 calc(var(--spine-h) * .035); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(4.5px,.78vh,6px); letter-spacing:.02em; }
   /* 南傳大藏經 */
   .spine-nd{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -1358,7 +1418,7 @@
   .spine-nd > *{ flex:0 0 auto; }
   .spine-nd img.nd-title{ position:static; width:70%; height:auto; display:block; }
   .spine-nd .nd-sub{ margin-top:calc(var(--spine-h) * .07); display:flex; flex-direction:row-reverse; gap:3px; min-height:0; flex:0 1 auto; overflow:hidden; }
-  .spine-nd .nd-sub > span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; font-size:clamp(5.5px,.92vh,7.5px); letter-spacing:.06em; line-height:1; }
+  .spine-nd .nd-sub > span{ writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap; font-size:clamp(5.5px,.92vh,7.5px); letter-spacing:.06em; line-height:1; }
   .spine-nd .nd-part{ margin-top:1.4em; }
   .spine-nd.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
   /* 서가 칸 이름표 */
@@ -1417,10 +1477,10 @@
   .spine-tsd img{ position:static; height:auto; display:block; }
   .spine-tsd img.ts-ph{ width:62%; }
   .spine-tsd .ts-sm{ margin-top:2px; display:flex; flex-direction:row-reverse; gap:1px; font-weight:600; font-size:clamp(5.5px,.92vh,7.5px); line-height:1.05; }
-  .spine-tsd .ts-sm i{ font-style:normal; writing-mode:vertical-rl; text-orientation:upright; }
-  .spine-tsd .ts-big{ margin-top:calc(var(--spine-h) * .012); writing-mode:vertical-rl; text-orientation:upright; font-weight:700; font-size:clamp(11px,2vh,16px); letter-spacing:.04em; line-height:1; text-shadow:0 1px 0 rgba(0,0,0,.5); }
+  .spine-tsd .ts-sm i{ font-style:normal; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; }
+  .spine-tsd .ts-big{ margin-top:calc(var(--spine-h) * .012); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; font-weight:700; font-size:clamp(11px,2vh,16px); letter-spacing:.04em; line-height:1; text-shadow:0 1px 0 rgba(0,0,0,.5); }
   .spine-tsd .ts-sub{ margin-top:calc(var(--spine-h) * .02); display:flex; flex-direction:row-reverse; gap:1px; flex:0 1 auto; min-height:0; overflow:hidden; }
-  .spine-tsd .ts-sub span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; font-weight:600; font-size:clamp(5px,.84vh,6.8px); line-height:1.05; letter-spacing:.02em; }
+  .spine-tsd .ts-sub span{ writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap; font-weight:600; font-size:clamp(5px,.84vh,6.8px); line-height:1.05; letter-spacing:.02em; }
   .spine-tsd img.ts-lo{ margin-top:auto; width:36%; }
   .spine-tsd.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
   .spine-k{
@@ -1436,14 +1496,14 @@
   }
   /* 낱말 사이를 좁게: 낱말마다 세로쓰기 칸으로 나눠 사이를 .25em만 띄움 */
   .spine-k .sk-col{ display:flex; flex-direction:column; align-items:center; gap:.4em; }
-  .spine-k .sk-col i{ font-style:normal; writing-mode:vertical-rl; text-orientation:upright; }
+  .spine-k .sk-col i{ font-style:normal; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; }
   .spine-k .sk-no{
     margin-top:calc(var(--spine-h) * .035); padding-top:calc(var(--spine-h) * .02);
     border-top:1px solid rgba(150,140,128,.45); font-family:'Noto Sans KR',sans-serif; font-size:clamp(6px,1vh,8px); font-weight:500;
     color:#6b5c50; letter-spacing:.02em; white-space:nowrap;
   }
   .spine-k .sk-name{
-    margin-top:calc(var(--spine-h) * .03); flex:0 0 auto; writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+    margin-top:calc(var(--spine-h) * .03); flex:0 0 auto; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap;
     font-family:'Noto Serif KR',serif; font-weight:600; font-size:clamp(8.5px,1.45vh,11.5px);
     letter-spacing:.08em; color:#2c231d;
   }
@@ -1454,7 +1514,7 @@
     object-fit:cover; display:block; mix-blend-mode:multiply;
   }
   .spine-k .sk-mus{
-    margin:7% 0 9%; writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+    margin:7% 0 9%; writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap;
     font-family:'Noto Sans KR',sans-serif; font-size:clamp(4.5px,.78vh,6px); font-weight:500; color:#7a6b5f;
   }
 
@@ -1469,14 +1529,14 @@
     margin-top:13%; display:flex; flex-direction:row-reverse; gap:2px;
     font-family:'Noto Sans KR','Inter',sans-serif; line-height:1;
   }
-  .spine-w .sw-sub > span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-w .sw-sub > span{ writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap; }
   .spine-w .sw-ser{ font-size:clamp(5.5px,.95vh,7.5px); color:rgba(42,38,34,.62); letter-spacing:-.08em; }
   .spine-w .sw-reg{ font-size:clamp(6.5px,1.1vh,8.5px); color:#fff; font-weight:700; text-shadow:0 0 1px rgba(0,0,0,.25); }
   .spine-w .sw-pub{
     margin-top:auto; margin-bottom:7px; display:flex; flex-direction:row-reverse; align-items:flex-start; gap:1px;
     font-family:'Noto Serif KR',serif; line-height:1;
   }
-  .spine-w .sw-pub > span{ writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; }
+  .spine-w .sw-pub > span{ writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap; }
   .spine-w .sw-cha{ font-size:clamp(6.5px,1.08vh,8px); font-weight:600; letter-spacing:.18em; color:#2a2622; }
   .spine-w .sw-inst{ font-size:clamp(5px,.88vh,6.5px); color:rgba(42,38,34,.6); }
 
@@ -1493,7 +1553,7 @@
   }
   .spine-m .sm-rule{ width:30%; height:1px; background:#c9c4b8; margin:7% 0 6%; }
   .spine-m .sm-ch{
-    writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+    writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap;
     font-family:'Noto Serif KR',serif; font-size:clamp(8.5px,1.35vh,11px); color:#6d5d50; letter-spacing:.02em;
   }
   .spine-m .sm-ch i{ font-style:normal; }
@@ -1536,7 +1596,7 @@
   .spine-c .sc-tab{
     margin-top:9px; width:58%; padding:4px 0; border-radius:5px; flex:0 0 auto;
     display:flex; justify-content:center; align-items:center;
-    writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
+    writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:nowrap;
     font-family:'Noto Serif KR',serif; font-size:clamp(7.5px,1.2vh,9px); color:#2b3a6b; letter-spacing:0; line-height:1;
   }
   .spine-c .sc-tab i{ font-style:normal; }
@@ -1553,8 +1613,8 @@
   .spine-c .sc-side2 i{ font-style:normal; }
   .spine-c .sc-side2 i + i{ margin-inline-start:.22em; }
   .spine-c .sc-ro{ font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:clamp(8.5px,1.3vh,10px); color:#3a4778; line-height:1.05; }
-  .spine-c .sc-sub{ margin-top:0; line-height:1.05; font-family:'Noto Serif KR',serif; font-size:clamp(7.5px,1.2vh,9px); color:#3a4778; text-orientation:upright; }
-  .spine-c .sc-tr{ margin-top:.8em; line-height:1.05; font-family:'Noto Serif KR',serif; font-size:clamp(7.5px,1.2vh,9px); color:#3a4778; text-orientation:upright; }
+  .spine-c .sc-sub{ margin-top:0; line-height:1.05; font-family:'Noto Serif KR',serif; font-size:clamp(7.5px,1.2vh,9px); color:#3a4778; text-orientation:upright; word-spacing:-.55em; }
+  .spine-c .sc-tr{ margin-top:.8em; line-height:1.05; font-family:'Noto Serif KR',serif; font-size:clamp(7.5px,1.2vh,9px); color:#3a4778; text-orientation:upright; word-spacing:-.55em; }
   .spine-c .sc-no{ margin-top:auto; font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:clamp(10px,1.6vh,12.5px); line-height:1; color:#1f2f6a; padding-top:2px; }
   .spine-c .sc-logo{ margin:5px 0 6px; display:flex; flex-direction:column; align-items:center; gap:2px; }
   .spine-c .sc-logo i{ width:0; height:0; border-left:5px solid transparent; border-right:5px solid transparent; border-bottom:9px solid #c4322f; }
@@ -2244,6 +2304,7 @@
       title: '2021 한국호국불교 자료집 IX — 삼국·통일신라·고려(보유)편',
       badge: '대한불교조계종 백년대계본부 불교사회연구소',
       category: '01-0003',
+      codes: ['kw-391890'],
       poster: 'covers/0016.jpg',
       url: 'https://drive.google.com/file/d/1X4Yl2lh-WnqPNdfFC0NPNSzKEtYnU0UG/view?usp=sharing'
     },
@@ -2598,33 +2659,24 @@
       poster: 'covers/0070.jpg',
       url: 'https://drive.google.com/file/d/179sc3Yrd9jSoD0MCwLONMWpeprIWB2gK/view?usp=sharing'
     },
+
+
+
+
     {
-      title: '테마 한국불교 플러스 1',
-      badge: '동국대학교 불교문화연구원 HK+사업단 엮음 · 동국대학교출판문화원 · 인문한국불교총서 11',
-      category: '01-0005',
-      poster: 'covers/0071.jpg',
-      url: 'https://drive.google.com/file/d/1BTlaZ3bU4SbFZI9WwHTWstVMJyckTNAp/view?usp=sharing'
-    },
-    {
-      title: '테마 한국불교 9',
-      badge: '동국대학교 불교문화연구원 HK연구단 엮음 · 동국대학교출판문화원 · 인문한국불교총서 9',
-      category: '01-0005',
-      poster: 'covers/0072.jpg',
-      url: 'https://drive.google.com/file/d/1m4KPpD9WMh142BuVgwCDCTAuF7qUg-VN/view?usp=sharing'
-    },
-    {
-      title: '테마 한국불교 2',
-      badge: '동국대학교 불교문화연구원 HK연구단 엮음 · 동국대학교출판부 · 인문한국불교총서 2',
+      title: '테마 한국불교 (인문한국불교총서)',
+      badge: '동국대학교 불교문화연구원 HK연구단 · HK+사업단 엮음 · 동국대학교출판부 · 출판문화원',
       category: '01-0005',
       poster: 'covers/0073.jpg',
-      url: 'https://drive.google.com/file/d/1U97NEW3zBGtmEh8Qj75MqPG75n6IxlCe/view?usp=sharing'
-    },
-    {
-      title: '테마 한국불교 7',
-      badge: '동국대학교 불교문화연구원 HK연구단 엮음 · 동국대학교출판부 · 인문한국불교총서 7',
-      category: '01-0005',
-      poster: 'covers/0074.jpg',
-      url: 'https://drive.google.com/file/d/1KMmnekDFG4-EU9DEfUqWqvmlulWh1CBZ/view?usp=sharing'
+      // 책등: 흰 바탕 · 위아래 검정 당초문 띠(플러스는 금색 띠) · 총서 번호 · 세로 제목 · 권 번호 · 출판사
+      spineDesign: { kind: 'thema' },
+      volumes: [
+        { label: '2', vno: '2', ser: '2', pub: '동국대학교출판부', title: '테마 한국불교 2 (인문한국불교총서 2) · 화엄·신의·조상·왕즉불·위령·사노·의상·향찰·수륙재', url: 'https://drive.google.com/file/d/1U97NEW3zBGtmEh8Qj75MqPG75n6IxlCe/view?usp=sharing' },
+        { label: '7', vno: '7', ser: '7', look: 'red', pub: '동국대학교출판부', title: '테마 한국불교 7 (인문한국불교총서 7) · 원효·원측·범망경·고승전·영험·디지털인문학·불교가사·재회', url: 'https://drive.google.com/file/d/1KMmnekDFG4-EU9DEfUqWqvmlulWh1CBZ/view?usp=sharing' },
+        { label: '9', vno: '9', ser: '9', pub: '동국대학교출판문화원', title: '테마 한국불교 9 (인문한국불교총서 9) · 균여·지눌·석마하연론·주석서·교단·불교명상·불교미술·상장례', url: 'https://drive.google.com/file/d/1m4KPpD9WMh142BuVgwCDCTAuF7qUg-VN/view?usp=sharing' },
+        { label: '플러스 1', vno: '1', ser: '11', look: 'gold', spineTitle: '테마 한국불교+', pub: '동국대학교출판문화원', title: '테마 한국불교 플러스 1 (인문한국불교총서 11)', url: 'https://drive.google.com/file/d/1BTlaZ3bU4SbFZI9WwHTWstVMJyckTNAp/view?usp=sharing' }
+      ],
+      tags: ['테마 한국불교', '테마한국불교', 'Thema', '인문한국불교총서', '동국대학교', '불교문화연구원', 'HK연구단', 'HK+', '플러스']
     },
     {
       title: '도해 팔상록 (圖解 八相錄)',
@@ -2895,6 +2947,98 @@
         { label: 'Vol. 12', vno: '12', hz: '高僧碑文', main: 'Stele Inscriptions', sub: 'of Eminent Korean Monks', title: 'Anthology of Stele Inscriptions of Eminent Korean Buddhist Monks', url: 'https://drive.google.com/file/d/1jk1nYFZfxJ2lqYVbZO7-75y40ixE8XoK/view?usp=sharing' }
       ],
       tags: ['Collected Works of Korean Buddhism', '한국전통사상총서', '영문판', '영역', 'Jogye Order', '조계종', 'Wonhyo', 'Chinul', 'Hyujeong', 'Hwaom', 'Gongan', 'Seon', 'Buswell', 'Muller', 'Jorgensen']
+    },
+    {
+      title: '대방광불화엄경 강설 (大方廣佛華嚴經 講說)',
+      badge: '여천 무비 (如天無比) 강설 · 담앤북스 · 전 81권',
+      category: ['06-0003', '05-0003'],
+      poster: 'covers/0622.jpg',
+      // 책등: 위 색띠(7처9회 회별 색, 1·17·71권은 표지 색 확인) · 연꽃 선 · 원본 大方廣佛華嚴經 · 세로 제목 · 권 번호 · 담앤북스
+      spineDesign: { kind: 'hyg' },
+      volumes: [
+        { label: '1', vno: '1', c: '#00686f', title: '대방광불화엄경 강설 1 · 一. 세주묘엄품 1', url: '' },
+        { label: '2', vno: '2', c: '#00686f', title: '대방광불화엄경 강설 2 · 一. 세주묘엄품 2', url: '' },
+        { label: '3', vno: '3', c: '#00686f', title: '대방광불화엄경 강설 3 · 一. 세주묘엄품 3', url: '' },
+        { label: '4', vno: '4', c: '#00686f', title: '대방광불화엄경 강설 4 · 一. 세주묘엄품 4', url: '' },
+        { label: '5', vno: '5', c: '#00686f', title: '대방광불화엄경 강설 5 · 一. 세주묘엄품 5', url: '' },
+        { label: '6', vno: '6', c: '#00686f', title: '대방광불화엄경 강설 6 · 二. 여래현상품', url: '' },
+        { label: '7', vno: '7', c: '#00686f', title: '대방광불화엄경 강설 7 · 三. 보현삼매품 · 四. 세계성취품', url: '' },
+        { label: '8', vno: '8', c: '#00686f', title: '대방광불화엄경 강설 8 · 五. 화장세계품 1', url: '' },
+        { label: '9', vno: '9', c: '#00686f', title: '대방광불화엄경 강설 9 · 五. 화장세계품 2', url: '' },
+        { label: '10', vno: '10', c: '#00686f', title: '대방광불화엄경 강설 10 · 五. 화장세계품 3', url: '' },
+        { label: '11', vno: '11', c: '#00686f', title: '대방광불화엄경 강설 11 · 六. 비로자나품', url: '' },
+        { label: '12', vno: '12', c: '#2d5a8c', title: '대방광불화엄경 강설 12 · 七. 여래명호품 · 八. 사성제품', url: '' },
+        { label: '13', vno: '13', c: '#2d5a8c', title: '대방광불화엄경 강설 13 · 九. 광명각품 · 十. 보살문명품', url: '' },
+        { label: '14', vno: '14', c: '#2d5a8c', title: '대방광불화엄경 강설 14 · 十一. 정행품 · 十二. 현수품 1', url: '' },
+        { label: '15', vno: '15', c: '#2d5a8c', title: '대방광불화엄경 강설 15 · 十二. 현수품 2', url: '' },
+        { label: '16', vno: '16', c: '#8e4790', title: '대방광불화엄경 강설 16 · 十三. 승수미산정품 · 十四. 수미정상게찬품 · 十五. 십주품', url: '' },
+        { label: '17', vno: '17', c: '#8e4790', title: '대방광불화엄경 강설 17 · 十六. 범행품 · 十七. 초발심공덕품', url: '' },
+        { label: '18', vno: '18', c: '#8e4790', title: '대방광불화엄경 강설 18 · 十八. 명법품', url: '' },
+        { label: '19', vno: '19', c: '#4f7a3a', title: '대방광불화엄경 강설 19 · 十九. 승야마천궁품 · 二十. 야마궁중게찬품 · 二十一. 십행품 1', url: '' },
+        { label: '20', vno: '20', c: '#4f7a3a', title: '대방광불화엄경 강설 20 · 二十一. 십행품 2', url: '' },
+        { label: '21', vno: '21', c: '#4f7a3a', title: '대방광불화엄경 강설 21 · 二十二. 십무진장품', url: '' },
+        { label: '22', vno: '22', c: '#3d4385', title: '대방광불화엄경 강설 22 · 二十三. 승도솔천궁품', url: '' },
+        { label: '23', vno: '23', c: '#3d4385', title: '대방광불화엄경 강설 23 · 二十四. 도솔궁중게찬품 · 二十五. 십회향품 1', url: '' },
+        { label: '24', vno: '24', c: '#3d4385', title: '대방광불화엄경 강설 24 · 二十五. 십회향품 2', url: '' },
+        { label: '25', vno: '25', c: '#3d4385', title: '대방광불화엄경 강설 25 · 二十五. 십회향품 3', url: '' },
+        { label: '26', vno: '26', c: '#3d4385', title: '대방광불화엄경 강설 26 · 二十五. 십회향품 4', url: '' },
+        { label: '27', vno: '27', c: '#3d4385', title: '대방광불화엄경 강설 27 · 二十五. 십회향품 5', url: '' },
+        { label: '28', vno: '28', c: '#3d4385', title: '대방광불화엄경 강설 28 · 二十五. 십회향품 6', url: '' },
+        { label: '29', vno: '29', c: '#3d4385', title: '대방광불화엄경 강설 29 · 二十五. 십회향품 7', url: '' },
+        { label: '30', vno: '30', c: '#3d4385', title: '대방광불화엄경 강설 30 · 二十五. 십회향품 8', url: '' },
+        { label: '31', vno: '31', c: '#3d4385', title: '대방광불화엄경 강설 31 · 二十五. 십회향품 9', url: '' },
+        { label: '32', vno: '32', c: '#3d4385', title: '대방광불화엄경 강설 32 · 二十五. 십회향품 10', url: '' },
+        { label: '33', vno: '33', c: '#3d4385', title: '대방광불화엄경 강설 33 · 二十五. 십회향품 11', url: '' },
+        { label: '34', vno: '34', c: '#a35a2a', title: '대방광불화엄경 강설 34 · 二十六. 십지품 1', url: '' },
+        { label: '35', vno: '35', c: '#a35a2a', title: '대방광불화엄경 강설 35 · 二十六. 십지품 2', url: '' },
+        { label: '36', vno: '36', c: '#a35a2a', title: '대방광불화엄경 강설 36 · 二十六. 십지품 3', url: '' },
+        { label: '37', vno: '37', c: '#a35a2a', title: '대방광불화엄경 강설 37 · 二十六. 십지품 4', url: '' },
+        { label: '38', vno: '38', c: '#a35a2a', title: '대방광불화엄경 강설 38 · 二十六. 십지품 5', url: '' },
+        { label: '39', vno: '39', c: '#a35a2a', title: '대방광불화엄경 강설 39 · 二十六. 십지품 6', url: '' },
+        { label: '40', vno: '40', c: '#4b5d6e', title: '대방광불화엄경 강설 40 · 二十七. 십정품 1', url: '' },
+        { label: '41', vno: '41', c: '#4b5d6e', title: '대방광불화엄경 강설 41 · 二十七. 십정품 2', url: '' },
+        { label: '42', vno: '42', c: '#4b5d6e', title: '대방광불화엄경 강설 42 · 二十七. 십정품 3', url: '' },
+        { label: '43', vno: '43', c: '#4b5d6e', title: '대방광불화엄경 강설 43 · 二十七. 십정품 4', url: '' },
+        { label: '44', vno: '44', c: '#4b5d6e', title: '대방광불화엄경 강설 44 · 二十八. 십통품 · 二十九. 십인품', url: '' },
+        { label: '45', vno: '45', c: '#4b5d6e', title: '대방광불화엄경 강설 45 · 三十. 아승기품 · 三十一. 여래수량품 · 三十二. 제보살주처품', url: '' },
+        { label: '46', vno: '46', c: '#4b5d6e', title: '대방광불화엄경 강설 46 · 三十三. 불부사의법품 1', url: '' },
+        { label: '47', vno: '47', c: '#4b5d6e', title: '대방광불화엄경 강설 47 · 三十三. 불부사의법품 2', url: '' },
+        { label: '48', vno: '48', c: '#4b5d6e', title: '대방광불화엄경 강설 48 · 三十四. 여래십신상해품 · 三十五. 여래수호광명공덕품', url: '' },
+        { label: '49', vno: '49', c: '#4b5d6e', title: '대방광불화엄경 강설 49 · 三十六. 보현행품', url: '' },
+        { label: '50', vno: '50', c: '#4b5d6e', title: '대방광불화엄경 강설 50 · 三十七. 여래출현품 1', url: '' },
+        { label: '51', vno: '51', c: '#4b5d6e', title: '대방광불화엄경 강설 51 · 三十七. 여래출현품 2', url: '' },
+        { label: '52', vno: '52', c: '#4b5d6e', title: '대방광불화엄경 강설 52 · 三十七. 여래출현품 3', url: '' },
+        { label: '53', vno: '53', c: '#2e6b55', title: '대방광불화엄경 강설 53 · 三十八. 이세간품 1', url: '' },
+        { label: '54', vno: '54', c: '#2e6b55', title: '대방광불화엄경 강설 54 · 三十八. 이세간품 2', url: '' },
+        { label: '55', vno: '55', c: '#2e6b55', title: '대방광불화엄경 강설 55 · 三十八. 이세간품 3', url: '' },
+        { label: '56', vno: '56', c: '#2e6b55', title: '대방광불화엄경 강설 56 · 三十八. 이세간품 4', url: '' },
+        { label: '57', vno: '57', c: '#2e6b55', title: '대방광불화엄경 강설 57 · 三十八. 이세간품 5', url: '' },
+        { label: '58', vno: '58', c: '#2e6b55', title: '대방광불화엄경 강설 58 · 三十八. 이세간품 6', url: '' },
+        { label: '59', vno: '59', c: '#2e6b55', title: '대방광불화엄경 강설 59 · 三十八. 이세간품 7', url: '' },
+        { label: '60', vno: '60', c: '#6e0f1c', title: '대방광불화엄경 강설 60 · 三十九. 입법계품 1', url: '' },
+        { label: '61', vno: '61', c: '#6e0f1c', title: '대방광불화엄경 강설 61 · 三十九. 입법계품 2', url: '' },
+        { label: '62', vno: '62', c: '#6e0f1c', title: '대방광불화엄경 강설 62 · 三十九. 입법계품 3', url: '' },
+        { label: '63', vno: '63', c: '#6e0f1c', title: '대방광불화엄경 강설 63 · 三十九. 입법계품 4', url: '' },
+        { label: '64', vno: '64', c: '#6e0f1c', title: '대방광불화엄경 강설 64 · 三十九. 입법계품 5', url: '' },
+        { label: '65', vno: '65', c: '#6e0f1c', title: '대방광불화엄경 강설 65 · 三十九. 입법계품 6', url: '' },
+        { label: '66', vno: '66', c: '#6e0f1c', title: '대방광불화엄경 강설 66 · 三十九. 입법계품 7', url: '' },
+        { label: '67', vno: '67', c: '#6e0f1c', title: '대방광불화엄경 강설 67 · 三十九. 입법계품 8', url: '' },
+        { label: '68', vno: '68', c: '#6e0f1c', title: '대방광불화엄경 강설 68 · 三十九. 입법계품 9', url: '' },
+        { label: '69', vno: '69', c: '#6e0f1c', title: '대방광불화엄경 강설 69 · 三十九. 입법계품 10', url: '' },
+        { label: '70', vno: '70', c: '#6e0f1c', title: '대방광불화엄경 강설 70 · 三十九. 입법계품 11', url: '' },
+        { label: '71', vno: '71', c: '#6e0f1c', title: '대방광불화엄경 강설 71 · 三十九. 입법계품 12', url: '' },
+        { label: '72', vno: '72', c: '#6e0f1c', title: '대방광불화엄경 강설 72 · 三十九. 입법계품 13', url: '' },
+        { label: '73', vno: '73', c: '#6e0f1c', title: '대방광불화엄경 강설 73 · 三十九. 입법계품 14', url: '' },
+        { label: '74', vno: '74', c: '#6e0f1c', title: '대방광불화엄경 강설 74 · 三十九. 입법계품 15', url: '' },
+        { label: '75', vno: '75', c: '#6e0f1c', title: '대방광불화엄경 강설 75 · 三十九. 입법계품 16', url: '' },
+        { label: '76', vno: '76', c: '#6e0f1c', title: '대방광불화엄경 강설 76 · 三十九. 입법계품 17', url: '' },
+        { label: '77', vno: '77', c: '#6e0f1c', title: '대방광불화엄경 강설 77 · 三十九. 입법계품 18', url: '' },
+        { label: '78', vno: '78', c: '#6e0f1c', title: '대방광불화엄경 강설 78 · 三十九. 입법계품 19', url: '' },
+        { label: '79', vno: '79', c: '#6e0f1c', title: '대방광불화엄경 강설 79 · 三十九. 입법계품 20', url: '' },
+        { label: '80', vno: '80', c: '#6e0f1c', title: '대방광불화엄경 강설 80 · 三十九. 입법계품 21', url: '' },
+        { label: '81', vno: '81', c: '#8a6a2a', title: '대방광불화엄경 강설 81 · 보현행원품', url: '' }
+      ],
+      tags: ['화엄경', '華嚴經', '대방광불화엄경', '강설', '무비', '여천무비', '如天無比', '담앤북스', '80화엄', '입법계품', '십지품', '보현행원품']
     },
     {
       title: '여천무비스님 전집 – 화중연화(火中蓮華)',
@@ -3344,6 +3488,20 @@
         { label: '제4권', name: '라훌라·아나율·우팔리', band: 'spines/sdj-bg-4.jpg', title: '라훌라 · 아나율 · 우팔리', url: 'https://drive.google.com/file/d/1_r9wF5OL6GlVNnSIAToOFHAlMSpZ-cFA/view?usp=sharing' },
         { label: '제5권', name: '부루나·수보리·가전연', band: 'spines/sdj-bg-5.jpg', title: '부루나 · 수보리 · 가전연', url: 'https://drive.google.com/file/d/1H33AFHEDvei5Ir7TSVviZA7xt0lMlrry/view?usp=sharing' }
       ]
+    },
+    {
+      title: '한국불상의 원류를 찾아서',
+      badge: '최완수 (崔完秀) 著 · 대원사 · 전 3권',
+      category: ['02-0004', '01-0004'],
+      poster: 'covers/0621.jpg',
+      // 책등: 미색 종이 · 권 번호 · 원본 붉은 붓글씨 제목 · 최완수 著 · 권별 부제 · 표지 불상 사진 · 원본 대원사 표기
+      spineDesign: { kind: 'cws' },
+      volumes: [
+        { label: '제1권', vno: '1', sub: '法水東流', fig: 'spines/cws-fig-1.jpg', title: '한국불상의 원류를 찾아서 1 : 法水東流 — 법수는 동쪽으로 흐르고', url: 'https://drive.google.com/file/d/1scm8lcNXrowm2dr9ym4K6ZM9LEs2alFZ/view?usp=sharing' },
+        { label: '제2권', vno: '2', sub: '彌勒 하생과\n阿彌陀 출현', fig: 'spines/cws-fig-2.jpg', title: '한국불상의 원류를 찾아서 2 : 彌勒 하생과 阿彌陀 출현', url: 'https://drive.google.com/file/d/1REuXMw30JfcKxQyGO4Y_94NAuIy8UMz4/view?usp=sharing' },
+        { label: '제3권', vno: '3', sub: '교종미술의 완성과\n선종미술의 개화', fig: 'spines/cws-fig-3.jpg', title: '한국불상의 원류를 찾아서 3 : 교종미술의 완성과 선종미술의 개화', url: 'https://drive.google.com/file/d/1Q_PooSScrTbOuAyvXMYtWY26etBHPOmP/view?usp=sharing' }
+      ],
+      tags: ['한국불상', '불상', '佛像', '최완수', '崔完秀', '대원사', '불교조각', '미륵', '아미타', '법수동류', '교종미술', '선종미술']
     },
     {
       title: '명찰순례 (名刹巡禮)',
@@ -4210,12 +4368,18 @@
       tags: ['한국불교전서', '불교전서', '韓國佛教全書']
     },
     {
-      title: '韓國佛敎儀禮資料叢書 (한국불교의례자료총서) 第四輯',
-      badge: '',
+      title: '韓國佛敎儀禮資料叢書 (한국불교의례자료총서)',
+      badge: '전 4집',
       category: ['01-0003'],
       poster: 'covers/0233.jpg',
-      url: 'https://drive.google.com/file/d/1S5rwreD2nFN6qhOgK8g-jL03b-hn9EcB/view?usp=sharing',
-      tags: ['의례', '儀禮', '의례자료총서', '한국불교의례']
+      // 책등: 각 집 속표지의 붓글씨 제목·인장을 그대로 사용 (spines/uirye-N.jpg)
+      volumes: [
+        { label: '第一輯', title: '韓國佛敎儀禮資料叢書 第一輯', url: 'https://drive.google.com/file/d/1eTYHQ96UHQprmfzJTYk1VHLbEeM9t-Gn/view?usp=sharing', spine: 'spines/uirye-1.jpg' },
+        { label: '第二輯', title: '韓國佛敎儀禮資料叢書 第二輯', url: 'https://drive.google.com/file/d/1y_A3TV58ISSLGPwiinO2uPvHsq8BASlQ/view?usp=sharing', spine: 'spines/uirye-2.jpg' },
+        { label: '第三輯', title: '韓國佛敎儀禮資料叢書 第三輯', url: 'https://drive.google.com/file/d/1syZgBzpwADLaiecJFxPm3I-20aFEZJQE/view?usp=sharing', spine: 'spines/uirye-3.jpg' },
+        { label: '第四輯', title: '韓國佛敎儀禮資料叢書 第四輯', url: 'https://drive.google.com/file/d/19r_8BvuLzhqDFVu8wbTt4OFFNSa6z6Ud/view?usp=sharing', spine: 'spines/uirye-4.jpg' }
+      ],
+      tags: ['의례', '儀禮', '의례자료총서', '한국불교의례', '한국불교의례자료총서', '韓國佛敎儀禮資料叢書']
     },
     {
       title: '왕오천축국전 (往五天竺國傳) : 돈황사본의 복원 및 역주',
@@ -4285,6 +4449,7 @@
       title: '一葉禪文 (일엽선문) : 金一葉禪師 文集',
       badge: '修德寺 歡喜臺',
       category: ['01-0001'],
+      codes: ['kw-391890'],
       poster: 'covers/0242.jpg',
       url: 'https://drive.google.com/file/d/1X0rcVpIC3c-vpltn7bb6jjJvV4mvXTfu/view?usp=sharing',
       tags: ['일엽', '一葉', '김일엽', '수덕사', '환희대', '비구니']
@@ -4550,6 +4715,7 @@
       title: '영규대사와 800의승 자료집',
       badge: '대한불교조계종 미래본부 불교사회연구소',
       category: ['01-0001'],
+      codes: ['kw-391890'],
       poster: 'covers/0277.jpg',
       url: 'https://drive.google.com/file/d/1HfOZPWn4QxM3XVO8AxtPhBkDkU56WXzO/view?usp=sharing',
       tags: ['영규', '騎虛', '기허', '의승', '승병', '임진왜란', '금산']
@@ -4822,6 +4988,7 @@
       title: '갑사 표충원 (表忠院)',
       badge: '이철헌 · 조규환 지음 · 대한불교조계종 불교사회연구소',
       category: ['01-0002'],
+      codes: ['kw-391890'],
       poster: 'covers/0310.jpg',
       url: 'https://drive.google.com/file/d/1NaSdUPhDKhDWOLP2oqdW768Y0LmkkbwV/view?usp=sharing',
       tags: ['갑사', '甲寺', '표충원', '表忠院', '공주', '영규', '의승']
@@ -7220,6 +7387,7 @@
       title: '韓國禪敎史 (한국선교사)',
       badge: '忽滑谷快天 (누카리야 카이텐) 著 · 鄭湖鏡 譯 · 민족사',
       category: ['01-0004', '05-0004'],
+      codes: ['kw-391890'],
       langs: ['한국어'],
       poster: 'covers/0554.jpg',
       url: 'https://drive.google.com/file/d/1nSZ8qVIgbT0dHqVPpdug0aHwAsLTb2Ur/view?usp=sharing',
@@ -7467,6 +7635,7 @@
       title: '빨리율 (Pāli Vinaya) · 國譯',
       badge: '釋普雲 (석보운) 國譯 · 혜안',
       category: ['05-0001', '06-0004'],
+      codes: ['kw-391890'],
       poster: 'covers/0571.jpg',
       volumes: [
         { label: 'I', title: '빨리율 I', url: '', missing: true },
@@ -7577,6 +7746,7 @@
       title: '자현 스님이 들려주는 불교사 100장면',
       badge: '자현 지음 · 불광출판사',
       category: ['10-0000'],
+      codes: ['kw-391890'],
       poster: 'covers/0583.jpg',
       url: 'https://drive.google.com/file/d/1b89uTDNRk-hc3F1vWJXsfF2RqhJescDY/view?usp=sharing',
       tags: ['불교사', '100장면', '자현', '불광출판사', '인도', '중앙아시아', '중국', '한국']
@@ -7700,6 +7870,7 @@
       title: '《釋迦如來十地修行記》의 언어연구와 역주 (석가여래십지수행기)',
       badge: '박원기 · 윤순일 · 한운진 · 이소화 · 김준수 (경완스님) 저 · 學古房',
       category: ['01-0003'],
+      codes: ['kw-391890'],
       langs: ['한국어', '한문'],
       poster: 'covers/0597.jpg',
       url: 'https://drive.google.com/file/d/13YLxhRSIq3C6vJWd7A4b_lSywGUVwTcw/view?usp=sharing',
@@ -7860,7 +8031,7 @@
       badge: '李智冠 (이지관) · 東國大學校 · 1982',
       category: ['10-0000'],
       poster: 'covers/0615.jpg',
-      url: '',
+      url: 'https://drive.google.com/file/d/1S4-zv81hUuCrC_kHphL3837zzUqLjR8B/view?usp=sharing',
       tags: ['교단', '敎團', '교단사', '지관', '智冠', '동국대학교']
     },
     {
@@ -7880,27 +8051,36 @@
       // 책등: 쪽빛 천 표지 · 원본 제첨 · 권차(第一~第十九)
       spineDesign: { kind: 'jo' },
       volumes: [
-        { label: '제1책', vno: '一', title: '李朝實錄佛敎鈔存 第一', url: 'https://drive.google.com/file/d/1sKUIMFEFIy0gNCGsNNx-tuR3-QvaZXnN/view?usp=sharing' },
-        { label: '제2책', vno: '二', title: '李朝實錄佛敎鈔存 第二', url: 'https://drive.google.com/file/d/1y5vfBKFrYwlqJvGk9LcUWggWSYfDLdQ5/view?usp=sharing' },
-        { label: '제3책', vno: '三', title: '李朝實錄佛敎鈔存 第三', url: 'https://drive.google.com/file/d/1XNXesUvi2gLerVMaJh583niHi6gJIilq/view?usp=sharing' },
-        { label: '제4책', vno: '四', title: '李朝實錄佛敎鈔存 第四', url: 'https://drive.google.com/file/d/1OC6u7YPuAlDFMc5dIQt1mS_hEIkHGD0x/view?usp=sharing' },
-        { label: '제5책', vno: '五', title: '李朝實錄佛敎鈔存 第五', url: 'https://drive.google.com/file/d/1Fs85pin1IMFhjjjInxyb7Fmt8ZDzlnpj/view?usp=sharing' },
-        { label: '제6책', vno: '六', title: '李朝實錄佛敎鈔存 第六', url: 'https://drive.google.com/file/d/1qfCSq3g1WqP563g5ce2Hl_QPIyKiYKr_/view?usp=sharing' },
-        { label: '제7책', vno: '七', title: '李朝實錄佛敎鈔存 第七', url: 'https://drive.google.com/file/d/1-P6bfNeqSlwdVkRAQFOUduhiCCw_MnsW/view?usp=sharing' },
-        { label: '제8책', vno: '八', title: '李朝實錄佛敎鈔存 第八', url: 'https://drive.google.com/file/d/1_jtgimRt18OCOBeT0u6oqijzx4OxXRpH/view?usp=sharing' },
-        { label: '제9책', vno: '九', title: '李朝實錄佛敎鈔存 第九', url: 'https://drive.google.com/file/d/1S3aTuSxDNQqJDJY4xXmoKO_jetwOKXJV/view?usp=sharing' },
-        { label: '제10책', vno: '十', title: '李朝實錄佛敎鈔存 第十', url: 'https://drive.google.com/file/d/1bl3RilUOo1gtCkrFD4_Q88N17an6pMwJ/view?usp=sharing' },
-        { label: '제11책', vno: '十一', title: '李朝實錄佛敎鈔存 第十一', url: 'https://drive.google.com/file/d/19UbLGJCGb68NPusL_xlW3Uyhv6zb6Lrl/view?usp=sharing' },
-        { label: '제12책', vno: '十二', title: '李朝實錄佛敎鈔存 第十二', url: 'https://drive.google.com/file/d/1ztApqJRZmve8DQ2G7j6DWSl3Mybb0HBM/view?usp=sharing' },
-        { label: '제13책', vno: '十三', title: '李朝實錄佛敎鈔存 第十三', url: 'https://drive.google.com/file/d/1JaRfPE8EIbGEdbnqh4lOi4wk4pimeLvn/view?usp=sharing' },
-        { label: '제14책', vno: '十四', title: '李朝實錄佛敎鈔存 第十四', url: 'https://drive.google.com/file/d/1VXPMR7iPoEIlYq5oYy7vC77lbCC5vLZW/view?usp=sharing' },
-        { label: '제15책', vno: '十五', title: '李朝實錄佛敎鈔存 第十五', url: 'https://drive.google.com/file/d/1u2f5bqO0tgSA-ygfY7qLdM6AIps7l8oz/view?usp=sharing' },
-        { label: '제16책', vno: '十六', title: '李朝實錄佛敎鈔存 第十六', url: 'https://drive.google.com/file/d/1cJugy1pW_o9iwt1Pp-FQH1-mcO7FWwAq/view?usp=sharing' },
-        { label: '제17책', vno: '十七', title: '李朝實錄佛敎鈔存 第十七', url: 'https://drive.google.com/file/d/1RfJJH5oz9AFKCVZoinruXidMlRL2a6O2/view?usp=sharing' },
-        { label: '제18책', vno: '十八', title: '李朝實錄佛敎鈔存 第十八', url: 'https://drive.google.com/file/d/1CltQm35ykY9NqPxCeSUODeWd09erGN2n/view?usp=sharing' },
-        { label: '제19책', vno: '十九', title: '李朝實錄佛敎鈔存 第十九', url: 'https://drive.google.com/file/d/1U5i6x3m_-7s9KrF3MYlGxjO76tZZYwfx/view?usp=sharing' }
+        { label: '제1책', vno: '1', title: '李朝實錄佛敎鈔存 제1책', url: 'https://drive.google.com/file/d/1sKUIMFEFIy0gNCGsNNx-tuR3-QvaZXnN/view?usp=sharing' },
+        { label: '제2책', vno: '2', title: '李朝實錄佛敎鈔存 제2책', url: 'https://drive.google.com/file/d/1y5vfBKFrYwlqJvGk9LcUWggWSYfDLdQ5/view?usp=sharing' },
+        { label: '제3책', vno: '3', title: '李朝實錄佛敎鈔存 제3책', url: 'https://drive.google.com/file/d/1XNXesUvi2gLerVMaJh583niHi6gJIilq/view?usp=sharing' },
+        { label: '제4책', vno: '4', title: '李朝實錄佛敎鈔存 제4책', url: 'https://drive.google.com/file/d/1OC6u7YPuAlDFMc5dIQt1mS_hEIkHGD0x/view?usp=sharing' },
+        { label: '제5책', vno: '5', title: '李朝實錄佛敎鈔存 제5책', url: 'https://drive.google.com/file/d/1Fs85pin1IMFhjjjInxyb7Fmt8ZDzlnpj/view?usp=sharing' },
+        { label: '제6책', vno: '6', title: '李朝實錄佛敎鈔存 제6책', url: 'https://drive.google.com/file/d/1qfCSq3g1WqP563g5ce2Hl_QPIyKiYKr_/view?usp=sharing' },
+        { label: '제7책', vno: '7', title: '李朝實錄佛敎鈔存 제7책', url: 'https://drive.google.com/file/d/1-P6bfNeqSlwdVkRAQFOUduhiCCw_MnsW/view?usp=sharing' },
+        { label: '제8책', vno: '8', title: '李朝實錄佛敎鈔存 제8책', url: 'https://drive.google.com/file/d/1_jtgimRt18OCOBeT0u6oqijzx4OxXRpH/view?usp=sharing' },
+        { label: '제9책', vno: '9', title: '李朝實錄佛敎鈔存 제9책', url: 'https://drive.google.com/file/d/1S3aTuSxDNQqJDJY4xXmoKO_jetwOKXJV/view?usp=sharing' },
+        { label: '제10책', vno: '10', title: '李朝實錄佛敎鈔存 제10책', url: 'https://drive.google.com/file/d/1bl3RilUOo1gtCkrFD4_Q88N17an6pMwJ/view?usp=sharing' },
+        { label: '제11책', vno: '11', title: '李朝實錄佛敎鈔存 제11책', url: 'https://drive.google.com/file/d/19UbLGJCGb68NPusL_xlW3Uyhv6zb6Lrl/view?usp=sharing' },
+        { label: '제12책', vno: '12', title: '李朝實錄佛敎鈔存 제12책', url: 'https://drive.google.com/file/d/1ztApqJRZmve8DQ2G7j6DWSl3Mybb0HBM/view?usp=sharing' },
+        { label: '제13책', vno: '13', title: '李朝實錄佛敎鈔存 제13책', url: 'https://drive.google.com/file/d/1JaRfPE8EIbGEdbnqh4lOi4wk4pimeLvn/view?usp=sharing' },
+        { label: '제14책', vno: '14', title: '李朝實錄佛敎鈔存 제14책', url: 'https://drive.google.com/file/d/1VXPMR7iPoEIlYq5oYy7vC77lbCC5vLZW/view?usp=sharing' },
+        { label: '제15책', vno: '15', title: '李朝實錄佛敎鈔存 제15책', url: 'https://drive.google.com/file/d/1u2f5bqO0tgSA-ygfY7qLdM6AIps7l8oz/view?usp=sharing' },
+        { label: '제16책', vno: '16', title: '李朝實錄佛敎鈔存 제16책', url: 'https://drive.google.com/file/d/1cJugy1pW_o9iwt1Pp-FQH1-mcO7FWwAq/view?usp=sharing' },
+        { label: '제17책', vno: '17', title: '李朝實錄佛敎鈔存 제17책', url: 'https://drive.google.com/file/d/1RfJJH5oz9AFKCVZoinruXidMlRL2a6O2/view?usp=sharing' },
+        { label: '제18책', vno: '18', title: '李朝實錄佛敎鈔存 제18책', url: 'https://drive.google.com/file/d/1CltQm35ykY9NqPxCeSUODeWd09erGN2n/view?usp=sharing' },
+        { label: '제19책', vno: '19', title: '李朝實錄佛敎鈔存 제19책', url: 'https://drive.google.com/file/d/1U5i6x3m_-7s9KrF3MYlGxjO76tZZYwfx/view?usp=sharing' }
       ],
       tags: ['이조실록불교초존', '李朝實錄佛敎鈔存', '실록불교초', '實錄佛敎抄', '조선왕조실록', '朝鮮王朝實錄', '권상로', '權相老', '江田俊雄', '에다 도시오', '규장각', '조선불교', '불교사료']
+    },
+    {
+      title: '한국 호국불교의 재조명',
+      badge: '대한불교조계종 불교사회연구소',
+      category: ['01-0004'],
+      codes: ['kw-391890'],
+      poster: 'covers/0620.jpg',
+      url: 'https://drive.google.com/file/d/1Ua4gOTqNMs9OMBNRJMrIAe9zwiCPammN/view?usp=sharing',
+      tags: ['호국불교', '護國佛敎', '한국호국불교', '불교사회연구소', '조계종', '승병']
     },
     {
       title: '韓國高僧 · 한국 고승',
@@ -7924,7 +8104,7 @@
         { name: '보각일연', hanja: '普覺一然', born: 1206, died: 1289, books: ['三聖賢 삼성현과 경산의 역사 인물 연구'] },
         { name: '청허휴정', hanja: '淸虛休靜', born: 1520, died: 1604, books: ['정선 휴정 (精選 休靜)', '淸虛堂集 (청허당집)'] },
         { name: '고산혜원', hanja: '杲山慧元', born: 1933, died: 2021, books: ['지리산의 무쇠소 — 고산 큰스님 회고록'] },
-        { name: '여천무비', hanja: '如天無比', born: 1943, books: ['여천무비스님 전집 – 화중연화(火中蓮華)', '무비 스님과 함께하는 불교 공부'] },
+        { name: '여천무비', hanja: '如天無比', born: 1943, books: ['여천무비스님 전집 – 화중연화(火中蓮華)', '대방광불화엄경 강설 (大方廣佛華嚴經 講說)', '무비 스님과 함께하는 불교 공부'] },
         { name: '덕산각현', hanja: '', books: ['덕산당 각현 대종사 — 불교복지 선구자 각현 스님 행장'] },
         { name: '인곡법장', hanja: '仁谷法長', born: 1941, died: 2005, books: ['아낌없이 주고 가신 인곡당 법장 대종사 (열반 20주기 기념)', '法長 : 언론보도 집성집 (인곡당 법장 대종사 열반 20주기 기념)'] },
         { name: '월초거연', hanja: '月初巨淵', born: 1858, died: 1934, books: ['月初門徒祖派譜 (월초문도조파보)'] },
@@ -9869,7 +10049,7 @@
         // 李朝實錄佛敎鈔存: 쪽빛 천 표지 · 원본 제첨(題簽) · 권차 · 아래 해제 상자
         a.className = 'spine spine-jo';
         a.innerHTML = `<span class="jo-slip"><img src="spines/jo-slip.jpg" alt="李朝實錄佛敎鈔存"><span class="jo-no"></span></span>`;
-        a.querySelector('.jo-no').textContent = '第' + (vol.vno || '');
+        a.querySelector('.jo-no').textContent = vol.vno || '';
       } else if (b.spineDesign && b.spineDesign.kind === 'cwkb') {
         // Collected Works of Korean Buddhism: 흰 책등 · 위 테라코타 띠에 권 번호 · 한자 · 영문 제목(세로) · 아래 조계종 법륜
         a.className = 'spine spine-cwkb';
@@ -9879,6 +10059,27 @@
         a.querySelector('.cw-main').textContent = vol.main || '';
         if ((vol.main || '').length > 18) a.classList.add('long');
         const sub = a.querySelector('.cw-sub'); if (vol.sub) sub.textContent = vol.sub; else sub.remove();
+      } else if (b.spineDesign && b.spineDesign.kind === 'thema') {
+        // 테마 한국불교: 흰 책등 · 위아래 당초문 띠(플러스는 금색) · 총서 번호 · 세로 제목 · 권 번호 · 출판사
+        a.className = 'spine spine-thema' + (vol.look ? ' ' + vol.look : '');
+        a.innerHTML = `<span class="th-band"></span><span class="th-ser"></span><span class="th-title"></span><span class="th-no"></span><span class="th-pub"></span><span class="th-band bot"></span>`;
+        a.querySelector('.th-ser').textContent = vol.ser || '';
+        a.querySelector('.th-title').textContent = vol.spineTitle || '테마 한국불교';
+        a.querySelector('.th-no').textContent = vol.vno || '';
+        a.querySelector('.th-pub').textContent = (vol.pub || '').replace('동국대학교','동국대');
+      } else if (b.spineDesign && b.spineDesign.kind === 'cws') {
+        // 한국불상의 원류를 찾아서: 미색 종이 · 권 번호 · 원본 붉은 붓글씨 제목 · 최완수 著 · 부제 · 표지 불상 사진(아래쪽) · 원본 대원사 표기
+        a.className = 'spine spine-cws';
+        a.innerHTML = `<span class="cw-bg"></span><span class="cw-no"></span><img class="cw-ti" src="spines/cws-title.png" alt="한국불상의 원류를 찾아서"><img class="cw-au" src="spines/cws-author.png" alt="최완수 著"><span class="cw-sub"></span><img class="cw-pub" src="spines/cws-pub.png" alt="대원사">`;
+        a.querySelector('.cw-no').textContent = vol.vno || '';
+        a.querySelector('.cw-sub').textContent = vol.sub || '';
+        a.querySelector('.cw-bg').style.backgroundImage = `url(${vol.fig})`;
+      } else if (b.spineDesign && b.spineDesign.kind === 'hyg') {
+        // 대방광불화엄경 강설: 위 색띠(회별 색) · 연꽃 선 · 원본 大方廣佛華嚴經 글씨 · 세로 제목 · 권 번호 원 · 담앤북스
+        a.className = 'spine spine-hyg';
+        a.style.setProperty('--c', vol.c || '#00686f');
+        a.innerHTML = `<span class="hy-band"><img src="spines/hy-cal.png" alt="大方廣佛華嚴經"></span><span class="hy-title">대방광불화엄경 강설</span><span class="hy-no"></span><span class="hy-pub">담앤북스</span>`;
+        a.querySelector('.hy-no').textContent = vol.vno || '';
       } else if (b.spineDesign && b.spineDesign.kind === 'lng') {
         // 능엄경 강화: 회갈색 천 · 佛敎叢書 · 세로 제목 · 권 번호 · 東國譯經院
         a.className = 'spine spine-lng';
@@ -10204,12 +10405,10 @@
         if (collSort === 'era') { const e = eraOf(pp.born); if (e !== curEra) { curEra = e; newGrid(e); } }
         const card = document.createElement('div');
         card.className = 'cp-card';
-        const plq = document.createElement('div');
-        plq.className = 'cp-plq big';
-        plq.innerHTML = [...pp.name].map(ch => `<b>${ch}</b>`).join('');
         const meta = document.createElement('div');
         meta.className = 'cp-meta';
-        meta.innerHTML = `<span class="cp-hanja">${pp.hanja || '&nbsp;'}</span><span class="cp-life">${lifeTxt(pp)}</span>`;
+        meta.innerHTML = `<span class="cp-name"></span><span class="cp-hanja">${pp.hanja || ''}</span><span class="cp-life">${lifeTxt(pp)}</span>`;
+        meta.querySelector('.cp-name').textContent = pp.name;
         const ul = document.createElement('div');
         ul.className = 'cp-books';
         (pp.books || []).forEach(t => {
@@ -10223,7 +10422,7 @@
           if (ref) a.addEventListener('click', () => openRef(ref)); else a.title = '서고에서 이 제목을 찾지 못했습니다';
           ul.appendChild(a);
         });
-        card.append(plq, meta, ul);
+        card.append(meta, ul);
         grid.appendChild(card);
       });
       const nBooks = new Set(list.flatMap(pp => pp.books || [])).size;
@@ -10463,10 +10662,6 @@
       const C = COLLECTIONS[b.collection];
       const ppl = [...C.people].sort((x, y) => (x.born ?? 9999) - (y.born ?? 9999));
       const nBooks = new Set(ppl.flatMap(pp => pp.books || [])).size;
-      const plaques = ppl.slice(0, 6).map(pp => {
-        const chars = [...pp.name].map(ch => `<b>${ch}</b>`).join('');
-        return `<span class="cp-plq">${chars}</span>`;
-      }).join('');
       el.classList.add('feature-coll');
       el.innerHTML = `
         <div class="ft-shade"></div>
@@ -10477,7 +10672,7 @@
           <p class="ft-stats"><span><b>${ppl.length}</b>분</span><span><b>${nBooks}</b>권</span></p>
           <span class="ft-cta">${f.cta || '열기'} <em>→</em></span>
         </div>
-        <div class="ft-art cp-art">${plaques}</div>`;
+        `;
       return el;
     }
     const bands = Array.from({ length: 9 }, (_, i) => `<i style="--k:${i}"></i>`).join('');
@@ -10526,9 +10721,392 @@
     if (/^[\x00-\u024f\u1e00-\u1eff\s‘’“”–—·:,.()'&!?-]+$/.test(b.title || '')) return ['영어'];
     return [];
   };
-  const searchText = b => fold([b.title, b.badge, b.isbn, ...(b.tags || []), ...langsOf(b), ...(b.volumes || []).map(v => `${v.label || ''} ${v.title || ''}`),
+  // ===== 교차 검색(같은 대상의 여러 표기) =====
+  // 한 줄 = 같은 사람·경전·개념. 책 정보에 이 중 하나라도 있으면 나머지 표기로 검색해도 찾아집니다.
+  // 새 표기를 더하려면 해당 줄에 '…' 를 추가하거나 새 줄을 만드세요.
+  const ALIASES = [
+    // 인도 논사·인물
+    ['Nagarjuna', 'Nāgārjuna', '나가르주나', '나가주나', '용수', '龍樹'],
+    ['Vasubandhu', '바수반두', '바수반도', '세친', '世親', '천친', '天親'],
+    ['Asanga', 'Asaṅga', '아상가', '무착', '無著'],
+    ['Aryadeva', 'Āryadeva', '아리야데바', '아리아데바', '제바', '提婆', '성천', '聖天'],
+    ['Candrakirti', 'Candrakīrti', '짠드라끼르띠', '찬드라키르티', '월칭', '月稱'],
+    ['Dignaga', 'Dignāga', '디그나가', '진나', '陳那'],
+    ['Dharmakirti', 'Dharmakīrti', '다르마끼르띠', '다르마키르티', '법칭', '法稱'],
+    ['Shantideva', 'Śāntideva', 'Santideva', '샨띠데바', '샨티데바', '적천', '寂天'],
+    ['Shantarakshita', 'Śāntarakṣita', '샨따락시따', '샨타락시타', '적호', '寂護'],
+    ['Kamalashila', 'Kamalaśīla', '까말라실라', '카말라실라', '연화계', '蓮華戒'],
+    ['Bhaviveka', 'Bhāviveka', 'Bhavya', '바비베까', '바비베카', '청변', '淸辨', '清辨'],
+    ['Buddhaghosa', '붓다고사', '각음', '覺音'],
+    ['Ashvaghosha', 'Aśvaghoṣa', '아쉬바고샤', '아슈바고샤', '마명', '馬鳴'],
+    ['Maitreya', '마이뜨레야', '마이트레야', '미륵', '彌勒'],
+    ['Ashoka', 'Aśoka', 'Asoka', '아쇼까', '아쇼카', '아소카', '아육왕', '阿育王'],
+    ['Milinda', 'Menander', 'Milindapanha', 'Milindapañha', '밀린다', '밀린다팡하', '미란다', '미란타', '彌蘭陀', '나선비구경', '那先比丘經'],
+    ['Ananda', 'Ānanda', '아난다', '아난', '阿難'],
+    ['Sariputta', 'Sāriputta', 'Sariputra', 'Śāriputra', '사리뿟따', '사리푸트라', '사리불', '舍利弗'],
+    ['Moggallana', 'Moggallāna', 'Maudgalyayana', '목갈라나', '목건련', '目犍連'],
+    ['Mahakassapa', 'Mahākassapa', 'Mahakasyapa', '마하깟사빠', '마하가섭', '가섭', '迦葉'],
+    ['Gotama', 'Gautama', 'Shakyamuni', 'Śākyamuni', 'Sakyamuni', '고따마', '고타마', '석가모니', '釋迦牟尼', '석가', '釋迦', '석존'],
+    ['Bodhidharma', '보리달마', '달마', '達磨', '達摩'],
+    ['Padmasambhava', '파드마삼바바', '빠드마삼바바', '연화생', '蓮華生'],
+    ['Milarepa', '밀라레빠', '밀라레파'],
+    ['Tsongkhapa', 'Tsong-kha-pa', '총카파', '쫑카빠', '종객파', '宗喀巴'],
+    ['Dalai Lama', '달라이 라마', '달라이라마'],
+    // 중국·한국·일본 인물
+    ['Wonhyo', '원효', '元曉'],
+    ['Uisang', 'Ŭisang', 'Uishang', '의상', '義湘'],
+    ['Chinul', 'Jinul', '지눌', '知訥', '보조', '普照'],
+    ['Hyujeong', 'Hyujong', 'Sosan', 'Seosan', '휴정', '休靜', '서산', '西山', '청허', '淸虛', '清虛'],
+    ['Kyunyo', 'Gyunyeo', '균여', '均如'],
+    ['Uicheon', 'Ŭich\'ŏn', 'Uichon', '의천', '義天'],
+    ['Iryeon', 'Iryon', '일연', '一然'],
+    ['Wonchuk', 'Woncheuk', '원측', '圓測'],
+    ['Gyeongheo', 'Kyongho', 'Kyŏnghŏ', '경허', '鏡虛'],
+    ['Mangong', 'Man Gong', '만공', '滿空'],
+    ['Xuanzang', 'Hsuan-tsang', 'Hsüan-tsang', '현장', '玄奘'],
+    ['Huineng', 'Hui-neng', '혜능', '慧能', '육조', '六祖'],
+    ['Linji', 'Lin-chi', 'Rinzai', '임제', '臨濟'],
+    ['Zhiyi', 'Chih-i', '지의', '智顗', '천태', '天台', 'Tiantai', 'Tendai'],
+    ['Fazang', 'Fa-tsang', '법장', '法藏'],
+    ['Zongmi', 'Tsung-mi', '종밀', '宗密'],
+    ['Kumarajiva', 'Kumārajīva', '꾸마라지바', '쿠마라지바', '구마라집', '鳩摩羅什'],
+    ['Dogen', 'Dōgen', '도겐', '도원', '道元'],
+    ['Shinran', '신란', '친란', '親鸞'],
+    ['Kukai', 'Kūkai', '구카이', '공해', '空海'],
+    ['Nichiren', '니치렌', '일련', '日蓮'],
+    // 경전·문헌
+    ['Avatamsaka', 'Avataṃsaka', 'Huayan', 'Hua-yen', 'Hwaeom', 'Hwaom', 'Hwaŏm', 'Kegon', '화엄', '華嚴'],
+    ['Lotus Sutra', 'Saddharmapundarika', 'Saddharmapuṇḍarīka', '법화경', '法華經', '묘법연화경', '妙法蓮華經'],
+    ['Diamond Sutra', 'Vajracchedika', 'Vajracchedikā', '금강경', '金剛經'],
+    ['Heart Sutra', 'Prajnaparamitahrdaya', '반야심경', '般若心經', '심경', '心經'],
+    ['Prajnaparamita', 'Prajñāpāramitā', 'Perfection of Wisdom', '반야바라밀', '般若波羅蜜', '반야경', '般若經'],
+    ['Vimalakirti', 'Vimalakīrti', '비말라끼르띠', '비마라키르티', '유마', '維摩', '유마경', '維摩經'],
+    ['Lankavatara', 'Laṅkāvatāra', '능가경', '楞伽經'],
+    ['=Surangama', '=Śūraṅgama', 'Surangama Sutra', 'Shurangama Sutra', '능엄경', '楞嚴經', '수능엄경', '首楞嚴經'],
+    ['Surangamasamadhi', 'Śūraṃgamasamādhi', 'Śūraṅgamasamādhi', '수능엄삼매경', '首楞嚴三昧經'],
+    ['Nirvana Sutra', 'Mahaparinirvana', 'Mahāparinirvāṇa', '열반경', '涅槃經'],
+    ['Brahmajala', 'Brahma\'s Net', 'Brahmā\'s Net', '범망경', '梵網經'],
+    ['Sukhavati', 'Sukhāvatī', 'Pure Land', '정토', '淨土', '아미타경', '阿彌陀經', '무량수경', '無量壽經'],
+    ['Mulamadhyamakakarika', 'Mūlamadhyamakakārikā', 'Madhyamaka', 'Madhyamika', '중론', '中論', '중관', '中觀'],
+    ['Abhidharmakosa', 'Abhidharmakośa', 'Abhidharma-kosa', 'Abhidharmakosabhasya', '아비달마꼬샤', '아비다르마코샤', '아비달마구사론', '구사론', '俱舍論', '阿毗達磨俱舍論', '阿毘達磨俱舍論'],
+    ['Abhidharma', 'Abhidhamma', '아비달마', '아비다르마', '아비담마', '阿毘達磨', '阿毗達磨', '아비다르마불교'],
+    ['Yogacara', 'Yogācāra', 'Vijnanavada', 'Vijñānavāda', '유식', '唯識', '유가행', '瑜伽行'],
+    ['Visuddhimagga', '청정도론', '淸淨道論', '清淨道論'],
+    ['Dhammapada', '담마빠다', '담마파다', '법구경', '法句經'],
+    ['Sutta Nipata', 'Suttanipata', 'Suttanipāta', '숫타니파타', '숫따니빠따', '경집'],
+    ['Jataka', 'Jātaka', '자타카', '자따까', '본생담', '本生譚', '본생경', '本生經'],
+    ['Digha Nikaya', 'Dīgha Nikāya', '디가 니까야', '디가니까야', '장부', '長部', '장아함', '長阿含'],
+    ['Majjhima Nikaya', 'Majjhima Nikāya', '맛지마 니까야', '맛지마니까야', '중부', '中部', '중아함', '中阿含'],
+    ['Samyutta Nikaya', 'Saṃyutta Nikāya', '상윳따 니까야', '상윳따니까야', '상응부', '相應部', '잡아함', '雜阿含'],
+    ['Anguttara Nikaya', 'Aṅguttara Nikāya', '앙굿따라 니까야', '앙굿따라니까야', '증지부', '增支部', '증일아함', '增一阿含'],
+    ['Nikaya', 'Nikāya', '니까야', '니카야'],
+    ['Agama', 'Āgama', '아함', '阿含'],
+    ['Vinaya', '비나야', '율장', '律藏', '계율', '戒律'],
+    ['Tripitaka', 'Tipitaka', 'Tipiṭaka', '삼장', '三藏', '대장경', '大藏經'],
+    ['Taisho', 'Taishō', '대정장', '大正藏', '대정신수대장경', '大正新脩大藏經'],
+    ['Tannisho', 'Tannishō', '탄니쇼', '탄이초', '歎異抄'],
+    ['Blue Cliff Record', 'Biyan Lu', 'Hekiganroku', '벽암록', '碧巖錄'],
+    ['Gateless Gate', 'Wumenguan', 'Mumonkan', '무문관', '無門關'],
+    ['Platform Sutra', '육조단경', '六祖壇經', '단경', '壇經'],
+    ['Mahabharata', 'Mahābhārata', '마하바라따', '마하바라타'],
+    ['Ramayana', 'Rāmāyaṇa', '라마야나', '라마야나'],
+    ['Bhagavad Gita', 'Bhagavadgita', 'Bhagavadgītā', '바가바드 기타', '바가바드기타', '바가바드 기따'],
+    ['Upanishad', 'Upaniṣad', '우파니샤드', '우빠니샤드'],
+    ['Veda', 'Vedic', '베다', '吠陀', '베다어'],
+    // 개념·종파·지역
+    ['=Zen', '=Chan', 'Seon', '=Son', 'Chan Buddhism', 'Zen Buddhism', '선불교', '禪', '선종', '禪宗', '젠'],
+    ['Theravada', 'Theravāda', '테라와다', '테라바다', '상좌부', '上座部', '남방불교'],
+    ['Mahayana', 'Mahāyāna', '마하야나', '대승', '大乘'],
+    ['Vajrayana', 'Vajrayāna', 'Tantra', 'Tantric', 'Esoteric', '바즈라야나', '밀교', '密敎', '密教', '금강승', '金剛乘'],
+    ['Pali', 'Pāli', '빠알리', '빨리', '팔리', '빨리어', '팔리어', '빠알리어', '巴利'],
+    ['Sanskrit', 'Saṃskṛta', '산스크리트', '산스끄리뜨', '산스끄리트', '산스크리뜨', '산스크리트어', '범어', '梵語', '梵'],
+    ['Tibet', 'Tibetan', '티베트', '티벳', '西藏', '서장'],
+    ['Gandhara', 'Gandhāra', '간다라', '乾陀羅'],
+    ['Stupa', 'Stūpa', '스투파', '스뚜빠', '탑', '塔', '불탑', '佛塔'],
+    ['Nirvana', 'Nirvāṇa', 'Nibbana', 'Nibbāna', '니르바나', '닙바나', '열반', '涅槃'],
+    ['Bodhisattva', '보디삿뜨바', '보디사트바', '보살', '菩薩'],
+    ['Avalokitesvara', 'Avalokiteśvara', 'Guanyin', 'Kannon', '관음', '觀音', '관세음', '觀世音'],
+    ['Amitabha', 'Amitābha', 'Amida', '아미타', '阿彌陀'],
+    ['Vairocana', '바이로차나', '비로자나', '毘盧遮那'],
+    ['Ksitigarbha', 'Kṣitigarbha', '지장', '地藏'],
+    ['Manjusri', 'Mañjuśrī', 'Manjushri', '문수', '文殊'],
+    ['Samantabhadra', '보현', '普賢'],
+    ['Vipassana', 'Vipassanā', 'Vipashyana', '위빠사나', '위파사나', '관', '觀'],
+    ['Samatha', 'Śamatha', 'Shamatha', '사마타', '止'],
+    ['Mindfulness', '=Sati', 'Satipatthana', 'Satipaṭṭhāna', '사띠빳타나', '염처', '念處', '마음챙김', '사띠', '알아차림', '念'],
+    ['Meditation', '명상', '冥想', '참선', '參禪'],
+    ['Dunhuang', 'Tun-huang', '돈황', '둔황', '敦煌'],
+    ['Angkor', '앙코르', '앙코르와트', '앙코르 와트'],
+    ['Silk Road', 'Silk Roads', '실크로드', '비단길'],
+    ['Gwaebul', 'Kwaebul', 'Hanging Scroll', '괘불', '掛佛'],
+    ['Buddhist art', '불교미술', '佛敎美術', '불교 미술'],
+    ['Korea', 'Korean', '한국', '韓國'],
+    ['India', 'Indian', '인도', '印度'],
+    ['China', 'Chinese', '중국', '中國'],
+    ['Japan', 'Japanese', '일본', '日本'],
+    ['Letter', 'Letters', 'Epistle', '편지', '서간', '書簡', '서한', '書翰'],
+    ['=King', 'Kings', 'Kingship', 'Kingdom', 'Emperor', 'Monarch', 'Monarchy', 'Raja', 'Rāja', '왕', '王', '국왕', '國王', '대왕', '大王', '황제', '皇帝'],
+    ['Mochizuki', '모찌즈끼', '모찌쯔끼', '모치즈키', '모치쓰키', '망월', '望月'],
+    // 지역
+    ['Southeast Asia', 'South East Asia', 'South-East Asia', 'Southeast Asian', 'Southeast', 'South East', 'South-East', '동남아', '동남아시아', '東南亞'],
+    ['East Asia', 'East Asian', '동아시아', '東亞', '동북아'],
+    ['South Asia', 'South Asian', '남아시아', '서남아시아'],
+    ['Central Asia', 'Central Asian', '중앙아시아', '중앙亞', '서역', '西域'],
+    ['Himalaya', 'Himalayan', 'Himalayas', '히말라야'],
+    ['=West', 'Western', 'Westerner', 'Occident', 'Europe', 'European', 'America', 'American', '서양', '서구', '유럽', '미국'],
+    ['Britain', 'British', 'England', 'English Buddhism', '영국'],
+    ['Thailand', 'Thai', 'Siam', 'Siamese', '태국', '시암', '泰國'],
+    ['Sri Lanka', 'Ceylon', 'Sinhala', 'Sinhalese', '스리랑카', '실론', '스리랑카'],
+    ['Myanmar', 'Burma', 'Burmese', '미얀마', '버마', '緬甸'],
+    ['Cambodia', 'Khmer', 'Kampuchea', '캄보디아', '크메르'],
+    ['Vietnam', 'Viet Nam', 'Vietnamese', '베트남', '월남', '越南'],
+    ['Laos', '=Lao', '라오스'],
+    ['Indonesia', 'Java', 'Javanese', 'Borobudur', '인도네시아', '자바', '보로부두르'],
+    ['Nepal', 'Nepalese', 'Nepali', '네팔'],
+    ['Mongolia', 'Mongolian', '몽골', '蒙古'],
+    ['Bhutan', '부탄'],
+    ['Kashmir', '카슈미르', '캐시미르'],
+    // 일반 낱말
+    ['History', 'Historical', '역사', '歷史'],
+    ['Dictionary', 'Encyclopedia', 'Encyclopaedia', 'Lexicon', 'Glossary', '사전', '辭典', '事典', '사전류', '대사전', '大辭典', '백과', '百科'],
+    ['Biography', 'Life of', '전기', '傳記', '생애', '일대기'],
+    ['Introduction', 'Introductory', 'Primer', '입문', '入門', '개론', '槪論', '概論', '개설', '槪說'],
+    ['Philosophy', 'Philosophical', '철학', '哲學', '사상', '思想'],
+    ['=Art', '=Arts', 'Artefact', 'Artifact', '미술', '美術', '예술', '藝術'],
+    ['Sculpture', 'Statue', '=Image', '조각', '彫刻', '불상', '佛像'],
+    ['Painting', 'Paintings', 'Mural', '회화', '繪畫', '불화', '佛畫', '벽화', '壁畫'],
+    ['Architecture', '건축', '建築'],
+    ['Temple', 'Temples', 'Monastery', 'Monasteries', '사찰', '寺刹', '사원', '寺院'],
+    ['Monk', 'Monks', 'Bhikkhu', 'Bhikshu', 'Bhikṣu', '승려', '僧侶', '비구', '比丘', '스님'],
+    ['=Nun', 'Nuns', 'Bhikkhuni', 'Bhikṣuṇī', '비구니', '比丘尼'],
+    ['Ritual', 'Rituals', 'Liturgy', 'Ceremony', '의례', '儀禮', '의식', '儀式'],
+    ['Archaeology', 'Archaeological', 'Excavation', '고고학', '考古學', '발굴', '發掘'],
+    ['Inscription', 'Inscriptions', 'Epigraphy', 'Stele', '금석문', '金石文', '비문', '碑文'],
+    ['Manuscript', 'Manuscripts', '사본', '寫本', '필사본', '筆寫本'],
+    ['Commentary', 'Commentaries', 'Exposition', '주석', '註釋', '注釋', '강설', '講說', '해설', '解說'],
+    ['Translation', 'Translated', '번역', '飜譯', '역주', '譯註'],
+    ['Grammar', '문법', '文法'],
+    ['Poem', 'Poems', 'Poetry', 'Verse', 'Verses', '詩', '게송', '偈頌', '시집', '詩集'],
+    ['=Story', 'Stories', 'Tales', 'Folktale', 'Narrative', 'Legend', 'Legends', '이야기', '설화', '說話', '전설'],
+    ['=Comic', 'Comics', 'Manga', 'Cartoon', '만화', '漫畫'],
+    ['Women', 'Woman', 'Female', '여성', '女性'],
+    ['Ethics', 'Ethical', 'Morality', '윤리', '倫理', '도덕'],
+    ['Psychology', 'Psychological', '심리', '心理', '심리학'],
+    ['Science', 'Scientific', '과학', '科學'],
+    ['=Death', 'Dying', 'Bardo', '죽음', '사후', '死後'],
+    ['Karma', 'Kamma', '까르마', '카르마', '業'],
+    ['Emptiness', 'Sunyata', 'Śūnyatā', 'Sunnata', '空', '공성', '空性'],
+    ['Consciousness', '=Mind', 'Vijnana', 'Vijñāna', 'Citta', '마음', '의식', '意識', '識'],
+    ['Pilgrimage', 'Pilgrim', '순례', '巡禮', '성지순례'],
+    ['Journal', 'Bulletin', '=Review', 'Proceedings', '학보', '학술지', '논총', '論叢', '논문집'],
+    // ── 텍스트 고유명사 (경·논·사서) ──
+    ['Mahavastu', 'Mahāvastu', '마하바스뚜', '마하바스투', '大事'],
+    ['Mahavamsa', 'Mahāvaṃsa', 'Mahavansa', '마하왐사', '마하밤사', '大史'],
+    ['Culavamsa', 'Cūḷavaṃsa', 'Culavansa', '쭐라왐사', '출라밤사', '소왕통사', '小史'],
+    ['Dipavamsa', 'Dīpavaṁsa', 'Dīpavaṃsa', '디빠왐사', '디파밤사', '島史'],
+    ['Dathavamsa', 'Dāṭhāvaṃsa', 'Dāṭhāvaṁsa', '다타왐사', '다타밤사', '불치사', '佛齒史'],
+    ['Udana', 'Udāna', '우다나', '감흥어', '感興語', '자설경', '自說經'],
+    ['Udanavarga', '우다나바르가', '법집요송경', '法集要頌經'],
+    ['Vigrahavyavartani', 'Vigrahavyāvartanī', '비그라하비야바르따니', '회쟁론', '廻諍論', '迴諍論'],
+    ['Dharmacakrapravartana', 'Dhammacakkappavattana', 'Dharma-Wheel', 'Wheel of Dharma', '초전법륜', '初轉法輪', '전법륜경', '轉法輪經'],
+    ['Buddhacarita', '붓다짜리따', '붓다차리타', '불소행찬', '佛所行讚'],
+    ['Saundarananda', '사운다라난다', '손다라난다', '미난타'],
+    ['Sukhavativyuha', 'Sukhāvatīvyūha', 'Land of Bliss', '무량수경', '無量壽經', '아미타경', '阿彌陀經', '극락', '極樂'],
+    ['Mahaparinibbana', 'Mahāparinibbāna', '대반열반경', '大般涅槃經', '열반경', '涅槃經'],
+    ['Patimokkha', 'Pātimokkha', 'Pratimoksa', 'Prātimokṣa', '빠띠목카', '바라제목차', '波羅提木叉', '계본', '戒本'],
+    ['Therigatha', 'Therīgāthā', '테리가타', '테리가타', '장로니게', '長老尼偈'],
+    ['Theragatha', 'Theragāthā', '테라가타', '장로게', '長老偈'],
+    ['Hitopadesa', 'Hitopadeśa', 'Hitopadesha', '히또빠데샤', '히토파데샤'],
+    ['Yoga Sutra', 'Yoga-Sutra', 'Yoga-Sūtra', 'Yogasutra', '요가수트라', '요가 수트라', '요가수뜨라', '요가경'],
+    ['=Yoga', 'Yogic', 'Yogi', '요가', '瑜伽'],
+    ['Purana', 'Purāṇa', '뿌라나', '푸라나'],
+    ['Uttararamacarita', 'Uttararāmacarita', '웃따라라마짜리따', '라마 후전'],
+    ['Karmasiddhiprakarana', 'Karmasiddhiprakaraṇa', '업성취론', '業成就論', '대승성업론', '大乘成業論'],
+    ['Pancaskandhaka', 'Pañcaskandhaka', '대승오온론', '大乘五蘊論', '오온론', '五蘊論'],
+    ['Skandha', 'Khandha', 'Aggregates', '오온', '五蘊'],
+    ['Dharmadhatustava', 'Dharmadhātustava', 'Dharmadhatustotra', 'Dharmadhātustotra', '법계찬', '法界讚'],
+    ['Dharmadhatu', 'Dharmadhātu', '법계', '法界'],
+    ['Mahaprajnaparamitasastra', 'Dazhidu lun', '대지도론', '大智度論'],
+    ['Awakening of Faith', 'Mahayanasraddhotpada', '대승기신론', '大乘起信論', '기신론', '起信論'],
+    ['Bodhicaryavatara', 'Bodhicaryāvatāra', 'Way of the Bodhisattva', '입보리행론', '入菩提行論', '입보살행론'],
+    ['Letter to a Friend', 'Suhrllekha', 'Suhṛllekha', '친우서', '親友書', '권계왕송', '勸誡王頌', '용수보살권계왕송'],
+    ['Kanishka', 'Kaniṣka', 'Kanishka', '카니슈카', '까니시까', '가니색가', '迦膩色迦'],
+    ['Matrceta', 'Mātṛceṭa', '마뜨리쩨따', '마트리체타'],
+    ['Satapancasatka', 'Śatapañcāśatka', '150찬불송', '일백오십찬불송', '一百五十讚佛頌', '백오십찬'],
+    ['Candragomin', '짠드라고민', '찬드라고민', '월관', '月官'],
+    ['Tibetan Book of the Dead', 'Bardo Thodol', 'Bardo Thödol', '티베트 사자의 서', '사자의 서', '바르도 퇴돌', '바르도'],
+    ['Treasure Store Treatise', 'Baozang lun', '보장론', '寶藏論'],
+    ['Jikji', 'Jikchi', '직지', '直指', '직지심체요절', '直指心體要節', '백운화상초록불조직지심체요절'],
+    ['Baizhang', 'Pai-chang', 'Pure Rules', '백장', '百丈', '백장청규', '百丈淸規', '百丈清規', '청규', '淸規', '清規'],
+    ['Chimun', '치문', '緇門', '치문경훈', '緇門警訓'],
+    ['Xinxinming', 'Hsin-hsin-ming', '신심명', '信心銘'],
+    ['Zhengdaoge', 'Song of Enlightenment', '증도가', '證道歌'],
+    ['Wangocheonchukgukjeon', 'Hyecho', 'Hyech\'o', '혜초', '慧超', '왕오천축국전', '往五天竺國傳'],
+    ['Datang Xiyu ji', 'Great Tang Records on the Western Regions', '대당서역기', '大唐西域記', '서역기', '西域記'],
+    ['Faxian', 'Fa-hsien', '법현', '法顯', '불국기', '佛國記'],
+    ['Yijing', 'I-tsing', 'I-ching', '의정', '義淨', '남해기귀내법전'],
+    ['Haedong Kosung Chon', '해동고승전', '海東高僧傳'],
+    ['Samguk Yusa', '삼국유사', '三國遺事'],
+    ['Tripitaka Koreana', 'Goryeo Tripitaka', 'Koryo Tripitaka', '고려대장경', '高麗大藏經', '팔만대장경', '八萬大藏經'],
+    ['Hangul Tripitaka', '한글대장경', '韓國語大藏經', '한글 대장경'],
+    ['Nanden Daizokyo', '남전대장경', '南傳大藏經', '남전'],
+    ['Pali Text Society', '=PTS', '빠알리성전협회', '팔리성전협회'],
+    ['Lotus', '연꽃', '蓮華', '蓮花', '연화'],
+    ['Thousand Hands', 'Nilakantha', 'Nīlakaṇṭha', 'Great Compassion Dharani', '천수경', '千手經', '대비주', '大悲呪', '신묘장구대다라니'],
+    ['Dharani', 'Dhāraṇī', 'Mantra', 'Mantras', '다라니', '陀羅尼', '진언', '眞言', '真言', '주문', '呪文'],
+    ['Mandala', 'Maṇḍala', '만다라', '曼茶羅', '曼荼羅'],
+    ['Vajra', '바즈라', '금강저', '金剛杵', '도르제'],
+    ['Thangka', 'Tangka', '탱화', '幀畵', '幀畫', '탕카', '땅카'],
+    ['Dancheong', 'Tanchong', '단청', '丹靑', '丹青'],
+    ['Buddhist bell', 'Temple bell', 'Bronze bell', '범종', '梵鐘'],
+    ['Pagoda', '불탑', '석탑', '石塔', '탑파', '塔婆'],
+    ['Relic', 'Relics', 'Sarira', 'Śarīra', '사리', '舍利'],
+    ['Talisman', 'Amulet', '부적', '符籍'],
+    ['Precept', 'Precepts', '=Sila', 'Śīla', '계율', '戒律'],
+    ['Ordination', '수계', '授戒', '受戒', '계단', '戒壇'],
+    ['Sangha', 'Saṅgha', 'Samgha', '상가', '승가', '僧伽', '교단', '敎團', '教團'],
+    ['Buddha', 'Buddhas', '붓다', '부처', '부처님', '佛陀', '불타', '여래', '如來'],
+    ['Arahant', 'Arhat', 'Arahat', '아라한', '阿羅漢', '나한', '羅漢'],
+    ['Dhamma', 'Dharma', '담마', '다르마', '불법', '佛法'],
+    ['Enlightenment', 'Awakening', 'Bodhi', '깨달음', '깨침', '보리', '菩提'],
+    ['Compassion', 'Karuna', 'Karuṇā', '자비', '慈悲', '연민'],
+    ['Wisdom', 'Prajna', 'Prajñā', 'Panna', 'Paññā', '지혜', '智慧', '반야', '般若'],
+    ['Eightfold Path', 'Noble Eightfold', '팔정도', '八正道'],
+    ['Four Noble Truths', '사성제', '四聖諦'],
+    ['Dependent Origination', 'Paticcasamuppada', 'Paṭiccasamuppāda', 'Pratityasamutpada', 'Pratītyasamutpāda', '연기', '緣起'],
+    ['Non-self', 'Anatta', 'Anattā', 'Anatman', 'Anātman', 'Selflessness', 'No-self', '무아', '無我'],
+    ['Rebirth', 'Samsara', 'Saṃsāra', 'Reincarnation', '윤회', '輪廻', '輪迴'],
+    ['Lineage', 'Dharma transmission', '법맥', '法脈', '전등', '傳燈', '조파', '祖派'],
+    ['Gongan', 'Koan', 'Kōan', 'Kongan', '공안', '公案', '화두', '話頭'],
+    ['Hindu', 'Hinduism', 'Brahmanism', 'Brahman', '힌두', '힌두교', '브라만교', '바라문', '婆羅門'],
+    ['Jain', 'Jaina', 'Jainism', '자이나', '자이나교', '耆那'],
+    ['Daoism', 'Taoism', 'Daoist', 'Taoist', 'Zhuangzi', 'Chuang Tzu', 'Laozi', 'Lao Tzu', '도교', '道敎', '道教', '노장', '老莊', '장자', '莊子', '노자', '老子'],
+    ['Confucian', 'Confucianism', 'Neo-Confucian', '유교', '儒敎', '儒教', '유학', '儒學', '성리학', '性理學'],
+    ['Islam', 'Islamic', 'Muslim', '이슬람'],
+    ['Christian', 'Christianity', 'New Testament', 'Bible', '기독교', '그리스도교', '신약성서', '성경'],
+    ['Shamanism', 'Shaman', 'Shamanic', '샤머니즘', '무속', '巫俗', '무당', '토착신앙', '土着信仰', '토속신앙'],
+    ['Folk religion', 'Folk belief', 'Indigenous', '민간신앙', '民間信仰', '토속', '土俗'],
+    ['Prakrit', 'Prākrit', '쁘라끄리뜨', '프라크리트', '프라크리트어'],
+    ['Greek', 'Greeks', 'Greece', 'Hellenistic', '그리스', '희랍', '希臘'],
+    ['Avesta', 'Avestan', '아베스타', '아베스따'],
+    ['Pyrrhonism', 'Pyrrho', '피론', '퓌론', '회의주의'],
+    ['Hittite', '히타이트', '힛타이트'],
+    ['Grammar', '문법', '文法', '어법', '語法', '통사론', '統辭論'],
+    // ── 종파·전통 ──
+    ['Jogye', 'Chogye', '조계종', '曹溪宗', '조계', '曹溪'],
+    ['Taego', 'T\'aego', '태고종', '太古宗', '태고', '太古'],
+    ['Cheontae', 'Ch\'ŏnt\'ae', '천태종'],
+    ['Newar', 'Newari', '네와르', '네와리'],
+    ['Nyingma', '닝마', '닝마파'],
+    ['Gelug', 'Geluk', 'Gelugpa', '겔룩', '겔룩파', '格魯派'],
+    ['Kagyu', 'Kagyü', '까규', '카규', '까규파'],
+    ['Sakya', 'Sakyapa', '사꺄', '사캬', '사꺄파'],
+    ['Shingon', '진언종', '眞言宗', '真言宗'],
+    ['Engaged Buddhism', 'Socially Engaged', '참여불교', '사회참여'],
+    ['Early Buddhism', 'Original Buddhism', 'Primitive Buddhism', '초기불교', '근본불교', '원시불교', '原始佛敎', '原始佛教'],
+    ['Sectarian Buddhism', 'Nikaya Buddhism', '부파불교', '部派佛敎', '部派佛教'],
+    // ── 시대·왕조 ──
+    ['Silla', 'Shilla', '신라', '新羅', '통일신라', '統一新羅'],
+    ['Baekje', 'Paekche', '백제', '百濟'],
+    ['Goguryeo', 'Koguryo', 'Koguryŏ', '고구려', '高句麗'],
+    ['Goryeo', 'Koryo', 'Koryŏ', '고려', '高麗'],
+    ['Joseon', 'Choson', 'Chosŏn', 'Yi dynasty', '조선', '朝鮮', '이조', '李朝'],
+    ['Tang dynasty', 'T\'ang', '당나라', '唐代', '대당', '大唐'],
+    ['Song dynasty', 'Sung dynasty', '=Sung', '송나라', '宋代', '송원', '宋元'],
+    ['Ayutthaya', 'Ayudhya', '아유타야', '아유타야왕조'],
+    ['Lanna', 'Lan Na', '란나', '란나왕국'],
+    ['Sukhothai', 'Ram Khamhaeng', 'Ramkhamhaeng', '수코타이', '람캄행'],
+    // ── 지명·유적 ──
+    ['Ajanta', '아잔타', '아잔따'],
+    ['Ellora', '엘로라'],
+    ['Sanchi', 'Sāñcī', '산치', '산찌'],
+    ['Bharhut', '바르후트', '바르후뜨'],
+    ['Bodh Gaya', 'Bodhgaya', 'Buddhagaya', '보드가야', '붓다가야', '부다가야'],
+    ['Lumbini', '룸비니', '藍毘尼'],
+    ['Sarnath', '사르나트', '녹야원', '鹿野苑'],
+    ['Kushinagar', 'Kusinara', '쿠시나가르', '꾸시나라', '구시나가라'],
+    ['Nalanda', 'Nālandā', '날란다', '나란다'],
+    ['Bamiyan', '바미얀'],
+    ['Afghanistan', 'Afghan', '아프가니스탄', '아프간'],
+    ['Phnom Penh', '프놈펜'],
+    ['Bagan', 'Pagan', '바간', '파간'],
+    ['Taiwan', 'Taiwanese', '대만', '臺灣', '台灣', '타이완'],
+    ['Seoul', '서울', '한양', '漢陽', '경성', '京城'],
+    ['Jeju', 'Cheju', '제주', '濟州'],
+    ['Gyeongju', 'Kyongju', '경주', '慶州'],
+    ['Haeinsa', 'Haein-sa', '해인사', '海印寺'],
+    ['Bulguksa', 'Pulguksa', '불국사', '佛國寺'],
+    ['Seokguram', 'Sokkuram', '석굴암', '石窟庵'],
+    ['Beomeosa', 'Pomosa', 'Pŏmŏsa', '범어사', '梵魚寺'],
+    ['Songgwangsa', '송광사', '松廣寺'],
+    ['Tongdosa', '통도사', '通度寺'],
+    ['Sudeoksa', 'Sudoksa', '수덕사', '修德寺'],
+    ['Buseoksa', 'Pusoksa', '부석사', '浮石寺'],
+    ['Beopjusa', 'Popchusa', '법주사', '法住寺'],
+    ['Geumsansa', 'Kumsansa', 'Kŭmsan-sa', '금산사', '金山寺'],
+    ['Silleuksa', 'Shilluksa', '신륵사', '神勒寺'],
+    ['Jogyesa', 'Chogyesa', '조계사', '曹溪寺'],
+    ['Bongeunsa', 'Pongeunsa', '봉은사', '奉恩寺'],
+    ['Woljeongsa', '월정사', '月精寺'],
+    ['Hwaeomsa', 'Hwaomsa', '화엄사', '華嚴寺'],
+    ['Jikjisa', 'Chikchisa', '직지사', '直指寺'],
+    ['Odaesan', '오대산', '五臺山'],
+    ['Kyujanggak', 'Gyujanggak', '규장각', '奎章閣'],
+    ['Dongguk', 'Tongguk', '동국대', '동국대학교', '東國大學校', '東國大'],
+    // ── 인물 (근현대·학자·작가) ──
+    ['Han Yong-un', 'Manhae', '한용운', '韓龍雲', '만해', '萬海'],
+    ['Seongcheol', 'Songchol', '성철', '性徹'],
+    ['Gyeongbong', '경봉', '鏡峰'],
+    ['Cheongdam', '청담', '靑潭'],
+    ['Hanam', 'Hanam Jungwon', '한암', '漢巖'],
+    ['Gwon Sang-no', 'Kwon Sang-no', '권상로', '權相老', '퇴경', '退耕'],
+    ['Park Han-yeong', 'Pak Hanyong', '박한영', '朴漢永', '石顚', '영호', '映湖'],
+    ['Ji-gwan', 'Jigwan', '지관', '智冠', '이지관', '李智冠'],
+    ['Unheo', '운허', '耘虛'],
+    ['Wolun', '월운', '月雲'],
+    ['Mubi', '무비', '無比', '여천', '如天'],
+    ['Chusa', 'Kim Jeong-hui', '추사', '秋史', '김정희', '金正喜', '완당', '阮堂'],
+    ['Gyeomjae', 'Jeong Seon', '겸재', '謙齋', '鄭敾', '겸재 정선'],
+    ['Thich Nhat Hanh', 'Nhat Hanh', '틱낫한', '틱 낫 한'],
+    ['Tezuka', 'Osamu Tezuka', '데즈카', '테즈카', '데즈카 오사무', '手塚治虫'],
+    ['Marco Polo', '마르코 폴로', '마르코폴로', '동방견문록'],
+    ['Bhumibol', 'Bhumibol Adulyadej', '푸미폰', '부미폰'],
+    ['Bilhana', 'Bilhaṇa', '빌하나'],
+    ['Sujato', 'Bhikkhu Sujato', '수자토'],
+    ['Bhikkhu Bodhi', '비구 보디', '보디 스님'],
+    ['Nakamura', 'Hajime Nakamura', '나카무라', '나까무라', '中村元', '나카무라 하지메'],
+    ['Hirakawa', 'Akira Hirakawa', '히라카와', '平川彰', '히라카와 아키라'],
+    ['Lamotte', 'Étienne Lamotte', '라모뜨', '라모트'],
+    ['Buswell', 'Robert Buswell', '버스웰'],
+    ['Gombrich', '곰브리치'],
+    ['Rhys Davids', '리즈 데이비스', '리스 데이비스'],
+    ['Max Muller', 'Max Müller', '막스 뮐러', '뮐러'],
+    ['Edward Conze', 'Conze', '콘즈', '콘제'],
+    ['Paul Williams', '폴 윌리엄스'],
+    ['Lopez', 'Donald Lopez', '로페즈'],
+    ['Burnouf', 'Eugène Burnouf', '뷔르누프', '뷔르누'],
+    ['Upinder Singh', '우핀더 싱'],
+    ['Romila Thapar', 'Thapar', '로밀라 타파르'],
+    ['Dalai', '달라이'],
+    ['Kangyur', 'Kanjur', '깡규르', '칸규르'],
+  ];
+  const aliasTerms = ALIASES.map(g => g.map(t => {
+    const exact = t.startsWith('=');
+    const f = fold(exact ? t.slice(1) : t);
+    if (!/^[a-z0-9 .'-]+$/.test(f)) return f;
+    // 로마자: 앞은 낱말 경계, 뒤는 이어지는 말도 허용 (Abhidharmakosa → Abhidharmakośabhāṣyam). '=' 표시는 낱말 그대로만
+    return new RegExp('(^|[^a-z])' + f.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + (exact ? 's?(?![a-z])' : ''));
+  }));
+  const withAliases = txt => {
+    const add = [];
+    aliasTerms.forEach((g, i) => {
+      if (g.some(t => typeof t === 'string' ? txt.includes(t) : t.test(txt))) add.push(fold(ALIASES[i].join(' ').replace(/=/g, '')));
+    });
+    return add.length ? txt + ' ' + add.join(' ') : txt;
+  };
+  const searchText = b => withAliases(fold([b.title, b.badge, b.isbn, ...(b.tags || []), ...langsOf(b), ...(b.volumes || []).map(v => `${v.label || ''} ${v.title || ''}`),
     ...(b.collection && COLLECTIONS[b.collection] ? COLLECTIONS[b.collection].people.map(pp => `${pp.name} ${pp.hanja || ''}`) : [])]
-    .filter(Boolean).join(' '));
+    .filter(Boolean).join(' ')));
   BOOKS.forEach((b, idx) => {
     const isMultiVolume = Array.isArray(b.volumes);
     const isPaper = !!b.newspaper;
