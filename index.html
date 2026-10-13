@@ -6,7 +6,7 @@
 <title>la librairie</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:ital,wght@1,600&family=Noto+Serif+KR:wght@600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Song+Myung&family=Noto+Serif+TC:wght@500;600&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:ital,wght@1,600&family=Noto+Serif+KR:wght@600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Song+Myung&family=Noto+Serif+TC:wght@500;600&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0a0a0c;
@@ -1364,6 +1364,48 @@
     font-family:'EB Garamond','Times New Roman',serif; font-weight:600; font-size:clamp(7.5px,1.25vh,10px); line-height:1; }
   .spine-hyg .hy-pub{ margin:calc(var(--spine-h) * .02) 0 calc(var(--spine-h) * .03); writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap;
     font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(5.4px,.88vh,7px); color:#3a3431; }
+  /* 韓國佛敎總覽 (대한불교진흥원) — 1권을 9책으로 나눔 */
+  .spine-hbch{
+    width:calc(var(--spine-h) * .24); position:relative; overflow:hidden;
+    background:linear-gradient(90deg,#b8362f 0%,#d9554a 14%,#e2625a 50%,#d6514a 86%,#b0322c 100%);
+    display:flex; flex-direction:column; align-items:center; color:#140e0c;
+    padding:calc(var(--spine-h) * .03) 0 calc(var(--spine-h) * .028);
+    box-shadow:inset 3px 0 5px rgba(255,255,255,.18), inset -5px 0 8px rgba(0,0,0,.25);
+  }
+  .spine-hbch > *{ flex:0 0 auto; position:relative; height:max-content; }
+  .spine-hbch > .hc-rule{ height:5px; }
+  .spine-hbch .hc-rule{ width:74%; height:5px; border-top:1.5px solid #c9a75e; border-bottom:.8px solid #c9a75e; }
+  .spine-hbch img{ height:auto; display:block; position:relative; }
+  .spine-hbch .hc-t1{ margin-top:calc(var(--spine-h) * .045); width:24%; }
+  .spine-hbch .hc-t2{ margin-top:calc(var(--spine-h) * .02); width:38%; }
+  .spine-hbch .hc-sub{ margin-top:calc(var(--spine-h) * .014); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.6em; white-space:nowrap; height:max-content;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(7px,1.2vh,9.4px); letter-spacing:0; }
+  .spine-hbch .hc-txt{ margin-top:calc(var(--spine-h) * .025); display:flex; flex-direction:row-reverse; align-items:flex-start; gap:4px; }
+  .spine-hbch .hc-txt .hc-sec, .spine-hbch .hc-txt .hc-sub{ margin-top:0; }
+  .spine-hbch .hc-txt .hc-sub{ padding-top:.9em; }
+  .spine-hbch .hc-no{ margin-top:calc(var(--spine-h) * .035); font-family:'EB Garamond','Times New Roman',serif; font-weight:700; font-size:clamp(8px,1.4vh,11px); line-height:1; letter-spacing:.02em; white-space:nowrap; }
+  .spine-hbch .hc-sec{ margin-top:calc(var(--spine-h) * .018); writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.6em; white-space:nowrap;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(8px,1.4vh,11px); letter-spacing:.02em; }
+  .spine-hbch .hc-pg{ margin-top:calc(var(--spine-h) * .012); font-family:'EB Garamond','Times New Roman',serif; font-size:clamp(5.6px,.92vh,7.2px); letter-spacing:.02em; opacity:.85; writing-mode:vertical-rl; }
+  .spine-hbch .hc-pub{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; white-space:nowrap; line-height:1;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(6.4px,1.05vh,8.2px); letter-spacing:.05em; }
+  .spine-hbch .hc-rule.bot{ margin-top:auto; }
+  /* 아비달마구사론 (권오민 역 · 동국역경원) */
+  .spine-aks{
+    width:calc(var(--spine-h) * .21); position:relative; overflow:hidden; color:#2a2826; --x:0;
+    background:linear-gradient(90deg,#dedcd6 0%,#f3f2ee 15%,#f9f8f5 50%,#f1f0ec 85%,#d8d6cf 100%);
+    display:flex; flex-direction:column; align-items:center;
+    padding:calc(var(--spine-h) * .04) 0 calc(var(--spine-h) * .035);
+    box-shadow:inset -3px 0 5px rgba(0,0,0,.16);
+  }
+  .spine-aks > *{ flex:0 0 auto; height:max-content; }
+  .spine-aks .ak-v{ writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.6em; white-space:nowrap; }
+  .spine-aks .ak-title{ font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:500; font-size:clamp(9px,1.55vh,12px); letter-spacing:.02em; }
+  .spine-aks .ak-hz{ margin-top:calc(var(--spine-h) * .018); font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-size:clamp(5.8px,.95vh,7.4px); letter-spacing:.04em; color:#55514c; line-height:1; }
+  .spine-aks .ak-no{ margin-top:calc(var(--spine-h) * .03); font-family:'EB Garamond','Times New Roman',serif; font-weight:700; font-size:clamp(13px,2.3vh,18px); line-height:1; }
+  .spine-aks .ak-pin{ margin-top:calc(var(--spine-h) * .025); padding-top:6px; border-top:1px solid #8d8984; width:66%; display:flex; flex-direction:row-reverse; justify-content:center; gap:3px; }
+  .spine-aks .ak-pin span{ width:1em; word-break:break-all; text-align:center; font-family:'Nanum Gothic','Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(5.4px,.9vh,7px); line-height:1.12; }
+  .spine-aks .ak-tr{ margin-top:auto; padding-top:4px; font-family:'Noto Serif KR',serif; font-weight:600; font-size:clamp(5.6px,.92vh,7.2px); color:#4a4642; }
   /* 민족사 불교경전 */
   .spine-mj{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -6916,13 +6958,21 @@
       tags: ['일백오십찬불송', '一百五十讚佛頌', 'Śatapañcāśatka', '마뗄리제타', 'Mātṛceṭa', '마뜨리쩨따', '운허', '耘虛', '토방']
     },
     {
-      title: '아비달마구사론 (阿毗達磨俱舍論) 1 · 분별계품·분별근품',
-      badge: '세친 (Vasubandhu) · 권오민 옮김 · 3역 한글대장경',
+      title: '아비달마구사론 (阿毗達磨俱舍論) · 권오민 역',
+      badge: '세친 (Vasubandhu) 造 · 권오민 옮김 · 동국역경원 · 3역 한글대장경 · 전 4권',
       category: ['05-0003', '06-0003'],
       poster: 'covers/0500.jpg',
-      url: '',
-      tags: ['아비달마구사론', '阿毗達磨俱舍論', '구사론', '俱舍論', '세친', '世親', '분별계품', '분별근품']
+      // 책등: 흰 종이 · 나눔명조 제목 아비달마구사론 · 阿毗達磨俱舍論 · 권 번호 · 선 아래 품 이름(나눔고딕)
+      spineDesign: { kind: 'aks' },
+      volumes: [
+        { label: '제1권', vno: '1', pin: '분별계품·분별근품', title: '아비달마구사론 1 (권오민 역) · 분별계품 · 분별근품', url: 'https://drive.google.com/file/d/11XGs1Ht4mzIWE9plmBnH1WxquJsTHfMZ/view?usp=sharing' },
+        { label: '제2권', vno: '2', pin: '분별세품·분별업품', title: '아비달마구사론 2 (권오민 역) · 분별세품 · 분별업품', url: 'https://drive.google.com/file/d/1T_miyrACUjK18kyE6wUNcs1DbReMsjPN/view?usp=sharing' },
+        { label: '제3권', vno: '3', pin: '분별수면품·분별현성품', title: '아비달마구사론 3 (권오민 역) · 분별수면품 · 분별현성품', url: 'https://drive.google.com/file/d/1RhTt8z-bOsd0VOW6LolZhH3Y_Pqye6aQ/view?usp=sharing' },
+        { label: '제4권', vno: '4', pin: '분별지품·분별정품·파집아품', title: '아비달마구사론 4 (권오민 역) · 분별지품 · 분별정품 · 파집아품', url: 'https://drive.google.com/file/d/1ccg877_1QHMCt_6ibjK9Gn2vw0UnAJJ4/view?usp=sharing' }
+      ],
+      tags: ['아비달마구사론', '阿毗達磨俱舍論', '구사론', '俱舍論', '권오민', '세친', '世親', '바수반두', '동국역경원', '한글대장경', '분별계품', '분별근품', '분별세품', '분별업품', '분별수면품', '분별현성품', '분별지품', '분별정품', '파집아품']
     },
+
     {
       title: '佛說 大智度論 (대지도론)',
       badge: '나가르주나 (龍樹) 著 · 徐京保 編譯 · 明文堂',
@@ -6961,7 +7011,7 @@
       badge: 'tr. Padmakara Translation Group · Snow Lion',
       category: ['05-0003'],
       poster: 'covers/0505.jpg',
-      url: '',
+      url: 'https://drive.google.com/file/d/1v6l3qrD5tOh-Rpwlv-FpW553Vlee8nEU/view?usp=sharing',
       tags: ['용수', 'Nāgārjuna', 'Suhṛllekha', '권계왕송', 'Letter to a Friend', 'Kangyur Rinpoche', 'Padmakara']
     },
     {
@@ -8081,6 +8131,35 @@
       poster: 'covers/0620.jpg',
       url: 'https://drive.google.com/file/d/1Ua4gOTqNMs9OMBNRJMrIAe9zwiCPammN/view?usp=sharing',
       tags: ['호국불교', '護國佛敎', '한국호국불교', '불교사회연구소', '조계종', '승병']
+    },
+    {
+      title: '다경 (茶經) : 그림으로 쉽게 풀어쓴 다도·다예·다사의 안내서',
+      badge: '육우 (陸羽) 지음 · 김진무 · 김태영 옮김 · 일빛 · 지심방 The Classic Series 09',
+      category: ['07-0002', '06-0003'],
+      codes: ['kw-391890'],
+      poster: 'covers/0623.jpg',
+      url: 'https://drive.google.com/file/d/1uS_SYoZH3IkoL7raCvVotQfpYjjTWVGm/view?usp=sharing',
+      tags: ['다경', '茶經', '차경', '육우', '陸羽', '차', '茶', '다도', '茶道', '다예', '茶藝', '다사', '茶事', '선다일미', '禪茶一味', '당나라', '중국 차문화', 'Classic of Tea', 'Lu Yu', 'Chajing']
+    },
+    {
+      title: '韓國佛敎總覽 (한국불교총람)',
+      badge: '韓國佛敎總覽 編纂委員會 · 大韓佛敎振興院 · 1책 (파일 9분책)',
+      category: ['08-0002', '01-0004'],
+      poster: 'covers/0624.jpg',
+      // 책등: 붉은 천 · 원본 붓글씨(검정 · 韓國佛敎 작게 · 總覽 크게) · 쪽 범위 · 부 이름 · 편 이름 (원래 1책을 파일로 분책)
+      spineDesign: { kind: 'hbch' },
+      volumes: [
+        { label: '서두', vno: '0', sec: '서두', sub: '목차·광고', pages: '0001–0080', title: '韓國佛敎總覽 0 · 서두 · 광고 · 목차 (pp. 0001–0080)', url: 'https://drive.google.com/file/d/1xiQEIqs1oEEcr_hvfYww_8oJLyXhUdsb/view?usp=sharing' },
+        { label: '총론', vno: '1', sec: '총론', sub: '역사·현황·국제편', pages: '0081–0162', title: '韓國佛敎總覽 1 · 01 총론 · 역사편 · 현황편 · 국제편 (pp. 0081–0162)', url: 'https://drive.google.com/file/d/1IFa5e4geJw08lOQjJIP41ABnIVYJGIrf/view?usp=sharing' },
+        { label: '자료 Ⅰ', vno: '2', sec: '자료 Ⅰ', sub: '종단·법인편', pages: '0163–0267', title: '韓國佛敎總覽 2 · 02 자료 · 종단편 · 법인편 (pp. 0163–0267)', url: '' },
+        { label: '자료 Ⅱ', vno: '3', sec: '자료 Ⅱ', sub: '단체·기관편', pages: '0268–0515', title: '韓國佛敎總覽 3 · 02 자료 · 단체/기관편 (pp. 0268–0515)', url: 'https://drive.google.com/file/d/1jYgYv0fqWv3kPX6oFMBmd4_aAMQqIDnZ/view?usp=sharing' },
+        { label: '목록 Ⅰ', vno: '4', sec: '목록 Ⅰ', sub: '인명편', pages: '0516–0713', title: '韓國佛敎總覽 4 · 03 목록 · 인명편 (pp. 0516–0713)', url: 'https://drive.google.com/file/d/1PkEUjCqeearni-nA1d8kOLEoDB3uiBlc/view?usp=sharing' },
+        { label: '목록 Ⅱ', vno: '5', sec: '목록 Ⅱ', sub: '사찰편', pages: '0716–0938', title: '韓國佛敎總覽 5 · 03 목록 · 사찰편 (pp. 0716–0938)', url: 'https://drive.google.com/file/d/1twVy6A6bEBKK5CaBVYvnu7Lg_5b-x28O/view?usp=sharing' },
+        { label: '목록 Ⅲ', vno: '6', sec: '목록 Ⅲ', sub: '문화재·도서논문편', pages: '0940–1173', title: '韓國佛敎總覽 6 · 03 목록 · 불교문화재편 · 도서/논문편 (pp. 0940–1173)', url: 'https://drive.google.com/file/d/1Ewju3QLbvuwERsHJhmEofn9M5vFMmdMz/view?usp=sharing' },
+        { label: '법령', vno: '7', sec: '법령', sub: '불교관계법령', pages: '1174–1287', title: '韓國佛敎總覽 7 · 04 법령 · 불교관계법령편 (pp. 1174–1287)', url: 'https://drive.google.com/file/d/1RjYAAiinTl62wc537Ctt-eDqbrPH-S7k/view?usp=sharing' },
+        { label: '연표', vno: '8', sec: '연표', sub: '한국불교사연표', pages: '1288–1418', title: '韓國佛敎總覽 8 · 05 연표 · 한국불교사연표 (pp. 1288–1418)', url: 'https://drive.google.com/file/d/1D7y_IyB3swVa41jobT4K4qXQgMQyyP35/view?usp=sharing' }
+      ],
+      tags: ['한국불교총람', '韓國佛敎總覽', '불교총람', '대한불교진흥원', '大韓佛敎振興院', '종단', '법인', '단체', '인명', '사찰', '불교문화재', '도서', '논문', '불교관계법령', '전통사찰보존법', '한국불교사연표', '연표', '편람']
     },
     {
       title: '韓國高僧 · 한국 고승',
@@ -10080,6 +10159,20 @@
         a.style.setProperty('--c', vol.c || '#00686f');
         a.innerHTML = `<span class="hy-band"><img src="spines/hy-cal.png" alt="大方廣佛華嚴經"></span><span class="hy-title">대방광불화엄경 강설</span><span class="hy-no"></span><span class="hy-pub">담앤북스</span>`;
         a.querySelector('.hy-no').textContent = vol.vno || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'hbch') {
+        // 韓國佛敎總覽: 붉은 천 · 금박 붓글씨 제목(원본) · 책 번호 · 편/부 이름 · 쪽수 · 大韓佛敎振興院
+        a.className = 'spine spine-hbch';
+        a.innerHTML = `<img class="hc-t1" src="spines/hbch-t1.png" alt="韓國佛敎"><img class="hc-t2" src="spines/hbch-t2.png" alt="總覽"><span class="hc-no"></span><span class="hc-txt"><span class="hc-sec"></span><span class="hc-sub"></span></span>`;
+        a.querySelector('.hc-no').textContent = (vol.pages || '').replace(/^0+/, '').replace(/–0*/, '–');
+        a.querySelector('.hc-sec').textContent = vol.sec || '';
+        a.querySelector('.hc-sub').textContent = vol.sub || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'aks') {
+        // 아비달마구사론(권오민 역): 속표지처럼 흰 바탕 · 제목 · 한자 · 권 번호 · 선 사이 품 이름 · 옮긴이
+        a.className = 'spine spine-aks';
+        a.innerHTML = `<span class="ak-v ak-title">아비달마구사론</span><span class="ak-v ak-hz">阿毗達磨俱舍論</span><span class="ak-no"></span><span class="ak-pin"></span>`;
+        a.querySelector('.ak-no').textContent = vol.vno || '';
+        const pin = a.querySelector('.ak-pin'); pin.innerHTML = '';
+        (vol.pin || '').split('·').forEach(t => { const c = document.createElement('span'); c.textContent = t; pin.appendChild(c); });
       } else if (b.spineDesign && b.spineDesign.kind === 'lng') {
         // 능엄경 강화: 회갈색 천 · 佛敎叢書 · 세로 제목 · 권 번호 · 東國譯經院
         a.className = 'spine spine-lng';
@@ -10952,6 +11045,7 @@
     ['Nanden Daizokyo', '남전대장경', '南傳大藏經', '남전'],
     ['Pali Text Society', '=PTS', '빠알리성전협회', '팔리성전협회'],
     ['Lotus', '연꽃', '蓮華', '蓮花', '연화'],
+    ['=Tea', 'Tea ceremony', 'Classic of Tea', 'Chajing', 'Cha Jing', 'Lu Yu', '다도', '茶道', '다경', '茶經', '다예', '茶藝', '차문화', '육우', '陸羽'],
     ['Thousand Hands', 'Nilakantha', 'Nīlakaṇṭha', 'Great Compassion Dharani', '천수경', '千手經', '대비주', '大悲呪', '신묘장구대다라니'],
     ['Dharani', 'Dhāraṇī', 'Mantra', 'Mantras', '다라니', '陀羅尼', '진언', '眞言', '真言', '주문', '呪文'],
     ['Mandala', 'Maṇḍala', '만다라', '曼茶羅', '曼荼羅'],
