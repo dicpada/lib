@@ -1406,6 +1406,34 @@
   .spine-aks .ak-pin{ margin-top:calc(var(--spine-h) * .025); padding-top:6px; border-top:1px solid #8d8984; width:66%; display:flex; flex-direction:row-reverse; justify-content:center; gap:3px; }
   .spine-aks .ak-pin span{ width:1em; word-break:break-all; text-align:center; font-family:'Nanum Gothic','Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(5.4px,.9vh,7px); line-height:1.12; }
   .spine-aks .ak-tr{ margin-top:auto; padding-top:4px; font-family:'Noto Serif KR',serif; font-weight:600; font-size:clamp(5.6px,.92vh,7.2px); color:#4a4642; }
+  /* 석전 박한영 전서 (동국대학교 출판문화원 · 전 10권) */
+  .spine-spj{
+    --c:#d23a2f; --f:#d9b45a;
+    width:calc(var(--spine-h) * .2); position:relative; overflow:hidden;
+    background:var(--c); color:var(--f);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset 3px 0 5px rgba(255,255,255,.14), inset -5px 0 8px rgba(0,0,0,.32);
+  }
+  .spine-spj::before{ content:''; position:absolute; inset:0; z-index:0; background:url(spines/spj-tex.jpg) center/100% 100% no-repeat; mix-blend-mode:overlay; opacity:.38; }
+  .spine-spj > *{ position:relative; z-index:1; flex:0 0 auto; height:max-content; }
+  .spine-spj > .sj-band{ height:calc(var(--spine-h) * .43); }
+  .spine-spj .sj-lotus{ margin-top:calc(var(--spine-h) * .04); width:30%; aspect-ratio:100/60; background:var(--f);
+    -webkit-mask:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTUwIDggQzQzIDE4IDQyIDMyIDUwIDQ0IEM1OCAzMiA1NyAxOCA1MCA4IFoiLz48cGF0aCBkPSJNMzcgMTYgQzMzIDI2IDM2IDM3IDQ3IDQ0IEM0MiAzNCA0MSAyNCA0MyAxOCIvPjxwYXRoIGQ9Ik02MyAxNiBDNjcgMjYgNjQgMzcgNTMgNDQgQzU4IDM0IDU5IDI0IDU3IDE4Ii8+PHBhdGggZD0iTTI1IDI0IEMyNSAzNCAzMyA0MiA0NiA0NSIvPjxwYXRoIGQ9Ik03NSAyNCBDNzUgMzQgNjcgNDIgNTQgNDUiLz48cGF0aCBkPSJNMTMgMzIgQzE4IDQwIDMwIDQ1IDQ0IDQ2Ii8+PHBhdGggZD0iTTg3IDMyIEM4MiA0MCA3MCA0NSA1NiA0NiIvPjxwYXRoIGQ9Ik0yMCA0NyBDMzIgNTIgNjggNTIgODAgNDciLz48cGF0aCBkPSJNNDQgNDYgQzQ3IDUwIDUzIDUwIDU2IDQ2Ii8+PC9zdmc+") center/contain no-repeat; mask:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgNjAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTUwIDggQzQzIDE4IDQyIDMyIDUwIDQ0IEM1OCAzMiA1NyAxOCA1MCA4IFoiLz48cGF0aCBkPSJNMzcgMTYgQzMzIDI2IDM2IDM3IDQ3IDQ0IEM0MiAzNCA0MSAyNCA0MyAxOCIvPjxwYXRoIGQ9Ik02MyAxNiBDNjcgMjYgNjQgMzcgNTMgNDQgQzU4IDM0IDU5IDI0IDU3IDE4Ii8+PHBhdGggZD0iTTI1IDI0IEMyNSAzNCAzMyA0MiA0NiA0NSIvPjxwYXRoIGQ9Ik03NSAyNCBDNzUgMzQgNjcgNDIgNTQgNDUiLz48cGF0aCBkPSJNMTMgMzIgQzE4IDQwIDMwIDQ1IDQ0IDQ2Ii8+PHBhdGggZD0iTTg3IDMyIEM4MiA0MCA3MCA0NSA1NiA0NiIvPjxwYXRoIGQ9Ik0yMCA0NyBDMzIgNTIgNjggNTIgODAgNDciLz48cGF0aCBkPSJNNDQgNDYgQzQ3IDUwIDUzIDUwIDU2IDQ2Ii8+PC9zdmc+") center/contain no-repeat; }
+  .spine-spj .sj-ser{ margin-top:calc(var(--spine-h) * .02); text-align:center; white-space:pre; line-height:1.18;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:600; font-size:clamp(6.4px,1.08vh,8.4px); letter-spacing:.02em; }
+  .spine-spj .sj-no{ margin-top:calc(var(--spine-h) * .028); font-family:'EB Garamond','Times New Roman',serif; font-size:clamp(14px,2.5vh,19px); line-height:1; }
+  .spine-spj .sj-band{ margin-top:calc(var(--spine-h) * .035); align-self:stretch;
+    background:linear-gradient(90deg,#e9e5dc 0%,#f6f3ec 14%,#faf8f3 50%,#f3f0e8 86%,#e4e0d6 100%); color:#3a3633;
+    box-shadow:0 1px 0 rgba(0,0,0,.15), 0 -1px 0 rgba(0,0,0,.12);
+    display:flex; flex-direction:column; align-items:center; justify-content:space-between; padding:7px 0; box-sizing:border-box; }
+  .spine-spj .sj-orn{ width:84%; height:7px; position:relative; flex:0 0 auto; }
+  .spine-spj .sj-orn::before{ content:''; position:absolute; left:0; right:0; top:3px; height:.6px; background:#8a837b; }
+  .spine-spj .sj-orn::after{ display:none; content:''; position:absolute; left:50%; top:0; width:5px; height:5px; margin-left:-2.5px; transform:rotate(45deg); background:#7b5c4c; top:1px; }
+  .spine-spj .sj-title{ flex:1 1 auto; min-height:0; display:flex; align-items:center; justify-content:center;
+    writing-mode:vertical-rl; text-orientation:upright; word-spacing:-.55em; white-space:pre; line-height:1.25 !important;
+    font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:400; font-size:calc(var(--spine-h) * .034); letter-spacing:0; overflow:hidden; }
+  .spine-spj .sj-pub{ position:absolute; left:50%; bottom:calc(var(--spine-h) * .035); transform:translateX(-50%); writing-mode:vertical-rl; text-orientation:upright; white-space:pre; line-height:1.2;
+    font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(5.4px,.9vh,6.8px); letter-spacing:0; }
   /* 민족사 불교경전 */
   .spine-mj{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -8499,6 +8527,28 @@
       tags: ['추사', '秋史', '김정희', '金正喜', '완당', '阮堂', '평전', '연보', '年譜', '최완수', '崔完秀', '서예', '추사체']
     },
     {
+      title: '석전 박한영 전서 (石顚 朴漢永 全書)',
+      badge: '석전 박한영 지음 · 동국대학교 출판문화원 · 전 10권',
+      category: ['01-0005', '01-0003'],
+      langs: ['한국어'],
+      poster: 'covers/0661.jpg',
+      // 책등: 권별 천 색(1–5권은 실물 사진 색, 6–10권은 어울리게 배색) · 박 색 연꽃 · 석전/박한영/전서 · 권 번호 · 흰 띠지 세로 제목 · 동국대학교 출판문화원
+      spineDesign: { kind: 'spj' },
+      volumes: [
+        { label: '제1권', vno: '1', c: '#d23a2f', f: '#e2bb5c', spineTitle: '석전문초', title: '석전 박한영 전서 1 · 석전문초 (石顚文鈔)', url: '', missing: true },
+        { label: '제2권', vno: '2', c: '#6b2232', f: '#d8b25a', spineTitle: '불교사 남요︱각종강요', title: '석전 박한영 전서 2 · 불교사 남요 · 각종강요 (佛敎史攬要 · 各宗綱要)', url: '', missing: true },
+        { label: '제3권', vno: '3', c: '#c8775a', f: '#9fae6a', spineTitle: '법보단경︱해수일적 강의', title: '석전 박한영 전서 3 · 법보단경 해수일적 강의 (法寶壇經海水一滴講義)', url: '', missing: true },
+        { label: '제4권', vno: '4', c: '#8f8cc7', f: '#9a2f9a', spineTitle: '정선 염송급설화', title: '석전 박한영 전서 4 · 정선 염송급설화 (精選拈頌及說話)', url: '', missing: true },
+        { label: '제5권', vno: '5', c: '#4a5a76', f: '#cfd3da', spineTitle: '정선 치문집설', title: '석전 박한영 전서 5 · 정선 치문집설 (精選緇門集說)', url: '', missing: true },
+        { label: '제6권', vno: '6', c: '#3f6d63', f: '#d9c48a', spineTitle: '계학약전', title: '석전 박한영 전서 6 · 계학약전 (戒學約詮)', url: 'https://drive.google.com/file/d/1z1aHSf3r-KM33QPWmcuXbWveWiCiue0F/view?usp=sharing' },
+        { label: '제7권', vno: '7', c: '#b88a3e', f: '#4a3a22', spineTitle: '인명입정리론 회석︱백법론 회석︱팔식규구', title: '석전 박한영 전서 7 · 인명입정리론 회석 · 백법론 회석 · 팔식규구 (因明入正理論會釋 · 百法論會釋 · 八識規矩)', url: '', missing: true },
+        { label: '제8권', vno: '8', c: '#2f3e6b', f: '#d8b25a', spineTitle: '인학절본︱석림한화', title: '석전 박한영 전서 8 · 인학절본 · 석림한화 (仁學節本 · 石林閒話)', url: 'https://drive.google.com/file/d/10PpjnKaw0VJrh_hOxvAN3sEXzPaFcGw6/view?usp=sharing' },
+        { label: '제9권', vno: '9', c: '#7c4a6a', f: '#e0c27a', spineTitle: '석전시초 Ⅰ', title: '석전 박한영 전서 9 · 석전시초 Ⅰ (石顚詩鈔 Ⅰ)', url: '', missing: true },
+        { label: '제10권', vno: '10', c: '#5f6b4a', f: '#e3cf8e', spineTitle: '석전시초 Ⅱ', title: '석전 박한영 전서 10 · 석전시초 Ⅱ (石顚詩鈔 Ⅱ)', url: '', missing: true }
+      ],
+      tags: ['석전', '石顚', '박한영', '朴漢永', '영호', '映湖', '정호', '鼎鎬', '전서', '全書', '석전문초', '불교사남요', '각종강요', '법보단경', '육조단경', '해수일적', '염송', '염송설화', '치문', '치문집설', '계학약전', '인명입정리론', '백법론', '팔식규구', '인학절본', '석림한화', '석전시초', '동국대학교출판문화원']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -8530,6 +8580,7 @@
         { name: '탄허택성', hanja: '呑虛宅成', born: 1913, died: 1983, books: ['呑虛禪師의 禪敎觀 (탄허선사의 선교관)', '방산굴의 무영수 (方山窟의 無影樹)'] },
         { name: '영허녹원', hanja: '暎虛綠園', born: 1928, died: 2017, books: ['허공에 가득한 깨달음 : 영허녹원 (暎虛綠園)', '허공에 가득한 깨달음 : 영허녹원 (暎虛綠園) · 파일 2'] },
         { name: '경운원기', hanja: '擎雲元奇', born: 1852, died: 1936, books: ['華嚴宗主 擎雲元奇 大禪師 散稿輯 (화엄종주 경운원기 대선사 산고집)', '華嚴宗主 擎雲元奇 大禪師 散稿輯 (화엄종주 경운원기 대선사 산고집) · 컬러 표지판'] },
+        { name: '석전정호', hanja: '石顚鼎鎬', born: 1870, died: 1948, books: ['석전 박한영 전서 (石顚 朴漢永 全書)', '戒學約詮 註解 (계학약전 주해)'] },
         { name: '운허용하', hanja: '耘虛龍夏', born: 1892, died: 1980, books: ['耘虛禪師語文集 (운허선사어문집)', '楞嚴經 註解 (능엄경 주해)', '佛敎의 哲理와 修行의 完成 : 漢典對譯 首楞嚴經 註解 (수능엄경 주해)', '일백오십찬불송 (一百五十讚佛頌)'] },
         { name: '전강영신', hanja: '田岡永信', born: 1898, died: 1975, books: ['전강선사일대기 (田岡禪師一代記) · 전강선사 법어'] },
         { name: '경허성우', hanja: '鏡虛惺牛', born: 1849, died: 1912, books: ['착한 일 많이 하게 그대가 부처일세 : 경허큰스님', '경허 · 만공의 선풍과 법맥', '콧구멍 없는 소 : 경허대사와 5대 제자', '경허와 만공의 禪思想', '작은 방에서 도인 나다 : 천장암과 경허대사 (경허대사열반 100주년 기념)', '鏡虛錄 (경허록)', '鏡虛滿空新出資料集 (경허만공신출자료집) 1 : 경허선사편', '鏡虛集 全 (경허집 · 한암 필사본)', '鏡虛集 (경허집 · 석명정 역주)'] },
@@ -10514,6 +10565,18 @@
         a.querySelector('.ak-no').textContent = vol.vno || '';
         const pin = a.querySelector('.ak-pin'); pin.innerHTML = '';
         (vol.pin || '').split('·').forEach(t => { const c = document.createElement('span'); c.textContent = t; pin.appendChild(c); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'spj') {
+        // 석전 박한영 전서: 권별 천 색 · 연꽃 · 석전/박한영/전서 · 권 번호 · 흰 띠지에 세로 제목 · 동국대학교 출판문화원
+        a.className = 'spine spine-spj';
+        a.style.setProperty('--c', vol.c || '#d23a2f');
+        a.style.setProperty('--f', vol.f || '#d9b45a');
+        const st = vol.spineTitle || '';
+        const len = st.replace(/[\s︱]/g, '').length;
+        const parts = st.split('︱');
+        a.style.setProperty('--n', Math.max(...parts.map(p => p.replace(/\s/g, '').length + (p.match(/\s/g) || []).length * .5), 5));
+        a.innerHTML = `<span class="sj-lotus"></span><span class="sj-ser">석전\n박한영\n전서</span><span class="sj-no"></span><span class="sj-band"><span class="sj-orn"></span><span class="sj-title"></span><span class="sj-orn"></span></span><span class="sj-pub">동국대학교\n출판문화원</span>`;
+        a.querySelector('.sj-no').textContent = vol.vno || '';
+        a.querySelector('.sj-title').textContent = parts.join('\n');
       } else if (b.spineDesign && b.spineDesign.kind === 'lng') {
         // 능엄경 강화: 회갈색 천 · 佛敎叢書 · 세로 제목 · 권 번호 · 東國譯經院
         a.className = 'spine spine-lng';
@@ -11588,7 +11651,19 @@
     img.className = 'poster';
     img.alt = b.title || '';
     img.loading = 'lazy';
+    img.decoding = 'async';
     if (hasPoster) {
+      // 표지를 못 불러오면 두 번까지 다시 시도하고, 그래도 안 되면 제목 카드로 보여 줌
+      let tries = 0;
+      img.addEventListener('error', () => {
+        if (tries < 2) {
+          tries++;
+          setTimeout(() => { img.src = b.poster + (b.poster.includes('?') ? '&' : '?') + 'r=' + tries; }, 1500 * tries);
+        } else {
+          a.classList.remove('has-poster');
+          img.style.display = 'none';
+        }
+      });
       img.src = b.poster;
     }
 
