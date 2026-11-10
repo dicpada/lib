@@ -6,7 +6,7 @@
 <title>la librairie</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:ital,wght@1,600&family=Noto+Serif+KR:wght@600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Song+Myung&family=Noto+Serif+TC:wght@500;600&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Playfair+Display:ital,wght@0,600;1,600&family=Noto+Serif+KR:wght@600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Song+Myung&family=Noto+Serif+TC:wght@500;600&family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;700&family=Nanum+Myeongjo:wght@400;700&family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#0a0a0c;
@@ -1135,6 +1135,25 @@
   }
   .spine-bk.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
 
+  /* 디자인 책등: 佛敎時報 (신문형 잡지 · 갱지 · 겹줄 · 붓글씨 제호) — 접두어 bs- */
+  .spine-bs{
+    width:calc(var(--spine-h) * .1);
+    background:
+      radial-gradient(circle at 40% 35%, rgba(50,45,38,.09) 0 .6px, transparent 1.2px) 0 0 / 4px 5px,
+      linear-gradient(90deg, color-mix(in srgb, var(--p) 80%, #5f5a50) 0%, var(--p) 20%, color-mix(in srgb, var(--p) 90%, #fff) 52%, var(--p) 80%, color-mix(in srgb, var(--p) 78%, #57524a) 100%);
+    display:flex; flex-direction:column; align-items:center; color:#1d1a17;
+    border-radius:1px 1px 0 0;
+  }
+  .spine-bs > *{ flex:0 0 auto; }
+  .spine-bs .bs-rule{ align-self:stretch; height:4px; margin:calc(var(--spine-h) * .03) 3px 0; border-top:1.5px solid #1f1c19; border-bottom:.5px solid #1f1c19; opacity:.8; }
+  .spine-bs .bs-rule:last-child{ margin:calc(var(--spine-h) * .02) 3px calc(var(--spine-h) * .03); }
+  .spine-bs .bs-title{ width:64%; height:auto; margin-top:calc(var(--spine-h) * .04); mix-blend-mode:multiply; opacity:.95; }
+  .spine-bs .bs-no{ margin-top:calc(var(--spine-h) * .045); display:flex; flex-direction:column; align-items:center; line-height:1.1;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:700; font-size:clamp(6.5px,1.1vh,9px); color:#221e1a; }
+  .spine-bs .bs-pub{ margin-top:auto; display:flex; flex-direction:column; align-items:center; line-height:1.15;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(5.5px,.9vh,7px); color:#3a342d; letter-spacing:.05em; }
+  .spine-bs.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
+
   /* 디자인 책등: 金剛杵 (얇은 갱지 잡지 · 전서 제목) — 접두어 kg- */
   .spine-kg{
     width:calc(var(--spine-h) * .105);
@@ -1434,6 +1453,51 @@
     font-family:'Noto Serif KR','Noto Serif CJK KR',serif; font-weight:400; font-size:calc(var(--spine-h) * .034); letter-spacing:0; overflow:hidden; }
   .spine-spj .sj-pub{ position:absolute; left:50%; bottom:calc(var(--spine-h) * .035); transform:translateX(-50%); writing-mode:vertical-rl; text-orientation:upright; white-space:pre; line-height:1.2;
     font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(5.4px,.9vh,6.8px); letter-spacing:0; }
+  /* 한길그레이트북스 (한길사) */
+  .spine-hgb{
+    width:calc(var(--spine-h) * .15); position:relative; overflow:hidden;
+    background:linear-gradient(90deg,#dcd9d2 0%,#efede8 14%,#f6f4f0 50%,#ecebe5 86%,#d6d3cc 100%); color:#1b1a19;
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset 3px 0 5px rgba(255,255,255,.5), inset -5px 0 8px rgba(0,0,0,.16), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-hgb > *{ flex:0 0 auto; }
+  .spine-hgb .gb-mark{ margin-top:calc(var(--spine-h) * .03); font-family:'EB Garamond','Times New Roman',serif; font-weight:700; font-size:clamp(11px,1.9vh,15px); line-height:1; letter-spacing:-.02em; }
+  .spine-hgb .gb-ser{ margin-top:2px; font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(3.6px,.6vh,4.6px); letter-spacing:-.02em; color:#c4302b; white-space:nowrap; }
+  .spine-hgb .gb-rule{ margin-top:5px; width:58%; height:.7px; background:#5a5753; }
+  .spine-hgb .gb-cap{ margin-top:4px; width:46%; aspect-ratio:60/46; background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2MCA0NiIgZmlsbD0iIzFiMWExOSI+PHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjUiIHJ4PSIuNiIvPjxwYXRoIGQ9Ik02IDdoNDhsLTMgNEg5eiIvPjxjaXJjbGUgY3g9IjkiIGN5PSIxMy41IiByPSI0LjIiLz48Y2lyY2xlIGN4PSI1MSIgY3k9IjEzLjUiIHI9IjQuMiIvPjxjaXJjbGUgY3g9IjkiIGN5PSIxMy41IiByPSIyIiBmaWxsPSIjZjRmMmVlIi8+PGNpcmNsZSBjeD0iNTEiIGN5PSIxMy41IiByPSIyIiBmaWxsPSIjZjRmMmVlIi8+PHBhdGggZD0iTTEzIDExaDM0bC0yIDhIMTV6Ii8+PHBhdGggZD0iTTE1IDE5YzMgNiAxIDEwLTIgMTJoMzRjLTMtMi01LTYtMi0xMnoiLz48cGF0aCBkPSJNMjEgMjFjMSA0IDAgNy0yIDlNMjcgMjB2MTBNMzMgMjB2MTBNMzkgMjFjLTEgNCAwIDcgMiA5IiBzdHJva2U9IiNmNGYyZWUiIHN0cm9rZS13aWR0aD0iMS4zIiBmaWxsPSJub25lIi8+PHJlY3QgeD0iMTQiIHk9IjMxIiB3aWR0aD0iMzIiIGhlaWdodD0iMyIgcng9Ii41Ii8+PHBhdGggZD0iTTE3IDM0aDI2djEySDE3eiIvPjxwYXRoIGQ9Ik0yMS41IDM1djExTTI2IDM1djExTTMwIDM1djExTTM0IDM1djExTTM4LjUgMzV2MTEiIHN0cm9rZT0iI2Y0ZjJlZSIgc3Ryb2tlLXdpZHRoPSIxLjQiLz48L3N2Zz4=") center/contain no-repeat; }
+  .spine-hgb .gb-title{ margin-top:calc(var(--spine-h) * .06); writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.06em;
+    font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:calc(var(--spine-h) * .05); line-height:1; }
+  .spine-hgb .gb-no{ margin-top:calc(var(--spine-h) * .025); font-family:'EB Garamond','Times New Roman',serif; font-weight:600; font-size:clamp(11px,1.9vh,15px); line-height:1; }
+  .spine-hgb .gb-au{ margin-top:auto; display:flex; flex-direction:row-reverse; align-items:flex-end; gap:.35em; line-height:1.12;
+    font-family:'Noto Sans KR',sans-serif; font-weight:500; font-size:clamp(6px,1vh,7.6px); color:#3a3835; }
+  .spine-hgb .gb-au > span{ display:flex; flex-direction:column; align-items:center; }
+  .spine-hgb .gb-au .gap{ height:.4em; }
+  .spine-hgb .gb-pub{ margin:calc(var(--spine-h) * .025) 0 calc(var(--spine-h) * .035); writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.08em;
+    font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(6.6px,1.1vh,8.4px); }
+  /* 기본동사 500 사전 (VERBS Dictionary) */
+  .spine-vb5{
+    width:calc(var(--spine-h) * .16); position:relative; overflow:hidden;
+    background:linear-gradient(90deg,#e4e3e6 0%,#f7f7f8 12%,#fdfdfd 50%,#f3f3f5 88%,#dcdbe0 100%); color:#2c2e20;
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -4px 0 7px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-vb5 > *{ flex:0 0 auto; }
+  .spine-vb5 .vb-ab{ flex:1 1 auto; justify-content:center; padding-bottom:calc(var(--spine-h) * .02); display:flex; flex-direction:column; align-items:center; color:var(--c);
+    font-family:'Playfair Display',Georgia,serif; font-weight:600; line-height:.92; }
+  .spine-vb5 .vb-ab span{ display:block; font-size:calc(var(--spine-h) * var(--fs)); transform:scaleX(.82); }
+  .spine-vb5 .vb-ab i{ display:block; width:3px; height:3px; border-radius:50%; background:var(--c); margin:calc(var(--spine-h) * .006) 0; opacity:.7; }
+  .spine-vb5 .vb-lab{ margin-top:calc(var(--spine-h) * .045); width:72%; background:#3c3e27; border:1.5px solid #e8822a; box-shadow:inset 0 0 0 1px #2c2e20;
+    padding:calc(var(--spine-h) * .02) 0; display:flex; flex-direction:column; align-items:center; }
+  .spine-vb5 .vb-t{ writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.04em; color:#f4f2ea;
+    font-family:'Noto Sans KR',sans-serif; font-weight:400; font-size:calc(var(--spine-h) * .036); line-height:1; }
+  .spine-vb5 .vb-n{ margin:calc(var(--spine-h) * .008) 0; color:#f08a3c; font-family:'Noto Sans KR',sans-serif; font-weight:400; font-size:calc(var(--spine-h) * .03); line-height:1; letter-spacing:-.02em; }
+  .spine-vb5 .vb-au{ margin-top:calc(var(--spine-h) * .02); letter-spacing:.1em;
+    font-family:'Noto Sans KR',sans-serif; font-size:clamp(5px,.85vh,6.6px); color:#55564a; }
+  .spine-vb5 .vb-au{ display:flex; flex-direction:column; align-items:center; gap:.4em; }
+  .spine-vb5 .vb-au span{ writing-mode:vertical-rl; text-orientation:upright; }
+  .spine-vb5 .vb-en{ margin-bottom:calc(var(--spine-h) * .04); writing-mode:vertical-rl; white-space:nowrap; padding-left:2px; border-left:2px solid #7bb52a;
+    font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:clamp(5.4px,.95vh,7.4px); color:#2c2e20; letter-spacing:.02em; }
+  .spine-vb5 .vb-en b{ font-weight:500; font-style:normal; }
   /* 민족사 불교경전 */
   .spine-mj{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -1784,6 +1848,40 @@
 
   /* ===== 신문 책꽂이 (연도별 선반) ===== */
   .modal-box.paper-mode{ width:min(1100px, 100%); max-height:92vh; }
+  /* 정기간행물 묶음 서가 */
+  .per-back{ font:inherit; font-size:12.5px; color:var(--text,#e8e2d6); background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.14);
+    border-radius:999px; padding:5px 12px; cursor:pointer; }
+  .per-back:hover{ background:rgba(255,255,255,.14); }
+  .per-shelf{ display:flex; flex-wrap:wrap; align-items:flex-end; gap:8px; padding:34px 26px 0; margin:0 14px 26px;
+    border-bottom:14px solid #4a3626; box-shadow:0 8px 0 #2a1e15, 0 14px 18px rgba(0,0,0,.45); }
+  .per-sp{ all:unset; box-sizing:border-box; cursor:pointer; width:92px; height:400px; position:relative; overflow:hidden;
+    display:flex; flex-direction:column; align-items:center; color:#1e1b17;
+    background:
+      radial-gradient(circle at 40% 35%, rgba(50,45,38,.08) 0 .6px, transparent 1.2px) 0 0 / 4px 5px,
+      linear-gradient(90deg, color-mix(in srgb, var(--p) 78%, #5d574c) 0%, var(--p) 16%, color-mix(in srgb, var(--p) 88%, #fff) 50%, var(--p) 84%, color-mix(in srgb, var(--p) 76%, #57514a) 100%);
+    border-radius:2px 2px 0 0; box-shadow:inset -4px 0 8px rgba(0,0,0,.14), 0 3px 8px rgba(0,0,0,.5);
+    transition:transform .18s ease, box-shadow .18s ease; }
+  .per-sp:hover, .per-sp:focus-visible{ transform:translateY(-8px); box-shadow:inset -4px 0 8px rgba(0,0,0,.14), 0 10px 16px rgba(0,0,0,.55); }
+  .per-sp > *{ flex:0 0 auto; }
+  .per-top{ align-self:stretch; margin:16px 0 0; padding:10px 0; background:var(--c); display:flex; justify-content:center;
+    box-shadow:inset 0 2px 0 rgba(255,255,255,.18), inset 0 -2px 0 rgba(0,0,0,.2); }
+  .per-mark{ display:flex; flex-direction:column; align-items:center; line-height:1.02; color:#f6efe0;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:900; font-size:27px; }
+  .per-ko, .per-han{ display:flex; flex-direction:column; align-items:center; gap:.35em; }
+  .per-ko span, .per-han span{ writing-mode:vertical-rl; text-orientation:upright; }
+  .per-rule{ align-self:stretch; height:5px; margin:22px 8px 0; border-top:1.5px solid #2a251f; border-bottom:.6px solid #2a251f; opacity:.7; }
+  .per-rule:last-child{ margin:0 8px 22px; }
+  .per-ko{ margin-top:34px; writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.06em;
+    font-family:'Noto Serif KR',serif; font-weight:700; font-size:var(--kf,19px); line-height:1; }
+  .per-han{ margin-top:12px; writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.1em; color:#5a5246;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:var(--hf,10.5px); line-height:1; }
+  .per-modal-fix, .per-ko, .per-han{ writing-mode:horizontal-tb !important; }
+  .per-meta{ margin-top:auto; display:flex; flex-direction:column; align-items:center; gap:4px; padding:14px 0 12px;
+    font-family:'EB Garamond','Noto Serif KR',serif; color:#3a342c; }
+  .per-yr{ display:flex; flex-direction:column; align-items:center; font-size:13px; font-weight:600; line-height:1.05; }
+  .per-yr i{ font-style:normal; font-size:9px; opacity:.55; }
+  .per-n{ font-family:'Noto Serif TC','Noto Serif KR',serif; font-size:10.5px; font-weight:700; padding-top:5px; border-top:1px solid rgba(0,0,0,.35); }
+  .per-foot{ align-self:stretch; height:10px; margin-bottom:14px; background:var(--c); opacity:.9; }
   .modal-box.paper-mode .modal-list{ padding:0 0 10px; }
   .pp-bar{
     position:sticky; top:0; z-index:3; background:var(--bg-raise);
@@ -3586,14 +3684,41 @@
       ]
     },
     {
+      title: '定期刊行物 (정기간행물)',
+      badge: '신문 · 사보 · 소식지 · 정기간행물을 한 서가에',
+      category: ['01-0006'],
+      poster: 'covers/0673.jpg',
+      // 묶음 서가: 아래 신문/사보 항목(정확한 title)을 책등으로 늘어놓고, 누르면 각 서가가 열림
+      periodicals: ['東大新聞 (동대신문)', '現代佛敎新聞 (현대불교신문)', '月刊 松廣寺 (월간 송광사)'],
+      tags: ['정기간행물', '定期刊行物', '신문', '사보', '소식지', '회보', '월보', '학보']
+    },
+    {
+      title: '月刊 松廣寺 (월간 송광사)',
+      badge: '조계총림 송광사 · 월간 사보',
+      category: ['01-0006'],
+      hubOnly: true,   // 메인에는 안 보이고 정기간행물 서가 안에만
+      // 사보: 목록은 newspaper-songgwang.js에 따로 (열 때만 불러옴)
+      newspaper: { key: 'songgwang', src: 'newspaper-songgwang.js', mark: '松廣', color: '#34563a', paper: '#e9e4d2' },
+      tags: ['월간 송광사', '月刊 松廣寺', '송광사', '松廣寺', '조계총림', '사보', '월간지']
+    },
+    {
       title: '東大新聞 (동대신문)',
       badge: '동국대학교 학보 · 1950 創刊',
       category: ['01-0006'],
       poster: 'covers/0134.jpg',
       // 신문: 목록은 newspaper.js에 따로 (열 때만 불러옴), PDF는 R2
-      newspaper: { key: 'dongdae', src: 'newspaper.js', mark: '東大' },
+      newspaper: { key: 'dongdae', src: 'newspaper.js', mark: '東大', color: '#1f3a68', paper: '#e8e1cf' },
       // 메인 화면 매대(홍보 배너)로 크게 보여 줌
       feature: { kicker: 'ARCHIVE · 學報', title: '東大新聞', sub: '동국대학교 학보 · 1950 — 2010', stats: [['60', '년'], ['1,466', '호']], desc: '창간호부터 2010년까지, 육십 년 학보를 한 호씩 꺼내 읽는 신문 서고', cta: '열람하기' }
+    },
+    {
+      title: '現代佛敎新聞 (현대불교신문)',
+      badge: '현대불교신문사 · 주간 불교신문',
+      category: ['01-0006'],
+      poster: 'covers/0663.jpg',
+      // 신문: 목록은 newspaper-hyundai.js에 따로 (열 때만 불러옴)
+      newspaper: { key: 'hyundai', src: 'newspaper-hyundai.js', mark: '現代', color: '#8a2b22', paper: '#ebe4d2' },
+      tags: ['현대불교신문', '現代佛敎新聞', '현대불교', '불교신문', '신문', '주간지']
     },
     {
       title: 'Dhammatthavinicchaya: Dhamma Topics and their Analysis',
@@ -3788,6 +3913,121 @@
         { label: '1/2', title: '한국의 범자 역사와 문화 (1/2)', url: 'https://drive.google.com/file/d/1Id3Cxqwei2_nXcp_JIA4ouMOKV7vl5bc/view?usp=sharing' },
         { label: '2/2', title: '한국의 범자 역사와 문화 (2/2)', url: 'https://drive.google.com/file/d/1ZKPYfGOW_N40hZXcl6uabt1FQyJ73U8H/view?usp=sharing' }
       ]
+    },
+    {
+      title: '佛敎時報 (불교시보)',
+      badge: '京城 佛敎時報社 發行 · 金泰洽 · 昭和十年(1935) 八月 創刊 · 全 104號 · 第一號(創刊號)–第三號 소장',
+      category: ['01-0006'],
+      poster: 'covers/0667.jpg',
+      // 신문형 잡지 책등: 1면 붓글씨 제호(佛敎時報)를 오려 세로로 · 第N號 · 佛敎時報社. 소장하지 않은 호는 missing
+      spineDesign: { kind: 'bsj', titleImg: 'spines/bsb-title.png' },
+      volumes: [
+        { label: '제1호 (창간호 · 1935.8)', title: '佛敎時報 第一號', url: 'https://drive.google.com/file/d/1IsWa-v75boKerq3q4by8Bh1e06t8xAqs/view?usp=sharing' },
+        { label: '제2호 (1935.9)', title: '佛敎時報 第二號', url: 'https://drive.google.com/file/d/1-yvegEjhUISOHq5f5VqAGIaFvfzqw6Nb/view?usp=sharing' },
+        { label: '제3호 (1935.10)', title: '佛敎時報 第三號', url: 'https://drive.google.com/file/d/1fmlBR80x-rFIp9UFQGs24MNTiAOuhxno/view?usp=sharing' },
+        { label: '제4호', title: '佛敎時報 第四號', url: '', missing: true },
+        { label: '제5호', title: '佛敎時報 第五號', url: '', missing: true },
+        { label: '제6호', title: '佛敎時報 第六號', url: '', missing: true },
+        { label: '제7호', title: '佛敎時報 第七號', url: '', missing: true },
+        { label: '제8호', title: '佛敎時報 第八號', url: '', missing: true },
+        { label: '제9호', title: '佛敎時報 第九號', url: '', missing: true },
+        { label: '제10호', title: '佛敎時報 第十號', url: '', missing: true },
+        { label: '제11호', title: '佛敎時報 第十一號', url: '', missing: true },
+        { label: '제12호', title: '佛敎時報 第十二號', url: '', missing: true },
+        { label: '제13호', title: '佛敎時報 第十三號', url: '', missing: true },
+        { label: '제14호', title: '佛敎時報 第十四號', url: '', missing: true },
+        { label: '제15호', title: '佛敎時報 第十五號', url: '', missing: true },
+        { label: '제16호', title: '佛敎時報 第十六號', url: '', missing: true },
+        { label: '제17호', title: '佛敎時報 第十七號', url: '', missing: true },
+        { label: '제18호', title: '佛敎時報 第十八號', url: '', missing: true },
+        { label: '제19호', title: '佛敎時報 第十九號', url: '', missing: true },
+        { label: '제20호', title: '佛敎時報 第二十號', url: '', missing: true },
+        { label: '제21호', title: '佛敎時報 第二十一號', url: '', missing: true },
+        { label: '제22호', title: '佛敎時報 第二十二號', url: '', missing: true },
+        { label: '제23호', title: '佛敎時報 第二十三號', url: '', missing: true },
+        { label: '제24호', title: '佛敎時報 第二十四號', url: '', missing: true },
+        { label: '제25호', title: '佛敎時報 第二十五號', url: '', missing: true },
+        { label: '제26호', title: '佛敎時報 第二十六號', url: '', missing: true },
+        { label: '제27호', title: '佛敎時報 第二十七號', url: '', missing: true },
+        { label: '제28호', title: '佛敎時報 第二十八號', url: '', missing: true },
+        { label: '제29호', title: '佛敎時報 第二十九號', url: '', missing: true },
+        { label: '제30호', title: '佛敎時報 第三十號', url: '', missing: true },
+        { label: '제31호', title: '佛敎時報 第三十一號', url: '', missing: true },
+        { label: '제32호', title: '佛敎時報 第三十二號', url: '', missing: true },
+        { label: '제33호', title: '佛敎時報 第三十三號', url: '', missing: true },
+        { label: '제34호', title: '佛敎時報 第三十四號', url: '', missing: true },
+        { label: '제35호', title: '佛敎時報 第三十五號', url: '', missing: true },
+        { label: '제36호', title: '佛敎時報 第三十六號', url: '', missing: true },
+        { label: '제37호', title: '佛敎時報 第三十七號', url: '', missing: true },
+        { label: '제38호', title: '佛敎時報 第三十八號', url: '', missing: true },
+        { label: '제39호', title: '佛敎時報 第三十九號', url: '', missing: true },
+        { label: '제40호', title: '佛敎時報 第四十號', url: '', missing: true },
+        { label: '제41호', title: '佛敎時報 第四十一號', url: '', missing: true },
+        { label: '제42호', title: '佛敎時報 第四十二號', url: '', missing: true },
+        { label: '제43호', title: '佛敎時報 第四十三號', url: '', missing: true },
+        { label: '제44호', title: '佛敎時報 第四十四號', url: '', missing: true },
+        { label: '제45호', title: '佛敎時報 第四十五號', url: '', missing: true },
+        { label: '제46호', title: '佛敎時報 第四十六號', url: '', missing: true },
+        { label: '제47호', title: '佛敎時報 第四十七號', url: '', missing: true },
+        { label: '제48호', title: '佛敎時報 第四十八號', url: '', missing: true },
+        { label: '제49호', title: '佛敎時報 第四十九號', url: '', missing: true },
+        { label: '제50호', title: '佛敎時報 第五十號', url: '', missing: true },
+        { label: '제51호', title: '佛敎時報 第五十一號', url: '', missing: true },
+        { label: '제52호', title: '佛敎時報 第五十二號', url: '', missing: true },
+        { label: '제53호', title: '佛敎時報 第五十三號', url: '', missing: true },
+        { label: '제54호', title: '佛敎時報 第五十四號', url: '', missing: true },
+        { label: '제55호', title: '佛敎時報 第五十五號', url: '', missing: true },
+        { label: '제56호', title: '佛敎時報 第五十六號', url: '', missing: true },
+        { label: '제57호', title: '佛敎時報 第五十七號', url: '', missing: true },
+        { label: '제58호', title: '佛敎時報 第五十八號', url: '', missing: true },
+        { label: '제59호', title: '佛敎時報 第五十九號', url: '', missing: true },
+        { label: '제60호', title: '佛敎時報 第六十號', url: '', missing: true },
+        { label: '제61호', title: '佛敎時報 第六十一號', url: '', missing: true },
+        { label: '제62호', title: '佛敎時報 第六十二號', url: '', missing: true },
+        { label: '제63호', title: '佛敎時報 第六十三號', url: '', missing: true },
+        { label: '제64호', title: '佛敎時報 第六十四號', url: '', missing: true },
+        { label: '제65호', title: '佛敎時報 第六十五號', url: '', missing: true },
+        { label: '제66호', title: '佛敎時報 第六十六號', url: '', missing: true },
+        { label: '제67호', title: '佛敎時報 第六十七號', url: '', missing: true },
+        { label: '제68호', title: '佛敎時報 第六十八號', url: '', missing: true },
+        { label: '제69호', title: '佛敎時報 第六十九號', url: '', missing: true },
+        { label: '제70호', title: '佛敎時報 第七十號', url: '', missing: true },
+        { label: '제71호', title: '佛敎時報 第七十一號', url: '', missing: true },
+        { label: '제72호', title: '佛敎時報 第七十二號', url: '', missing: true },
+        { label: '제73호', title: '佛敎時報 第七十三號', url: '', missing: true },
+        { label: '제74호', title: '佛敎時報 第七十四號', url: '', missing: true },
+        { label: '제75호', title: '佛敎時報 第七十五號', url: '', missing: true },
+        { label: '제76호', title: '佛敎時報 第七十六號', url: '', missing: true },
+        { label: '제77호', title: '佛敎時報 第七十七號', url: '', missing: true },
+        { label: '제78호', title: '佛敎時報 第七十八號', url: '', missing: true },
+        { label: '제79호', title: '佛敎時報 第七十九號', url: '', missing: true },
+        { label: '제80호', title: '佛敎時報 第八十號', url: '', missing: true },
+        { label: '제81호', title: '佛敎時報 第八十一號', url: '', missing: true },
+        { label: '제82호', title: '佛敎時報 第八十二號', url: '', missing: true },
+        { label: '제83호', title: '佛敎時報 第八十三號', url: '', missing: true },
+        { label: '제84호', title: '佛敎時報 第八十四號', url: '', missing: true },
+        { label: '제85호', title: '佛敎時報 第八十五號', url: '', missing: true },
+        { label: '제86호', title: '佛敎時報 第八十六號', url: '', missing: true },
+        { label: '제87호', title: '佛敎時報 第八十七號', url: '', missing: true },
+        { label: '제88호', title: '佛敎時報 第八十八號', url: '', missing: true },
+        { label: '제89호', title: '佛敎時報 第八十九號', url: '', missing: true },
+        { label: '제90호', title: '佛敎時報 第九十號', url: '', missing: true },
+        { label: '제91호', title: '佛敎時報 第九十一號', url: '', missing: true },
+        { label: '제92호', title: '佛敎時報 第九十二號', url: '', missing: true },
+        { label: '제93호', title: '佛敎時報 第九十三號', url: '', missing: true },
+        { label: '제94호', title: '佛敎時報 第九十四號', url: '', missing: true },
+        { label: '제95호', title: '佛敎時報 第九十五號', url: '', missing: true },
+        { label: '제96호', title: '佛敎時報 第九十六號', url: '', missing: true },
+        { label: '제97호', title: '佛敎時報 第九十七號', url: '', missing: true },
+        { label: '제98호', title: '佛敎時報 第九十八號', url: '', missing: true },
+        { label: '제99호', title: '佛敎時報 第九十九號', url: '', missing: true },
+        { label: '제100호', title: '佛敎時報 第百號', url: '', missing: true },
+        { label: '제101호', title: '佛敎時報 第百一號', url: '', missing: true },
+        { label: '제102호', title: '佛敎時報 第百二號', url: '', missing: true },
+        { label: '제103호', title: '佛敎時報 第百三號', url: '', missing: true },
+        { label: '제104호', title: '佛敎時報 第百四號', url: '', missing: true }
+      ],
+      tags: ['불교시보', '佛敎時報', '佛教時報', '김태흡', '金泰洽', '김대은', '심전개발', '心田開發', '일제강점기', '근대불교', '잡지', '신문']
     },
     {
       title: '金剛杵 (금강저)',
@@ -4255,11 +4495,12 @@
       badge: '라다크리슈난 (Sarvepalli Radhakrishnan) 지음 · 이거룡 옮김 · 한길사 · 한길그레이트북스 · 전 4권',
       category: ['05-0005'],
       poster: 'covers/0210.jpg',
+      spineDesign: { kind: 'hgb', title: '인도철학사', author: '라다크리슈난 저\n이거룡 역' },
       volumes: [
-        { label: '제1권', title: '인도철학사 I', url: '' },
-        { label: '제2권', title: '인도철학사 II', url: '' },
-        { label: '제3권', title: '인도철학사 III', url: 'https://drive.google.com/file/d/1hWpb65147SsTDV42L9lyrA5vGX6fBIBg/view?usp=sharing' },
-        { label: '제4권', title: '인도철학사 IV', url: 'https://drive.google.com/file/d/1afQ1iYvGn9ahl4IvCnM57EOT3Nf-HjyH/view?usp=sharing' }
+        { label: '제1권', title: '인도철학사 I', vno: 'Ⅰ', url: '', missing: true },
+        { label: '제2권', title: '인도철학사 II', vno: 'Ⅱ', url: '', missing: true },
+        { label: '제3권', title: '인도철학사 III', vno: 'Ⅲ', url: 'https://drive.google.com/file/d/1vFQgX5BHFTmXFl5Opb3B3sGcwtwzNUxR/view?usp=sharing' },
+        { label: '제4권', title: '인도철학사 IV', vno: 'Ⅳ', url: 'https://drive.google.com/file/d/1afQ1iYvGn9ahl4IvCnM57EOT3Nf-HjyH/view?usp=sharing' }
       ],
       tags: ['인도철학', 'Indian Philosophy', 'Radhakrishnan', '라다크리슈난', '이거룡']
     },
@@ -5292,48 +5533,48 @@
         { label: '제1권', title: '한국불교사', author: '가마타 시게오 · 신현숙 옮김', url: 'https://drive.google.com/file/d/1f5YMpEbfMCJUUfmSEDNve2PxKzQLmo69/view?usp=sharing' },
         { label: '제2권', title: '인도불교의 역사(上)', author: '히라카와 아키라 · 이호근 옮김', url: '', missing: true },
         { label: '제3권', title: '인도불교의 역사(下)', author: '히라카와 아키라 · 이호근 옮김', url: 'https://drive.google.com/file/d/1WjVY7fqeSYV7V-s1Mxo8Lpw9ngJh5l9L/view?usp=sharing' },
-        { label: '제4권', title: '일본불교사', author: '石田瑞麿 · 이영자 옮김', url: '', missing: true },
-        { label: '제5권', title: '티베트불교사', author: '山口瑞鳳 · 矢崎正見 · 이호근 · 안영길 옮김', url: '', missing: true },
+        { label: '제4권', title: '일본불교사', author: '石田瑞麿 · 이영자 옮김', url: 'https://drive.google.com/file/d/1ih8miqnmORoRB_P_LNUStjo9FmcQu0st/view?usp=sharing' },
+        { label: '제5권', title: '티베트불교사', author: '山口瑞鳳 · 矢崎正見 · 이호근 · 안영길 옮김', url: 'https://drive.google.com/file/d/1XUH52MVjC7Kr01-8er2A5ZYAoGILVR7j/view?usp=sharing' },
         { label: '제6권', title: '인도불교사상사', author: '에드워드 콘즈 · 안성두 · 주민황 옮김', url: 'https://drive.google.com/file/d/1Mo0bnJNYIf4lwS8XSBYrIzVwXGh5pGOW/view?usp=sharing' },
         { label: '제7권', title: '중국불교사상사', author: '기무라 키요타카 · 장휘옥 옮김', url: 'https://drive.google.com/file/d/112fWLkbkJePsVHoWgRB9fCwJw40QnO2o/view?usp=sharing' },
         { label: '제8권', title: '초기·부파불교의 역사', author: '후지타 고타츠 外 · 권오민 옮김', url: 'https://drive.google.com/file/d/16Jjxy8kWtBBTkrx6fnqT6Lu7QylnYDqF/view?usp=sharing' },
         { label: '제9권', title: '인도사상의 역사', author: '早島鏡正 · 高崎直道 · 정호영 옮김', url: 'https://drive.google.com/file/d/1u0ZEQY82pt2Vt-fgOez4CPLhp-it37dS/view?usp=sharing' },
         { label: '제10권', title: '선의 사상과 역사', author: '柳田聖山 · 안영길 · 추만호 옮김', url: 'https://drive.google.com/file/d/1doubbq5dRzJJBrTQHV8P0mgP8LAXcM1x/view?usp=sharing' },
-        { label: '제11권', title: '중국근세불교사상비판', author: '任繼愈 · 안영길 · 추만호 옮김', url: '', missing: true },
-        { label: '제12권', title: '대승불교의 사상', author: '우에다 요시부미 · 박태원 옮김', url: '', missing: true },
+        { label: '제11권', title: '중국근세불교사상비판', author: '任繼愈 · 안영길 · 추만호 옮김', url: 'https://drive.google.com/file/d/1pAm1LfAiQ89VrNwEiz7JDy8rVNPqeSmi/view?usp=sharing' },
+        { label: '제12권', title: '대승불교의 사상', author: '우에다 요시부미 · 박태원 옮김', url: 'https://drive.google.com/file/d/1RCXKINENjFtmbR-t04GyefZT9CfFKtsH/view?usp=sharing' },
         { label: '제13권', title: '천태법화의 사상', author: '타무라 시로우 · 이영자 옮김', url: 'https://drive.google.com/file/d/1esVRDaf773BC-EHC_qwxzZLjQMh7s0U1/view?usp=sharing' },
         { label: '제14권', title: '유식의 구조', author: '다케무라 마키오 · 정승석 옮김', url: 'https://drive.google.com/file/d/17SoO0YyOgaMOpdwnmIlve-sLObo-x8pD/view?usp=sharing' },
-        { label: '제15권', title: '인도불교철학', author: '가지야마 유이치 · 권오민 옮김', url: '', missing: true },
-        { label: '제16권', title: '인도불교의 인식과 논리', author: '梶山雄一 · 전치수 옮김', url: '', missing: true },
-        { label: '제17권', title: '공의 논리 – 중관사상', author: '梶山雄一 · 上山春平 · 정호영 옮김', url: '', missing: true },
+        { label: '제15권', title: '인도불교철학', author: '가지야마 유이치 · 권오민 옮김', url: 'https://drive.google.com/file/d/1q-tcwjCNtXisQc0ofhwLJ9NVAE2ecerm/view?usp=sharing' },
+        { label: '제16권', title: '인도불교의 인식과 논리', author: '梶山雄一 · 전치수 옮김', url: 'https://drive.google.com/file/d/1Gzlj-FvJ40bOKpdiqxtdt3tTL8PlcxWR/view?usp=sharing' },
+        { label: '제17권', title: '공의 논리 – 중관사상', author: '梶山雄一 · 上山春平 · 정호영 옮김', url: 'https://drive.google.com/file/d/1k1EWtUx5QY5eH8MGDYGQ7D1vYvV4LOwQ/view?usp=sharing' },
         { label: '제18권', title: '아비달마의 철학', author: '櫻部建 · 上山春平 · 정호영 옮김', url: 'https://drive.google.com/file/d/1fqmT58aiyHfQC16s1NaZjV1L9glBylgW/view?usp=sharing' },
-        { label: '제19권', title: '중국불교의 사상', author: '中村元 · 玉城康四郎 · 정순일 옮김', url: '', missing: true },
+        { label: '제19권', title: '중국불교의 사상', author: '中村元 · 玉城康四郎 · 정순일 옮김', url: 'https://drive.google.com/file/d/1xjAhVENQQ1RP8AnAEy9sIdZQ0lz3WG4Y/view?usp=sharing' },
         { label: '제20권', title: '원효의 인식과 논리', author: '신현숙 지음', url: '', missing: true },
         { label: '제21권', title: '해방자 붓다! 반항자 붓다!', author: '놀란 플리니 제이콥슨 · 주민황', url: 'https://drive.google.com/file/d/1K-qQg8kD5MLAmqCeTy710fDEpPpSm5Ie/view?usp=sharing' },
-        { label: '제22권', title: '초기대승불교의 종교생활', author: '平川彰 · 심법제 옮김', url: '', missing: true },
+        { label: '제22권', title: '초기대승불교의 종교생활', author: '平川彰 · 심법제 옮김', url: 'https://drive.google.com/file/d/1s2aU5pIbvbohUnZVUMSbFhirbGEqCI94/view?usp=sharing' },
         { label: '제23권', title: '인식과 초월 – 유식의 철학', author: '핫도리 마사아키 · 이만 옮김', url: 'https://drive.google.com/file/d/19-S1IE7lwOeXCE9cgF5ojLeBjqctfhCt/view?usp=sharing' },
         { label: '제24권', title: '초기불교교단과 계율', author: '사토우 미츠오 · 김호성 옮김', url: 'https://drive.google.com/file/d/17Qd8vcXGrK1retyFwzN6z5zocGw-7IZN/view?usp=sharing' },
         { label: '제25권', title: '선정쌍수의 전개', author: '藤吉慈海 · 한보광 옮김', url: '', missing: true },
-        { label: '제26권', title: '중국불교 – 역사와 문화', author: '케네스 첸 · 박해당 옮김', url: '', missing: true },
-        { label: '제27권', title: '밀교의 역사와 문화', author: '요리토미 모토히로 · 김무생 옮김', url: '', missing: true },
+        { label: '제26권', title: '중국불교 – 역사와 문화', author: '케네스 첸 · 박해당 옮김', url: 'https://drive.google.com/file/d/1yTbo2yDhClY6h17IhDOtUOHx8_P0dOkl/view?usp=sharing' },
+        { label: '제27권', title: '밀교의 역사와 문화', author: '요리토미 모토히로 · 김무생 옮김', url: 'https://drive.google.com/file/d/1aSWuHNPnDbPW8L0VxcVeaOnxEnp3oA-K/view?usp=sharing' },
         { label: '제28권', title: '민중불교의 탐구', author: '법성 · 황필호 外 지음', url: '', missing: true },
-        { label: '제29권', title: '딴뜨라불교입문', author: '다스굽따 · 정승석 옮김', url: '', missing: true },
+        { label: '제29권', title: '딴뜨라불교입문', author: '다스굽따 · 정승석 옮김', url: 'https://drive.google.com/file/d/1H7WB3bRZGQ98Sm4Xb5reT9xCRIKdGhge/view?usp=sharing' },
         { label: '제30권', title: '불교철학개론', author: '方立天 · 유영희 옮김', url: 'https://drive.google.com/file/d/1vghtsBT3D0_QTSPuLgQuoqvnRRNmUGzI/view?usp=sharing' },
         { label: '제31권', title: '불교사상과 서양철학', author: '에드워드 콘즈 外 · 김종욱 옮김', url: 'https://drive.google.com/file/d/1FjFAC6s7GhWgLoDTmI8WjYzZulPtHYku/view?usp=sharing' },
-        { label: '제32권', title: '인도불교 – 문화사적 탐구', author: '나라 야스아키 · 정호영 옮김', url: '', missing: true },
-        { label: '제33권', title: '소승대승', author: '히로 사치야 · 강기희 옮김', url: '', missing: true },
-        { label: '제34권', title: '불교의 서구적 모색', author: '유다 유타카 · 이미령 옮김', url: '', missing: true },
-        { label: '제35권', title: '인도의 선·중국의 선', author: '田上太秀 · 阿部肇一 · 최현각 옮김', url: '', missing: true },
-        { label: '제36권', title: '달마', author: '야나기다 세이잔 · 김성환 옮김', url: '' },
+        { label: '제32권', title: '인도불교 – 문화사적 탐구', author: '나라 야스아키 · 정호영 옮김', url: 'https://drive.google.com/file/d/1yj2mN6fh1Q4gqgdJcgqdgpdsF7EisekU/view?usp=sharing' },
+        { label: '제33권', title: '소승대승', author: '히로 사치야 · 강기희 옮김', url: 'https://drive.google.com/file/d/11wtEEiqPwNQCWDGvFXd8VcFTPlShmB0N/view?usp=sharing' },
+        { label: '제34권', title: '불교의 서구적 모색', author: '유다 유타카 · 이미령 옮김', url: 'https://drive.google.com/file/d/17iwXOv6V1gjKHZ1kwDIhO37TLUoFTQMz/view?usp=sharing' },
+        { label: '제35권', title: '인도의 선·중국의 선', author: '田上太秀 · 阿部肇一 · 최현각 옮김', url: 'https://drive.google.com/file/d/1WVfRvxY1MuqtLUdX9zWwrACn3-zhjX06/view?usp=sharing' },
+        { label: '제36권', title: '달마', author: '야나기다 세이잔 · 김성환 옮김', url: '', missing: true },
         { label: '제37권', title: '붓다와 다르마', author: '암베드카르 · 박희준 · 김기은 옮김', url: '', missing: true },
-        { label: '제38권', title: '불교의 현대적 조명', author: '교수불자연합회 편', url: '', missing: true },
+        { label: '제38권', title: '불교의 현대적 조명', author: '교수불자연합회 편', url: 'https://drive.google.com/file/d/10AOn80YZAXmQGBQIrSQpkvAHiaP4fgkW/view?usp=sharing' },
         { label: '제39권', title: '한국불교인물사상사', author: '불교신문사 편', url: 'https://drive.google.com/file/d/13PaJJVBr4c2FhpCf2D3GA_nnOUBoTRGR/view?usp=sharing' },
-        { label: '제40권', title: '중국불교학강의', author: '呂澂 · 각소 옮김', url: '', missing: true },
+        { label: '제40권', title: '중국불교학강의', author: '呂澂 · 각소 옮김', url: 'https://drive.google.com/file/d/1yQPrywzWVWsb88HP5GyKNWV_duP6sQbm/view?usp=sharing' },
         { label: '제41권', title: '중국문학과 선', author: '陳允吉 · 일지 옮김', url: '', missing: true },
         { label: '제42권', title: '서양철학과 선', author: '존 스태프니 外 · 김종욱 편역', url: '', missing: true },
         { label: '제43권', title: '붓다, 마르크스, 그리고 하느님', author: '트레버 링 · 안옥선 옮김', url: 'https://drive.google.com/file/d/1wbNIBHqH70pQfH1aIwI4Ma-hGaeOEJU9/view?usp=sharing' },
         { label: '제44권', title: '민중불교철학', author: '여익구 지음', url: '', missing: true },
-        { label: '제45권', title: '논어와 선', author: '한토 다이가 · 야마다 구니오 · 최효선 옮김', url: '', missing: true }
+        { label: '제45권', title: '논어와 선', author: '한토 다이가 · 야마다 구니오 · 최효선 옮김', url: 'https://drive.google.com/file/d/1i99nRE_89OYuo17CBgARHbWZwzCs2vVQ/view?usp=sharing' }
       ],
       tags: ['깨달음총서', '민족사', '유식', '인물사상사', '아비달마', '달마', '인도철학', '인도사상']
     },
@@ -6462,7 +6703,7 @@
         { label: '조선 10', era: '조선', vno: '10', name: '천지명양수륙재의범음산보집', title: '천지명양수륙재의범음산보집 (天地冥陽水陸齋儀梵音刪補集) · 지환 · 김두재 옮김', look: 'w', url: '', missing: true },
         { label: '조선 11', era: '조선', vno: '11', name: '삼봉집', title: '삼봉집 (三峰集) · 화악 지탁 · 김재희 옮김', look: 'w', url: '', missing: true },
         { label: '조선 12', era: '조선', vno: '12', name: '선문수경', title: '선문수경 (禪文手鏡) · 백파 긍선 · 신규탁 옮김', look: 'w', url: '', missing: true },
-        { label: '조선 13', era: '조선', vno: '13', name: '선문사변만어', title: '선문사변만어 (禪門四辨漫語) · 초의 의순 · 김영욱 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 13', era: '조선', vno: '13', name: '선문사변만어', title: '선문사변만어 (禪門四辨漫語) · 초의 의순 · 김영욱 옮김', look: 'w', url: 'https://drive.google.com/file/d/1cN1Av7dKkl1csb_VsbxP-_ZzM3f2v_bG/view?usp=sharing' },
         { label: '조선 14', era: '조선', vno: '14', name: '부휴당대사집', title: '부휴당대사집 (浮休堂大師集) · 부휴 선수 · 이상현 옮김', look: 'w', url: '', missing: true },
         { label: '조선 15', era: '조선', vno: '15', name: '무경집', title: '무경집 (無竟集) · 무경 자수 · 김재희 옮김', look: 'w', url: '', missing: true },
         { label: '조선 16', era: '조선', vno: '16', name: '무경실중어록', title: '무경실중어록 (無竟室中語錄) · 무경 자수 · 성재헌 옮김', look: 'w', url: '', missing: true },
@@ -8531,13 +8772,13 @@
       badge: '석전 박한영 지음 · 동국대학교 출판문화원 · 전 10권',
       category: ['01-0005', '01-0003'],
       langs: ['한국어'],
-      poster: 'covers/0661.jpg',
+      poster: 'covers/0661.jpg?v=2',
       // 책등: 권별 천 색(1–5권은 실물 사진 색, 6–10권은 어울리게 배색) · 박 색 연꽃 · 석전/박한영/전서 · 권 번호 · 흰 띠지 세로 제목 · 동국대학교 출판문화원
       spineDesign: { kind: 'spj' },
       volumes: [
-        { label: '제1권', vno: '1', c: '#d23a2f', f: '#e2bb5c', spineTitle: '석전문초', title: '석전 박한영 전서 1 · 석전문초 (石顚文鈔)', url: '', missing: true },
-        { label: '제2권', vno: '2', c: '#6b2232', f: '#d8b25a', spineTitle: '불교사 남요︱각종강요', title: '석전 박한영 전서 2 · 불교사 남요 · 각종강요 (佛敎史攬要 · 各宗綱要)', url: '', missing: true },
-        { label: '제3권', vno: '3', c: '#c8775a', f: '#9fae6a', spineTitle: '법보단경︱해수일적 강의', title: '석전 박한영 전서 3 · 법보단경 해수일적 강의 (法寶壇經海水一滴講義)', url: '', missing: true },
+        { label: '제1권', vno: '1', c: '#d23a2f', f: '#e2bb5c', spineTitle: '석전문초', title: '석전 박한영 전서 1 · 석전문초 (石顚文鈔)', url: 'https://drive.google.com/file/d/1VpmK2uHJSoOXBBjM8AUedaZDfMVy8AoA/view?usp=sharing' },
+        { label: '제2권', vno: '2', c: '#6b2232', f: '#d8b25a', spineTitle: '불교사 남요︱각종강요', title: '석전 박한영 전서 2 · 불교사 남요 · 각종강요 (佛敎史攬要 · 各宗綱要)', url: 'https://drive.google.com/file/d/1gTrwRNXo2OTxsstdNVqoX1JpPUqZJ7dp/view?usp=sharing' },
+        { label: '제3권', vno: '3', c: '#c8775a', f: '#9fae6a', spineTitle: '법보단경︱해수일적 강의', title: '석전 박한영 전서 3 · 법보단경 해수일적 강의 (法寶壇經海水一滴講義)', url: 'https://drive.google.com/file/d/1W0jsMETngeQYLJBdF70jQiUJJjQiuu4v/view?usp=sharing' },
         { label: '제4권', vno: '4', c: '#8f8cc7', f: '#9a2f9a', spineTitle: '정선 염송급설화', title: '석전 박한영 전서 4 · 정선 염송급설화 (精選拈頌及說話)', url: '', missing: true },
         { label: '제5권', vno: '5', c: '#4a5a76', f: '#cfd3da', spineTitle: '정선 치문집설', title: '석전 박한영 전서 5 · 정선 치문집설 (精選緇門集說)', url: '', missing: true },
         { label: '제6권', vno: '6', c: '#3f6d63', f: '#d9c48a', spineTitle: '계학약전', title: '석전 박한영 전서 6 · 계학약전 (戒學約詮)', url: 'https://drive.google.com/file/d/1z1aHSf3r-KM33QPWmcuXbWveWiCiue0F/view?usp=sharing' },
@@ -8547,6 +8788,103 @@
         { label: '제10권', vno: '10', c: '#5f6b4a', f: '#e3cf8e', spineTitle: '석전시초 Ⅱ', title: '석전 박한영 전서 10 · 석전시초 Ⅱ (石顚詩鈔 Ⅱ)', url: '', missing: true }
       ],
       tags: ['석전', '石顚', '박한영', '朴漢永', '영호', '映湖', '정호', '鼎鎬', '전서', '全書', '석전문초', '불교사남요', '각종강요', '법보단경', '육조단경', '해수일적', '염송', '염송설화', '치문', '치문집설', '계학약전', '인명입정리론', '백법론', '팔식규구', '인학절본', '석림한화', '석전시초', '동국대학교출판문화원']
+    },
+    {
+      title: '기본동사 500 사전 (The Most Important 500 Verbs in English)',
+      badge: '이주영 지음 · 20세기 플러스 · 알파벳별 18책 (A–W)',
+      category: ['04-0001', '08-0002'],
+      poster: 'covers/0662.jpg',
+      spineDesign: { kind: 'vb5' },
+      volumes: [
+        { label: 'A', title: '기본동사 500 사전 A', ab: 'A', color: '#00809f', url: 'https://drive.google.com/file/d/1PE_RFKCGg1EGjP87AqOHkx3Gd6YlRWgo/view?usp=sharing' },
+        { label: 'B', title: '기본동사 500 사전 B', ab: 'B', color: '#e6267f', url: 'https://drive.google.com/file/d/1zmFOOWAA1Dk0uocoZFaB0DZKyixoFWSA/view?usp=sharing' },
+        { label: 'C', title: '기본동사 500 사전 C', ab: 'C', color: '#f05a1e', url: 'https://drive.google.com/file/d/1YqmDCkp-OHOK4ogZ5rtnymyOnWAECFtT/view?usp=sharing' },
+        { label: 'D', title: '기본동사 500 사전 D', ab: 'D', color: '#5fa31e', url: 'https://drive.google.com/file/d/1HFnfXU1q2kvoEIneOuoPKGtciGWKblbY/view?usp=sharing' },
+        { label: 'E', title: '기본동사 500 사전 E', ab: 'E', color: '#c4952a', url: 'https://drive.google.com/file/d/1-hkgoebVAFOClh_EK1t33pQIZM4i9o5I/view?usp=sharing' },
+        { label: 'F', title: '기본동사 500 사전 F', ab: 'F', color: '#7a3fa0', url: 'https://drive.google.com/file/d/12e_12E26xNPnBe7mILi2wuGLGfoP9siV/view?usp=sharing' },
+        { label: 'G', title: '기본동사 500 사전 G', ab: 'G', color: '#1f6fc0', url: 'https://drive.google.com/file/d/1YBBCwwE4QsoHaLdHr3FulQIyJ6Ba-RSi/view?usp=sharing' },
+        { label: 'H', title: '기본동사 500 사전 H', ab: 'H', color: '#d8282e', url: 'https://drive.google.com/file/d/1z4d8oPGGqTIl87lZEB5VFtO-iPryNkxJ/view?usp=sharing' },
+        { label: 'I', title: '기본동사 500 사전 I', ab: 'I', color: '#00809f', url: 'https://drive.google.com/file/d/1ZnPuRXCdikqrBNQfG5G3Ld0K6rf-_9c9/view?usp=sharing' },
+        { label: 'J·K', title: '기본동사 500 사전 J·K', ab: 'JK', color: '#e6267f', url: 'https://drive.google.com/file/d/19mrCh_d0zZoxdJExH0cTShZTvUoKu0kt/view?usp=sharing' },
+        { label: 'L', title: '기본동사 500 사전 L', ab: 'L', color: '#f05a1e', url: 'https://drive.google.com/file/d/18h5h22pXLeY-N7xpRHv2JhklVgNS6HhH/view?usp=sharing' },
+        { label: 'M·N', title: '기본동사 500 사전 M·N', ab: 'MN', color: '#5fa31e', url: 'https://drive.google.com/file/d/1Ua_SLpMLm4CwNh3Jx_7VA2TQA6eHPogr/view?usp=sharing' },
+        { label: 'O', title: '기본동사 500 사전 O', ab: 'O', color: '#c4952a', url: 'https://drive.google.com/file/d/1bFI5-oHaBqhpLXY2-JGWGZyC4ndFMhbN/view?usp=sharing' },
+        { label: 'P', title: '기본동사 500 사전 P', ab: 'P', color: '#7a3fa0', url: 'https://drive.google.com/file/d/1EH9su-zCU_E2JMFn8aA1L3YYb6Ijmt8B/view?usp=sharing' },
+        { label: 'R', title: '기본동사 500 사전 R', ab: 'R', color: '#1f6fc0', url: 'https://drive.google.com/file/d/1dTnsEMVM51pjuqgXQQ50zgw89ggYJ0m_/view?usp=sharing' },
+        { label: 'S', title: '기본동사 500 사전 S', ab: 'S', color: '#d8282e', url: 'https://drive.google.com/file/d/1SOk6v-bl3eUu37K3kxmwu44MKMxzQ3c8/view?usp=sharing' },
+        { label: 'T', title: '기본동사 500 사전 T', ab: 'T', color: '#00809f', url: 'https://drive.google.com/file/d/1daYA_gdFvLN3G1U9H4mvfWMamFuAv0yg/view?usp=sharing' },
+        { label: 'U·V·W', title: '기본동사 500 사전 U·V·W', ab: 'UVW', color: '#e6267f', url: 'https://drive.google.com/file/d/1dHEFPBX6DEmcsAmBgDxDXe3f_RIrLtvi/view?usp=sharing' }
+      ],
+      tags: ['기본동사 500 사전', '기본동사', '영어', 'English', 'VERBS Dictionary', '500 Verbs', '동사', '영어사전', '사전', '이주영', '20세기 플러스', '20세기플러스', '단어', '어휘']
+    },
+    {
+      title: '북한의 사찰 (北韓의 寺刹)',
+      badge: '북한의 불교와 사찰, 그 과거와 현재 · 대한불교진흥원',
+      category: ['01-0002'],
+      poster: 'covers/0665.jpg',
+      url: 'https://drive.google.com/file/d/1QkX3Xk-doI6mUUvksSoSau0aDokLI0sG/view?usp=sharing',
+      tags: ['북한의 사찰', '북한', '北韓', '북한 사찰', '사찰', '寺刹', '조선민주주의인민공화국', '북한불교', '대한불교진흥원']
+    },
+    {
+      title: '松廣寺 (송광사) · 韓國의 寺刹 6',
+      badge: '韓國佛敎硏究院 著 · 일지사 · 한국의 사찰 6',
+      category: ['01-0002'],
+      poster: 'covers/0664.jpg',
+      url: 'https://drive.google.com/file/d/1Y49ZZLwzaoCawccyFcVavVXAWujucPGM/view?usp=sharing',
+      tags: ['송광사', '松廣寺', '한국의 사찰', '韓國의 寺刹', '한국불교연구원', '韓國佛敎硏究院', '일지사', '조계산', '승보사찰']
+    },
+    {
+      title: '고려 대화엄도량 개태사 (開泰寺)',
+      badge: '대한불교조계종 개태사',
+      category: ['01-0002'],
+      poster: 'covers/0666.jpg',
+      url: 'https://drive.google.com/file/d/1eCUwfcBHZX44TkzTfyaiL8eSkGlnLmn4/view?usp=sharing',
+      tags: ['개태사', '開泰寺', '고려', '화엄도량', '논산', '태조 왕건', '천호산', '사찰']
+    },
+    {
+      title: 'The Gāndhārī Dharmapada',
+      badge: 'John Brough · Buddhist Tradition Series (Motilal Banarsidass)',
+      category: ['06-0003'],
+      langs: ['영어'],
+      poster: 'covers/0668.jpg',
+      url: 'https://drive.google.com/file/d/1MlW4NWKShTRtlkjVrUpwcdScqWZ7-QoV/view?usp=sharing',
+      tags: ['Gandhari Dharmapada', 'Gāndhārī Dharmapada', 'Dharmapada', 'Dhammapada', '법구경', '간다리 법구경', '간다라어', 'Gāndhārī', 'Kharoṣṭhī', '카로슈티', 'John Brough', '존 브로', 'Buddhist Tradition Series']
+    },
+    {
+      title: 'Comparative Grammar of the Prākrit Languages',
+      badge: 'R. Pischel · Translator: Subhadra Jha',
+      category: ['04-0002'],
+      langs: ['영어'],
+      poster: 'covers/0669.jpg',
+      url: 'https://drive.google.com/file/d/13dxUf0g_Y3Tn6swpPbiOZEXtJx1MxCEw/view?usp=sharing',
+      tags: ['Prakrit', 'Prākrit', '프라크리트', '프라크리트어', '쁘라끄리뜨', '비교문법', 'Comparative Grammar', 'Grammatik der Prakrit-Sprachen', 'Richard Pischel', 'R. Pischel', '피셸', 'Subhadra Jha', '중기인도어', 'Middle Indo-Aryan', '문법']
+    },
+    {
+      title: 'A Comparative Dictionary of the Indo-Aryan Languages',
+      badge: 'R. L. Turner · Oxford University Press',
+      category: ['04-0002', '08-0002'],
+      langs: ['영어'],
+      poster: 'covers/0670.jpg',
+      url: 'https://drive.google.com/file/d/1kSZ-2rs1-NMIIuSPB0QlDAKqY0QmQADG/view?usp=sharing',
+      tags: ['Comparative Dictionary', 'Indo-Aryan', '인도아리아어', '비교사전', 'CDIAL', 'R. L. Turner', 'Ralph Lilley Turner', '터너', '산스크리트', 'Sanskrit', 'Prakrit', '프라크리트', '어원', '사전', '언어학', '역사언어학']
+    },
+    {
+      title: 'The Indo-Aryan Languages',
+      badge: 'George Cardona · Dhanesh Jain 편 · Routledge Language Family Series',
+      category: ['04-0002'],
+      langs: ['영어'],
+      poster: 'covers/0671.jpg',
+      url: '',
+      tags: ['Indo-Aryan', 'The Indo-Aryan Languages', '인도아리아어', 'George Cardona', '카르도나', 'Dhanesh Jain', 'Routledge Language Family Series', 'Sanskrit', '산스크리트', 'Hindi', '힌디어', '언어학']
+    },
+    {
+      title: 'Siddham across Asia: How the Buddha Learned His ABC',
+      badge: 'Richard Salomon · 23rd J. Gonda Lecture 2015 · Royal Netherlands Academy of Arts and Sciences (KNAW)',
+      category: ['04-0002'],
+      langs: ['영어'],
+      poster: 'covers/0672.jpg',
+      url: 'https://drive.google.com/file/d/10FIity7nKOm558Om3HscKex5W3UUH9go/view?usp=sharing',
+      tags: ['Siddham', '실담', '悉曇', '실담자', '실담문자', 'siddhaṃ', 'Brāhmī', '브라흐미', '문자', '음절표', 'alphabet', 'Richard Salomon', '리처드 살로몬', 'Gonda Lecture', 'KNAW', '간다라']
     },
     {
       title: '韓國高僧 · 한국 고승',
@@ -8658,7 +8996,7 @@
   const grid = document.getElementById('grid');
   const listView = document.getElementById('listView');
   const countEl = document.getElementById('count');
-  if (countEl) countEl.textContent = BOOKS.reduce((n, b) => n + ((b.newspaper || b.collection) ? 0 : Array.isArray(b.volumes) ? b.volumes.filter(v => !v.missing).length : 1), 0);
+  if (countEl) countEl.textContent = BOOKS.reduce((n, b) => n + ((b.newspaper || b.collection || b.periodicals) ? 0 : Array.isArray(b.volumes) ? b.volumes.filter(v => !v.missing).length : 1), 0);
 
   // category는 문자열 하나 또는 ['03-0003','05-0000'] 같은 배열(여러 분류)
   const catsOf = b => [].concat(b.category || []);
@@ -10404,6 +10742,16 @@
         robe.style.backgroundImage = `url("${b.spineDesign.robe}")`;
         robe.style.backgroundSize = `${n * 100}% auto`;
         robe.style.backgroundPosition = `${n > 1 ? i / (n - 1) * 100 : 0}% 40%`;
+      } else if (b.spineDesign && b.spineDesign.kind === 'bsj') {
+        // 佛敎時報: 호마다 조금씩 다른 갱지색 · 위아래 겹줄 · 붓글씨 제호 · 第N號 · 佛敎時報社
+        const PAPER = ['#dcd8cc', '#d4d0c3', '#d9d3c4', '#cfccc1', '#d7d2c6', '#ded8ca'];
+        const no = b.volumes.indexOf(vol) + 1;
+        a.className = 'spine spine-bs';
+        a.style.setProperty('--p', PAPER[(no * 5) % PAPER.length]);
+        a.innerHTML = `<span class="bs-rule"></span><img class="bs-title" alt=""><span class="bs-no"></span><span class="bs-pub"></span><span class="bs-rule"></span>`;
+        a.querySelector('.bs-title').src = b.spineDesign.titleImg;
+        stackChars(a.querySelector('.bs-no'), vol.title.replace(/^佛敎時報\s*/, ''));
+        stackChars(a.querySelector('.bs-pub'), '佛敎時報社');
       } else if (b.spineDesign && b.spineDesign.kind === 'bkj') {
         // 佛敎: 분홍빛 도는 회색 종이 · 붓글씨 제목 · 第N號 · 卍자 뇌문 · 佛敎社
         const PAPER = ['#d9c9c5', '#d2c4c0', '#dccdc8', '#cfc2be', '#d6c7c2'];
@@ -10565,6 +10913,23 @@
         a.querySelector('.ak-no').textContent = vol.vno || '';
         const pin = a.querySelector('.ak-pin'); pin.innerHTML = '';
         (vol.pin || '').split('·').forEach(t => { const c = document.createElement('span'); c.textContent = t; pin.appendChild(c); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'vb5') {
+        // 기본동사 500 사전: 흰 케이스 · 큰 컬러 알파벳 · 올리브 제목 상자(주황 테) · 이탤릭 영문 부제
+        a.className = 'spine spine-vb5';
+        a.style.setProperty('--c', vol.color || '#00809f');
+        const L = (vol.ab || '').split('');
+        a.style.setProperty('--fs', L.length >= 3 ? '.075' : L.length === 2 ? '.1' : '.15');
+        a.innerHTML = `<span class="vb-lab"><span class="vb-t">기본동사</span><span class="vb-n">500</span><span class="vb-t">사전</span></span><span class="vb-au"><span>이주영</span><span>지음</span></span><span class="vb-ab"></span><span class="vb-en">The most important <b>500 VERBS</b> in English</span>`;
+        const ab = a.querySelector('.vb-ab');
+        L.forEach((ch, k) => { if (k) ab.appendChild(document.createElement('i')); const sp = document.createElement('span'); sp.textContent = ch; ab.appendChild(sp); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'hgb') {
+        // 한길그레이트북스: 회백색 · GB 로고 · 기둥머리 · 굵은 세로 제목 · 로마 숫자 · 옮긴이 · 한길사
+        a.className = 'spine spine-hgb';
+        a.innerHTML = `<span class="gb-mark">GB</span><span class="gb-ser">한길그레이트북스</span><span class="gb-cap"></span><span class="gb-rule"></span><span class="gb-title"></span><span class="gb-no"></span><span class="gb-au"></span><span class="gb-pub">한길사</span>`;
+        a.querySelector('.gb-title').textContent = b.spineDesign.title;
+        a.querySelector('.gb-no').textContent = vol.vno || '';
+        const au = a.querySelector('.gb-au');
+        (b.spineDesign.author || '').split('\n').forEach(line => { const c = document.createElement('span'); stackChars(c, line); au.appendChild(c); });
       } else if (b.spineDesign && b.spineDesign.kind === 'spj') {
         // 석전 박한영 전서: 권별 천 색 · 연꽃 · 석전/박한영/전서 · 권 번호 · 흰 띠지에 세로 제목 · 동국대학교 출판문화원
         a.className = 'spine spine-spj';
@@ -10745,7 +11110,7 @@
 
   function openVolumesModal(b) {
     modalBook = b;
-    modalBox.classList.remove('paper-mode', 'coll-mode');
+    modalBox.classList.remove('paper-mode', 'coll-mode', 'per-mode');
     modalList.onscroll = null;
     modalTitle.textContent = b.title;
     modalSub.textContent = b.badge || '';   // 제목 아래 작은 글씨: 저자·역자·출판사 등
@@ -10786,6 +11151,9 @@
   // 합병호(제991ㆍ2호), 호외, 띄어쓰기·오타가 섞인 이름도 최대한 읽어 냄
   // 연도는 파일 이름 맨 앞(=폴더)의 연도를 기준으로 함
   function parsePaper(path, base, norm) {
+    // 항목이 { name, url } 객체면 (구글 드라이브 등) url을 그대로 씀
+    let direct = '';
+    if (path && typeof path === 'object') { direct = path.url || ''; path = path.name || ''; }
     path = path.normalize(norm || 'NFC');
     const parts = path.split('/');
     const name = parts[parts.length - 1];
@@ -10796,40 +11164,106 @@
     const extra = /호외/.test(clean);
     const after = nm ? clean.slice(nm.index + nm[0].length) : clean.replace(/^\d{4}\s*년/, '');
     const dm = after.match(/(\d{4,5})\s*\.\s*(\d{1,2})\s*[.ㆍ]\s*(\d{1,2})/);
+    // 사보·잡지용: 일 없이 월만 (2015.3) · 3월호 · 봄/여름/가을/겨울호
+    const SEASON = { '봄': 3, '여름': 6, '가을': 9, '겨울': 12, '春': 3, '夏': 6, '秋': 9, '冬': 12 };
+    const mm = dm ? null : (after.match(/(\d{4})\s*\.\s*(\d{1,2})(?!\s*[.ㆍ]?\s*\d)/) || after.match(/(?:^|[^\d])()(\d{1,2})\s*월/));
+    const sm = dm || mm ? null : after.match(/(봄|여름|가을|겨울|春|夏|秋|冬)\s*[호號]?/);
     const it = {
       path, name: clean,
-      url: base + parts.map(encodeURIComponent).join('/'),
+      url: direct || (base || '') + parts.map(encodeURIComponent).join('/'),
       year,
       no: nm ? +nm[1] : null,
       no2: nm && nm[2] ? nm[2] : '',
       extra,
-      mo: dm ? +dm[2] : null,
-      dd: dm ? +dm[3] : null
+      mo: dm ? +dm[2] : mm ? +mm[2] : sm ? SEASON[sm[1]] : null,
+      dd: dm ? +dm[3] : null,
+      season: sm ? sm[1] + (/[春夏秋冬]/.test(sm[1]) ? '號' : '호') : ''
     };
-    it.date = dm && year ? `${year}.${it.mo}.${it.dd}` : '';
+    it.date = dm && year ? `${year}.${it.mo}.${it.dd}` : mm && year ? `${year}.${it.mo}` : '';
     const noTxt = it.no ? `제${it.no}${it.no2 ? 'ㆍ' + it.no2 : ''}호` : (extra ? '호외' : '');
-    const iso = dm && year ? `${year}-${String(it.mo).padStart(2,'0')}-${String(it.dd).padStart(2,'0')}` : '';
+    const iso = dm && year ? `${year}-${String(it.mo).padStart(2,'0')}-${String(it.dd).padStart(2,'0')}` : mm && year ? `${year}-${String(it.mo).padStart(2,'0')}` : it.season;
     it.label = noTxt ? `${year}년 ${noTxt}${iso ? ' · ' + iso : ''}` : clean;
     const full2 = it.no2 ? String(it.no).slice(0, String(it.no).length - it.no2.length) + it.no2 : '';
     it.full2 = full2;
     it.search = [clean, noTxt, it.no ? `${it.no}호 ${it.no}` : '', full2 ? `제${full2}호 ${full2}호 ${full2}` : '',
       extra ? '호외 號外' : '', it.date,
-      dm ? `${year}년 ${it.mo}월 ${it.dd}일 ${year}.${String(it.mo).padStart(2,'0')}.${String(it.dd).padStart(2,'0')}` : ''].join(' ').toLowerCase();
+      dm ? `${year}년 ${it.mo}월 ${it.dd}일 ${year}.${String(it.mo).padStart(2,'0')}.${String(it.dd).padStart(2,'0')}` : '',
+      mm ? `${year}년 ${it.mo}월 ${it.mo}월호 ${year}.${String(it.mo).padStart(2,'0')}` : '', it.season].join(' ').toLowerCase();
     return it;
   }
 
-  function openNewspaperModal(b) {
+  function openNewspaperModal(b, from) {
+    modalBook = b; modalShelf = false;
+    modalTitle.textContent = b.title;
+    modalSub.textContent = b.badge || '';
+    modalViewBtn.hidden = true;
+    modalBox.classList.remove('shelf-mode', 'coll-mode', 'per-mode');
+    modalBox.classList.add('paper-mode');
+    modalList.innerHTML = '<div class="pp-loading">신문 목록을 불러오는 중…</div>';
+    modalOverlay.classList.add('open');
+    const addBack = () => {
+      if (!from || modalBook !== b) return;
+      const btn = document.createElement('button');
+      btn.className = 'per-back';
+      btn.textContent = '← 정기간행물';
+      btn.addEventListener('click', () => openPeriodicalsModal(from));
+      const bar = modalList.querySelector('.pp-bar');
+      bar ? bar.prepend(btn) : modalList.prepend(btn);
+    };
+    loadPaper(b.newspaper)
+      .then(data => { if (modalBook === b) { renderPaper(b, data); addBack(); } })
+      .catch(() => { if (modalBook === b) { modalList.innerHTML = '<div class="pp-empty">신문 목록(' + b.newspaper.src + ')을 불러오지 못했습니다.</div>'; addBack(); } });
+  }
+
+  // ===== 정기간행물 묶음 서가: 신문·사보 책꽂이를 한 곳에 =====
+  // BOOKS 항목에 periodicals: ['신문/사보 항목의 정확한 title', …]
+  // 각 신문 항목의 newspaper 에 color(띠 색) · paper(종이 색)을 주면 책등에 반영
+  function openPeriodicalsModal(b) {
     modalBook = b; modalShelf = false;
     modalTitle.textContent = b.title;
     modalSub.textContent = b.badge || '';
     modalViewBtn.hidden = true;
     modalBox.classList.remove('shelf-mode', 'coll-mode');
-    modalBox.classList.add('paper-mode');
-    modalList.innerHTML = '<div class="pp-loading">신문 목록을 불러오는 중…</div>';
+    modalBox.classList.add('paper-mode', 'per-mode');
+    modalList.onscroll = null;
+    modalList.innerHTML = '';
+    modalList.scrollTop = 0;
+    const items = (b.periodicals || []).map(t => BOOKS.find(x => x.title === t)).filter(x => x && x.newspaper);
+    const bar = document.createElement('div');
+    bar.className = 'pp-bar';
+    bar.innerHTML = `<div class="pp-info"><b>${items.length}</b>종 · 책등을 누르면 그 간행물의 서가가 열립니다</div>`;
+    const shelf = document.createElement('div');
+    shelf.className = 'per-shelf';
+    items.forEach(bk => {
+      const np = bk.newspaper;
+      const m = (bk.title || '').match(/^(.*?)\s*\((.*)\)\s*$/);
+      const han = m ? m[1] : bk.title, ko = m ? m[2] : '';
+      const sp = document.createElement('button');
+      sp.className = 'per-sp';
+      sp.style.setProperty('--c', np.color || '#3b3a36');
+      sp.style.setProperty('--p', np.paper || '#e7e0cf');
+      sp.title = bk.title + (bk.badge ? ' · ' + bk.badge : '');
+      sp.innerHTML = `<span class="per-rule"></span><span class="per-ko"></span><span class="per-han"></span>` +
+        `<span class="per-meta"><span class="per-yr">…</span><span class="per-n"></span></span><span class="per-rule"></span>`;
+      // 띄어쓰기는 세로쓰기에서 너무 벌어지므로 낱말마다 따로 세우고 작은 간격만
+      const words = (el, t) => t.split(/\s+/).filter(Boolean).forEach(w => { const x = document.createElement('span'); x.textContent = w; el.appendChild(x); });
+      words(sp.querySelector('.per-ko'), ko || han);
+      words(sp.querySelector('.per-han'), ko ? han : '');
+      const kl = (ko || han).replace(/\s/g, '').length, hl = ko ? han.replace(/\s/g, '').length : 0;
+      if (kl > 5) sp.style.setProperty('--kf', Math.max(13, Math.floor(110 / kl)) + 'px');
+      if (hl > 5) sp.style.setProperty('--hf', Math.max(8, Math.floor(62 / hl)) + 'px');
+      sp.addEventListener('click', () => openNewspaperModal(bk, b));
+      shelf.appendChild(sp);
+      loadPaper(np).then(data => {
+        const its = data.files.map(p => parsePaper(p, data.base, data.norm));
+        const ys = its.map(x => x.year).filter(Boolean);
+        const y0 = Math.min(...ys), y1 = Math.max(...ys);
+        sp.querySelector('.per-yr').innerHTML = ys.length ? (y0 === y1 ? `${y0}` : `${y0}<i>│</i>${y1}`) : '';
+        sp.querySelector('.per-n').textContent = `${its.length.toLocaleString()}號`;
+      }).catch(() => { sp.querySelector('.per-yr').textContent = ''; });
+    });
+    modalList.append(bar, shelf);
     modalOverlay.classList.add('open');
-    loadPaper(b.newspaper)
-      .then(data => { if (modalBook === b) renderPaper(b, data); })
-      .catch(() => { if (modalBook === b) modalList.innerHTML = '<div class="pp-empty">신문 목록(newspaper.js)을 불러오지 못했습니다.</div>'; });
   }
 
   // ===== 인물 컬렉션 서가 =====
@@ -10859,7 +11293,7 @@
     modalTitle.textContent = C.title || b.title;
     modalSub.textContent = b.badge || '';
     modalViewBtn.hidden = true;
-    modalBox.classList.remove('shelf-mode');
+    modalBox.classList.remove('shelf-mode', 'per-mode');
     modalBox.classList.add('paper-mode', 'coll-mode');
     modalList.onscroll = null;
     renderCollection(C);
@@ -10975,7 +11409,7 @@
     modalList.appendChild(bar);
 
     const noTxt = it => it.no ? `第 <b>${it.no}${it.no2 ? 'ㆍ' + it.no2 : ''}</b> 號` : (it.extra ? '<b class="gw">號外</b>' : it.name);
-    const dateTxt = it => it.mo ? `${it.year}. ${it.mo}. ${it.dd}` : '';
+    const dateTxt = it => it.season ? `${it.year}. ${it.season}` : it.mo ? `${it.year}. ${it.mo}${it.dd ? '. ' + it.dd : ''}` : '';
     const hoverOn = (el, it) => {
       el.addEventListener('mouseenter', () => { info.textContent = it.label; });
       el.addEventListener('focus', () => { info.textContent = it.label; });
@@ -11004,7 +11438,7 @@
         a.className = 'spine spine-p';
         linkTo(a, it);
         a.title = it.label;
-        const dTxt = it.mo ? `${it.mo}.${it.dd}` : '';
+        const dTxt = it.season ? it.season : it.mo ? (it.dd ? `${it.mo}.${it.dd}` : `${it.mo}월`) : '';
         if (it.no) {
           a.innerHTML = `<span class="sp-date">${dTxt}</span><span class="sp-rule"></span><span class="sp-no"></span>` +
             (it.no2 ? `<span class="sp-no2">ㆍ${it.no2}</span>` : '') + `<span class="sp-ho">號</span>`;
@@ -11055,8 +11489,8 @@
         a.className = 'pl-band' + (it.extra ? ' extra' : '') + (it.no2 ? ' twin' : '');
         linkTo(a, it);
         const no = it.no ? `第<b>${it.no}${it.no2 ? 'ㆍ' + it.no2 : ''}</b>號` : (it.extra ? '<b class="gw">號外</b>' : it.name);
-        const iso = it.mo ? `${it.year}-${pad2(it.mo)}-${pad2(it.dd)}` : '';
-        a.innerHTML = `<span class="pb-mast">${it.extra ? '號外' : '東大'}</span><span class="pb-no">${no}</span><span class="pb-date">${iso}</span>`;
+        const iso = it.season ? `${it.year} ${it.season}` : it.mo ? `${it.year}-${pad2(it.mo)}${it.dd ? '-' + pad2(it.dd) : ''}` : '';
+        a.innerHTML = `<span class="pb-mast">${it.extra ? '號外' : (mark || '東大')}</span><span class="pb-no">${no}</span><span class="pb-date">${iso}</span>`;
         hoverOn(a, it);
         stack.appendChild(a);
         return { el: a, it };
@@ -11198,7 +11632,7 @@
   const fold = t => String(t || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').normalize('NFC')
     .replace(/[’‘'`]/g, '').toLowerCase();
   // 권수: 여러 권 묶음은 소장한 권(결본 제외)을 한 권씩, 신문·인물 서가는 세지 않음
-  const volCount = b => (b.newspaper || b.collection) ? 0 : Array.isArray(b.volumes) ? b.volumes.filter(v => !v.missing).length : 1;
+  const volCount = b => (b.newspaper || b.collection || b.periodicals) ? 0 : Array.isArray(b.volumes) ? b.volumes.filter(v => !v.missing).length : 1;
   // 한국어책 판별: lang 지정이 있으면 그대로, 없으면 제목(괄호 속 읽기 제외)에 한글이 있거나 한자만으로 된 제목이면 한국책
   const isKo = b => {
     if (b.lang) return b.lang === 'ko';
@@ -11618,13 +12052,15 @@
     return add.length ? txt + ' ' + add.join(' ') : txt;
   };
   const searchText = b => withAliases(fold([b.title, b.badge, b.isbn, ...(b.tags || []), ...langsOf(b), ...(b.volumes || []).map(v => `${v.label || ''} ${v.title || ''}`),
-    ...(b.collection && COLLECTIONS[b.collection] ? COLLECTIONS[b.collection].people.map(pp => `${pp.name} ${pp.hanja || ''}`) : [])]
+    ...(b.collection && COLLECTIONS[b.collection] ? COLLECTIONS[b.collection].people.map(pp => `${pp.name} ${pp.hanja || ''}`) : []),
+    ...(b.periodicals || [])]
     .filter(Boolean).join(' ')));
   BOOKS.forEach((b, idx) => {
+    if (b.hubOnly) return;   // 정기간행물 묶음 서가 안에서만 보이는 항목 (메인 카드 없음)
     const isMultiVolume = Array.isArray(b.volumes);
     const isPaper = !!b.newspaper;
-    const isColl = !!b.collection;
-    const opener = isColl ? () => openCollectionModal(b) : isPaper ? () => openNewspaperModal(b) : () => openVolumesModal(b);
+    const isColl = !!b.collection || !!b.periodicals;
+    const opener = b.periodicals ? () => openPeriodicalsModal(b) : isColl ? () => openCollectionModal(b) : isPaper ? () => openNewspaperModal(b) : () => openVolumesModal(b);
     const hasPoster = !!b.poster;
 
     const a = document.createElement(isMultiVolume || isPaper || isColl ? 'div' : 'a');
