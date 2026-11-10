@@ -1498,6 +1498,48 @@
   .spine-vb5 .vb-en{ margin-bottom:calc(var(--spine-h) * .04); writing-mode:vertical-rl; white-space:nowrap; padding-left:2px; border-left:2px solid #7bb52a;
     font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:clamp(5.4px,.95vh,7.4px); color:#2c2e20; letter-spacing:.02em; }
   .spine-vb5 .vb-en b{ font-weight:500; font-style:normal; }
+  /* 왕초보 박사 되다 (민족사) */
+  .spine-wcb{
+    width:calc(var(--spine-h) * .14); position:relative; overflow:hidden;
+    background:linear-gradient(90deg,#dedbd3 0%,#f6f4ee 14%,#fdfcf8 50%,#f3f1ea 86%,#d9d5cc 100%); color:#1c1b19;
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -4px 0 7px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-wcb > *{ flex:0 0 auto; }
+  .spine-wcb .wc-band{ align-self:stretch; height:calc(var(--spine-h) * .045); background:var(--f); }
+  .spine-wcb .wc-band:last-child{ margin-top:0; }
+  .spine-wcb .wc-dot{ margin-top:calc(var(--spine-h) * .035); width:calc(var(--spine-h) * .028); height:calc(var(--spine-h) * .028); border-radius:50%; background:var(--d); }
+  .spine-wcb .wc-t{ margin-top:calc(var(--spine-h) * .008); writing-mode:vertical-rl; text-orientation:upright; letter-spacing:-.02em;
+    font-family:'Noto Sans KR',sans-serif; font-weight:900; font-size:calc(var(--spine-h) * .05); line-height:1; }
+  .spine-wcb .wc-sub{ margin-top:calc(var(--spine-h) * .02); display:flex; flex-direction:column; align-items:center; gap:.3em; color:var(--c);
+    font-family:'Noto Serif KR',serif; font-weight:800; font-size:calc(var(--spine-h) * .036); line-height:1; }
+  .spine-wcb .wc-sub span{ writing-mode:vertical-rl; text-orientation:upright; }
+  .spine-wcb .wc-au{ margin-top:auto; writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.1em;
+    font-family:'Noto Sans KR',sans-serif; font-weight:500; font-size:clamp(5.5px,.95vh,7.2px); color:#4a4741; }
+  .spine-wcb .wc-pub{ margin:calc(var(--spine-h) * .02) 0 calc(var(--spine-h) * .025); padding:3px 1px; border:1px solid #1c1b19;
+    writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.05em; font-family:'Noto Serif KR',serif; font-weight:700; font-size:clamp(6px,1vh,8px); }
+  /* 잡아함경 (동국역경원 · 김월운 옮김) */
+  .spine-jah{
+    width:calc(var(--spine-h) * .15); position:relative; overflow:hidden;
+    background:linear-gradient(90deg,#d9d6cc 0%,#f2f0e8 14%,#f9f8f3 50%,#efede5 86%,#d3d0c6 100%); color:#1d1c19;
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -4px 0 7px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-jah > *{ flex:0 0 auto; position:relative; }
+  .spine-jah::before{ content:''; position:absolute; left:0; right:0; top:calc(var(--spine-h) * .05); height:calc(var(--spine-h) * .44);
+    background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDQ4IDQ4Ij48cmVjdCB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIGZpbGw9IiNhYWE3OGYiLz48ZyB0cmFuc2Zvcm09InJvdGF0ZSg0NSAyNCAyNCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Y0ZjJlYSIgc3Ryb2tlLXdpZHRoPSIxLjYiIHN0cm9rZS1saW5lY2FwPSJzcXVhcmUiPjxwYXRoIGQ9Ik0tMTAgMGg2OE0tMTAgMTZoNjhNLTEwIDMyaDY4TS0xMCA0OGg2OE0wIC0xMHY2OE0xNiAtMTB2NjhNMzIgLTEwdjY4TTQ4IC0xMHY2OCIgc3Ryb2tlLXdpZHRoPSIuOSIgb3BhY2l0eT0iLjU1Ii8+PHBhdGggZD0iTTQgOGg4di00TTEyIDEydjhoNE04IDIwaC00di04TTIwIDR2OGg0Ii8+PHBhdGggZD0iTTI4IDhoOHYtNE0zNiAxMnY4aDRNMzIgMjBoLTR2LThNNDQgNHY4aDQiLz48cGF0aCBkPSJNNCAzMmg4di00TTEyIDM2djhoNE04IDQ0aC00di04TTIwIDI4djhoNCIvPjxwYXRoIGQ9Ik0yOCAzMmg4di00TTM2IDM2djhoNE0zMiA0NGgtNHYtOE00NCAyOHY4aDQiLz48L2c+PGcgZmlsbD0iI2Y0ZjJlYSIgb3BhY2l0eT0iLjk1Ij48cGF0aCBkPSJNMjQgMTVjMi4yIDIuNiAyLjIgNi40IDAgOS0yLjItMi42LTIuMi02LjQgMC05eiIvPjxwYXRoIGQ9Ik0yNCAyNGMtMi42LS44LTUuNi0uMi03LjQgMS44IDIuOCAxLjQgNS40IDEgNy40LTEuOHpNMjQgMjRjMi42LS44IDUuNi0uMiA3LjQgMS44LTIuOCAxLjQtNS40IDEtNy40LTEuOHoiLz48cGF0aCBkPSJNMTcuNSAyN2gxM2MtMS40IDItMy44IDMtNi41IDNzLTUuMS0xLTYuNS0zeiIvPjwvZz48L3N2Zz4=") 0 0 / calc(var(--spine-h) * .07) auto repeat; opacity:.92;
+    box-shadow:inset 0 0 0 .5px rgba(0,0,0,.08); }
+  .spine-jah .ja-box{ position:absolute; left:0; right:0; top:calc(var(--spine-h) * .27); transform:translateY(-50%); padding:calc(var(--spine-h) * .016) 3px calc(var(--spine-h) * .012);
+    display:flex; flex-direction:column; align-items:center; text-shadow:0 0 2px rgba(249,248,243,.9), 0 0 4px rgba(249,248,243,.6); }
+  .spine-jah .ja-t{ writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.02em;
+    font-family:'Noto Serif KR',serif; font-weight:600; font-size:calc(var(--spine-h) * var(--tf, .053)); line-height:1; color:#141311; font-weight:700; }
+  .spine-jah .ja-no{ margin-top:calc(var(--spine-h) * .01); font-family:'Noto Serif KR',serif; font-weight:700; font-size:calc(var(--spine-h) * .034); line-height:1; color:#141311; }
+  .spine-jah .ja-han{ margin-top:calc(var(--spine-h) * .535); writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.06em;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:700; font-size:calc(var(--spine-h) * .028); line-height:1; }
+  .spine-jah .ja-au{ margin-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.12em;
+    font-family:'Noto Sans KR',sans-serif; font-weight:400; font-size:clamp(5.5px,.95vh,7.2px); color:#55524b; }
+  .spine-jah .ja-pub{ margin:auto 0 calc(var(--spine-h) * .035); padding:4px 2px; background:#5d6156; color:#f1efe6;
+    writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.04em; font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:clamp(5px,.85vh,6.6px); }
   /* 민족사 불교경전 */
   .spine-mj{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -8887,6 +8929,56 @@
       tags: ['Siddham', '실담', '悉曇', '실담자', '실담문자', 'siddhaṃ', 'Brāhmī', '브라흐미', '문자', '음절표', 'alphabet', 'Richard Salomon', '리처드 살로몬', 'Gonda Lecture', 'KNAW', '간다라']
     },
     {
+      title: '왕초보 박사 되다 시리즈',
+      badge: '민족사 · 왕초보 ○○ 박사 되다 · 경전 · 반야심경 · 법화경 · 불교교리 · 선 · 수행 · 육조단경 · 천수경 · 초기불교 · 한문 · 화엄경',
+      category: ['10-0000'],
+      poster: 'covers/0674.jpg?v=2',
+      spineDesign: { kind: 'wcb' },
+      volumes: [
+        { label: '경전', title: '왕초보 경전 박사 되다', sub: '경전 박사 되다', author: '', frame: '#3d7cc0', color: '#2f6095', dot: '#3d7cc0', url: 'https://drive.google.com/file/d/1Gd5C8LVD4v9OoAONXXMGGLgH9D5hnkM6/view?usp=sharing' },
+        { label: '반야심경', title: '왕초보 반야심경 박사 되다', sub: '반야심경 박사 되다', author: '', frame: '#c9a227', color: '#9c7e1e', dot: '#c9a227', url: 'https://drive.google.com/file/d/1dty7ISFveUiD05bCS5PncL6-JZjbpJmo/view?usp=sharing' },
+        { label: '법화경', title: '왕초보 법화경 박사 되다', sub: '법화경 박사 되다', author: '', frame: '#d6457a', color: '#a6355f', dot: '#d6457a', url: 'https://drive.google.com/file/d/1jFnNMcglffXJ7toSWb0LLoaNowxi5vfM/view?usp=sharing' },
+        { label: '불교', title: '왕초보 불교 박사 되다', sub: '불교 박사 되다', author: '', frame: '#84b843', color: '#8a2d6e', dot: '#8a2d6e', url: '', missing: true },
+        { label: '불교교리', title: '왕초보 불교교리 박사 되다', sub: '불교교리 박사 되다', author: '', frame: '#2f9c8a', color: '#24796b', dot: '#2f9c8a', url: 'https://drive.google.com/file/d/1pnir4AXVz4O0eCb--NvYc54iam7nhzY3/view?usp=sharing' },
+        { label: '禪', title: '왕초보 禪 박사 되다', sub: '禪 박사 되다', author: '', frame: '#c9c4b8', color: '#8a2d6e', dot: '#6aa63a', url: 'https://drive.google.com/file/d/1DObNo3v9PrSG1yW75iyfupFnFSOlrWzF/view?usp=sharing' },
+        { label: '수행', title: '왕초보 수행 박사 되다', sub: '수행 박사 되다', author: '', frame: '#6c8f3a', color: '#546f2d', dot: '#6c8f3a', url: 'https://drive.google.com/file/d/165_8VgrCbZbCt5r1RBclw38NzmiLiWKz/view?usp=sharing' },
+        { label: '육조단경', title: '왕초보 육조단경 박사 되다', sub: '육조단경 박사 되다', author: '', frame: '#9a6430', color: '#784e25', dot: '#9a6430', url: 'https://drive.google.com/file/d/1rDHWwFW3uk65JY4lUCwzhVTcVM3uOaXC/view?usp=sharing' },
+        { label: '천수경', title: '왕초보 천수경 박사 되다', sub: '천수경 박사 되다', author: '', frame: '#4a5bb5', color: '#39468d', dot: '#4a5bb5', url: 'https://drive.google.com/file/d/1DPiLCblKD9DMg0yLKeZFW_OoYZpSRctq/view?usp=sharing' },
+        { label: '초기불교', title: '왕초보 초기불교 박사 되다', sub: '초기불교 박사 되다', author: '마성', frame: '#f08c1f', color: '#e07a12', dot: '#f08c1f', url: 'https://drive.google.com/file/d/13v4sC2lOQyl3gt3UTTN7bLX7_fZGyYBW/view?usp=sharing' },
+        { label: '한문', title: '왕초보 한문 박사 되다', sub: '한문 박사 되다', author: '', frame: '#b8443a', color: '#8f352d', dot: '#b8443a', url: 'https://drive.google.com/file/d/1aelQLVnFU66YduBdHpiLDWuAnJ9dGo-Z/view?usp=sharing' },
+        { label: '화엄경', title: '왕초보 화엄경 박사 되다', sub: '화엄경 박사 되다', author: '', frame: '#7a4fb0', color: '#5f3d89', dot: '#7a4fb0', url: 'https://drive.google.com/file/d/1OcCdySwb0J8cEmqRekw1rlDV9oylKxry/view?usp=sharing' }
+      ],
+      tags: ['왕초보', '왕초보 박사 되다', '왕초보 선 박사 되다', '왕초보 초기불교 박사 되다', '왕초보 불교 박사 되다', '민족사', '입문', '불교입문', '선', '禪', '초기불교', '마성', '경전', '반야심경', '법화경', '불교교리', '수행', '육조단경', '천수경', '한문', '화엄경']
+    },
+    {
+      title: '아함경 (阿含經) · 장아함 · 중아함 · 잡아함 · 증일아함',
+      badge: '김월운 옮김 · 동국역경원 · 장아함경 3 · 중아함경 5 · 잡아함경 5 · 증일아함경 4',
+      category: ['06-0003'],
+      poster: 'covers/0675.jpg?v=2',
+      // 4아함을 한 세트로: 같은 책등 디자인, 경 이름(t)·한자(han)·권 번호(vno)만 다름
+      spineDesign: { kind: 'jah' },
+      volumes: [
+        { label: '장아함경 1', title: '장아함경 1', t: '장아함경', han: '長阿含經', vno: '1', url: 'https://drive.google.com/file/d/1w5vRhkFc7xBKRdIhzSslyqBUi_Zauxdr/view?usp=sharing' },
+        { label: '장아함경 2', title: '장아함경 2', t: '장아함경', han: '長阿含經', vno: '2', url: 'https://drive.google.com/file/d/1FaarhpPxwxtVgKCpSgG7VlpncfNjkM9a/view?usp=sharing' },
+        { label: '장아함경 3', title: '장아함경 3', t: '장아함경', han: '長阿含經', vno: '3', url: '', missing: true },
+        { label: '중아함경 1', title: '중아함경 1', t: '중아함경', han: '中阿含經', vno: '1', url: 'https://drive.google.com/file/d/1PIxzwmfyJbv_Q5Xasdb7BCr-GFxBE0kd/view?usp=sharing' },
+        { label: '중아함경 2', title: '중아함경 2', t: '중아함경', han: '中阿含經', vno: '2', url: 'https://drive.google.com/file/d/1NERTGLDHHVI-I5kSRIRAZYiOQLL60f-0/view?usp=sharing' },
+        { label: '중아함경 3', title: '중아함경 3', t: '중아함경', han: '中阿含經', vno: '3', url: 'https://drive.google.com/file/d/1jPjW8qZdqb6NAG16PQvV-vCCvmou34sp/view?usp=sharing' },
+        { label: '중아함경 4', title: '중아함경 4', t: '중아함경', han: '中阿含經', vno: '4', url: 'https://drive.google.com/file/d/12GR2iW2Je20JrzGjBJwF7p1qVGTJcs9K/view?usp=sharing' },
+        { label: '중아함경 5', title: '중아함경 5', t: '중아함경', han: '中阿含經', vno: '5', url: '', missing: true },
+        { label: '잡아함경 1', title: '잡아함경 1', t: '잡아함경', han: '雜阿含經', vno: '1', url: 'https://drive.google.com/file/d/12WQOjEdaSq_9_nGYEW9Bha-qrUpmqeXL/view?usp=sharing' },
+        { label: '잡아함경 2', title: '잡아함경 2', t: '잡아함경', han: '雜阿含經', vno: '2', url: 'https://drive.google.com/file/d/12ya_B8Xx5hRGd50kXS5hQyifZXdZ_HFn/view?usp=sharing' },
+        { label: '잡아함경 3', title: '잡아함경 3', t: '잡아함경', han: '雜阿含經', vno: '3', url: 'https://drive.google.com/file/d/1e8RYG6K6gTW0_D92WlsRHb8nOp3YSAB-/view?usp=sharing' },
+        { label: '잡아함경 4', title: '잡아함경 4', t: '잡아함경', han: '雜阿含經', vno: '4', url: 'https://drive.google.com/file/d/1FPE6Stf3vFogCJheH1N_JzZEV1PZCy4M/view?usp=sharing' },
+        { label: '잡아함경 5', title: '잡아함경 5', t: '잡아함경', han: '雜阿含經', vno: '5', url: 'https://drive.google.com/file/d/1cMqjieG2YisIYu-_z0dpNv6F-yE6b1Oz/view?usp=sharing' },
+        { label: '증일아함경 1', title: '증일아함경 1', t: '증일아함경', han: '增一阿含經', vno: '1', url: 'https://drive.google.com/file/d/1OtzAkLcW3Pk6KtMVVaIwxiBLbZzyyaPy/view?usp=sharing' },
+        { label: '증일아함경 2', title: '증일아함경 2', t: '증일아함경', han: '增一阿含經', vno: '2', url: 'https://drive.google.com/file/d/1EQ8k6eYxspWyMItZU8WD20pKhiVsPig1/view?usp=sharing' },
+        { label: '증일아함경 3', title: '증일아함경 3', t: '증일아함경', han: '增一阿含經', vno: '3', url: 'https://drive.google.com/file/d/1yIsTjlu-q4Bn4Guzznjj9zoHBBmquO59/view?usp=sharing' },
+        { label: '증일아함경 4', title: '증일아함경 4', t: '증일아함경', han: '增一阿含經', vno: '4', url: 'https://drive.google.com/file/d/1nDeLHpTQmYsb5FfoqBl94m9GrfDTjZL4/view?usp=sharing' }
+      ],
+      tags: ['아함경', '阿含經', '아함', '4아함', '사아함', '장아함경', '長阿含經', '중아함경', '中阿含經', '잡아함경', '雜阿含經', '증일아함경', '增一阿含經', 'Āgama', 'Dīrghāgama', 'Madhyamāgama', 'Saṃyuktāgama', 'Ekottarikāgama', '김월운', '동국역경원']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -10913,6 +11005,24 @@
         a.querySelector('.ak-no').textContent = vol.vno || '';
         const pin = a.querySelector('.ak-pin'); pin.innerHTML = '';
         (vol.pin || '').split('·').forEach(t => { const c = document.createElement('span'); c.textContent = t; pin.appendChild(c); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'jah') {
+        // 잡아함경: 미색 바탕 · 위쪽 회올리브 卍자 뇌문 + 연꽃 무늬 · 흰 상자 속 세로 제목과 권 번호 · 雜阿含經 · 옮긴이 · 동국역경원
+        a.className = 'spine spine-jah';
+        a.innerHTML = `<span class="ja-box"><span class="ja-t"></span><span class="ja-no"></span></span><span class="ja-han"></span><span class="ja-au">김월운 옮김</span><span class="ja-pub">동국역경원</span>`;
+        a.querySelector('.ja-t').textContent = vol.t || '잡아함경';
+        if ((vol.t || '').length >= 5) a.style.setProperty('--tf', '.043');
+        a.querySelector('.ja-han').textContent = vol.han || '雜阿含經';
+        a.querySelector('.ja-no').textContent = vol.vno || '';
+      } else if (b.spineDesign && b.spineDesign.kind === 'wcb') {
+        // 왕초보 ○○ 박사 되다: 흰 바탕 · 위아래 테 색 띠 · 색 동그라미 + 굵은 '왕초보' · 색 부제 · 민족사 상자
+        a.className = 'spine spine-wcb';
+        a.style.setProperty('--f', vol.frame || '#bdb7ab');
+        a.style.setProperty('--c', vol.color || '#8a2d6e');
+        a.style.setProperty('--d', vol.dot || vol.color || '#8a2d6e');
+        a.innerHTML = `<span class="wc-band"></span><span class="wc-dot"></span><span class="wc-t">왕초보</span><span class="wc-sub"></span><span class="wc-au"></span><span class="wc-pub">민족사</span><span class="wc-band"></span>`;
+        const sub = a.querySelector('.wc-sub');
+        (vol.sub || '').split(/\s+/).filter(Boolean).forEach(w => { const x = document.createElement('span'); x.textContent = w; sub.appendChild(x); });
+        a.querySelector('.wc-au').textContent = vol.author || '';
       } else if (b.spineDesign && b.spineDesign.kind === 'vb5') {
         // 기본동사 500 사전: 흰 케이스 · 큰 컬러 알파벳 · 올리브 제목 상자(주황 테) · 이탤릭 영문 부제
         a.className = 'spine spine-vb5';
