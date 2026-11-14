@@ -1558,6 +1558,64 @@
     font-family:'Noto Sans KR',sans-serif; font-weight:500; font-size:clamp(5.5px,.95vh,7.2px); color:var(--ink); opacity:.75; }
   .spine-dpr .dp-pub{ margin:calc(var(--spine-h) * .02) 0 calc(var(--spine-h) * .03); padding:3px 1px; border:1px solid var(--ink); color:var(--ink);
     writing-mode:vertical-rl; text-orientation:upright; letter-spacing:.05em; font-family:'Noto Serif KR',serif; font-weight:700; font-size:clamp(6px,1vh,8px); }
+  /* 國譯一切經 (大東出版社) */
+  .spine-kyi{
+    width:calc(var(--spine-h) * .13); position:relative; overflow:hidden; color:#1d1a16;
+    background:
+      linear-gradient(90deg, #d9cfb8 0%, #ece4d0 12%, #f3ecdb 50%, #e9e0cb 88%, #d4c9b0 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -4px 0 7px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-kyi > *{ flex:0 0 auto; }
+  .spine-kyi .ky-t{ width:58%; height:auto; margin-top:calc(var(--spine-h) * .04); }
+  .spine-kyi .ky-dept{ margin-top:calc(var(--spine-h) * .03); display:flex; flex-direction:column; align-items:center; line-height:1.12;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(6px,1.05vh,8.2px); color:#3a352d; }
+  .spine-kyi .ky-sec{ margin-top:auto; display:flex; flex-direction:column; align-items:center; line-height:1.25;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(6.5px,1.15vh,9px); color:#2a251f; }
+  .spine-kyi .ky-no{ margin:calc(var(--spine-h) * .03) 0 calc(var(--spine-h) * .07); display:flex; flex-direction:column; align-items:center; line-height:1.05;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:700; font-size:clamp(7px,1.25vh,9.8px); }
+  /* Sanskrithandschriften aus den Turfanfunden (VOHD X · Franz Steiner) */
+  .spine-sht{
+    width:calc(var(--spine-h) * .21); position:relative; overflow:hidden; color:#e9e6df;
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.025) 0 1px, transparent 1px 3px),
+      linear-gradient(90deg, #2b3440 0%, #36414e 14%, #3d4957 50%, #35404c 86%, #28313c 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -4px 0 7px rgba(0,0,0,.25), 0 2px 6px rgba(0,0,0,.5);
+  }
+  /* 모든 크기를 책등 높이(--spine-h)에 비례 → 화면 크기와 상관없이 로고까지 다 들어감 */
+  .spine-sht > *{ flex:0 0 auto; }
+  .spine-sht .sh-teil{ margin-top:calc(var(--spine-h) * .035); text-align:center; font-family:'EB Garamond',Georgia,serif; line-height:1; letter-spacing:.06em; }
+  .spine-sht .sh-teil small{ display:block; font-size:calc(var(--spine-h) * .03); }
+  .spine-sht .sh-teil b{ display:block; margin-top:calc(var(--spine-h) * .008); font-weight:500; font-size:calc(var(--spine-h) * .062); letter-spacing:0; }
+  .spine-sht .sh-t{ margin-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; white-space:nowrap; letter-spacing:.06em;
+    font-family:'EB Garamond',Georgia,serif; font-size:calc(var(--spine-h) * .024); line-height:1.4; text-align:center; }
+  .spine-sht .sh-ed{ margin-top:auto; padding-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; white-space:normal; max-height:calc(var(--spine-h) * .23); line-height:1.35; text-align:center; letter-spacing:.04em;
+    font-family:'EB Garamond',Georgia,serif; font-size:calc(var(--spine-h) * .021); opacity:.85; }
+  .spine-sht .sh-logo{ margin:calc(var(--spine-h) * .025) 0 calc(var(--spine-h) * .008); width:calc(var(--spine-h) * .05); height:calc(var(--spine-h) * .05); border:1px solid currentColor; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; font-family:'EB Garamond',serif; font-style:italic; font-size:calc(var(--spine-h) * .026); }
+  .spine-sht .sh-pub{ margin-bottom:calc(var(--spine-h) * .035); font-family:'EB Garamond',Georgia,serif; font-size:calc(var(--spine-h) * .022); letter-spacing:.08em; }
+  /* 雷虛 金東華 全集 (雷虛佛敎學術院) */
+  .spine-lhk{
+    width:calc(var(--spine-h) * .16); position:relative; overflow:hidden; color:#1c1b19;
+    background:linear-gradient(90deg, #dedbd3 0%, #f4f2ec 13%, #fbfaf6 50%, #f1efe8 87%, #d8d4cb 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -4px 0 7px rgba(0,0,0,.12), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-lhk > *{ flex:0 0 auto; }
+  .spine-lhk .lh-ser{ margin-top:calc(var(--spine-h) * .04); display:flex; flex-direction:column; align-items:center; line-height:1.1;
+    font-family:'Noto Sans KR',sans-serif; font-weight:500; font-size:clamp(5.5px,.95vh,7.4px); color:#3a3833; }
+  .spine-lhk .lh-ser .g{ height:.45em; }
+  .spine-lhk .lh-no{ margin-top:4px; min-width:1.3em; padding:1px 2px; border:.8px solid #3a3833; text-align:center;
+    font-family:'Noto Sans KR',sans-serif; font-weight:500; font-size:clamp(5.5px,.95vh,7.4px); line-height:1.15; color:#3a3833; }
+  .spine-lhk .lh-rule{ align-self:stretch; margin:calc(var(--spine-h) * .02) 4px 0; height:.8px; background:#8a857c; }
+  .spine-lhk .lh-t{ margin-top:calc(var(--spine-h) * .028); display:flex; flex-direction:column; align-items:center; gap:calc(var(--spine-h) * .012);
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:calc(var(--spine-h) * var(--tf, .042)); line-height:1.02; }
+  .spine-lhk .lh-t > span{ display:flex; flex-direction:column; align-items:center; }
+  .spine-lhk .gap{ height:.35em; }
+  .spine-lhk img.lh-fig{ width:40%; height:auto; margin-top:auto; opacity:.85; }
+  .spine-lhk .lh-pub{ margin:calc(var(--spine-h) * .02) 0 calc(var(--spine-h) * .03); display:flex; flex-direction:column; align-items:center; line-height:1.08;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(5.5px,.92vh,7.2px); color:#2c2a26; }
   /* 민족사 불교경전 */
   .spine-mj{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -3499,7 +3557,7 @@
       category: ['10-0001'],
       isbn: '9791162851364',
       poster: 'covers/0125.jpg',
-      url: 'https://drive.google.com/file/d/1R5F7T14SJH1DiVSISbLzCz_Zg8vrtpwb/view?usp=sharing'
+      url: 'https://drive.google.com/file/d/1NLW6wms0Xik3KucdVPkd4etWZ1WgUjNc/view?usp=sharing'
     },
     {
       title: '나도 때론 울고 싶다',
@@ -3532,6 +3590,14 @@
       isbn: '9788992783255',
       poster: 'covers/0129.jpg',
       url: 'https://drive.google.com/file/d/1Rtr2wrj2w3XvKGpAtToIWjog-fJeuUrr/view?usp=sharing'
+    },
+    {
+      title: '명상과 만나다 — 선지식 · 지성인과의 만남',
+      badge: '주경 · 동국대학교 불교학술원 종학연구소 엮음 · 동국 · 2023 서울국제명상엑스포 강연집',
+      category: ['10-0001'],
+      poster: 'covers/0677.jpg',
+      url: 'https://drive.google.com/file/d/1qi7e_XGJUE-fwSmXvxfMVOxGoOG6YkbL/view?usp=sharing',
+      tags: ['명상과 만나다', '주경', '주경스님', '주경 스님', '서울국제명상엑스포', '명상엑스포', '명상', '선지식', '강연집', '종학연구소', '불교학술원', '동국대학교', 'Seoul International Meditation Expo']
     },
     {
       title: '빠알리 경장 4부 니까야 (디가 · 맛지마 · 상윳따 · 앙굿따라)',
@@ -4470,20 +4536,6 @@
       url: 'https://drive.google.com/file/d/1k6g19pUE6zzKNC_ZHg4sKvFjghp3GHQz/view?usp=sharing'
     },
     {
-      title: '佛敎學槪論 (불교학개론)',
-      badge: '雷虛 金東華 (뇌허 김동화) · 雷虛 金東華 全集 1 · 雷虛佛敎學術院 · 2001',
-      category: ['10-0000'],
-      poster: 'covers/0199.jpg',
-      url: 'https://drive.google.com/file/d/1NGcviyvMBwcdet41vlK8uelGc-VbLDdC/view?usp=sharing'
-    },
-    {
-      title: '原始佛敎思想 (원시불교사상)',
-      badge: '雷虛 金東華 (뇌허 김동화) · 雷虛 金東華 全集 3 · 雷虛佛敎學術院',
-      category: ['05-0000'],
-      poster: 'covers/0200.jpg',
-      url: 'https://drive.google.com/file/d/1gruYqD4NU54x4JYeffQYjNtJ72EtdLds/view?usp=sharing'
-    },
-    {
       title: '부파불교 원전의 이해 (부록: 청정도론과 구사론의 오온론 원문)',
       badge: '최봉수 · 불교원전번역연구소 출판부',
       category: ['05-0000'],
@@ -4568,8 +4620,8 @@
       poster: 'covers/0210.jpg',
       spineDesign: { kind: 'hgb', title: '인도철학사', author: '라다크리슈난 저\n이거룡 역' },
       volumes: [
-        { label: '제1권', title: '인도철학사 I', vno: 'Ⅰ', url: '', missing: true },
-        { label: '제2권', title: '인도철학사 II', vno: 'Ⅱ', url: '', missing: true },
+        { label: '제1권', title: '인도철학사 I', vno: 'Ⅰ', url: 'https://drive.google.com/file/d/1ZkOL0QU1LsYKGuiyN-u4wiaQ9xEL-NCp/view?usp=sharing' },
+        { label: '제2권', title: '인도철학사 II', vno: 'Ⅱ', url: 'https://drive.google.com/file/d/1asPOqiCOplzrgjciiDKCf5xk8O3SnHG0/view?usp=sharing' },
         { label: '제3권', title: '인도철학사 III', vno: 'Ⅲ', url: 'https://drive.google.com/file/d/1vFQgX5BHFTmXFl5Opb3B3sGcwtwzNUxR/view?usp=sharing' },
         { label: '제4권', title: '인도철학사 IV', vno: 'Ⅳ', url: 'https://drive.google.com/file/d/1afQ1iYvGn9ahl4IvCnM57EOT3Nf-HjyH/view?usp=sharing' }
       ],
@@ -5060,14 +5112,6 @@
       poster: 'covers/0271.jpg',
       url: 'https://drive.google.com/file/d/1h0DZXJBJZ9CcQDv4dzGgeNAJ7vL-dJz1/view?usp=sharing',
       tags: ['해인승가대학', '해인사', '강원', '동문', '동문수첩']
-    },
-    {
-      title: '韓國歷代高僧傳 (한국역대고승전)',
-      badge: '雷虛 金東華 (뇌허 김동화) · 雷虛 金東華 全集 12 · 雷虛佛敎學術院',
-      category: ['01-0001'],
-      poster: 'covers/0272.jpg',
-      url: 'https://drive.google.com/file/d/1BWQoQk7FEHsZVo-1f5k6ZwkcYa1U82sN/view?usp=sharing',
-      tags: ['역대고승전', '고승전', '김동화', '뇌허']
     },
     {
       title: '觀音禪院 芳啣錄 (관음선원 방함록)',
@@ -6801,7 +6845,7 @@
         { label: '조선 37', era: '조선', vno: '37', name: '역산집', title: '역산집 (櫟山集) · 영허 선영 · 공근식 옮김', look: 'w', url: '', missing: true },
         { label: '조선 38', era: '조선', vno: '38', name: '함허당득통화상어록', title: '함허당득통화상어록 (涵虛堂得通和尙語錄) · 득통 기화 · 박해당 옮김', look: 'w', url: '', missing: true },
         { label: '조선 39', era: '조선', vno: '39', name: '가산고', title: '가산고 (伽山藁) · 월하 계오 · 성재헌 옮김', look: 'w', url: '', missing: true },
-        { label: '조선 40', era: '조선', vno: '40', name: '선원제전집도서과평', title: '선원제전집도서과평 (禪源諸詮集都序科評) · 설암 추붕 · 이정희 옮김', look: 'w', url: '', missing: true },
+        { label: '조선 40', era: '조선', vno: '40', name: '선원제전집도서과평', title: '선원제전집도서과평 (禪源諸詮集都序科評) · 설암 추붕 · 이정희 옮김', look: 'w', url: 'https://drive.google.com/file/d/1i9oiF6mHk9rZaguZLRuaIeikJHjjlX_6/view?usp=sharing' },
         { label: '조선 41', era: '조선', vno: '41', name: '함홍당집', title: '함홍당집 (涵弘堂集) · 함홍 치능 · 성재헌 옮김', look: 'w', url: '', missing: true },
         { label: '조선 42', era: '조선', vno: '42', name: '백암집', title: '백암집 (栢庵集) · 백암 성총 · 유호선 옮김', look: 'w', url: '', missing: true },
         { label: '조선 43', era: '조선', vno: '43', name: '동계집', title: '동계집 (東溪集) · 동계 경일 · 김승호 옮김', look: 'w', url: '', missing: true },
@@ -6912,31 +6956,31 @@
       // 책등: 미색 천 · 예서체 제목(실물 책등 사진에서 따옴) · 아래 세로로 권수 · 부명
       spineDesign: { kind: 'ndj' },
       volumes: [
-        { label: '第一卷', vno: '1', sub: '律部一', title: '南傳大藏經 第一卷 · 律藏 一', url: '', missing: true },
-        { label: '第二卷', vno: '2', sub: '律部二', title: '南傳大藏經 第二卷 · 律藏 二', url: '', missing: true },
-        { label: '第三卷', vno: '3', sub: '律部三', title: '南傳大藏經 第三卷 · 律藏 三', url: '', missing: true },
-        { label: '第四卷', vno: '4', sub: '律部四', title: '南傳大藏經 第四卷 · 律藏 四', url: '', missing: true },
-        { label: '第五卷', vno: '5', sub: '律部五', title: '南傳大藏經 第五卷 · 律藏 五', url: '', missing: true },
-        { label: '第六卷', vno: '6', sub: '長部經典一', title: '南傳大藏經 第六卷 · 長部經典 一', url: '', missing: true },
-        { label: '第七卷', vno: '7', sub: '長部經典二', title: '南傳大藏經 第七卷 · 長部經典 二', url: '', missing: true },
-        { label: '第八卷', vno: '8', sub: '長部經典三', title: '南傳大藏經 第八卷 · 長部經典 三', url: '', missing: true },
-        { label: '第九卷', vno: '9', sub: '中部經典一', title: '南傳大藏經 第九卷 · 中部經典 一', url: '', missing: true },
-        { label: '第十卷', vno: '10', sub: '中部經典二', title: '南傳大藏經 第十卷 · 中部經典 二', url: '', missing: true },
-        { label: '第十一卷上', vno: '11上', sub: '中部經典三', title: '南傳大藏經 第十一卷上 · 中部經典 三', url: '', missing: true },
-        { label: '第十一卷下', vno: '11下', sub: '中部經典四', title: '南傳大藏經 第十一卷下 · 中部經典 四', url: '', missing: true },
-        { label: '第十二卷', vno: '12', sub: '相應部經典一', title: '南傳大藏經 第十二卷 · 相應部經典 一', url: '', missing: true },
-        { label: '第十三卷', vno: '13', sub: '相應部經典二', title: '南傳大藏經 第十三卷 · 相應部經典 二', url: '', missing: true },
-        { label: '第十四卷', vno: '14', sub: '相應部經典三', title: '南傳大藏經 第十四卷 · 相應部經典 三', url: '', missing: true },
-        { label: '第十五卷', vno: '15', sub: '相應部經典四', title: '南傳大藏經 第十五卷 · 相應部經典 四', url: '', missing: true },
-        { label: '第十六卷上', vno: '16上', sub: '相應部經典五', title: '南傳大藏經 第十六卷上 · 相應部經典 五', url: '', missing: true },
-        { label: '第十六卷下', vno: '16下', sub: '相應部經典六', title: '南傳大藏經 第十六卷下 · 相應部經典 六', url: '', missing: true },
-        { label: '第十七卷', vno: '17', sub: '增支部經典一', title: '南傳大藏經 第十七卷 · 增支部經典 一', url: '', missing: true },
-        { label: '第十八卷', vno: '18', sub: '增支部經典二', title: '南傳大藏經 第十八卷 · 增支部經典 二', url: '', missing: true },
-        { label: '第十九卷', vno: '19', sub: '增支部經典三', title: '南傳大藏經 第十九卷 · 增支部經典 三', url: '', missing: true },
-        { label: '第二十卷', vno: '20', sub: '增支部經典四', title: '南傳大藏經 第二十卷 · 增支部經典 四', url: '', missing: true },
-        { label: '第二十一卷', vno: '21', sub: '增支部經典五', title: '南傳大藏經 第二十一卷 · 增支部經典 五', url: '', missing: true },
-        { label: '第二十二卷上', vno: '22上', sub: '增支部經典六', title: '南傳大藏經 第二十二卷上 · 增支部經典 六', url: '', missing: true },
-        { label: '第二十二卷下', vno: '22下', sub: '增支部經典七', title: '南傳大藏經 第二十二卷下 · 增支部經典 七', url: '', missing: true },
+        { label: '第一卷', vno: '1', sub: '律部一', title: '南傳大藏經 第一卷 · 律藏 一', url: 'https://drive.google.com/file/d/1kCv-Q3BgR-L2uK5BDj6JpNPQqKXTRfI2/view?usp=sharing' },
+        { label: '第二卷', vno: '2', sub: '律部二', title: '南傳大藏經 第二卷 · 律藏 二', url: 'https://drive.google.com/file/d/1z7tYlU8pLTMqG-t1ZnfYHMjZbpA9TEGo/view?usp=sharing' },
+        { label: '第三卷', vno: '3', sub: '律部三', title: '南傳大藏經 第三卷 · 律藏 三', url: 'https://drive.google.com/file/d/1WGs6OPR7rPMjaN9DfZx5bORMPljdfZEH/view?usp=sharing' },
+        { label: '第四卷', vno: '4', sub: '律部四', title: '南傳大藏經 第四卷 · 律藏 四', url: 'https://drive.google.com/file/d/1LI8xzy_-vTTKs8dRKBOnrsvLU6x-f4Bs/view?usp=sharing' },
+        { label: '第五卷', vno: '5', sub: '律部五', title: '南傳大藏經 第五卷 · 律藏 五', url: 'https://drive.google.com/file/d/1Rj45Ad0hH01DqCvYDRwM0cty6MlJby4q/view?usp=sharing' },
+        { label: '第六卷', vno: '6', sub: '長部經典一', title: '南傳大藏經 第六卷 · 長部經典 一', url: 'https://drive.google.com/file/d/1a0RJA_EESYseVy-FMo2z6oEbRE0i7Vtx/view?usp=sharing' },
+        { label: '第七卷', vno: '7', sub: '長部經典二', title: '南傳大藏經 第七卷 · 長部經典 二', url: 'https://drive.google.com/file/d/1gtwnmlcYruVQN44ZwFNXaG2Wu-_Bvgoi/view?usp=sharing' },
+        { label: '第八卷', vno: '8', sub: '長部經典三', title: '南傳大藏經 第八卷 · 長部經典 三', url: 'https://drive.google.com/file/d/1SHFQHaikMC6ZDvcsnJakjaxxA-dyt18D/view?usp=sharing' },
+        { label: '第九卷', vno: '9', sub: '中部經典一', title: '南傳大藏經 第九卷 · 中部經典 一', url: 'https://drive.google.com/file/d/1zl6mpzSrBk3u_IGNmZs6GBBj_JV3S3nu/view?usp=sharing' },
+        { label: '第十卷', vno: '10', sub: '中部經典二', title: '南傳大藏經 第十卷 · 中部經典 二', url: 'https://drive.google.com/file/d/1LxPha_-7vWBA3hFgwdEEywBzi08eBK85/view?usp=sharing' },
+        { label: '第十一卷上', vno: '11上', sub: '中部經典三', title: '南傳大藏經 第十一卷上 · 中部經典 三', url: 'https://drive.google.com/file/d/1eYeEZwzQNDie1V3qqpfVVmHsK9RHooOz/view?usp=sharing' },
+        { label: '第十一卷下', vno: '11下', sub: '中部經典四', title: '南傳大藏經 第十一卷下 · 中部經典 四', url: 'https://drive.google.com/file/d/1g0_L2-yxdGBYK03fVrTBERxWolt8UYA-/view?usp=sharing' },
+        { label: '第十二卷', vno: '12', sub: '相應部經典一', title: '南傳大藏經 第十二卷 · 相應部經典 一', url: 'https://drive.google.com/file/d/19Z5E06qL1e7sD-yCfJTKRR0piHeYgBrS/view?usp=sharing' },
+        { label: '第十三卷', vno: '13', sub: '相應部經典二', title: '南傳大藏經 第十三卷 · 相應部經典 二', url: 'https://drive.google.com/file/d/1YuWk1DM0i9LnAkG7fqPLUfMXB7Vgp3IF/view?usp=sharing' },
+        { label: '第十四卷', vno: '14', sub: '相應部經典三', title: '南傳大藏經 第十四卷 · 相應部經典 三', url: 'https://drive.google.com/file/d/1WVCM7GCuVezpCIBxiNDrvlV6NCOSYfbl/view?usp=sharing' },
+        { label: '第十五卷', vno: '15', sub: '相應部經典四', title: '南傳大藏經 第十五卷 · 相應部經典 四', url: 'https://drive.google.com/file/d/1U2Mrz-1CtF7YB4Oan1JMv9R8KQsNhPOd/view?usp=sharing' },
+        { label: '第十六卷上', vno: '16上', sub: '相應部經典五', title: '南傳大藏經 第十六卷上 · 相應部經典 五', url: 'https://drive.google.com/file/d/1YF-DWqVqbO-__1JqKy1-UJ1ylcgfSXxl/view?usp=sharing' },
+        { label: '第十六卷下', vno: '16下', sub: '相應部經典六', title: '南傳大藏經 第十六卷下 · 相應部經典 六', url: 'https://drive.google.com/file/d/1PmlYMbVjG_atVUbV2VC4anB4amdFsBPj/view?usp=sharing' },
+        { label: '第十七卷', vno: '17', sub: '增支部經典一', title: '南傳大藏經 第十七卷 · 增支部經典 一', url: 'https://drive.google.com/file/d/1dbkyjHl-yz1WM5WM0HHMvoul12v3b1Jp/view?usp=sharing' },
+        { label: '第十八卷', vno: '18', sub: '增支部經典二', title: '南傳大藏經 第十八卷 · 增支部經典 二', url: 'https://drive.google.com/file/d/1IgHPJvl4-FAMkbt_iiRhLctKyvFurumr/view?usp=sharing' },
+        { label: '第十九卷', vno: '19', sub: '增支部經典三', title: '南傳大藏經 第十九卷 · 增支部經典 三', url: 'https://drive.google.com/file/d/1eGdMwBQZCaCz7ncjcfZlv5aiAhCrMx1A/view?usp=sharing' },
+        { label: '第二十卷', vno: '20', sub: '增支部經典四', title: '南傳大藏經 第二十卷 · 增支部經典 四', url: 'https://drive.google.com/file/d/1lq9476BwbFPauKJ2aWkKKWQtJ9IY5awq/view?usp=sharing' },
+        { label: '第二十一卷', vno: '21', sub: '增支部經典五', title: '南傳大藏經 第二十一卷 · 增支部經典 五', url: 'https://drive.google.com/file/d/1nmT7SoloTSZYq_ik_pX2NEfQVDnVX_l7/view?usp=sharing' },
+        { label: '第二十二卷上', vno: '22上', sub: '增支部經典六', title: '南傳大藏經 第二十二卷上 · 增支部經典 六', url: 'https://drive.google.com/file/d/1gosj8nDlSvTCz7JAPs2BLj9TfS27IDhv/view?usp=sharing' },
+        { label: '第二十二卷下', vno: '22下', sub: '增支部經典七', title: '南傳大藏經 第二十二卷下 · 增支部經典 七', url: 'https://drive.google.com/file/d/1NPsiyuQIrvwxKOziW_Nn9SynzSCz7hRi/view?usp=sharing' },
         { label: '第二十三卷', vno: '23', sub: '小部經典一', title: '南傳大藏經 第二十三卷 · 小部經典 一', url: '', missing: true },
         { label: '第二十四卷', vno: '24', sub: '小部經典二', title: '南傳大藏經 第二十四卷 · 小部經典 二', url: '', missing: true },
         { label: '第二十五卷', vno: '25', sub: '小部經典三', title: '南傳大藏經 第二十五卷 · 小部經典 三', url: '', missing: true },
@@ -7934,24 +7978,24 @@
         { label: '第十卷', vno: '10', sub: '華嚴部 下', title: '大正新脩大藏經 第10卷 · 華嚴部 下', url: '', missing: true },
         { label: '第十一卷', vno: '11', sub: '寶積部 上', title: '大正新脩大藏經 第11卷 · 寶積部 上', url: 'https://drive.google.com/file/d/1QbAreCadzW6tQPh3a7aq9tsQMnkWqyOI/view?usp=sharing' },
         { label: '第十二卷', vno: '12', sub: '寶積部 下 · 涅槃部 全', title: '大正新脩大藏經 第12卷 · 寶積部 下 · 涅槃部 全', url: '', missing: true },
-        { label: '第十三卷', vno: '13', sub: '大集部 全', title: '大正新脩大藏經 第13卷 · 大集部 全', url: '', missing: true },
+        { label: '第十三卷', vno: '13', sub: '大集部 全', title: '大正新脩大藏經 第13卷 · 大集部 全', url: 'https://drive.google.com/file/d/1CwvVYC65V2l-6gQwniC0YgyFiBp0X4OB/view?usp=sharing' },
         { label: '第十四卷', vno: '14', sub: '經集部 一', title: '大正新脩大藏經 第14卷 · 經集部 一', url: 'https://drive.google.com/file/d/17JtKgoAMWEe_1I8elDjzJSx0C2yMexlj/view?usp=sharing' },
-        { label: '第十五卷', vno: '15', sub: '經集部 二', title: '大正新脩大藏經 第15卷 · 經集部 二', url: '', missing: true },
-        { label: '第十六卷', vno: '16', sub: '經集部 三', title: '大正新脩大藏經 第16卷 · 經集部 三', url: '', missing: true },
-        { label: '第十七卷', vno: '17', sub: '經集部 四', title: '大正新脩大藏經 第17卷 · 經集部 四', url: '', missing: true },
-        { label: '第十八卷', vno: '18', sub: '密教部 一', title: '大正新脩大藏經 第18卷 · 密教部 一', url: '', missing: true },
-        { label: '第十九卷', vno: '19', sub: '密教部 二', title: '大正新脩大藏經 第19卷 · 密教部 二', url: '', missing: true },
-        { label: '第二十卷', vno: '20', sub: '密教部 三', title: '大正新脩大藏經 第20卷 · 密教部 三', url: '', missing: true },
-        { label: '第二十一卷', vno: '21', sub: '密教部 四', title: '大正新脩大藏經 第21卷 · 密教部 四', url: '', missing: true },
-        { label: '第二十二卷', vno: '22', sub: '律部 一', title: '大正新脩大藏經 第22卷 · 律部 一', url: '', missing: true },
-        { label: '第二十三卷', vno: '23', sub: '律部 二', title: '大正新脩大藏經 第23卷 · 律部 二', url: '', missing: true },
-        { label: '第二十四卷', vno: '24', sub: '律部 三', title: '大正新脩大藏經 第24卷 · 律部 三', url: '', missing: true },
-        { label: '第二十五卷', vno: '25', sub: '釋經論部 上', title: '大正新脩大藏經 第25卷 · 釋經論部 上', url: '', missing: true },
-        { label: '第二十六卷', vno: '26', sub: '釋經論部 下 · 毘曇部 一', title: '大正新脩大藏經 第26卷 · 釋經論部 下 · 毘曇部 一', url: '', missing: true },
-        { label: '第二十七卷', vno: '27', sub: '毘曇部 二', title: '大正新脩大藏經 第27卷 · 毘曇部 二', url: '', missing: true },
-        { label: '第二十八卷', vno: '28', sub: '毘曇部 三', title: '大正新脩大藏經 第28卷 · 毘曇部 三', url: '', missing: true },
-        { label: '第二十九卷', vno: '29', sub: '毘曇部 四', title: '大正新脩大藏經 第29卷 · 毘曇部 四', url: '', missing: true },
-        { label: '第三十卷', vno: '30', sub: '中觀部 全 · 瑜伽部 上', title: '大正新脩大藏經 第30卷 · 中觀部 全 · 瑜伽部 上', url: '', missing: true },
+        { label: '第十五卷', vno: '15', sub: '經集部 二', title: '大正新脩大藏經 第15卷 · 經集部 二', url: 'https://drive.google.com/file/d/1gGVVkLmvX7LL7238S8g3cKjGI0TGhtYn/view?usp=sharing' },
+        { label: '第十六卷', vno: '16', sub: '經集部 三', title: '大正新脩大藏經 第16卷 · 經集部 三', url: 'https://drive.google.com/file/d/17MvsEsaDoiL7jsm0GjPEKjfCHB9HGtxw/view?usp=sharing' },
+        { label: '第十七卷', vno: '17', sub: '經集部 四', title: '大正新脩大藏經 第17卷 · 經集部 四', url: 'https://drive.google.com/file/d/1k8P-Px2MLVHnC07aDqJGsTud5Qn1qXR5/view?usp=sharing' },
+        { label: '第十八卷', vno: '18', sub: '密教部 一', title: '大正新脩大藏經 第18卷 · 密教部 一', url: 'https://drive.google.com/file/d/1z2norazPG50b9Uk0sRb9lyOPDr76P11F/view?usp=sharing' },
+        { label: '第十九卷', vno: '19', sub: '密教部 二', title: '大正新脩大藏經 第19卷 · 密教部 二', url: 'https://drive.google.com/file/d/1UTowOfPycdhnzS3blj9TGcO6rMt3drZ8/view?usp=sharing' },
+        { label: '第二十卷', vno: '20', sub: '密教部 三', title: '大正新脩大藏經 第20卷 · 密教部 三', url: 'https://drive.google.com/file/d/1xxx7gSy8VOxFuKJ-GRp27O2ZUnTKfacf/view?usp=sharing' },
+        { label: '第二十一卷', vno: '21', sub: '密教部 四', title: '大正新脩大藏經 第21卷 · 密教部 四', url: 'https://drive.google.com/file/d/1KQ_JAqxbKRSxS-vlGI9NcKpsRfs4iPQa/view?usp=sharing' },
+        { label: '第二十二卷', vno: '22', sub: '律部 一', title: '大正新脩大藏經 第22卷 · 律部 一', url: 'https://drive.google.com/file/d/1Gg-Avun52pc31rHjD6iaxk_rUn8HQrUO/view?usp=sharing' },
+        { label: '第二十三卷', vno: '23', sub: '律部 二', title: '大正新脩大藏經 第23卷 · 律部 二', url: 'https://drive.google.com/file/d/1j6-wWi8iXP757E-Lnm-WwhxxGe4aXpMs/view?usp=sharing' },
+        { label: '第二十四卷', vno: '24', sub: '律部 三', title: '大正新脩大藏經 第24卷 · 律部 三', url: 'https://drive.google.com/file/d/12R75qyoleZ5Z9ENKHUcPC_GnbVYY5Vmh/view?usp=sharing' },
+        { label: '第二十五卷', vno: '25', sub: '釋經論部 上', title: '大正新脩大藏經 第25卷 · 釋經論部 上', url: 'https://drive.google.com/file/d/1LNtAgTPRHpcsmLxLUS9d-khS5gAzFu6u/view?usp=sharing' },
+        { label: '第二十六卷', vno: '26', sub: '釋經論部 下 · 毘曇部 一', title: '大正新脩大藏經 第26卷 · 釋經論部 下 · 毘曇部 一', url: 'https://drive.google.com/file/d/1zn1JUR5beQM9CHYrWlUli1V2_eU6sE70/view?usp=sharing' },
+        { label: '第二十七卷', vno: '27', sub: '毘曇部 二', title: '大正新脩大藏經 第27卷 · 毘曇部 二', url: 'https://drive.google.com/file/d/1FycZIkS7JkGG-SdCC_97i2wH0dHGj-hY/view?usp=sharing' },
+        { label: '第二十八卷', vno: '28', sub: '毘曇部 三', title: '大正新脩大藏經 第28卷 · 毘曇部 三', url: 'https://drive.google.com/file/d/1NaeYpGbRd6CQUDaz_ZYilCZrx642-axV/view?usp=sharing' },
+        { label: '第二十九卷', vno: '29', sub: '毘曇部 四', title: '大正新脩大藏經 第29卷 · 毘曇部 四', url: 'https://drive.google.com/file/d/1Cwb7v-6MPC6YjJInS6XnPpFmh73eC3ar/view?usp=sharing' },
+        { label: '第三十卷', vno: '30', sub: '中觀部 全 · 瑜伽部 上', title: '大正新脩大藏經 第30卷 · 中觀部 全 · 瑜伽部 上', url: 'https://drive.google.com/file/d/1EXvMv5dDt1mlPl5FnFHCOGRQz0IxZ5wj/view?usp=sharing' },
         { label: '第三十一卷', vno: '31', sub: '瑜伽部 下', title: '大正新脩大藏經 第31卷 · 瑜伽部 下', url: '', missing: true },
         { label: '第三十二卷', vno: '32', sub: '論集部 全', title: '大正新脩大藏經 第32卷 · 論集部 全', url: '', missing: true },
         { label: '第三十三卷', vno: '33', sub: '經疏部 一', title: '大正新脩大藏經 第33卷 · 經疏部 一', url: '', missing: true },
@@ -9024,6 +9068,99 @@
         { label: '천수경 입문', title: '도표로 읽는 천수경 입문', big: '천수경 입문', author: '', color: '#ee3e61', ink: '#141416', top: '#ffffff', url: 'https://drive.google.com/file/d/1DUf5XfwJhvmlkSlSHXqLicMOuqzZ7EAH/view?usp=sharing' }
       ],
       tags: ['도표로 읽는', '도표로 읽는 불교입문', '불교입문', '입문', '이자랑', '이필원', '배종훈', '민족사', '세종도서', '붓다의 생애', '불교사', '경전입문', '명상입문', '명상', '반야심경', '부처님 생애', '불교교리', '유식입문', '유식', '천수경', '천수경 입문']
+    },
+    {
+      title: '國譯一切經 (국역일체경)',
+      badge: '大東出版社 · 印度撰述部 (釋經論部 · 毘曇部 · 瑜伽部 · 論集部) · 和漢撰述部 (論疏部 · 護教部)',
+      category: ['06-0003'],
+      langs: ['일본어'],
+      poster: 'covers/0678.jpg?v=2',
+      spineDesign: { kind: 'kyi', titleImg: 'spines/kyi-title.png' },
+      volumes: [
+        { label: '釋經論部 5上', title: '國譯一切經 印度撰述部 · 釋經論部 五上', dept: '印度撰述部', sec: '釋經論部', no: '五上', url: 'https://drive.google.com/file/d/1r-FHJruNuTPcCcFpBUSLz2DDcG2wIwsO/view?usp=sharing' },
+        { label: '釋經論部 6', title: '國譯一切經 印度撰述部 · 釋經論部 六', dept: '印度撰述部', sec: '釋經論部', no: '六', url: 'https://drive.google.com/file/d/1WZMiMC395jc9-VI0-ivMrF1DaujAXNKN/view?usp=sharing' },
+        { label: '毘曇部 30', title: '國譯一切經 印度撰述部 · 毘曇部 三十', dept: '印度撰述部', sec: '毘曇部', no: '三十', url: 'https://drive.google.com/file/d/1r_cvRuInD3Tn10jxpwpv47Q04xBWkFsj/view?usp=sharing' },
+        { label: '瑜伽部 1', title: '國譯一切經 印度撰述部 · 瑜伽部 一', dept: '印度撰述部', sec: '瑜伽部', no: '一', url: '', missing: true },
+        { label: '瑜伽部 2', title: '國譯一切經 印度撰述部 · 瑜伽部 二', dept: '印度撰述部', sec: '瑜伽部', no: '二', url: '', missing: true },
+        { label: '瑜伽部 3', title: '國譯一切經 印度撰述部 · 瑜伽部 三', dept: '印度撰述部', sec: '瑜伽部', no: '三', url: '', missing: true },
+        { label: '瑜伽部 4', title: '國譯一切經 印度撰述部 · 瑜伽部 四', dept: '印度撰述部', sec: '瑜伽部', no: '四', url: '', missing: true },
+        { label: '瑜伽部 5', title: '國譯一切經 印度撰述部 · 瑜伽部 五', dept: '印度撰述部', sec: '瑜伽部', no: '五', url: '', missing: true },
+        { label: '瑜伽部 6', title: '國譯一切經 印度撰述部 · 瑜伽部 六', dept: '印度撰述部', sec: '瑜伽部', no: '六', url: '', missing: true },
+        { label: '瑜伽部 7', title: '國譯一切經 印度撰述部 · 瑜伽部 七', dept: '印度撰述部', sec: '瑜伽部', no: '七', url: '', missing: true },
+        { label: '瑜伽部 8', title: '國譯一切經 印度撰述部 · 瑜伽部 八', dept: '印度撰述部', sec: '瑜伽部', no: '八', url: '', missing: true },
+        { label: '瑜伽部 9', title: '國譯一切經 印度撰述部 · 瑜伽部 九', dept: '印度撰述部', sec: '瑜伽部', no: '九', url: '', missing: true },
+        { label: '瑜伽部 10', title: '國譯一切經 印度撰述部 · 瑜伽部 十', dept: '印度撰述部', sec: '瑜伽部', no: '十', url: 'https://drive.google.com/file/d/1IeYyveoXYoucvIJZiliD-7HvLcDRz17Q/view?usp=sharing' },
+        { label: '瑜伽部 11', title: '國譯一切經 印度撰述部 · 瑜伽部 十一', dept: '印度撰述部', sec: '瑜伽部', no: '十一', url: '', missing: true },
+        { label: '瑜伽部 12', title: '國譯一切經 印度撰述部 · 瑜伽部 十二', dept: '印度撰述部', sec: '瑜伽部', no: '十二', url: '', missing: true },
+        { label: '論集部 2', title: '國譯一切經 印度撰述部 · 論集部 二', dept: '印度撰述部', sec: '論集部', no: '二', url: 'https://drive.google.com/file/d/1QEPOnZhdS2KplO5y_3ahNIp7st6m6LD2/view?usp=sharing' },
+        { label: '論集部 3', title: '國譯一切經 印度撰述部 · 論集部 三', dept: '印度撰述部', sec: '論集部', no: '三', url: 'https://drive.google.com/file/d/1CtH3Y2XLpdLIF5ajFJciJOw8fvhw5_OO/view?usp=sharing' },
+        { label: '論集部 4', title: '國譯一切經 印度撰述部 · 論集部 四', dept: '印度撰述部', sec: '論集部', no: '四', url: 'https://drive.google.com/file/d/1nOIOcS_yQbuwqnkXCSzEty48jvtNQ9sj/view?usp=sharing' },
+        { label: '論集部 6', title: '國譯一切經 印度撰述部 · 論集部 六', dept: '印度撰述部', sec: '論集部', no: '六', url: 'https://drive.google.com/file/d/1UkOLWkDduuosOoyu4AWFyelmEC0gBm2F/view?usp=sharing' },
+        { label: '論集部 7', title: '國譯一切經 印度撰述部 · 論集部 七', dept: '印度撰述部', sec: '論集部', no: '七', url: 'https://drive.google.com/file/d/1BXZzBPkm0MgPi-G0E-VvkQvGKDlEPpZX/view?usp=sharing' },
+        { label: '論疏部 1', title: '國譯一切經 和漢撰述部 · 論疏部 一', dept: '和漢撰述部', sec: '論疏部', no: '一', url: 'https://drive.google.com/file/d/10lOnY7T25IPzxlom0AOllxikxTB88OXX/view?usp=sharing' },
+        { label: '論疏部 2', title: '國譯一切經 和漢撰述部 · 論疏部 二', dept: '和漢撰述部', sec: '論疏部', no: '二', url: 'https://drive.google.com/file/d/1RU9LeApr21786gJ9QHB_EUTXt7NS3bkc/view?usp=sharing' },
+        { label: '論疏部 4', title: '國譯一切經 和漢撰述部 · 論疏部 四', dept: '和漢撰述部', sec: '論疏部', no: '四', url: 'https://drive.google.com/file/d/1mrcndY1Fa9cO8R0p7QYtX5-NH_7kJUFs/view?usp=sharing' },
+        { label: '論疏部 8', title: '國譯一切經 和漢撰述部 · 論疏部 八', dept: '和漢撰述部', sec: '論疏部', no: '八', url: 'https://drive.google.com/file/d/1l-apt1gJXdzT8dhR3lOBZom2UMdBP6U5/view?usp=sharing' },
+        { label: '論疏部 9', title: '國譯一切經 和漢撰述部 · 論疏部 九', dept: '和漢撰述部', sec: '論疏部', no: '九', url: 'https://drive.google.com/file/d/1YU7Jv-NEqL2tuBXocMlxdqDeeL-tkJ-6/view?usp=sharing' },
+        { label: '論疏部 10', title: '國譯一切經 和漢撰述部 · 論疏部 十', dept: '和漢撰述部', sec: '論疏部', no: '十', url: 'https://drive.google.com/file/d/1_VPoAQmgBx_T1FxddyP5sRe68z9UvWPt/view?usp=sharing' },
+        { label: '論疏部 16', title: '國譯一切經 和漢撰述部 · 論疏部 十六', dept: '和漢撰述部', sec: '論疏部', no: '十六', url: 'https://drive.google.com/file/d/1X2lFLEvSLK5n2zug7Svgu56AbNT3PBfX/view?usp=sharing' },
+        { label: '論疏部 17', title: '國譯一切經 和漢撰述部 · 論疏部 十七', dept: '和漢撰述部', sec: '論疏部', no: '十七', url: 'https://drive.google.com/file/d/1VdcZbBxskQOAeFZD0GZEIB8cNUd6cpHv/view?usp=sharing' },
+        { label: '論疏部 18上', title: '國譯一切經 和漢撰述部 · 論疏部 十八上', dept: '和漢撰述部', sec: '論疏部', no: '十八上', url: 'https://drive.google.com/file/d/1OSPPZ7mxl0Wh9mrxAzqeEHj1ZLbR4Bx0/view?usp=sharing' },
+        { label: '論疏部 18下', title: '國譯一切經 和漢撰述部 · 論疏部 十八下', dept: '和漢撰述部', sec: '論疏部', no: '十八下', url: 'https://drive.google.com/file/d/1xFR-qcwnk1NcuAp8qJ-WEqnw5KfWpGgw/view?usp=sharing' },
+        { label: '論疏部 20', title: '國譯一切經 和漢撰述部 · 論疏部 二十', dept: '和漢撰述部', sec: '論疏部', no: '二十', url: 'https://drive.google.com/file/d/1SrXSsLPA8JS2xGsPeAyspxDiWRxRqq1H/view?usp=sharing' },
+        { label: '論疏部 21', title: '國譯一切經 和漢撰述部 · 論疏部 二十一', dept: '和漢撰述部', sec: '論疏部', no: '二十一', url: 'https://drive.google.com/file/d/1YbFmq5ebZFqhkBsb-376ZDW5k3H480u_/view?usp=sharing' },
+        { label: '論疏部 23', title: '國譯一切經 和漢撰述部 · 論疏部 二十三', dept: '和漢撰述部', sec: '論疏部', no: '二十三', url: 'https://drive.google.com/file/d/1YtUn84sunRA8WytJT5jIrImPt1_WOQEP/view?usp=sharing' },
+        { label: '護教部 4', title: '國譯一切經 和漢撰述部 · 護教部 四', dept: '和漢撰述部', sec: '護教部', no: '四', url: 'https://drive.google.com/file/d/1d0tbKgz68ZIV-RYEPbcCGRWY1IZz52WN/view?usp=sharing' },
+        { label: '護教部 5', title: '國譯一切經 和漢撰述部 · 護教部 五', dept: '和漢撰述部', sec: '護教部', no: '五', url: 'https://drive.google.com/file/d/1wL-6DZibHr_YlTxpD7Un_gDUpO0HH6dB/view?usp=sharing' }
+      ],
+      tags: ['국역일체경', '國譯一切經', '国訳一切経', '일체경', '대동출판사', '大東出版社', '인도찬술부', '印度撰述部', '유가부', '瑜伽部', '유식', '瑜伽師地論', '유가사지론', '일본어 번역', 'Kokuyaku Issaikyō', '화한찬술부', '和漢撰述部', '논소부', '論疏部', '논집부', '論集部', '비담부', '毘曇部', '석경론부', '釋經論部', '호교부', '護教部']
+    },
+    {
+      title: 'Sanskrithandschriften aus den Turfanfunden (SHT)',
+      badge: 'Verzeichnis der Orientalischen Handschriften in Deutschland X · Franz Steiner Verlag · Teil 1–12',
+      category: ['04-0002', '08-0001'],
+      langs: ['독일어'],
+      poster: 'covers/0679.jpg',
+      spineDesign: { kind: 'sht' },
+      volumes: [
+        { label: 'Teil 1', title: 'Sanskrithandschriften aus den Turfanfunden Teil 1', vno: '1', ed: 'Waldschmidt · Clawiter · Holzmann', url: 'https://drive.google.com/file/d/1-Oh0jPk0GlfLSSldEHyK2MAjhu-eN6HC/view?usp=sharing' },
+        { label: 'Teil 2', title: 'Sanskrithandschriften aus den Turfanfunden Teil 2', vno: '2', ed: 'Waldschmidt · Clawiter · Sander-Holzmann', url: 'https://drive.google.com/file/d/1aw4uia4IlCtJQ32iv3xEIbxQgmWla8eV/view?usp=sharing' },
+        { label: 'Teil 3', title: 'Sanskrithandschriften aus den Turfanfunden Teil 3', vno: '3', ed: 'Waldschmidt · Clawiter · Sander-Holzmann', url: 'https://drive.google.com/file/d/1OmhUJKLUtfB2b0j9YY73LR33cyELIO4Z/view?usp=sharing' },
+        { label: 'Teil 4', title: 'Sanskrithandschriften aus den Turfanfunden Teil 4', vno: '4', ed: 'Sander · Waldschmidt', url: 'https://drive.google.com/file/d/1oNb1nScolmsRW4qzNy9dR6O_1NJrTpzb/view?usp=sharing' },
+        { label: 'Teil 5', title: 'Sanskrithandschriften aus den Turfanfunden Teil 5', vno: '5', ed: 'Sander · Waldschmidt', url: 'https://drive.google.com/file/d/1OXqTtwImuHSZrMCC8dMsRY_J6mb8KHYN/view?usp=sharing' },
+        { label: 'Teil 6', title: 'Sanskrithandschriften aus den Turfanfunden Teil 6', vno: '6', ed: 'Bechert · Wille', url: 'https://drive.google.com/file/d/1oT5MjdRJ5qXiIv_fiKtvchzCo4JcnG2p/view?usp=sharing' },
+        { label: 'Teil 7', title: 'Sanskrithandschriften aus den Turfanfunden Teil 7', vno: '7', ed: 'Bechert · Wille', url: 'https://drive.google.com/file/d/13cGEKlTqLMrKJk1pHP98ydn1-6hEHP1q/view?usp=sharing' },
+        { label: 'Teil 8', title: 'Sanskrithandschriften aus den Turfanfunden Teil 8', vno: '8', ed: 'Bechert · Wille', url: 'https://drive.google.com/file/d/1crjySOmuuhIklMJu5fFySE-SSqsTaymt/view?usp=sharing' },
+        { label: 'Teil 9', title: 'Sanskrithandschriften aus den Turfanfunden Teil 9', vno: '9', ed: 'Bechert · Wille', url: 'https://drive.google.com/file/d/1Uf8TZvsfGd123nCEzyZQaf4FzpKJXs8i/view?usp=sharing' },
+        { label: 'Teil 10', title: 'Sanskrithandschriften aus den Turfanfunden Teil 10', vno: '10', ed: 'Klaus Wille', url: 'https://drive.google.com/file/d/1_QPYzV_x1XT1TpOF1Co-lNUVyjw_QE4A/view?usp=sharing' },
+        { label: 'Teil 11', title: 'Sanskrithandschriften aus den Turfanfunden Teil 11 · Die Katalognummern 4363–5799', vno: '11', ed: 'Klaus Wille', url: 'https://drive.google.com/file/d/1BePPie3JtDtcwxi0fKOtgRGULUcGdLqh/view?usp=sharing' },
+        { label: 'Teil 12', title: 'Sanskrithandschriften aus den Turfanfunden Teil 12', vno: '12', ed: 'Klaus Wille', url: 'https://drive.google.com/file/d/1eriVssK7mkSVK4Oh2M5j494DJpdbqGwb/view?usp=sharing' }
+      ],
+      tags: ['Sanskrithandschriften aus den Turfanfunden', 'SHT', 'Turfan', '투르판', 'Turfanfunde', 'VOHD', 'Verzeichnis der Orientalischen Handschriften in Deutschland', '산스크리트 사본', 'Sanskrit manuscripts', '사본 목록', 'Katalog', 'Klaus Wille', 'Ernst Waldschmidt', 'Lore Sander', 'Heinz Bechert', 'Franz Steiner', '중앙아시아', '실크로드', '베를린 투르판 컬렉션']
+    },
+    {
+      title: '雷虛 金東華 全集 (뇌허 김동화 전집)',
+      badge: '雷虛 金東華 (뇌허 김동화) · 雷虛佛敎學術院 · 2001 · 전 14권',
+      category: ['01-0005', '10-0000'],
+      poster: 'covers/0680.jpg',
+      spineDesign: { kind: 'lhk' },
+      volumes: [
+        { label: '제1권', title: '佛敎學槪論 (불교학개론)', vno: '1', st: '佛敎學槪論', url: 'https://drive.google.com/file/d/1NGcviyvMBwcdet41vlK8uelGc-VbLDdC/view?usp=sharing' },
+        { label: '제2권', title: '佛敎敎理發達史 (불교교리발달사)', vno: '2', st: '佛敎敎理發達史', url: 'https://drive.google.com/file/d/1jspl6yPJW4RIcstQJnOxA4J2-NdSY_fM/view?usp=sharing' },
+        { label: '제3권', title: '原始佛敎思想 (원시불교사상)', vno: '3', st: '原始佛敎思想', url: 'https://drive.google.com/file/d/1gruYqD4NU54x4JYeffQYjNtJ72EtdLds/view?usp=sharing' },
+        { label: '제4권', title: '大乘佛敎思想 (대승불교사상)', vno: '4', st: '大乘佛敎思想', url: 'https://drive.google.com/file/d/1mMMfTVqnbM1NJJ-Ue_JDEFFR6UhsHXUZ/view?usp=sharing' },
+        { label: '제5권', title: '俱舍學 (구사학 — 소승불교의 유철학사상)', vno: '5', st: '俱舍學', url: 'https://drive.google.com/file/d/1kwe0OQ4isvMjIs1FnlanZ43MJ-GUXaFe/view?usp=sharing' },
+        { label: '제6권', title: '唯識哲學 (유식철학)', vno: '6', st: '唯識哲學', url: 'https://drive.google.com/file/d/1RuwxgyGXNxhnz5cgEqS0gwAmLD5fSoF8/view?usp=sharing' },
+        { label: '제7권', title: '佛敎唯心思想의 發達 (불교유심사상의 발달)', vno: '7', st: '佛敎唯心思想의 發達', url: 'https://drive.google.com/file/d/1AD9mZdsyzqWDMW8p6kKkwINk2TrTx3-s/view?usp=sharing' },
+        { label: '제8권', title: '佛敎倫理學 (불교윤리학 — 인간학으로서의 불교)', vno: '8', st: '佛敎倫理學', url: 'https://drive.google.com/file/d/1Uzvrry6G2qIFXG0K2O_0U7_aAmgEm3_N/view?usp=sharing' },
+        { label: '제9권', title: '禪宗思想史 (선종사상사)', vno: '9', st: '禪宗思想史', url: 'https://drive.google.com/file/d/1RWV_jKSFa3xh74esnS15KCnmwIQHwcPG/view?usp=sharing' },
+        { label: '제10권', title: '佛敎의 護國思想 · 佛敎의 敎育思想 (불교의 호국사상 · 불교의 교육사상)', vno: '10', st: '佛敎의 護國思想︱佛敎의 敎育思想', url: 'https://drive.google.com/file/d/1oMtILW5rPc-RZCvhEYRp4CkRYwrxPcvx/view?usp=sharing' },
+        { label: '제11권', title: '三國時代의 佛敎思想 · 韓國佛敎思想의 座標 (삼국시대의 불교사상 · 한국불교사상의 좌표)', vno: '11', st: '三國時代의 佛敎思想︱韓國佛敎思想의 座標', url: 'https://drive.google.com/file/d/1g5B2a6TNl_diOWDNWOdwukCeKjyh3uU-/view?usp=sharing' },
+        { label: '제12권', title: '韓國歷代高僧傳 (한국역대고승전)', vno: '12', st: '韓國歷代高僧傳', url: 'https://drive.google.com/file/d/1SC_6uowr9eKVJqX2H4OkZ3yL67zuDi0N/view?usp=sharing' },
+        { label: '제13권', title: '佛敎小論文·論說 (불교소논문 · 논설)', vno: '13', st: '佛敎小論文·論說', url: 'https://drive.google.com/file/d/1YNA7pvnFaOQD8rdR6f4Lvj-ntMdainGN/view?usp=sharing' },
+        { label: '제14권', title: '佛敎敎養·雜文 (불교교양 · 잡문)', vno: '14', st: '佛敎敎養·雜文', url: '', missing: true }
+      ],
+      tags: ['뇌허 김동화 전집', '雷虛 金東華 全集', '김동화', '金東華', '뇌허', '雷虛', '뇌허불교학술원', '雷虛佛敎學術院', '불교학개론', '불교교리발달사', '원시불교사상', '대승불교사상', '구사학', '유식철학', '불교윤리학', '선종사상사', '호국사상', '한국역대고승전', '역대고승전', '고승전']
     },
     {
       title: '韓國高僧 · 한국 고승',
@@ -11052,6 +11189,33 @@
         a.querySelector('.ak-no').textContent = vol.vno || '';
         const pin = a.querySelector('.ak-pin'); pin.innerHTML = '';
         (vol.pin || '').split('·').forEach(t => { const c = document.createElement('span'); c.textContent = t; pin.appendChild(c); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'lhk') {
+        // 雷虛 金東華 全集: 흰 종이 · 위 '雷虛 金東華 全集' + 네모 권 번호 · 가는 줄 · 명조 세로 제목(합본은 두 줄) · 달마도 · 雷虛佛敎學術院
+        a.className = 'spine spine-lhk';
+        a.innerHTML = `<span class="lh-ser"></span><span class="lh-no"></span><span class="lh-rule"></span><span class="lh-t"></span><img class="lh-fig" src="spines/lh-fig.png" alt=""><span class="lh-pub"></span>`;
+        stackChars(a.querySelector('.lh-ser'), '雷虛金東華全集');
+        a.querySelector('.lh-no').textContent = vol.vno || '';
+        const tt = a.querySelector('.lh-t');
+        const parts = (vol.st || '').split('︱');
+        const n = Math.max(...parts.map(p => p.length));
+        a.style.setProperty('--tf', parts.length > 1 ? (n > 6 ? '.024' : '.03') : (n > 6 ? '.032' : '.042'));
+        if (parts.length > 1) { tt.style.flexDirection = 'row-reverse'; tt.style.alignItems = 'flex-start'; }
+        parts.forEach(p => { const c = document.createElement('span'); stackChars(c, p); tt.appendChild(c); });
+        stackChars(a.querySelector('.lh-pub'), '雷虛佛敎學術院');
+      } else if (b.spineDesign && b.spineDesign.kind === 'sht') {
+        // Sanskrithandschriften aus den Turfanfunden: 짙은 청회색 천 · 위 TEIL 번호 · 세로(옆으로 누운) 영문 제목 · 저자 · Steiner 로고
+        a.className = 'spine spine-sht';
+        a.innerHTML = `<span class="sh-teil"><small>TEIL</small><b></b></span><span class="sh-t">SANSKRITHANDSCHRIFTEN<br>AUS DEN TURFANFUNDEN</span><span class="sh-ed"></span><span class="sh-logo">fs</span><span class="sh-pub">STEINER</span>`;
+        a.querySelector('.sh-teil b').textContent = vol.vno || '';
+        a.querySelector('.sh-ed').textContent = (vol.ed || '').toUpperCase().replace(/-/g, '\u2011');   // 이름 속 하이픈에서 줄이 갈리지 않게
+      } else if (b.spineDesign && b.spineDesign.kind === 'kyi') {
+        // 國譯一切經: 미색 종이 케이스 · 붓글씨 제호(속표지에서 오림) · 部 이름 · 아래쪽 部類와 권 번호(한자)
+        a.className = 'spine spine-kyi';
+        a.innerHTML = `<img class="ky-t" alt="國譯一切經"><span class="ky-dept"></span><span class="ky-sec"></span><span class="ky-no"></span>`;
+        a.querySelector('.ky-t').src = b.spineDesign.titleImg;
+        stackChars(a.querySelector('.ky-dept'), vol.dept || '印度撰述部');
+        stackChars(a.querySelector('.ky-sec'), vol.sec || '');
+        stackChars(a.querySelector('.ky-no'), vol.no || '');
       } else if (b.spineDesign && b.spineDesign.kind === 'dpr') {
         // 도표로 읽는 ○○ (민족사): 권마다 표지 바탕색 · 위 작은 '도표로 읽는'(표지 손글씨, 색 지정) · 굵은 손글씨 제목 · 저자 · 민족사
         a.className = 'spine spine-dpr';
