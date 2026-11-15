@@ -1189,7 +1189,7 @@
 
   /* 디자인 책등: 명찰순례 (한지 + 단청색 끈 + 먹선 절집) */
   .spine-mc{
-    width:calc(var(--spine-h) * .2); position:relative;
+    width:calc(var(--spine-h) * .4); position:relative;
     background:
       radial-gradient(circle at 30% 20%, rgba(120,95,60,.06) 0 1px, transparent 1.5px) 0 0 / 5px 5px,
       linear-gradient(90deg,#d9cdb2 0%,#efe6d1 18%,#f4ecda 50%,#ece2cc 82%,#d3c6aa 100%);
@@ -1202,7 +1202,7 @@
   }
   .spine-mc .mc-title{
     flex:0 0 auto;
-    margin-top:calc(var(--spine-h) * .03); display:flex; flex-direction:column; align-items:center;
+    margin-top:calc(var(--spine-h) * .065); display:flex; flex-direction:column; align-items:center;
     font-family:'Song Myung','Noto Serif KR',serif; font-size:clamp(13px,2.15vh,17px); line-height:1.05; color:#231a13;
   }
   .spine-mc .mc-han{
@@ -1215,7 +1215,7 @@
     margin-top:calc(var(--spine-h) * .025); width:calc(var(--spine-h) * .06); height:calc(var(--spine-h) * .06);
     display:flex; align-items:center; justify-content:center; border-radius:2px;
     background:#a8342a; color:#f6ead8; box-shadow:inset 0 0 0 1.5px #a8342a, inset 0 0 0 2.5px rgba(246,234,216,.6);
-    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(8px,1.35vh,11px);
+    font-family:'Noto Serif KR',serif; font-weight:600; font-size:clamp(8px,1.35vh,11px);
   }
   .spine-mc .mc-au{
     margin-top:calc(var(--spine-h) * .025); display:flex; flex-direction:column; align-items:center; flex:0 0 auto; line-height:1.2;
@@ -1616,6 +1616,91 @@
   .spine-lhk img.lh-fig{ width:40%; height:auto; margin-top:auto; opacity:.85; }
   .spine-lhk .lh-pub{ margin:calc(var(--spine-h) * .02) 0 calc(var(--spine-h) * .03); display:flex; flex-direction:column; align-items:center; line-height:1.08;
     font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:clamp(5.5px,.92vh,7.2px); color:#2c2a26; }
+  /* 불식 (YBC 불식편집부 · 월간) */
+  .spine-bsk{
+    width:calc(var(--spine-h) * .16); position:relative; overflow:hidden; color:#111;
+    background:linear-gradient(90deg, #e4e3df 0%, #f8f8f6 12%, #ffffff 50%, #f6f6f3 88%, #dfded9 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -4px 0 7px rgba(0,0,0,.1), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-bsk > *{ flex:0 0 auto; }
+  .spine-bsk img.bk-seal{ width:72%; height:auto; margin-top:calc(var(--spine-h) * .14); }
+  .spine-bsk .bk-mo{ margin-top:auto; font-family:'Noto Sans KR',Arial,sans-serif; font-weight:700; font-size:calc(var(--spine-h) * .075); line-height:1; }
+  .spine-bsk .bk-yr{ margin:calc(var(--spine-h) * .018) 0 calc(var(--spine-h) * .09); font-family:'Noto Sans KR',Arial,sans-serif; font-weight:400; font-size:calc(var(--spine-h) * .03); line-height:1; color:#444; }
+  /* Modern Korean Buddhism (동국대학교 불교학술원 · 영역 근대 한국불교) */
+  .spine-mkb{
+    width:calc(var(--spine-h) * .2); position:relative; overflow:hidden; color:#f4f1ec;
+    background:#868b9d; display:flex; flex-direction:column; align-items:stretch;
+    box-shadow:inset 3px 0 5px rgba(255,255,255,.12), inset -5px 0 8px rgba(0,0,0,.28), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-mkb > *{ flex:0 0 auto; }
+  .spine-mkb .mk-ser{ height:calc(var(--spine-h) * .13); display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center;
+    font-family:'Noto Sans KR',Arial,sans-serif; font-weight:500; font-size:calc(var(--spine-h) * .021); line-height:1.25; }
+  .spine-mkb .mk-orn{ height:calc(var(--spine-h) * .024); background:#868b9d url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMiIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTIgOCI+PHBhdGggZD0iTTAgNmMyIDAgMi00IDUtNHMzIDMgMSAzLTEtMiAwLTIiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2YyZjBlYyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBhdGggZD0iTTYgNmMyIDAgMyAwIDYgMCIgc3Ryb2tlPSIjZjJmMGVjIiBzdHJva2Utd2lkdGg9Ii42Ii8+PC9zdmc+") center/auto 70% repeat-x; }
+  .spine-mkb .mk-panel{ height:calc(var(--spine-h) * .47); background:linear-gradient(90deg,#6e3a35,#7f4642 50%,#6c3833);
+    display:flex; flex-direction:row-reverse; justify-content:center; align-items:flex-start; gap:calc(var(--spine-h) * .006); padding-top:calc(var(--spine-h) * .02); }
+  .spine-mkb .mk-t{ writing-mode:vertical-rl; max-height:calc(var(--spine-h) * .43); white-space:normal; text-transform:uppercase;
+    font-family:'EB Garamond',Georgia,serif; font-size:calc(var(--spine-h) * var(--tf, .03)); line-height:1.08; letter-spacing:.01em; }
+  .spine-mkb .mk-o{ writing-mode:vertical-rl; max-height:calc(var(--spine-h) * .43); white-space:nowrap;
+    font-family:'EB Garamond',Georgia,serif; font-style:italic; font-size:calc(var(--spine-h) * .022); line-height:1.1; opacity:.92; }
+  .spine-mkb .mk-bot{ flex:1 1 auto; position:relative; display:flex; flex-direction:column; align-items:center;
+    background:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0NiIgdmlld0JveD0iMCAwIDQwIDQ2Ij48cmVjdCB3aWR0aD0iNDAiIGhlaWdodD0iNDYiIGZpbGw9IiM1ZjVmNWUiLz4KPGcgZmlsbD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIj4KPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIgMTIpIj48Y2lyY2xlIHI9IjkiIGZpbGw9IiM3YTdhNzgiLz48cGF0aCBkPSJNMC02YTYgNiAwIDEgMS01IDNNMC0zYTMgMyAwIDEgMS0yIDIiIHN0cm9rZT0iIzRhNGE0OSIgc3Ryb2tlLXdpZHRoPSIxLjYiLz48Y2lyY2xlIHI9IjkiIHN0cm9rZT0iIzNmM2YzZSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9nPgo8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMiAzNSkiPjxjaXJjbGUgcj0iOSIgZmlsbD0iIzdhN2E3OCIvPjxwYXRoIGQ9Ik0wLTZhNiA2IDAgMSAxLTUgM00wLTNhMyAzIDAgMSAxLTIgMiIgc3Ryb2tlPSIjNGE0YTQ5IiBzdHJva2Utd2lkdGg9IjEuNiIvPjxjaXJjbGUgcj0iOSIgc3Ryb2tlPSIjM2YzZjNlIiBzdHJva2Utd2lkdGg9IjEiLz48L2c+CjxnIGZpbGw9IiM3MjcyNzAiIHN0cm9rZT0iIzQ3NDc0NiIgc3Ryb2tlLXdpZHRoPSIuOCI+PHBhdGggZD0iTTI4IDZjNCAwIDcgMyA3IDYtMyAxLTYgMC03LTItMSAyLTQgMy03IDIgMC0zIDMtNiA3LTZ6Ii8+PHBhdGggZD0iTTggMzJjNCAwIDcgMyA3IDYtMyAxLTYgMC03LTItMSAyLTQgMy03IDIgMC0zIDMtNiA3LTZ6Ii8+PHBhdGggZD0iTS0yIDIyYzMgMSA1IDMgNSA1TTM4IDIyYzMgMSA1IDMgNSA1IiAvPjwvZz4KPC9nPjwvc3ZnPg==") 0 0 / calc(var(--spine-h) * .1) auto repeat; }
+  .spine-mkb .mk-au{ margin-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; white-space:normal; max-height:calc(var(--spine-h) * .2); text-align:left;
+    font-family:'Noto Sans KR',Arial,sans-serif; font-weight:500; font-size:calc(var(--spine-h) * .022); line-height:1.15; text-shadow:0 0 3px rgba(0,0,0,.8); }
+  .spine-mkb .mk-logo{ margin:auto 0 calc(var(--spine-h) * .035); width:calc(var(--spine-h) * .045); height:calc(var(--spine-h) * .045); border-radius:50%;
+    background:radial-gradient(circle at 50% 36%, #555 0 14%, transparent 15%), radial-gradient(circle at 34% 63%, #555 0 14%, transparent 15%), radial-gradient(circle at 66% 63%, #555 0 14%, transparent 15%), #f1efea;
+    box-shadow:0 0 0 1.5px #f1efea, 0 0 0 2.5px rgba(0,0,0,.4); }
+  /* 불교평론 (Buddhist Review · 계간) */
+  .spine-bpr{
+    width:calc(var(--spine-h) * .15); position:relative; overflow:hidden; color:#fff;
+    background:linear-gradient(90deg, #0c0c0c 0%, #1b1b1b 14%, #222 50%, #1a1a1a 86%, #0a0a0a 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset 3px 0 5px rgba(255,255,255,.06), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-bpr > *{ flex:0 0 auto; }
+  .spine-bpr .bp-no{ margin-top:calc(var(--spine-h) * .05); text-align:center; font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:calc(var(--spine-h) * .045); line-height:1; }
+  .spine-bpr .bp-no small{ display:block; margin-top:2px; font-weight:400; font-size:.5em; color:#aaa; }
+  .spine-bpr .bp-acc{ width:46%; height:calc(var(--spine-h) * .008); margin-top:calc(var(--spine-h) * .025); background:#f4a273; }
+  .spine-bpr .bp-t{ margin-top:calc(var(--spine-h) * .035); display:flex; flex-direction:column; align-items:center; font-family:'Black Han Sans','Noto Sans KR',sans-serif; font-weight:400;
+    font-size:calc(var(--spine-h) * .07); line-height:1.02; }
+  .spine-bpr .bp-en{ margin-top:calc(var(--spine-h) * .02); writing-mode:vertical-rl; white-space:nowrap; letter-spacing:.18em; color:#8b8b8b;
+    font-family:'Courier New',monospace; font-size:calc(var(--spine-h) * .022); line-height:1; }
+  .spine-bpr .bp-yr{ margin:auto 0 calc(var(--spine-h) * .045); text-align:center; font-family:'Noto Sans KR',sans-serif; font-weight:400; font-size:calc(var(--spine-h) * .024); line-height:1.25; color:#bbb; }
+  /* 한국사 (국사편찬위원회 · 1974–1979 · 전 25권) */
+  .spine-hks{
+    width:calc(var(--spine-h) * .15); position:relative; overflow:hidden; color:#3f6c5a;
+    background:linear-gradient(90deg, #e3e0d2 0%, #f4f2e6 13%, #faf8ee 50%, #f2f0e3 87%, #dddacb 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset -4px 0 7px rgba(0,0,0,.1), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-hks > *{ flex:0 0 auto; }
+  .spine-hks img.hk-t{ width:44%; height:auto; margin-top:calc(var(--spine-h) * .05); }
+  .spine-hks .hk-no{ margin-top:calc(var(--spine-h) * .03); font-family:Arial,'Noto Sans KR',sans-serif; font-weight:900; font-size:calc(var(--spine-h) * .06); line-height:1; letter-spacing:.02em; }
+  .spine-hks .hk-era{ margin-top:calc(var(--spine-h) * .03); padding:2px 0; border-top:1px solid currentColor; border-bottom:1px solid currentColor; display:flex; flex-direction:column; align-items:center;
+    font-family:'Noto Sans KR',sans-serif; font-weight:700; font-size:calc(var(--spine-h) * .028); line-height:1.1; }
+  .spine-hks .hk-sub{ margin-top:calc(var(--spine-h) * .025); display:flex; flex-direction:column; align-items:center; gap:.3em;
+    font-family:'Noto Sans KR',sans-serif; font-weight:500; font-size:calc(var(--spine-h) * var(--sf, .028)); line-height:1.02; }
+  .spine-hks .hk-sub > span{ display:flex; flex-direction:column; align-items:center; }
+  .spine-hks .hk-pub{ margin:auto 0 calc(var(--spine-h) * .035); display:flex; flex-direction:column; align-items:center; padding-top:calc(var(--spine-h) * .02);
+    font-family:'Noto Sans KR',sans-serif; font-weight:400; font-size:calc(var(--spine-h) * .022); line-height:1.1; }
+  /* Oxford A Very Short Introduction (붓질 색띠 문고본) */
+  .spine-vsi{
+    width:calc(var(--spine-h) * .1); position:relative; overflow:hidden; color:#fff;
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 3px, rgba(0,0,0,.05) 3px 4px),
+      linear-gradient(180deg, var(--c1) 0%, var(--c1) 52%, var(--c2) 58%, var(--c2) 64%, var(--c3) 70%, var(--c3) 78%, var(--c4) 84%, var(--c4) 100%);
+    display:flex; flex-direction:column; align-items:center;
+    box-shadow:inset 2px 0 4px rgba(255,255,255,.15), inset -4px 0 7px rgba(0,0,0,.25), 0 2px 6px rgba(0,0,0,.5);
+  }
+  .spine-vsi::after{ content:''; position:absolute; left:0; right:0; top:50%; height:34%; pointer-events:none;
+    background:repeating-linear-gradient(175deg, rgba(255,255,255,.07) 0 2px, transparent 2px 6px, rgba(0,0,0,.06) 6px 7px); mix-blend-mode:overlay; }
+  .spine-vsi > *{ flex:0 0 auto; position:relative; z-index:1; }
+  .spine-vsi .vs-txt{ margin-top:calc(var(--spine-h) * .035); writing-mode:vertical-rl; white-space:nowrap; display:flex; align-items:baseline; gap:calc(var(--spine-h) * .015); text-shadow:0 0 2px rgba(0,0,0,.35); }
+  .spine-vsi .vs-t{ font-family:'Gill Sans','Gill Sans MT','Lato','Noto Sans',sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:.06em; font-size:calc(var(--spine-h) * var(--tf, .03)); line-height:1; }
+  .spine-vsi .vs-s{ font-family:'Helvetica Neue',Arial,sans-serif; font-weight:700; font-size:calc(var(--spine-h) * .024); line-height:1; letter-spacing:-.01em; }
+  .spine-vsi .vs-au{ margin-top:auto; writing-mode:vertical-rl; white-space:nowrap; font-family:'Helvetica Neue',Arial,sans-serif; font-size:calc(var(--spine-h) * .024); line-height:1; padding-top:calc(var(--spine-h) * .025); text-shadow:0 0 2px rgba(0,0,0,.35); }
+  .spine-vsi .vs-no{ margin-top:calc(var(--spine-h) * .02); font-family:'Gill Sans','Lato',sans-serif; font-size:calc(var(--spine-h) * .032); line-height:1; letter-spacing:-.02em; }
+  .spine-vsi .vs-ox{ margin:calc(var(--spine-h) * .02) 0 calc(var(--spine-h) * .03); writing-mode:vertical-rl; font-family:'EB Garamond',Georgia,serif; font-weight:600; letter-spacing:.06em; font-size:calc(var(--spine-h) * .022); line-height:1; }
   /* 민족사 불교경전 */
   .spine-mj{
     width:calc(var(--spine-h) * .15); position:relative;
@@ -3817,7 +3902,7 @@
       category: ['01-0006'],
       poster: 'covers/0673.jpg',
       // 묶음 서가: 아래 신문/사보 항목(정확한 title)을 책등으로 늘어놓고, 누르면 각 서가가 열림
-      periodicals: ['東大新聞 (동대신문)', '現代佛敎新聞 (현대불교신문)', '月刊 松廣寺 (월간 송광사)', '正覺道場 (정각도량)', '佛敎 (불교)', '金剛杵 (금강저)', '佛敎時報 (불교시보)', '釋林 (석림)'],
+      periodicals: ['東大新聞 (동대신문)', '現代佛敎新聞 (현대불교신문)', '月刊 松廣寺 (월간 송광사)', '正覺道場 (정각도량)', '佛敎 (불교)', '金剛杵 (금강저)', '佛敎時報 (불교시보)', '釋林 (석림)', '不識 (불식)', '불교평론 (Buddhist Review)'],
       tags: ['정기간행물', '定期刊行物', '신문', '사보', '소식지', '회보', '월보', '학보']
     },
     {
@@ -4053,7 +4138,7 @@
     },
     {
       title: '佛敎時報 (불교시보)',
-      badge: '京城 佛敎時報社 發行 · 金泰洽 · 昭和十年(1935) 八月 創刊 · 全 104號 · 第一號(創刊號)–第三號 소장',
+      badge: '京城 佛敎時報社 發行 · 金泰洽 · 昭和十年(1935) 八月 創刊 · 全 104號 · 第一號(創刊號)–第四號 소장',
       category: ['01-0006'],
       poster: 'covers/0667.jpg',
       // 신문형 잡지 책등: 1면 붓글씨 제호(佛敎時報)를 오려 세로로 · 第N號 · 佛敎時報社. 소장하지 않은 호는 missing
@@ -4062,7 +4147,7 @@
         { label: '제1호 (창간호 · 1935.8)', title: '佛敎時報 第一號', url: 'https://drive.google.com/file/d/1IsWa-v75boKerq3q4by8Bh1e06t8xAqs/view?usp=sharing' },
         { label: '제2호 (1935.9)', title: '佛敎時報 第二號', url: 'https://drive.google.com/file/d/1-yvegEjhUISOHq5f5VqAGIaFvfzqw6Nb/view?usp=sharing' },
         { label: '제3호 (1935.10)', title: '佛敎時報 第三號', url: 'https://drive.google.com/file/d/1fmlBR80x-rFIp9UFQGs24MNTiAOuhxno/view?usp=sharing' },
-        { label: '제4호', title: '佛敎時報 第四號', url: '', missing: true },
+        { label: '제4호', title: '佛敎時報 第四號', url: 'https://drive.google.com/file/d/1340eAK8oFz2cwbQt2jJFnTuoFzJ3jL0i/view?usp=sharing' },
         { label: '제5호', title: '佛敎時報 第五號', url: '', missing: true },
         { label: '제6호', title: '佛敎時報 第六號', url: '', missing: true },
         { label: '제7호', title: '佛敎時報 第七號', url: '', missing: true },
@@ -6511,12 +6596,30 @@
       tags: ['네팔', 'Nepal', '네와르', 'Newar', 'Todd Lewis', 'Schopen']
     },
     {
-      title: 'Tibetan Buddhism : A Very Short Introduction',
-      badge: 'Matthew T. Kapstein · Oxford University Press',
-      category: ['05-0003', '07-0002'],
+      title: 'A Very Short Introduction (Oxford)',
+      badge: 'Oxford University Press · Very Short Introductions',
+      category: ['10-0000'],
+      langs: ['영어'],
       poster: 'covers/0436.jpg',
-      url: 'https://drive.google.com/file/d/1_qE898MIEY4ukLc4K5KPPnMnmf-zjmp3/view?usp=sharing',
-      tags: ['티베트불교', 'Tibetan Buddhism', 'Kapstein', '캅스타인', 'Very Short Introduction']
+      spineDesign: { kind: 'vsi' },
+      volumes: [
+        { label: '1 · Classics', title: 'Classics : A Very Short Introduction', en: 'Classics', au: 'Beard & Henderson', no: '1', colors: ['#8a2a3a', '#d9a441', '#4a7a6a', '#2a3a5a'], url: 'https://drive.google.com/file/d/17i5NrWkZXhVHziUfCEWwg9We9E680WOp/view?usp=sharing' },
+        { label: '16 · History', title: 'History : A Very Short Introduction', en: 'History', au: 'Arnold', no: '16', colors: ['#2f5f8a', '#e0b04a', '#c44a2f', '#2a2a3a'], url: 'https://drive.google.com/file/d/1u_oAUv8IM00aJLZi32SvOsNJevAaBsDb/view?usp=sharing' },
+        { label: '80 · Ethics', title: 'Ethics : A Very Short Introduction', en: 'Ethics', au: 'Blackburn', no: '80', colors: ['#1f4a5a', '#e8c23a', '#d6582f', '#3a2a4a'], url: 'https://drive.google.com/file/d/1GhJFWekd11kFlsXjvro_QyyKXlIzNUlD/view?usp=sharing' },
+        { label: '113 · Hieroglyphs', title: 'Hieroglyphs : A Very Short Introduction', en: 'Hieroglyphs', au: 'Wilson', no: '113', colors: ['#c47a2a', '#e8c45a', '#2a6a8a', '#3a2a1a'], url: 'https://drive.google.com/file/d/1C-AMYSeFu5CiEHC9rvGiIz5ycJJ34FnU/view?usp=sharing' },
+        { label: '129 · Renaissance Art', title: 'Renaissance Art : A Very Short Introduction', en: 'Renaissance Art', au: 'Johnson', no: '129', colors: ['#5a2a6a', '#e0a84a', '#2a7a8a', '#1f2a4a'], url: 'https://drive.google.com/file/d/19dxnbL8n9VJfMnMjdJaGouOp1KxzvmcX/view?usp=sharing' },
+        { label: '133 · The History of Time', title: 'The History of Time : A Very Short Introduction', en: 'The History of Time', au: 'Holford-Strevens', no: '133', colors: ['#3a3a6a', '#c4a43a', '#8a3a5a', '#1a2a3a'], url: 'https://drive.google.com/file/d/1OCNGXgRV5QGi7Oj_WRwQ3P9SZYXDFksA/view?usp=sharing' },
+        { label: '136 · Design', title: 'Design : A Very Short Introduction', en: 'Design', au: 'Heskett', no: '136', colors: ['#e05a2a', '#f2c43a', '#3a8a7a', '#2a4a8a'], url: 'https://drive.google.com/file/d/1kW7RUHH0axAWyjS4krYXuUX32KRcd_Fe/view?usp=sharing' },
+        { label: '140 · The Crusades', title: 'The Crusades : A Very Short Introduction', en: 'The Crusades', au: 'Tyerman', no: '140', colors: ['#7a1f22', '#c4862a', '#3a5a3a', '#2a1a1a'], url: 'https://drive.google.com/file/d/1ugtfn6Fe9YdsOw9gSeWfn-XKWdnA8pwT/view?usp=sharing' },
+        { label: '155 · Fundamentalism', title: 'Fundamentalism : A Very Short Introduction', en: 'Fundamentalism', au: 'Ruthven', no: '155', colors: ['#2a5a3a', '#e2c24a', '#b0402a', '#1a2a2a'], url: 'https://drive.google.com/file/d/1RIGK6ZBWagot1GanDZ0-jjlsRmcMn8yq/view?usp=sharing' },
+        { label: '161 · Racism', title: 'Racism : A Very Short Introduction', en: 'Racism', au: 'Rattansi', no: '161', colors: ['#2a2a2a', '#d8b03a', '#c43a2a', '#3a5a8a'], url: 'https://drive.google.com/file/d/1kxgr7XpWhU45KsK5C62BztOW_ILCZytl/view?usp=sharing' },
+        { label: '164 · International Relations', title: 'International Relations : A Very Short Introduction', en: 'International Relations', au: 'Wilkinson', no: '164', colors: ['#1f4f7a', '#e8c84a', '#3a8a5a', '#2a2a4a'], url: 'https://drive.google.com/file/d/12px0ZNUIWWHmKHNR8M2FG5GTzstHynb7/view?usp=sharing' },
+        { label: '177 · The Quakers', title: 'The Quakers : A Very Short Introduction', en: 'The Quakers', au: 'Dandelion', no: '177', colors: ['#3a6a4a', '#e8d27a', '#c46a3a', '#2a3a2a'], url: 'https://drive.google.com/file/d/149fupJFOR2pLkgYHPi3h14VrBCgxnMp2/view?usp=sharing' },
+        { label: '180 · Law', title: 'Law : A Very Short Introduction', en: 'Law', au: 'Wacks', no: '180', colors: ['#4a2a2a', '#c49a3a', '#6a7a8a', '#1f1f2a'], url: 'https://drive.google.com/file/d/1HCqv7RzrW-R5bs5iza2xGqE4szSTQAEG/view?usp=sharing' },
+        { label: '195 · Autism', title: 'Autism : A Very Short Introduction', en: 'Autism', au: 'Frith', no: '195', colors: ['#e8423a', '#f2a23a', '#3a9ac4', '#2a5a9a'], url: 'https://drive.google.com/file/d/1q17xfyl4wZ0ZPxAe9fAWaC8otmUAGm8u/view?usp=sharing' },
+        { label: '373 · Tibetan Buddhism', title: 'Tibetan Buddhism : A Very Short Introduction', en: 'Tibetan Buddhism', au: 'Kapstein', no: '373', colors: ['#7a2a2f', '#c98a2e', '#3d6a8a', '#2c2a4a'], url: 'https://drive.google.com/file/d/1K62b3hS3-_Oe_rrIOO9fQTqR7TXJGOjD/view?usp=sharing' }
+      ],
+      tags: ['A Very Short Introduction', 'Very Short Introduction', 'VSI', 'Oxford', '옥스퍼드', '티베트불교', 'Tibetan Buddhism', 'Kapstein', '캅스타인', 'Classics', 'History', 'Ethics', 'Hieroglyphs', '상형문자', '이집트 상형문자', '고대 이집트', 'The History of Time', 'Design', 'The Crusades', '십자군', 'Renaissance Art', '르네상스', '르네상스 미술', 'Fundamentalism', '근본주의', 'Racism', '인종주의', 'International Relations', '국제관계', 'The Quakers', '퀘이커', 'Law', '법', 'Autism', '자폐']
     },
     {
       title: 'Presenting Japanese Buddhism to the West : Orientalism, Occidentalism, and the Columbian Exposition',
@@ -9163,6 +9266,141 @@
       tags: ['뇌허 김동화 전집', '雷虛 金東華 全集', '김동화', '金東華', '뇌허', '雷虛', '뇌허불교학술원', '雷虛佛敎學術院', '불교학개론', '불교교리발달사', '원시불교사상', '대승불교사상', '구사학', '유식철학', '불교윤리학', '선종사상사', '호국사상', '한국역대고승전', '역대고승전', '고승전']
     },
     {
+      title: '不識 (불식)',
+      badge: 'YBC 불식편집부 · 월간 · 2015년 1월호 – 2019년 1월호 (전 49호)',
+      category: ['01-0006'],
+      poster: 'covers/0681.jpg',
+      spineDesign: { kind: 'bsk', titleImg: 'spines/bsk-seal.png' },
+      volumes: [
+        { label: '제1호 (2015.1)', title: '불식 2015년 1월호 (통권 1호)', yr: '2015', mo: '1', no: '1', url: 'https://drive.google.com/file/d/1LxpBI1QhNmKjTWwngmoUD2bsLujtOW2l/view?usp=sharing' },
+        { label: '제2호 (2015.2)', title: '불식 2015년 2월호 (통권 2호)', yr: '2015', mo: '2', no: '2', url: 'https://drive.google.com/file/d/1XARP6sEKdlcbrlKUowRD3SH6wbB2Fk7T/view?usp=sharing' },
+        { label: '제3호 (2015.3)', title: '불식 2015년 3월호 (통권 3호)', yr: '2015', mo: '3', no: '3', url: 'https://drive.google.com/file/d/1_7BeMPFoylEnVo6WW0RcZJWHDgwtWaMy/view?usp=sharing' },
+        { label: '제4호 (2015.4)', title: '불식 2015년 4월호 (통권 4호)', yr: '2015', mo: '4', no: '4', url: 'https://drive.google.com/file/d/1lPgIaX6Sfdbjx4sFEIYGTqKR6qg-u6Jp/view?usp=sharing' },
+        { label: '제5호 (2015.5)', title: '불식 2015년 5월호 (통권 5호)', yr: '2015', mo: '5', no: '5', url: 'https://drive.google.com/file/d/1fO_oaI8c_cVLMK3IrrtjXUGFsa3vFX2d/view?usp=sharing' },
+        { label: '제6호 (2015.6)', title: '불식 2015년 6월호 (통권 6호)', yr: '2015', mo: '6', no: '6', url: 'https://drive.google.com/file/d/1vNRg0HVdJMN_BNsU1ZZ23MXencwop-im/view?usp=sharing' },
+        { label: '제7호 (2015.7)', title: '불식 2015년 7월호 (통권 7호)', yr: '2015', mo: '7', no: '7', url: 'https://drive.google.com/file/d/1FI-d4oYk8sJb1HIq4PQlVVe4WpwUodNR/view?usp=sharing' },
+        { label: '제8호 (2015.8)', title: '불식 2015년 8월호 (통권 8호)', yr: '2015', mo: '8', no: '8', url: 'https://drive.google.com/file/d/1mdihm0c2lw2kj32tzwf5xg0oB_JKQYPC/view?usp=sharing' },
+        { label: '제9호 (2015.9)', title: '불식 2015년 9월호 (통권 9호)', yr: '2015', mo: '9', no: '9', url: 'https://drive.google.com/file/d/1fVY02KqVAvBneiETyMwk1kU6xM5DWX5A/view?usp=sharing' },
+        { label: '제10호 (2015.10)', title: '불식 2015년 10월호 (통권 10호)', yr: '2015', mo: '10', no: '10', url: 'https://drive.google.com/file/d/1AOVSS6UXJxsry3oE0hSjkWYcu6ikzrtF/view?usp=sharing' },
+        { label: '제11호 (2015.11)', title: '불식 2015년 11월호 (통권 11호)', yr: '2015', mo: '11', no: '11', url: 'https://drive.google.com/file/d/1M_qEyaUfReEyDTXVMZR3Uyg9zuzn-cuJ/view?usp=sharing' },
+        { label: '제12호 (2015.12)', title: '불식 2015년 12월호 (통권 12호)', yr: '2015', mo: '12', no: '12', url: 'https://drive.google.com/file/d/1_wigzuiaQkyt8hJA9HtzErEXxVHCMAu1/view?usp=sharing' },
+        { label: '제13호 (2016.1)', title: '불식 2016년 1월호 (통권 13호)', yr: '2016', mo: '1', no: '13', url: 'https://drive.google.com/file/d/1wEBkWOq38qBI0shNN6xK-RBfxN7eyzzF/view?usp=sharing' },
+        { label: '제14호 (2016.2)', title: '불식 2016년 2월호 (통권 14호)', yr: '2016', mo: '2', no: '14', url: 'https://drive.google.com/file/d/1pw-fPTBlw76LMOahiz08hm1KCsymsC-5/view?usp=sharing' },
+        { label: '제15호 (2016.3)', title: '불식 2016년 3월호 (통권 15호)', yr: '2016', mo: '3', no: '15', url: 'https://drive.google.com/file/d/1lLiAW4-0ukFGicjXvbjqvGkqQkkmC-43/view?usp=sharing' },
+        { label: '제16호 (2016.4)', title: '불식 2016년 4월호 (통권 16호)', yr: '2016', mo: '4', no: '16', url: 'https://drive.google.com/file/d/17Sw5HiLqX3HD3gjFlBDAOs0Ix0p18Jpm/view?usp=sharing' },
+        { label: '제17호 (2016.5)', title: '불식 2016년 5월호 (통권 17호)', yr: '2016', mo: '5', no: '17', url: 'https://drive.google.com/file/d/1bqQuBrYj_vyjybO3d7LrwApl35aJc-w9/view?usp=sharing' },
+        { label: '제18호 (2016.6)', title: '불식 2016년 6월호 (통권 18호)', yr: '2016', mo: '6', no: '18', url: 'https://drive.google.com/file/d/1OZZdUsId2TBmU-QS8nQUn6vf7JQhchxQ/view?usp=sharing' },
+        { label: '제19호 (2016.7)', title: '불식 2016년 7월호 (통권 19호)', yr: '2016', mo: '7', no: '19', url: 'https://drive.google.com/file/d/1C1IL-Jrn2GAR_O9yBv5ssc0rG3G6YIuo/view?usp=sharing' },
+        { label: '제20호 (2016.8)', title: '불식 2016년 8월호 (통권 20호)', yr: '2016', mo: '8', no: '20', url: 'https://drive.google.com/file/d/1dIcF5eZQGDTt_ePQuT4rts28Y8DMUU7V/view?usp=sharing' },
+        { label: '제21호 (2016.9)', title: '불식 2016년 9월호 (통권 21호)', yr: '2016', mo: '9', no: '21', url: 'https://drive.google.com/file/d/1Fgp8Xzx4m4PUq-hXQYxMAiZOxel3bg-w/view?usp=sharing' },
+        { label: '제22호 (2016.10)', title: '불식 2016년 10월호 (통권 22호)', yr: '2016', mo: '10', no: '22', url: 'https://drive.google.com/file/d/1Mww4CJNftfdUekji-X4qO8mGqLQUM4wH/view?usp=sharing' },
+        { label: '제23호 (2016.11)', title: '불식 2016년 11월호 (통권 23호)', yr: '2016', mo: '11', no: '23', url: 'https://drive.google.com/file/d/1UQySMvDOnbqRZgopKSs6I_0VEsdll2pb/view?usp=sharing' },
+        { label: '제24호 (2016.12)', title: '불식 2016년 12월호 (통권 24호)', yr: '2016', mo: '12', no: '24', url: 'https://drive.google.com/file/d/11fHbzQTVUvgB2bxXRQgKayKE9o86pZZb/view?usp=sharing' },
+        { label: '제25호 (2017.1)', title: '불식 2017년 1월호 (통권 25호)', yr: '2017', mo: '1', no: '25', url: 'https://drive.google.com/file/d/1R9NUnKUjd0CfXtDcdtXstsfH7J72v49Y/view?usp=sharing' },
+        { label: '제26호 (2017.2)', title: '불식 2017년 2월호 (통권 26호)', yr: '2017', mo: '2', no: '26', url: 'https://drive.google.com/file/d/1W0jx7mwDe1Ci3oRpsSi0yUuJCw1vsSL0/view?usp=sharing' },
+        { label: '제27호 (2017.3)', title: '불식 2017년 3월호 (통권 27호)', yr: '2017', mo: '3', no: '27', url: 'https://drive.google.com/file/d/1jz5WQ3XvF0dUq_8ntxfp4s0CH_uvM7Wc/view?usp=sharing' },
+        { label: '제28호 (2017.4)', title: '불식 2017년 4월호 (통권 28호)', yr: '2017', mo: '4', no: '28', url: 'https://drive.google.com/file/d/16SoVMQCjam8-AcWTnqOpSztO2kihHrHl/view?usp=sharing' },
+        { label: '제29호 (2017.5)', title: '불식 2017년 5월호 (통권 29호)', yr: '2017', mo: '5', no: '29', url: 'https://drive.google.com/file/d/1veX4tjNeqcir6lmfw5EyXT1gk26oMKOK/view?usp=sharing' },
+        { label: '제30호 (2017.6)', title: '불식 2017년 6월호 (통권 30호)', yr: '2017', mo: '6', no: '30', url: 'https://drive.google.com/file/d/1Zz3Ayqk3pRcAFHw44j977dOPxf_cp8gm/view?usp=sharing' },
+        { label: '제31호 (2017.7)', title: '불식 2017년 7월호 (통권 31호)', yr: '2017', mo: '7', no: '31', url: 'https://drive.google.com/file/d/1JIjkXF9Gd0ayQ1DoHKNEyDIC5fExool-/view?usp=sharing' },
+        { label: '제32호 (2017.8)', title: '불식 2017년 8월호 (통권 32호)', yr: '2017', mo: '8', no: '32', url: 'https://drive.google.com/file/d/1xqyR1JWsDXmJogTvE0yLqT4eN7ar8AHj/view?usp=sharing' },
+        { label: '제33호 (2017.9)', title: '불식 2017년 9월호 (통권 33호)', yr: '2017', mo: '9', no: '33', url: 'https://drive.google.com/file/d/1SnkRqQcJO-aqxTjyu85_05BZOoMfbSU_/view?usp=sharing' },
+        { label: '제34호 (2017.10)', title: '불식 2017년 10월호 (통권 34호)', yr: '2017', mo: '10', no: '34', url: 'https://drive.google.com/file/d/1yBVj7SyzyOKqWAkIVe-SlstVoSa8lEF_/view?usp=sharing' },
+        { label: '제35호 (2017.11)', title: '불식 2017년 11월호 (통권 35호)', yr: '2017', mo: '11', no: '35', url: 'https://drive.google.com/file/d/1BXUfH103nY_4v9acCiUIf4jwnnLabAuw/view?usp=sharing' },
+        { label: '제36호 (2017.12)', title: '불식 2017년 12월호 (통권 36호)', yr: '2017', mo: '12', no: '36', url: 'https://drive.google.com/file/d/1KDy8ldCtAtQSMSv21Q6yQi8CWJiztjSZ/view?usp=sharing' },
+        { label: '제37호 (2018.1)', title: '불식 2018년 1월호 (통권 37호)', yr: '2018', mo: '1', no: '37', url: 'https://drive.google.com/file/d/1GGsU6lVFBpmx6RLiNs0HDCzeYG4Ol0Mm/view?usp=sharing' },
+        { label: '제38호 (2018.2)', title: '불식 2018년 2월호 (통권 38호)', yr: '2018', mo: '2', no: '38', url: 'https://drive.google.com/file/d/1LiKxJJ3EH9RFd4DHzWkWteb9AW0NAxDl/view?usp=sharing' },
+        { label: '제39호 (2018.3)', title: '불식 2018년 3월호 (통권 39호)', yr: '2018', mo: '3', no: '39', url: 'https://drive.google.com/file/d/1x0nXaL3YQMunP8Q67ZJQ_Ci95EzqTxDQ/view?usp=sharing' },
+        { label: '제40호 (2018.4)', title: '불식 2018년 4월호 (통권 40호)', yr: '2018', mo: '4', no: '40', url: '', missing: true },
+        { label: '제41호 (2018.5)', title: '불식 2018년 5월호 (통권 41호)', yr: '2018', mo: '5', no: '41', url: 'https://drive.google.com/file/d/1JPcyHeeGpokiEQ1VnpSiAkdtsoDYeTE7/view?usp=sharing' },
+        { label: '제42호 (2018.6)', title: '불식 2018년 6월호 (통권 42호)', yr: '2018', mo: '6', no: '42', url: 'https://drive.google.com/file/d/19R6YYePV2I29vzAFuTtxD5cWscEnlhgK/view?usp=sharing' },
+        { label: '제43호 (2018.7)', title: '불식 2018년 7월호 (통권 43호)', yr: '2018', mo: '7', no: '43', url: '', missing: true },
+        { label: '제44호 (2018.8)', title: '불식 2018년 8월호 (통권 44호)', yr: '2018', mo: '8', no: '44', url: '', missing: true },
+        { label: '제45호 (2018.9)', title: '불식 2018년 9월호 (통권 45호)', yr: '2018', mo: '9', no: '45', url: 'https://drive.google.com/file/d/1aSv_4tSu0BqLEk8uchhWN045BK7zDioe/view?usp=sharing' },
+        { label: '제46호 (2018.10)', title: '불식 2018년 10월호 (통권 46호)', yr: '2018', mo: '10', no: '46', url: 'https://drive.google.com/file/d/1HAC0YJ59KloF9eLI8rBbgcokUVN8YQ33/view?usp=sharing' },
+        { label: '제47호 (2018.11)', title: '불식 2018년 11월호 (통권 47호)', yr: '2018', mo: '11', no: '47', url: '', missing: true },
+        { label: '제48호 (2018.12)', title: '불식 2018년 12월호 (통권 48호)', yr: '2018', mo: '12', no: '48', url: '', missing: true },
+        { label: '제49호 (2019.1)', title: '불식 2019년 1월호 (통권 49호)', yr: '2019', mo: '1', no: '49', url: '', missing: true }
+      ],
+      tags: ['불식', '不識', 'bulsik', 'YBC', '용흥사', '방콕', '잡지', '사보', '월간 불식', 'YBC 불식편집부', '불식편집부', '월간지', '법진', '강대공']
+    },
+    {
+      title: 'Modern Korean Buddhism (영역 근대 한국불교 총서)',
+      badge: '동국대학교 불교학술원 · 근대 한국불교 문헌 영역 · 전 10권',
+      category: ['01-0005'],
+      langs: ['영어'],
+      poster: 'covers/0682.jpg?v=2',
+      spineDesign: { kind: 'mkb' },
+      volumes: [
+        { label: '1', title: 'The Gyeongheo Collection: Prose and Poetry by the Restorer of Korean Seon (경허집)', en: 'The Gyeongheo Collection: Prose and Poetry by the Restorer of Korean Seon', orig: 'Gyeongheo-jip', au: 'Gyeongheo', url: 'https://drive.google.com/file/d/1sPoDxcQiBeqS4z-6lxGyqTpLct6KFhrE/view?usp=sharing' },
+        { label: '2', title: 'The Sun over the Sea of Enlightenment (각해일륜)', en: 'The Sun over the Sea of Enlightenment', orig: 'Gakhae illyun', au: 'Baek Yongseong', url: 'https://drive.google.com/file/d/1SrQLkGukEGqh0VIVwyWG9DJLzJEInX7Y/view?usp=sharing' },
+        { label: '3', title: 'An Anthology of East Asian Commentaries on the Nyāyapraveśa (인명입정리론 회석)', en: 'An Anthology of East Asian Commentaries on the Nyāyapraveśa', orig: 'Inmyeong ip jeongni-ron hoeseok', au: 'Bak Hanyeong', url: 'https://drive.google.com/file/d/10cLfjgbCITwE1E_-L31sGzvk-x3HqGBK/view?usp=sharing' },
+        { label: '4', title: 'Harmonizing the Hundred Teachings (백교회통)', en: 'Harmonizing the Hundred Teachings', orig: 'Baekgyo hoetong', au: 'Yi Neunghwa', url: 'https://drive.google.com/file/d/1xJTqpVsbzNQwh3s96TDTeiFOwWmGptqE/view?usp=sharing' },
+        { label: '5', title: 'Sheaves of Korean Buddhist History (조선불교사고)', en: 'Sheaves of Korean Buddhist History', orig: 'Joseon Bulgyosa-go', au: 'Gim Yeongsu', url: 'https://drive.google.com/file/d/1L2i7v2bM6ib1tgv_VdRCG-y_9bTIFuHO/view?usp=sharing' },
+        { label: '6', title: 'Tracts on the Modern Reformation of Korean Buddhism (근대 한국불교 개혁론)', en: 'Tracts on the Modern Reformation of Korean Buddhism', orig: '', au: 'Gwon Sangro, Yi Yeongjae, Han Yongun', url: 'https://drive.google.com/file/d/1kWuLKOabNDai3ZxwcMn7jHk0Lx0XuNts/view?usp=sharing' },
+        { label: '7', title: 'A Collection of Modern Korean Buddhist Discourses (근대 한국 불교 논설 모음)', en: 'A Collection of Modern Korean Buddhist Discourses', orig: '', au: 'Choe Namseon and others', url: 'https://drive.google.com/file/d/1bEtJpsdG4H6OKrglMpJWUjEcWDOn1zKl/view?usp=sharing' },
+        { label: '8', title: 'The Temple of Words: An Anthology of Modern Korean Buddhist Poetry (근대 한국 불교시 선집)', en: 'The Temple of Words: An Anthology of Modern Korean Buddhist Poetry', orig: '', au: 'Han Yongun and others', url: 'https://drive.google.com/file/d/15ygayKYgtBKk9_yR6m9MZ0MgfZ0-CQOg/view?usp=sharing' },
+        { label: '9', title: 'A Study of Korean Pagodas (조선탑파의 연구)', en: 'A Study of Korean Pagodas', orig: 'Joseon tappa ui yeongu', au: 'Go Yuseop', url: 'https://drive.google.com/file/d/1LeWvbMNaNqSUQlqjIGJIPGwNrDqfTirt/view?usp=sharing' },
+        { label: '10', title: 'Essential Compendium for Buddhists: A Modern Buddhist Liturgy (불자필람)', en: 'Essential Compendium for Buddhists: A Modern Buddhist Liturgy', orig: 'Bulja pillam', au: 'Choe Chwiheo and An Jinho', url: 'https://drive.google.com/file/d/1VUm_Ys3dGlDa24JhD3vVSqgFapB93I5w/view?usp=sharing' }
+      ],
+      tags: ['Modern Korean Buddhism', '근대 한국불교', '근대불교', '영역', '영어 번역', '동국대학교', '불교학술원', '불자필람', '조선탑파의 연구', '고유섭', '한용운', '최남선', '권상로', '이영재', '조선불교사고', '김영수', '인명입정리론', '박한영', '석전', '각해일륜', '백용성', '용성', '경허집', '경허', '백교회통', '이능화']
+    },
+    {
+      title: '불교평론 (Buddhist Review)',
+      badge: '계간 · 1999년 겨울 창간 (제1권 제1호)',
+      category: ['01-0006'],
+      poster: 'covers/0683.jpg',
+      spineDesign: { kind: 'bpr' },
+      volumes: [
+        { label: '제1호 (1999 겨울 · 창간호)', title: '불교평론 1999년 겨울 제1호 (창간호)', yr: '1999', se: '겨울', no: '1', url: 'https://drive.google.com/file/d/1-cOj_5vfuvzcoZ-eHfnbPFgh9zEzDWYM/view?usp=sharing' },
+        { label: '제2호 (2000 봄)', title: '불교평론 2000년 봄 제2호', yr: '2000', se: '봄', no: '2', url: 'https://drive.google.com/file/d/1kWIiRHZk1eVuax24luDFAjMVxsvwfBA1/view?usp=sharing' },
+        { label: '제3호 (2000 여름)', title: '불교평론 2000년 여름 제3호', yr: '2000', se: '여름', no: '3', url: 'https://drive.google.com/file/d/1IGRM83pHknlKBw_-fJWaCo-jJjrqAh4g/view?usp=sharing' },
+        { label: '제4호 (2000 가을)', title: '불교평론 2000년 가을 제4호', yr: '2000', se: '가을', no: '4', url: 'https://drive.google.com/file/d/1LSWzz6_DXiPZVnWMLzFm-HCxMYaFyZlL/view?usp=sharing' },
+        { label: '제5호 (2000 겨울)', title: '불교평론 2000년 겨울 제5호', yr: '2000', se: '겨울', no: '5', url: 'https://drive.google.com/file/d/1Q5R3FzNI0slANrTQ4rqeIoIAJt1GLvyy/view?usp=sharing' },
+        { label: '제6호 (2001 봄)', title: '불교평론 2001년 봄 제6호', yr: '2001', se: '봄', no: '6', url: 'https://drive.google.com/file/d/17fNw5A6OMhQMUc0fs9tCHWJFQGxlLJaF/view?usp=sharing' },
+        { label: '제7호 (2001 여름)', title: '불교평론 2001년 여름 제7호', yr: '2001', se: '여름', no: '7', url: 'https://drive.google.com/file/d/1MVLiHcXHEtVVAKklk79zPvG1EwQxitAx/view?usp=sharing' },
+        { label: '제8호 (2001 가을)', title: '불교평론 2001년 가을 제8호', yr: '2001', se: '가을', no: '8', url: 'https://drive.google.com/file/d/11Ue4Y_fdbxh4AHSEAwsQVAR5K0ioslZb/view?usp=sharing' },
+        { label: '제9호 (2001 겨울)', title: '불교평론 2001년 겨울 제9호', yr: '2001', se: '겨울', no: '9', url: 'https://drive.google.com/file/d/1bmaG1izfoq6PS7DzSR61wGEnZJLQBjLn/view?usp=sharing' },
+        { label: '제10호 (2002 봄)', title: '불교평론 2002년 봄 제10호', yr: '2002', se: '봄', no: '10', url: 'https://drive.google.com/file/d/1xmX49CrLaIRvCV8HGCZTdEke4owy8B-T/view?usp=sharing' }
+      ],
+      tags: ['불교평론', 'Buddhist Review', '계간지', '잡지', '불교잡지', '평론']
+    },
+    {
+      title: '한국사 (국사편찬위원회 · 전 25권)',
+      badge: '대한민국 문교부 국사편찬위원회 · 정화인쇄문화사 · 1974–1979 · 전 25권',
+      category: ['01-0004'],
+      poster: 'covers/0684.jpg',
+      spineDesign: { kind: 'hks', titleImg: 'spines/hks-title.png' },
+      volumes: [
+        { label: '1권', title: '한국사 1 — 고대 · 한국의 선사문화', vno: '1', era: '고대', sub: '한국의 선사문화', url: 'https://drive.google.com/file/d/1p2l4xW0E7RHKXk-AihD5WBlpddohDfvG/view?usp=sharing' },
+        { label: '2권', title: '한국사 2 — 고대 · 고대 민족의 성장', vno: '2', era: '고대', sub: '고대 민족의 성장', url: 'https://drive.google.com/file/d/1Yl68ItPq9Xb699Dgx6fJz2x8SIpuPjgC/view?usp=sharing' },
+        { label: '3권', title: '한국사 3 — 고대 · 민족의 통일', vno: '3', era: '고대', sub: '민족의 통일', url: 'https://drive.google.com/file/d/1Uvv6fDmgam9hQMohxTnNEDjQBDthd2n_/view?usp=sharing' },
+        { label: '4권', title: '한국사 4 — 고려 · 고려 귀족사회의 성립', vno: '4', era: '고려', sub: '고려 귀족사회의 성립', url: 'https://drive.google.com/file/d/15bI3UpfffjqnUsNOCbFv_9917BxzQbqm/view?usp=sharing' },
+        { label: '5권', title: '한국사 5 — 고려 · 고려 귀족국가의 사회구조', vno: '5', era: '고려', sub: '고려 귀족국가의 사회구조', url: 'https://drive.google.com/file/d/1NKhD9is6WRpEbGMgBeixYXcBTYnZV_jt/view?usp=sharing' },
+        { label: '6권', title: '한국사 6 — 고려 · 고려 귀족사회의 문화', vno: '6', era: '고려', sub: '고려 귀족사회의 문화', url: 'https://drive.google.com/file/d/1ZGIpx3OD8gE5Or0hi2X7YJ8iEVhIo4gz/view?usp=sharing' },
+        { label: '7권', title: '한국사 7 — 고려 · 무신정권과 대몽항쟁', vno: '7', era: '고려', sub: '무신정권과 대몽항쟁', url: 'https://drive.google.com/file/d/12k_7Dr6JeV3cdjlk1_P0kqKk2Fdkico_/view?usp=sharing' },
+        { label: '8권', title: '한국사 8 — 고려 · 고려후기의 사회와 문화', vno: '8', era: '고려', sub: '고려후기의 사회와 문화', url: 'https://drive.google.com/file/d/1w8XY2-0Xc7vqLcl4COSOxiZcGW7pJVBV/view?usp=sharing' },
+        { label: '9권', title: '한국사 9 — 조선 · 양반관료국가의 성립', vno: '9', era: '조선', sub: '양반관료국가의 성립', url: 'https://drive.google.com/file/d/1QvbcEKqR9FTrmxeYjiV0PGrFIo08c-2Q/view?usp=sharing' },
+        { label: '10권', title: '한국사 10 — 조선 · 양반관료국가의 사회구조', vno: '10', era: '조선', sub: '양반관료국가의 사회구조', url: 'https://drive.google.com/file/d/1A_97QH6AFR8hUAljAcWMmA44UiO8URNv/view?usp=sharing' },
+        { label: '11권', title: '한국사 11 — 조선 · 양반관료사회의 문화', vno: '11', era: '조선', sub: '양반관료사회의 문화', url: 'https://drive.google.com/file/d/1u47czlpcAQq2aKSlr-plOhnOxM89uwFB/view?usp=sharing' },
+        { label: '12권', title: '한국사 12 — 조선 · 양반사회의 모순과 대외항쟁', vno: '12', era: '조선', sub: '양반사회의 모순과 대외항쟁', url: 'https://drive.google.com/file/d/1IrXWZ3rOdfvVlOVyyjtbtD4Yd_DVoDn_/view?usp=sharing' },
+        { label: '13권', title: '한국사 13 — 조선 · 양반사회의 변화', vno: '13', era: '조선', sub: '양반사회의 변화', url: 'https://drive.google.com/file/d/15xkIvhsg5ddEjd1Pa_LOKmtf8lE9yQfI/view?usp=sharing' },
+        { label: '14권', title: '한국사 14 — 조선 · 근대적 사상의 맹아', vno: '14', era: '조선', sub: '근대적 사상의 맹아', url: 'https://drive.google.com/file/d/1sqaBVaD7DK7QTNe2vqHXbXIdngwKwY_2/view?usp=sharing' },
+        { label: '15권', title: '한국사 15 — 조선 · 민중의 항거', vno: '15', era: '조선', sub: '민중의 항거', url: 'https://drive.google.com/file/d/1zLnuw3zLhD9WpO_aKMafsPlx0iGdX4c_/view?usp=sharing' },
+        { label: '16권', title: '한국사 16 — 근대 · 개화 척사운동', vno: '16', era: '근대', sub: '개화 척사운동', url: 'https://drive.google.com/file/d/18DphMUZq06sbgK31eALAx4tIrXepQ9if/view?usp=sharing' },
+        { label: '17권', title: '한국사 17 — 근대 · 동학농민봉기와 갑오개혁', vno: '17', era: '근대', sub: '동학농민봉기와 갑오개혁', url: 'https://drive.google.com/file/d/1LCB7JDMr-AZW-0DOvBoGw4Njs4faYYnP/view?usp=sharing' },
+        { label: '18권', title: '한국사 18 — 근대 · 독립협회의 활동', vno: '18', era: '근대', sub: '독립협회의 활동', url: 'https://drive.google.com/file/d/1Qn7CIDoSLmeZU1exJ_TZjxKuMlWr15_2/view?usp=sharing' },
+        { label: '19권', title: '한국사 19 — 근대 · 대한제국의 종말과 의병항쟁', vno: '19', era: '근대', sub: '대한제국의 종말과 의병항쟁', url: 'https://drive.google.com/file/d/1T4brmifrWo5tlXYJafCAhQZp67dyNL_l/view?usp=sharing' },
+        { label: '20권', title: '한국사 20 — 근대 · 근대문화의 발생', vno: '20', era: '근대', sub: '근대문화의 발생', url: 'https://drive.google.com/file/d/1nsfF-V_DH7DbySuACaNS4cGwYS_ntLoE/view?usp=sharing' },
+        { label: '21권', title: '한국사 21 — 근대 · 3·1운동전후의 사회와 경제', vno: '21', era: '근대', sub: '3·1운동전후의 사회와 경제', url: 'https://drive.google.com/file/d/1LJRUhGhiDyMQ4P3b4fNiUsimZw65YUk_/view?usp=sharing' },
+        { label: '22권', title: '한국사 22 — 근대 · 민족운동의 전개', vno: '22', era: '근대', sub: '민족운동의 전개', url: 'https://drive.google.com/file/d/1xLpqFHMmumLDGK675cJmMWXBEbrSCcmP/view?usp=sharing' },
+        { label: '23권', title: '한국사 23 — 총설 · 한국민족', vno: '23', era: '총설', sub: '한국민족', url: 'https://drive.google.com/file/d/1H8hPNc7ccJV-pDkKk-_xmZnKh2OO-EUA/view?usp=sharing' },
+        { label: '24권', title: '한국사 24 — 총색인', vno: '24', era: '', sub: '총색인', url: 'https://drive.google.com/file/d/1wfCfp6AcubmGUsTBH89tL5BkOOo9rMa-/view?usp=sharing' },
+        { label: '25권', title: '한국사 25 — 논저목록', vno: '25', era: '', sub: '논저목록', url: 'https://drive.google.com/file/d/1xh4V0wkb-vwuj5pov9jvTykPgQYo0pQi/view?usp=sharing' }
+      ],
+      tags: ['한국사', '국편 한국사', '국편한국사', '국사편찬위원회', '문교부', '정화인쇄문화사', '고대', '고려', '조선', '근대', '선사문화', '삼국', '통일신라', '양반', '동학농민봉기', '갑오개혁', '독립협회', '의병', '3·1운동', '민족운동', '총색인', '논저목록']
+    },
+    {
       title: '韓國高僧 · 한국 고승',
       badge: '인물 컬렉션 · 법호·법명과 생몰연으로 모은 서가',
       category: [],
@@ -11118,15 +11356,14 @@
         const nmBox = a.querySelector('.sj-name');
         (vol.name || '').split('·').forEach(part => { const i = document.createElement('b'); i.textContent = part.trim(); nmBox.appendChild(i); });
       } else if (b.spineDesign && b.spineDesign.kind === 'mchs') {
-        // 명찰순례: 한지 바탕 · 권마다 다른 단청색 끈 · 명조 제목 · 붉은 낙관 권수 · 먹선 절집 그림
-        const HAN = '一二三四五';
+        // 명찰순례: 한지 바탕 · 명조 제목 · 붉은 낙관 권수(1·2·3) · 먹선 절집 그림
         const no = b.volumes.indexOf(vol) + 1;
         a.className = 'spine spine-mc';
         a.style.setProperty('--c', vol.color || '#8a2f2f');
-        a.innerHTML = `<span class="mc-cord"></span><span class="mc-title"></span><span class="mc-han"></span><span class="mc-seal"></span><span class="mc-au"></span><span class="mc-art"></span><span class="mc-pub">대원사</span>`;
+        a.innerHTML = `<span class="mc-title"></span><span class="mc-han"></span><span class="mc-seal"></span><span class="mc-au"></span><span class="mc-art"></span><span class="mc-pub">대원사</span>`;
         stackChars(a.querySelector('.mc-title'), '명찰순례');
         stackChars(a.querySelector('.mc-han'), '名刹巡禮');
-        a.querySelector('.mc-seal').textContent = HAN[no - 1] || no;
+        a.querySelector('.mc-seal').textContent = no;
         stackChars(a.querySelector('.mc-au'), '崔完秀著');
       } else if (b.spineDesign && b.spineDesign.kind === 'eob') {
         // Encyclopaedia of Buddhism: 흰 책등 · 법륜 · 아래에서 위로 읽는 세로줄 (편자 / 제목+권 / 수록 범위)
@@ -11189,6 +11426,59 @@
         a.querySelector('.ak-no').textContent = vol.vno || '';
         const pin = a.querySelector('.ak-pin'); pin.innerHTML = '';
         (vol.pin || '').split('·').forEach(t => { const c = document.createElement('span'); c.textContent = t; pin.appendChild(c); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'vsi') {
+        // Oxford VSI: 위 단색 + 아래 붓질 색띠 · 옆으로 누운 대문자 제목 + 굵은 'A Very Short Introduction' · 저자 · 번호 · OXFORD
+        a.className = 'spine spine-vsi';
+        const cs = (vol.colors || ['#c4302b', '#e8a23a', '#2f7a63', '#1f3f6e']);
+        cs.forEach((c, k) => a.style.setProperty('--c' + (k + 1), c));
+        a.innerHTML = `<span class="vs-txt"><span class="vs-t"></span><span class="vs-s">A Very Short Introduction</span></span><span class="vs-au"></span><span class="vs-no"></span><span class="vs-ox">OXFORD</span>`;
+        a.querySelector('.vs-t').textContent = vol.en || vol.title;
+        a.querySelector('.vs-au').textContent = vol.au || '';
+        a.querySelector('.vs-no').textContent = vol.no || '';
+        if ((vol.en || '').length > 14) a.style.setProperty('--tf', '.025');
+      } else if (b.spineDesign && b.spineDesign.kind === 'hks') {
+        // 한국사(국편 1974–79): 미색 · 초록 기하체 '한국사' · 굵은 권 번호 · 시대(위아래 줄) · 권 제목 · 국사편찬위원회
+        a.className = 'spine spine-hks';
+        a.innerHTML = `<img class="hk-t" alt="한국사"><span class="hk-no"></span><span class="hk-era"></span><span class="hk-sub"></span><span class="hk-pub"></span>`;
+        a.querySelector('.hk-t').src = b.spineDesign.titleImg;
+        a.querySelector('.hk-no').textContent = vol.vno || '';
+        const era = a.querySelector('.hk-era');
+        if (vol.era) stackChars(era, vol.era); else era.remove();
+        const sub = a.querySelector('.hk-sub');
+        const words = (vol.sub || '').split(' ');
+        const longest = Math.max(...words.map(w => w.length));
+        if ((vol.sub || '').replace(/\s/g, '').length > 9 || longest > 6) a.style.setProperty('--sf', '.022');
+        words.forEach(w => {
+          const c = document.createElement('span');
+          const m = w.match(/^(\d+·\d+)(.*)$/);   // '3·1'은 한 덩어리로 가로 배치
+          if (m) { const g = document.createElement('span'); g.textContent = m[1]; g.style.cssText = 'font-size:.8em;letter-spacing:-.05em;white-space:nowrap'; c.appendChild(g); const r = document.createElement('span'); stackChars(r, m[2]); r.style.cssText = 'display:flex;flex-direction:column;align-items:center'; c.appendChild(r); }
+          else stackChars(c, w);
+          sub.appendChild(c);
+        });
+        stackChars(a.querySelector('.hk-pub'), '국사편찬위원회');
+      } else if (b.spineDesign && b.spineDesign.kind === 'bpr') {
+        // 불교평론: 검은 바탕 · 위 통권 호수 · 주황 짧은 띠 · 굵은 흰 '불교평론' + 회색 Buddhist Review · 아래 작은 연도·계절
+        a.className = 'spine spine-bpr';
+        a.innerHTML = `<span class="bp-no"></span><span class="bp-acc"></span><span class="bp-t"></span><span class="bp-en">Buddhist Review</span><span class="bp-yr"></span>`;
+        a.querySelector('.bp-no').textContent = vol.no || '';
+        stackChars(a.querySelector('.bp-t'), '불교평론');
+        a.querySelector('.bp-yr').innerHTML = `${vol.yr || ''}<br>${vol.se || ''}`;
+      } else if (b.spineDesign && b.spineDesign.kind === 'mkb') {
+        // Modern Korean Buddhism: 회청색 머리띠 · 물결 장식 · 고동색 제목 칸(옆으로 누운 영문 제목 + 이탤릭 원전명) · 꽃무늬 회색 아래칸 · 저자 · 로고
+        a.className = 'spine spine-mkb';
+        a.innerHTML = `<span class="mk-ser">Modern<br>Korean<br>Buddhism</span><span class="mk-orn"></span><span class="mk-panel"><span class="mk-t"></span><span class="mk-o"></span></span><span class="mk-orn"></span><span class="mk-bot"><span class="mk-au"></span><span class="mk-logo"></span></span>`;
+        a.querySelector('.mk-t').textContent = vol.en || vol.title;
+        a.querySelector('.mk-o').textContent = vol.orig || '';
+        a.querySelector('.mk-au').textContent = vol.au || '';
+        const L = (vol.en || '').length;
+        a.style.setProperty('--tf', L > 50 ? '.023' : L > 30 ? '.027' : '.031');
+      } else if (b.spineDesign && b.spineDesign.kind === 'bsk') {
+        // 不識: 흰 바탕 · 위 도장 제호(빨간 테) · 아래 작은 연월 + 굵은 통권 번호
+        a.className = 'spine spine-bsk';
+        a.innerHTML = `<img class="bk-seal" alt="不識"><span class="bk-mo"></span><span class="bk-yr"></span>`;
+        a.querySelector('.bk-seal').src = b.spineDesign.titleImg;
+        a.querySelector('.bk-yr').textContent = vol.yr ? `${vol.yr}.${vol.mo}` : '';   // 연월은 작게
+        a.querySelector('.bk-mo').textContent = vol.no || '';                            // 통권 번호는 크게
       } else if (b.spineDesign && b.spineDesign.kind === 'lhk') {
         // 雷虛 金東華 全集: 흰 종이 · 위 '雷虛 金東華 全集' + 네모 권 번호 · 가는 줄 · 명조 세로 제목(합본은 두 줄) · 달마도 · 雷虛佛敎學術院
         a.className = 'spine spine-lhk';
