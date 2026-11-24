@@ -1156,6 +1156,67 @@
   .spine-bs.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
 
   /* 디자인 책등: 金剛杵 (얇은 갱지 잡지 · 전서 제목) — 접두어 kg- */
+  /* 규장각의 불교문헌 — 접두어 kj- */
+  .spine-kjg{ width:calc(var(--spine-h) * .115); display:flex; flex-direction:column; align-items:stretch; padding:0; overflow:hidden; border-radius:1px 1px 0 0;
+    background:linear-gradient(90deg, rgba(0,0,0,.18), transparent 16%, rgba(255,255,255,.08) 50%, transparent 84%, rgba(0,0,0,.2)); }
+  .spine-kjg > *{ flex:0 0 auto; }
+  .spine-kjg .kj-top{ height:42%; background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 5px), #1c2130;
+    display:flex; justify-content:center; padding-top:calc(var(--spine-h) * .05); box-shadow:inset 0 -2px 0 #a07a4c; }
+  .spine-kjg .kj-t{ display:flex; flex-direction:column; align-items:center; line-height:1.08; color:#f1ece0;
+    font-family:'Noto Serif KR',serif; font-weight:600; font-size:calc(var(--spine-h) * .034); }
+  .spine-kjg .kj-t .gap{ height:.35em; }
+  .spine-kjg .kj-mid{ flex:1 1 auto; background:
+      radial-gradient(ellipse at 30% 40%, rgba(255,255,255,.22), transparent 60%),
+      repeating-linear-gradient(35deg, rgba(255,255,255,.12) 0 1px, transparent 1px 7px), #a9d4bd;
+    display:flex; flex-direction:column; align-items:center; padding-top:calc(var(--spine-h) * .045); color:#5b2a35; }
+  .spine-kjg .kj-no{ display:flex; flex-direction:column; align-items:center; font-family:'Noto Serif KR',serif; line-height:1; }
+  .spine-kjg .kj-no b{ font-weight:700; font-size:calc(var(--spine-h) * .04); letter-spacing:-.02em; }
+  .spine-kjg .kj-no i{ display:block; width:1px; height:calc(var(--spine-h) * .03); background:currentColor; margin:4px 0; opacity:.7; }
+  .spine-kjg .kj-no > span{ font-weight:700; font-size:calc(var(--spine-h) * .045); }
+  .spine-kjg .kj-pg{ margin-top:calc(var(--spine-h) * .03); writing-mode:vertical-rl; font-family:'Noto Serif KR',serif;
+    font-size:calc(var(--spine-h) * .026); font-weight:600; color:#2e3a33; letter-spacing:.03em; }
+  .spine-kjg .kj-bot{ height:9%; background:repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 4px), #9b7449; box-shadow:inset 0 2px 0 rgba(0,0,0,.12); }
+  /* 韓國佛敎學 (한국불교학) — 접두어 kbh- */
+  .spine-kbh{
+    width:calc(var(--spine-h) * .1);
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.35) 0 1px, rgba(0,0,0,.035) 1px 2px, transparent 2px 3px),
+      repeating-linear-gradient(90deg, rgba(0,0,0,.025) 0 1px, transparent 1px 4px),
+      linear-gradient(90deg, color-mix(in srgb, var(--p) 80%, #8a8578) 0%, var(--p) 18%, color-mix(in srgb, var(--p) 85%, #fff) 50%, var(--p) 82%, color-mix(in srgb, var(--p) 78%, #7d786c) 100%);
+    display:flex; flex-direction:column; align-items:center; color:#1d1a17; border-radius:1px 1px 0 0;
+  }
+  .spine-kbh.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
+  .spine-kbh > *{ flex:0 0 auto; }
+  .spine-kbh .kbh-title{ width:52%; height:auto; margin-top:calc(var(--spine-h) * .075); }
+  .spine-kbh .kbh-no, .spine-kbh .kbh-pub, .spine-kbh .kbh-yr{ display:flex; flex-direction:column; align-items:center; line-height:1.12;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; color:#14110e; }
+  .spine-kbh .kbh-no{ margin-top:calc(var(--spine-h) * .04); font-weight:700; font-size:calc(var(--spine-h) * .036); }
+  .spine-kbh .kbh-pub{ margin-top:calc(var(--spine-h) * .035); font-weight:600; font-size:calc(var(--spine-h) * .031); }
+  .spine-kbh .kbh-yr{ margin-top:calc(var(--spine-h) * .03); font-weight:700; font-size:calc(var(--spine-h) * .034); line-height:1; font-family:'Noto Serif KR',serif; }
+  .spine-kbh .kbh-pub:last-child{ margin-bottom:calc(var(--spine-h) * .04); }
+  /* 朝鮮佛教 (조선불교) — 접두어 cb- */
+  .spine-cb{
+    width:calc(var(--spine-h) * .1);
+    background:
+      radial-gradient(circle at 40% 30%, rgba(60,50,35,.09) 0 .6px, transparent 1.2px) 0 0 / 4px 5px,
+      radial-gradient(circle at 70% 60%, rgba(60,50,35,.06) 0 .5px, transparent 1px) 1px 2px / 6px 7px,
+      linear-gradient(90deg, color-mix(in srgb, var(--p) 84%, #6b604c) 0%, var(--p) 22%, color-mix(in srgb, var(--p) 90%, #fff) 55%, var(--p) 80%, color-mix(in srgb, var(--p) 82%, #5c523f) 100%);
+    display:flex; flex-direction:column; align-items:center; color:#1f1b17; border-radius:1px 1px 0 0;
+  }
+  .spine-cb.is-missing{ opacity:.16; filter:grayscale(1) brightness(.75) contrast(.7); box-shadow:none; }
+  .spine-cb > *{ flex:0 0 auto; }
+  .spine-cb .cb-band{ align-self:stretch; height:calc(var(--spine-h) * .035); margin-top:calc(var(--spine-h) * .03);
+    background:
+      radial-gradient(circle, rgba(230,222,205,.55) 0 .5px, transparent 1px) 0 0 / 3px 2px,
+      #1c1915; opacity:.88; }
+  .spine-cb .cb-title{ width:58%; height:auto; margin-top:calc(var(--spine-h) * .05); opacity:.9; mix-blend-mode:multiply; }
+  .spine-cb .cb-orn{ position:relative; width:1px; height:calc(var(--spine-h) * .06); margin-top:calc(var(--spine-h) * .03); background:#2a241e; opacity:.7; }
+  .spine-cb .cb-orn::after{ content:''; position:absolute; left:50%; top:50%; width:5px; height:5px; transform:translate(-50%,-50%) rotate(45deg); border:1px solid #2a241e; background:var(--p); }
+  .spine-cb .cb-no{ margin-top:calc(var(--spine-h) * .03); display:flex; flex-direction:column; align-items:center; line-height:1.1;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:700; font-size:calc(var(--spine-h) * .03); color:#221d18; }
+  .spine-cb .cb-pub{ margin-top:auto; margin-bottom:calc(var(--spine-h) * .035); display:flex; flex-direction:column; align-items:center; line-height:1.12;
+    font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:calc(var(--spine-h) * .021); color:#3a3128; letter-spacing:.04em; }
   .spine-kg{
     width:calc(var(--spine-h) * .105);
     background:
@@ -1718,6 +1779,13 @@
   .spine-bhr.txt{ color:#2a221a; background:
       radial-gradient(circle at 30% 20%, rgba(120,95,60,.05) 0 1px, transparent 1.5px) 0 0 / 5px 5px,
       linear-gradient(90deg, #d9cfb6 0%, #efe7d3 14%, #f5eedd 50%, #ece3cd 86%, #d4c8ad 100%); }
+  .spine-bhr.pre{ width:calc(var(--spine-h) * .11); color:#d8b86a; padding-bottom:calc(var(--spine-h) * .035); background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, transparent 1px 3px),
+      linear-gradient(90deg, #2e2119 0%, #47332a 14%, #523c30 50%, #45322a 86%, #2a1e17 100%); }
+  .spine-bhr.pre .bh-ser{ font-size:calc(var(--spine-h) * .019); }
+  .spine-bhr.pre .bh-tp{ margin-top:calc(var(--spine-h) * .05); font-family:'Noto Serif KR',serif; font-weight:600; font-size:calc(var(--spine-h) * .036); }
+  .spine-bhr.pre .bh-tp .gap{ height:.45em; }
+  .spine-bhr.pre .bh-ed{ font-size:calc(var(--spine-h) * .03); padding:3px 3px; }
   .spine-bhr > *{ flex:0 0 auto; }
   .spine-bhr .bh-ser{ margin-top:calc(var(--spine-h) * .035); display:flex; flex-direction:column; align-items:center; line-height:1.05;
     font-family:'Noto Serif TC','Noto Serif KR',serif; font-weight:600; font-size:calc(var(--spine-h) * .022); opacity:.85; }
@@ -2561,7 +2629,7 @@
     {
       title: '釋林 (석림)',
       badge: '東國大學校 釋林會 · 論叢',
-      category: '01-0006',
+      category: '09-0001',
       poster: 'covers/0001.jpg',
       // 책등: 크림색 바탕 · 은은한 나한 얼굴 무늬 · 금색 釋林 · 第N輯 · 東國大學校釋林會 (1~42집, 미소장 권은 흐리게)
       spineDesign: { kind: 'srl' },
@@ -2644,7 +2712,7 @@
     {
       title: '伽山學報 第11號 (가산학보 제11호)',
       badge: '2003 · 가산불교문화연구원 · 가산학회',
-      category: '01-0006',
+      category: '09-0001',
       poster: 'covers/0006.jpg',
       url: 'https://drive.google.com/file/d/1CjBR2BWBuSBTgsAC0IlsrD8NhVRuLbo_/view?usp=sharing'
     },
@@ -2936,7 +3004,7 @@
     {
       title: 'The Role and Meaning of Religion for Korean Society',
       badge: 'Ed. Song-Chong Lee · Religions (MDPI)',
-      category: '01-0006',
+      category: ['09-0003', '01-0006'],
       poster: 'covers/0052.jpg',
       url: 'https://drive.google.com/file/d/1Kf05Xz5ALuiFlNsHRRMjZCiV8Ne67OsI/view?usp=sharing'
     },
@@ -3266,6 +3334,24 @@
       category: '01-0002',
       poster: 'covers/0099.jpg',
       url: 'https://drive.google.com/file/d/11PnH8W8tRkgFuqp_6Hx-IgeI2R6fdlXQ/view?usp=sharing'
+    },
+    {
+      title: '규장각의 불교문헌',
+      badge: '동국대학교 불교학술원 불교기록문화유산아카이브 사업단 편 · 동국대학교 출판문화원 · 고문헌 조사보고서 · 문헌 1–269 · 전 6책(분권)',
+      category: ['01-0003'],
+      langs: ['한국어'],
+      poster: 'covers/0690.jpg',
+      // 분권: p0–p1 = 책 쪽수, n0–n1 = 문헌목록번호. 책등 두께 일정
+      spineDesign: { kind: 'kjg' },
+      volumes: [
+        { label: '서문·목차', title: '규장각의 불교문헌 서문·목차 (p.0001–0064)', p0: '0001', p1: '0064', n0: '', n1: '', url: 'https://drive.google.com/file/d/11WfOn7-tkX8GET4fh66kEGsFUtitpwkn/view?usp=sharing' },
+        { label: '001–050', title: '규장각의 불교문헌 001–050 (p.0065–0263)', p0: '0065', p1: '0263', n0: '001', n1: '050', url: 'https://drive.google.com/file/d/1Qr9akqt1qpPxrJIpUTRRekR9U6eVw2sg/view?usp=sharing' },
+        { label: '051–100', title: '규장각의 불교문헌 051–100 (p.0265–0587)', p0: '0265', p1: '0587', n0: '051', n1: '100', url: 'https://drive.google.com/file/d/1Z5owSqVcWaCK1YOC54lyVip2Ug--xcnU/view?usp=sharing' },
+        { label: '101–150', title: '규장각의 불교문헌 101–150 (p.0588–0785)', p0: '0588', p1: '0785', n0: '101', n1: '150', url: 'https://drive.google.com/file/d/1roeg17QdNVKEw0ltlommvN5ujdaXj6L_/view?usp=sharing' },
+        { label: '151–199', title: '규장각의 불교문헌 151–199 (p.0786–1014)', p0: '0786', p1: '1014', n0: '151', n1: '199', url: 'https://drive.google.com/file/d/1wY1htFU34ocxI4KuOPd76xnSk4HUtjiy/view?usp=sharing' },
+        { label: '200–269', title: '규장각의 불교문헌 200–269 (p.1015–1300)', p0: '1015', p1: '1300', n0: '200', n1: '269', url: 'https://drive.google.com/file/d/1VMruU6ukzClMCC1OZDd-eZrZIY6YDm4g/view?usp=sharing' }
+      ],
+      tags: ['규장각', '奎章閣', '서울대', '불교문헌', '고문헌', '조사보고서', '해제', '목록', '불교기록문화유산', 'ABC', '동국대학교 불교학술원']
     },
     {
       title: '해인사 고문헌 조사보고서',
@@ -3916,6 +4002,15 @@
       tags: ['한국불상', '불상', '佛像', '최완수', '崔完秀', '대원사', '불교조각', '미륵', '아미타', '법수동류', '교종미술', '선종미술']
     },
     {
+      title: '佛像研究 (불상연구)',
+      badge: '崔完秀 (최완수) 著 · 知識產業社 (지식산업사)',
+      category: ['02-0000'],
+      langs: ['한국어'],
+      poster: 'covers/0692.jpg',
+      url: 'https://drive.google.com/file/d/1f-7nZdEJr-hfGkdMEXceEHRBHXjueB3U/view?usp=sharing',
+      tags: ['불상연구', '佛像研究', '불상', '佛像', '조각', '불교미술', '최완수', '崔完秀', '지식산업사', '知識產業社', '간송미술관']
+    },
+    {
       title: '명찰순례 (名刹巡禮)',
       badge: '최완수 (崔完秀) 지음 · 대원사 · 1994 · 전 3권',
       category: ['01-0002'],
@@ -3933,7 +4028,7 @@
       category: ['01-0006'],
       poster: 'covers/0673.jpg',
       // 묶음 서가: 아래 신문/사보 항목(정확한 title)을 책등으로 늘어놓고, 누르면 각 서가가 열림
-      periodicals: ['東大新聞 (동대신문)', '現代佛敎新聞 (현대불교신문)', '月刊 松廣寺 (월간 송광사)', '正覺道場 (정각도량)', '佛敎 (불교)', '金剛杵 (금강저)', '佛敎時報 (불교시보)', '釋林 (석림)', '不識 (불식)', '불교평론 (Buddhist Review)'],
+      periodicals: ['東大新聞 (동대신문)', '現代佛敎新聞 (현대불교신문)', '月刊 松廣寺 (월간 송광사)', '月刊 佛光 (월간 불광)', '正覺道場 (정각도량)', '佛敎 (불교)', '朝鮮佛教 (조선불교)', '金剛杵 (금강저)', '佛敎時報 (불교시보)', '不識 (불식)', '불교평론 (Buddhist Review)'],
       tags: ['정기간행물', '定期刊行物', '신문', '사보', '소식지', '회보', '월보', '학보']
     },
     {
@@ -3944,6 +4039,15 @@
       // 사보: 목록은 newspaper-songgwang.js에 따로 (열 때만 불러옴)
       newspaper: { key: 'songgwang', src: 'newspaper-songgwang.js', mark: '松廣', color: '#34563a', paper: '#e9e4d2', titleImg: 'spines/per-songgwang.png', titleW: 34 },
       tags: ['월간 송광사', '月刊 松廣寺', '송광사', '松廣寺', '조계총림', '사보', '월간지']
+    },
+    {
+      title: '月刊 佛光 (월간 불광)',
+      badge: '불광출판사 · 1974.11 創刊 · 월간',
+      category: ['01-0006'],
+      hubOnly: true,   // 메인에는 안 보이고 정기간행물 서가 안에만
+      // 월간지(100호 넘음 → 신문 서가 방식): 목록은 newspaper-bulgwang.js
+      newspaper: { key: 'bulgwang', src: 'newspaper-bulgwang.js', mark: '佛光', color: '#7a3b1c', paper: '#ece5d4', font: "'Black Han Sans', sans-serif" },
+      tags: ['월간 불광', '月刊 佛光', '불광', '佛光', '불광출판사', '불광사', '광덕', '光德', '월간지', '잡지']
     },
     {
       title: '正覺道場 (정각도량)',
@@ -4321,6 +4425,36 @@
         { label: '제29호', title: '金剛杵 第二十九號', url: '', missing: true },
         { label: '제30호', title: '金剛杵 第三十號', url: '', missing: true }
       ]
+    },
+    {
+      title: '朝鮮佛教 (조선불교)',
+      badge: '京城 朝鮮佛教社 發行 · 朝鮮佛教大會 · 1924 創刊 · 每月 十一日 發行 · 第十三號(1925.5)–第十九號 소장',
+      category: ['01-0006'],
+      poster: 'covers/0685.jpg',
+      // 표지 예서 제호(朝鮮佛教)를 오려 세로로 · 위쪽 굵은 먹띠 · 第N號 · 朝鮮佛教社. 소장하지 않은 호는 missing
+      spineDesign: { kind: 'cbj', titleImg: 'spines/cb-title.png' },
+      volumes: [
+        { label: '제1호', title: '朝鮮佛教 第一號', url: '', missing: true },
+        { label: '제2호', title: '朝鮮佛教 第二號', url: '', missing: true },
+        { label: '제3호', title: '朝鮮佛教 第三號', url: '', missing: true },
+        { label: '제4호', title: '朝鮮佛教 第四號', url: '', missing: true },
+        { label: '제5호', title: '朝鮮佛教 第五號', url: '', missing: true },
+        { label: '제6호', title: '朝鮮佛教 第六號', url: '', missing: true },
+        { label: '제7호', title: '朝鮮佛教 第七號', url: '', missing: true },
+        { label: '제8호', title: '朝鮮佛教 第八號', url: '', missing: true },
+        { label: '제9호', title: '朝鮮佛教 第九號', url: '', missing: true },
+        { label: '제10호', title: '朝鮮佛教 第十號', url: '', missing: true },
+        { label: '제11호', title: '朝鮮佛教 第十一號', url: '', missing: true },
+        { label: '제12호', title: '朝鮮佛教 第十二號', url: '', missing: true },
+        { label: '제13호 (1925.5)', title: '朝鮮佛教 第十三號', url: 'https://drive.google.com/file/d/1TBYzxB5XF-T22-LOpvZTiHVvkJ4UQ_Xg/view?usp=sharing' },
+        { label: '제14호 (1925.6)', title: '朝鮮佛教 第十四號', url: 'https://drive.google.com/file/d/1BZwTkycWLBJS2TUq5yDyBQKKIbHrlXmZ/view?usp=sharing' },
+        { label: '제15호 (1925.7)', title: '朝鮮佛教 第十五號', url: 'https://drive.google.com/file/d/1cX_WA8baQMK65GELqxZb03rp8JhxEOt_/view?usp=sharing' },
+        { label: '제16호 (1925.8)', title: '朝鮮佛教 第十六號', url: 'https://drive.google.com/file/d/1sbM1bvEai0zn_xwTqsFY3bMEX-YY_Dg7/view?usp=sharing' },
+        { label: '제17호 (1925.9)', title: '朝鮮佛教 第十七號', url: 'https://drive.google.com/file/d/112y1khQOe4y1GZiF_G5PDdmEjPeH09ek/view?usp=sharing' },
+        { label: '제18호 (1925.10)', title: '朝鮮佛教 第十八號', url: 'https://drive.google.com/file/d/1-FzKflGJC0y1tavEVrr0rNcwj0oNyKpB/view?usp=sharing' },
+        { label: '제19호 (1925.11)', title: '朝鮮佛教 第十九號', url: 'https://drive.google.com/file/d/1wRlyn-jG7E9fAP7UueSnKXtFTwSXduG7/view?usp=sharing' }
+      ],
+      tags: ['조선불교', '朝鮮佛教', '朝鮮佛敎', '조선불교사', '朝鮮佛教社', '조선불교대회', '朝鮮佛教大會', '일제강점기', '근대불교', '잡지', '월간지', '일본어']
     },
     {
       title: '佛敎 (불교)',
@@ -4719,11 +4853,132 @@
     {
       title: '韓國佛敎學 (한국불교학)',
       badge: '사단법인 한국불교학회 · Since 1973',
-      category: ['01-0006'],
+      category: ['09-0001'],
       poster: 'covers/0209.jpg',
-      // 집이 더 생기면 아래 volumes에 번호 순서대로 추가
+      // 책등: 흰 비단결 천 · 붓글씨 제호(韓國佛敎學) · 第N輯 · 韓國佛敎學會 · 연도(숫자). 100호 넘지만 책등 방식(사용자 지정)
+      // yr: 발행 연도 (아는 것만) · 소장 권은 missing 지우고 url 넣기
+      spineDesign: { kind: 'kbh', titleImg: 'spines/kbh-title.png' },
       volumes: [
-        { label: '제100집', title: '韓國佛敎學 제100집 (2021년 11월) · 100집 기념 특집', url: 'https://drive.google.com/file/d/1bZ7abOpJnXpoA2Lw7u-x6WAzoJUmmQR_/view?usp=sharing' }
+        { label: '제1집', no: 1, title: '韓國佛敎學 제1집', url: '', missing: true },
+        { label: '제2집', no: 2, title: '韓國佛敎學 제2집', url: '', missing: true },
+        { label: '제3집', no: 3, title: '韓國佛敎學 제3집', url: '', missing: true },
+        { label: '제4집', no: 4, title: '韓國佛敎學 제4집', url: '', missing: true },
+        { label: '제5집', no: 5, title: '韓國佛敎學 제5집', url: '', missing: true },
+        { label: '제6집', no: 6, title: '韓國佛敎學 제6집', url: '', missing: true },
+        { label: '제7집', no: 7, title: '韓國佛敎學 제7집', url: '', missing: true },
+        { label: '제8집', no: 8, title: '韓國佛敎學 제8집', url: '', missing: true },
+        { label: '제9집', no: 9, title: '韓國佛敎學 제9집', url: '', missing: true },
+        { label: '제10집', no: 10, title: '韓國佛敎學 제10집', url: '', missing: true },
+        { label: '제11집', no: 11, title: '韓國佛敎學 제11집', url: '', missing: true },
+        { label: '제12집', no: 12, title: '韓國佛敎學 제12집', url: '', missing: true },
+        { label: '제13집', no: 13, title: '韓國佛敎學 제13집', url: '', missing: true },
+        { label: '제14집', no: 14, title: '韓國佛敎學 제14집', url: '', missing: true },
+        { label: '제15집', no: 15, title: '韓國佛敎學 제15집', url: '', missing: true },
+        { label: '제16집', no: 16, title: '韓國佛敎學 제16집', url: '', missing: true },
+        { label: '제17집', no: 17, title: '韓國佛敎學 제17집', url: '', missing: true },
+        { label: '제18집', no: 18, title: '韓國佛敎學 제18집', url: '', missing: true },
+        { label: '제19집', no: 19, title: '韓國佛敎學 제19집', url: '', missing: true },
+        { label: '제20집', no: 20, yr: '1995', title: '韓國佛敎學 제20집', url: '', missing: true },
+        { label: '제21집', no: 21, title: '韓國佛敎學 제21집', url: '', missing: true },
+        { label: '제22집', no: 22, title: '韓國佛敎學 제22집', url: '', missing: true },
+        { label: '제23집', no: 23, title: '韓國佛敎學 제23집', url: '', missing: true },
+        { label: '제24집', no: 24, title: '韓國佛敎學 제24집', url: '', missing: true },
+        { label: '제25집', no: 25, title: '韓國佛敎學 제25집', url: '', missing: true },
+        { label: '제26집', no: 26, title: '韓國佛敎學 제26집', url: '', missing: true },
+        { label: '제27집', no: 27, title: '韓國佛敎學 제27집', url: '', missing: true },
+        { label: '제28집', no: 28, title: '韓國佛敎學 제28집', url: '', missing: true },
+        { label: '제29집', no: 29, title: '韓國佛敎學 제29집', url: '', missing: true },
+        { label: '제30집', no: 30, title: '韓國佛敎學 제30집', url: '', missing: true },
+        { label: '제31집', no: 31, title: '韓國佛敎學 제31집', url: '', missing: true },
+        { label: '제32집', no: 32, title: '韓國佛敎學 제32집', url: '', missing: true },
+        { label: '제33집', no: 33, title: '韓國佛敎學 제33집', url: '', missing: true },
+        { label: '제34집', no: 34, title: '韓國佛敎學 제34집', url: '', missing: true },
+        { label: '제35집', no: 35, title: '韓國佛敎學 제35집', url: '', missing: true },
+        { label: '제36집', no: 36, title: '韓國佛敎學 제36집', url: '', missing: true },
+        { label: '제37집', no: 37, title: '韓國佛敎學 제37집', url: '', missing: true },
+        { label: '제38집', no: 38, title: '韓國佛敎學 제38집', url: '', missing: true },
+        { label: '제39집', no: 39, title: '韓國佛敎學 제39집', url: '', missing: true },
+        { label: '제40집', no: 40, title: '韓國佛敎學 제40집', url: '', missing: true },
+        { label: '제41집', no: 41, title: '韓國佛敎學 제41집', url: '', missing: true },
+        { label: '제42집', no: 42, title: '韓國佛敎學 제42집', url: '', missing: true },
+        { label: '제43집', no: 43, title: '韓國佛敎學 제43집', url: '', missing: true },
+        { label: '제44집', no: 44, title: '韓國佛敎學 제44집', url: '', missing: true },
+        { label: '제45집', no: 45, title: '韓國佛敎學 제45집', url: '', missing: true },
+        { label: '제46집', no: 46, title: '韓國佛敎學 제46집', url: '', missing: true },
+        { label: '제47집', no: 47, title: '韓國佛敎學 제47집', url: '', missing: true },
+        { label: '제48집', no: 48, title: '韓國佛敎學 제48집', url: '', missing: true },
+        { label: '제49집', no: 49, title: '韓國佛敎學 제49집', url: '', missing: true },
+        { label: '제50집', no: 50, title: '韓國佛敎學 제50집', url: '', missing: true },
+        { label: '제51집', no: 51, title: '韓國佛敎學 제51집', url: '', missing: true },
+        { label: '제52집', no: 52, title: '韓國佛敎學 제52집', url: '', missing: true },
+        { label: '제53집', no: 53, title: '韓國佛敎學 제53집', url: '', missing: true },
+        { label: '제54집', no: 54, title: '韓國佛敎學 제54집', url: '', missing: true },
+        { label: '제55집', no: 55, title: '韓國佛敎學 제55집', url: '', missing: true },
+        { label: '제56집', no: 56, title: '韓國佛敎學 제56집', url: '', missing: true },
+        { label: '제57집', no: 57, title: '韓國佛敎學 제57집', url: '', missing: true },
+        { label: '제58집', no: 58, title: '韓國佛敎學 제58집', url: '', missing: true },
+        { label: '제59집', no: 59, title: '韓國佛敎學 제59집', url: '', missing: true },
+        { label: '제60집', no: 60, title: '韓國佛敎學 제60집', url: '', missing: true },
+        { label: '제61집', no: 61, title: '韓國佛敎學 제61집', url: '', missing: true },
+        { label: '제62집', no: 62, title: '韓國佛敎學 제62집', url: '', missing: true },
+        { label: '제63집', no: 63, title: '韓國佛敎學 제63집', url: '', missing: true },
+        { label: '제64집', no: 64, title: '韓國佛敎學 제64집', url: '', missing: true },
+        { label: '제65집', no: 65, title: '韓國佛敎學 제65집', url: '', missing: true },
+        { label: '제66집', no: 66, title: '韓國佛敎學 제66집', url: '', missing: true },
+        { label: '제67집', no: 67, title: '韓國佛敎學 제67집', url: '', missing: true },
+        { label: '제68집', no: 68, title: '韓國佛敎學 제68집', url: '', missing: true },
+        { label: '제69집', no: 69, title: '韓國佛敎學 제69집', url: '', missing: true },
+        { label: '제70집', no: 70, title: '韓國佛敎學 제70집', url: '', missing: true },
+        { label: '제71집', no: 71, title: '韓國佛敎學 제71집', url: '', missing: true },
+        { label: '제72집', no: 72, title: '韓國佛敎學 제72집', url: '', missing: true },
+        { label: '제73집', no: 73, title: '韓國佛敎學 제73집', url: '', missing: true },
+        { label: '제74집', no: 74, title: '韓國佛敎學 제74집', url: '', missing: true },
+        { label: '제75집', no: 75, title: '韓國佛敎學 제75집', url: '', missing: true },
+        { label: '제76집', no: 76, title: '韓國佛敎學 제76집', url: '', missing: true },
+        { label: '제77집', no: 77, title: '韓國佛敎學 제77집', url: '', missing: true },
+        { label: '제78집', no: 78, title: '韓國佛敎學 제78집', url: '', missing: true },
+        { label: '제79집', no: 79, title: '韓國佛敎學 제79집', url: '', missing: true },
+        { label: '제80집', no: 80, title: '韓國佛敎學 제80집', url: '', missing: true },
+        { label: '제81집', no: 81, title: '韓國佛敎學 제81집', url: '', missing: true },
+        { label: '제82집', no: 82, title: '韓國佛敎學 제82집', url: '', missing: true },
+        { label: '제83집', no: 83, title: '韓國佛敎學 제83집', url: '', missing: true },
+        { label: '제84집', no: 84, title: '韓國佛敎學 제84집', url: '', missing: true },
+        { label: '제85집', no: 85, title: '韓國佛敎學 제85집', url: '', missing: true },
+        { label: '제86집', no: 86, title: '韓國佛敎學 제86집', url: '', missing: true },
+        { label: '제87집', no: 87, title: '韓國佛敎學 제87집', url: 'https://drive.google.com/file/d/1wPjuvV9anEAUGaI5k779maEoBvRWf6zl/view?usp=sharing' },
+        { label: '제88집', no: 88, title: '韓國佛敎學 제88집', url: 'https://drive.google.com/file/d/19P42bEe__GHScsIIWVNJgGPAE7DqvbPq/view?usp=sharing' },
+        { label: '제89집', no: 89, title: '韓國佛敎學 제89집', url: 'https://drive.google.com/file/d/1sxOSUPXlhvvDLi2uowOpfzVAteZ11Gcj/view?usp=sharing' },
+        { label: '제90집', no: 90, title: '韓國佛敎學 제90집', url: 'https://drive.google.com/file/d/1wjrAYa2pFAfFKkijCpnUAuBpjAocZQEh/view?usp=sharing' },
+        { label: '제91집', no: 91, title: '韓國佛敎學 제91집', url: 'https://drive.google.com/file/d/1Wpn225kopaOPouYUaR9TxIE3bePOxhcB/view?usp=sharing' },
+        { label: '제92집', no: 92, title: '韓國佛敎學 제92집', url: 'https://drive.google.com/file/d/1mWesusSmewToeu-Q9nuuwcATBEMe_4ke/view?usp=sharing' },
+        { label: '제93집', no: 93, title: '韓國佛敎學 제93집', url: 'https://drive.google.com/file/d/1hYGET1cjZMWtE3KjDkowfOdyl0O9dz-e/view?usp=sharing' },
+        { label: '제94집', no: 94, title: '韓國佛敎學 제94집', url: 'https://drive.google.com/file/d/1elLHGxg3imPw7JSyUF1YQPAF68xIlqKN/view?usp=sharing' },
+        { label: '제95집', no: 95, title: '韓國佛敎學 제95집', url: 'https://drive.google.com/file/d/1sJJ59lbXddC5ND3jVf3gg7C3SfUAdfvq/view?usp=sharing' },
+        { label: '제96집', no: 96, title: '韓國佛敎學 제96집', url: 'https://drive.google.com/file/d/16ZYO9Qg_P-c3ox7WOhmQKk8Iokobic46/view?usp=sharing' },
+        { label: '제97집', no: 97, title: '韓國佛敎學 제97집', url: 'https://drive.google.com/file/d/11_pyY5RkS4cRfxMjw4sSt-XqYzi0jiAB/view?usp=sharing' },
+        { label: '제98집', no: 98, title: '韓國佛敎學 제98집', url: 'https://drive.google.com/file/d/14X6L2GSjIU83ax5ujbphH79-jqC5cIOw/view?usp=sharing' },
+        { label: '제99집', no: 99, title: '韓國佛敎學 제99집', url: 'https://drive.google.com/file/d/1czVvehgBN9XorGkuSfykVUBH9HX9aHTR/view?usp=sharing' },
+        { label: '제100집', no: 100, yr: '2021', title: '韓國佛敎學 제100집 (2021년 11월) · 100집 기념 특집', url: 'https://drive.google.com/file/d/1X_Y4x8kClzMRkJ5zFJ-jXSTc_L_VMd-0/view?usp=sharing' },
+        { label: '제101집', no: 101, title: '韓國佛敎學 제101집', url: 'https://drive.google.com/file/d/1NDf34CdVFa8LSVXSjvdBs4uK6r76J5jz/view?usp=sharing' },
+        { label: '제102집', no: 102, title: '韓國佛敎學 제102집', url: 'https://drive.google.com/file/d/1xH9rEhbajs2j7Hux-TjRMMZ_8FnU0NAs/view?usp=sharing' },
+        { label: '제103집', no: 103, title: '韓國佛敎學 제103집', url: 'https://drive.google.com/file/d/1Kwbgww7WAEB4yzyux_UfHkLG-i2rBnWA/view?usp=sharing' },
+        { label: '제104집', no: 104, title: '韓國佛敎學 제104집', url: 'https://drive.google.com/file/d/1XxQumn4EH-M-vBjlF7qAmPkBTA0QHfhX/view?usp=sharing' },
+        { label: '제105집', no: 105, title: '韓國佛敎學 제105집', url: 'https://drive.google.com/file/d/1dBv53pLejsduae1xlsQph__RPypABpgI/view?usp=sharing' },
+        { label: '제106집', no: 106, title: '韓國佛敎學 제106집', url: 'https://drive.google.com/file/d/1mraD_NA2QB6Dc-vZJAt6vfhv-Bp2qdsm/view?usp=sharing' },
+        { label: '제107집', no: 107, title: '韓國佛敎學 제107집', url: 'https://drive.google.com/file/d/1dSdcSf0PZujHqIwfRa0GgQ4xyxIYcTmK/view?usp=sharing' },
+        { label: '제108집', no: 108, title: '韓國佛敎學 제108집', url: 'https://drive.google.com/file/d/1npQR2gRwzrT_pvF7E_u9mHMYU57yLrMh/view?usp=sharing' },
+        { label: '제109집', no: 109, title: '韓國佛敎學 제109집', url: '', missing: true },
+        { label: '제110집', no: 110, title: '韓國佛敎學 제110집', url: 'https://drive.google.com/file/d/1r-NlZK9rJAHcTaP1IgznToCfZn8VUST_/view?usp=sharing' },
+        { label: '제111집', no: 111, title: '韓國佛敎學 제111집', url: 'https://drive.google.com/file/d/1BRX4TyJsyTtOjWnxplPvfvSm6ePIMyWS/view?usp=sharing' },
+        { label: '제112집', no: 112, title: '韓國佛敎學 제112집', url: 'https://drive.google.com/file/d/1wbM8rlw9_h7N-KDtEs7Kwv1VPzqTL2uC/view?usp=sharing' },
+        { label: '제113집', no: 113, title: '韓國佛敎學 제113집', url: 'https://drive.google.com/file/d/1ir-5lmyFyl--OSgu51vw-REukvibicmK/view?usp=sharing' },
+        { label: '제114집', no: 114, title: '韓國佛敎學 제114집', url: 'https://drive.google.com/file/d/18yejChHH1sNa4pnszd6peKktFXPgTlGT/view?usp=sharing' },
+        { label: '제115집', no: 115, title: '韓國佛敎學 제115집', url: 'https://drive.google.com/file/d/1in3JDMHTb-KgLVlkGIbOO3wDVd8kwgAW/view?usp=sharing' },
+        { label: '제116집', no: 116, title: '韓國佛敎學 제116집', url: 'https://drive.google.com/file/d/11pQa7BKk7ihZJUYlw3S9vcfofrIOGct8/view?usp=sharing' },
+        { label: '제117집', no: 117, title: '韓國佛敎學 제117집', url: '', missing: true },
+        { label: '제118집', no: 118, title: '韓國佛敎學 제118집', url: '', missing: true },
+        { label: '제119집', no: 119, title: '韓國佛敎學 제119집', url: '', missing: true },
+        { label: '제120집', no: 120, title: '韓國佛敎學 제120집', url: '', missing: true }
       ],
       // 검색용 (화면에 안 보임): 제100집 수록 논문·필자
       tags: ['순정리론', '성유식론', '경량부', '유식', '다라니', 'Dhāraṇī', '석마하연론', '원효', '수행관법', '금강삼매경론', '신라', '인왕회', '조계종 표준본', '금강경', '신행체계', '풍양 조씨', '분암', '남양주 견성암', '불상', '마음이란 무엇인가', '석학',
@@ -4754,7 +5009,7 @@
     {
       title: '불교학 연구 (Korea Journal of Buddhist Studies)',
       badge: '佛敎學硏究會 (불교학연구회) · KABS · 한국연구재단 우수등재학술지',
-      category: ['01-0006'],
+      category: ['09-0001'],
       poster: 'covers/0212.jpg',
       // 호가 더 생기면 아래 volumes에 번호 순서대로 추가
       volumes: [
@@ -5214,6 +5469,22 @@
       tags: ['혜춘', '慧春', '영첩', '비구니', '사진']
     },
     {
+      title: '구도와 전법 그리고 인연 : 경하현성 도선사 조실 회고록',
+      badge: '경하현성 · 도선사',
+      category: ['01-0001'],
+      poster: 'covers/0686.jpg',
+      url: 'https://drive.google.com/file/d/1Rb6odQGawDeRlnK7IWfwylgVbTy0rrUc/view?usp=sharing',
+      tags: ['경하', '현성', '경하현성', '도선사', '조실', '회고록', '구도', '전법']
+    },
+    {
+      title: '식민지 동토에 광복의 꽃씨 뿌린 선지식 : 포월당 봉률스님 행적기',
+      badge: '직지사 주지 재임하며 독립운동 선봉에 서다 · 대한불교조계종 직지사',
+      category: ['01-0001'],
+      poster: 'covers/0687.jpg',
+      url: 'https://drive.google.com/file/d/1ELRVV_towGWw9OxlDFttT6JbkLUVqrSP/view?usp=sharing',
+      tags: ['포월', '봉률', '포월봉률', '포월당', '직지사', '독립운동', '항일', '행적기', '건국훈장']
+    },
+    {
       title: '韓國佛敎의 法脈 (한국불교의 법맥)',
       badge: '退翁 性徹 (퇴옹 성철) 著 · 藏經閣 · 성철스님 법어집 2집 4권',
       category: ['01-0001'],
@@ -5493,6 +5764,14 @@
       poster: 'covers/0309.jpg',
       url: 'https://drive.google.com/file/d/1gTUVl-_bXIYCjlXvXFabT-WwvyiVVB2U/view?usp=sharing',
       tags: ['만덕사', '萬德寺', '백련사', '강진', '사지', '寺志']
+    },
+    {
+      title: '밀양 표충사 시첩 : 사명 대사의 공훈을 기리는 사대부들의 시',
+      badge: '동국대학교 불교기록문화유산아카이브 사업단 편 · 동국대학교출판부 · 사지자료집 6',
+      category: ['01-0002'],
+      poster: 'covers/0688.jpg',
+      url: 'https://drive.google.com/file/d/1I2nniy4m-xktrTRE_HhtfBhBTTUTiZBj/view?usp=sharing',
+      tags: ['표충사', '表忠寺', '表忠祠', '밀양', '시첩', '詩帖', '사명대사', '사명당', '유정', '惟政', '사대부', '한시', '사지자료집', '寺誌資料集', 'ABC']
     },
     {
       title: '갑사 표충원 (表忠院)',
@@ -8319,6 +8598,15 @@
       tags: ['요경서설', '經序', '서문', '지관', '智冠', '가산불교문화연구원']
     },
     {
+      title: '韓國佛敎所依經典研究 (한국불교소의경전연구)',
+      badge: '李智冠 (이지관) 著 · 도서출판 伽山文庫 · 1993',
+      category: ['01-0003'],
+      langs: ['한국어', '한문'],
+      poster: 'covers/0691.jpg',
+      url: 'https://drive.google.com/file/d/1Mdt4Pjm2RERpiSQZsGR8Lx3G5pdmJ3O8/view?usp=sharing',
+      tags: ['한국불교소의경전연구', '소의경전', '所依經典', '이지관', '李智冠', '지관', '智冠', '가산문고', '伽山文庫', '가산', '경전', '강원', '이력과목']
+    },
+    {
       title: '韓國高僧碑文總集 : 朝鮮朝·近現代 (한국고승비문총집 조선조·근현대)',
       badge: '智冠 (지관) 編 · 伽山佛敎文化研究院',
       category: ['01-0003'],
@@ -8876,6 +9164,15 @@
       tags: ['탄허', '呑虛', '탄허택성', '呑虛宅成', '김금택', '선교관', '禪敎觀', '탄허불교문화재단', '월정사', '月精寺', '오대산', '해주', '무관', '김광식', '윤창화', '각성', '정병삼', '정성본']
     },
     {
+      title: '呑虛思想特講 (탄허사상 특강)',
+      badge: '문광 편저 · 도서출판 교림',
+      category: ['01-0001'],
+      langs: ['한국어'],
+      poster: 'covers/0689.jpg',
+      url: 'https://drive.google.com/file/d/1YNNTOyLX34olk5Eu9R1gz3Bs9x2TpGJE/view?usp=sharing',
+      tags: ['탄허', '呑虛', '탄허택성', '呑虛宅成', '탄허사상', '특강', '문광', '교림', '월정사', '오대산']
+    },
+    {
       title: '연기와 공 : 여래장사상은 불교가 아니다',
       badge: '松本史朗 (마쓰모토 시로) 著 · 慧源 (혜원) 譯 · 운주사 · 현대불교 비판신서',
       category: ['05-0003'],
@@ -9393,8 +9690,9 @@
       pageOrder: true,
       spineDesign: { kind: 'bhr', sections: true },
       volumes: [
+        { label: '서문과 논문', title: '근대선원방함록 서문과 논문', temple: '서문', ed: '서문', url: 'https://drive.google.com/file/d/1TeUYDl5aUbJzKdOagDSI3gAqvU_nUFzD/view?usp=sharing' },
         { label: '해인사 1 영인본', title: '근대선원방함록 해인사 (1899–1967) 1 영인본 · p.0005–0317', temple: '해인사', han: '海印寺', yrs: '1899–1967', ed: '영인본', p0: '0005', p1: '0317', url: 'https://drive.google.com/file/d/1VLeZ101Tq-9m34ON_CUaJwlZ7rLI_J1q/view?usp=sharing' },
-        { label: '해인사 2 입력본', title: '근대선원방함록 해인사 (1899–1967) 2 입력본 (없음)', temple: '해인사', han: '海印寺', yrs: '1899–1967', ed: '입력본', p0: '', p1: '', url: '', missing: true },
+        { label: '해인사 2 입력본', title: '근대선원방함록 해인사 (1899–1967) 2 입력본 · p.0037–0147', temple: '해인사', han: '海印寺', yrs: '1899–1967', ed: '입력본', p0: '0037', p1: '0147', url: 'https://drive.google.com/file/d/1F8ZVn6mwP7WDddKbcXbHCCAvkKgLrI_y/view?usp=sharing' },
         { label: '수덕사 1 영인본', title: '근대선원방함록 수덕사 (1910–1967) 1 영인본 · p.0321–0488', temple: '수덕사', han: '修德寺', yrs: '1910–1967', ed: '영인본', p0: '0321', p1: '0488', url: 'https://drive.google.com/file/d/1qe8rhltUv8D7zBcYgcrvnrvSFw69u5R5/view?usp=sharing' },
         { label: '수덕사 2 입력본', title: '근대선원방함록 수덕사 (1910–1967) 2 입력본 · p.0152–0227', temple: '수덕사', han: '修德寺', yrs: '1910–1967', ed: '입력본', p0: '0152', p1: '0227', url: 'https://drive.google.com/file/d/1-oHKTydC3g7vr9ImKmmCBUMFWzo8lFpY/view?usp=sharing' },
         { label: '견성암 1 영인본', title: '근대선원방함록 견성암 (1927–1949) 1 영인본 · p.0491–0664', temple: '견성암', han: '見性庵', yrs: '1927–1949', ed: '영인본', p0: '0491', p1: '0664', url: 'https://drive.google.com/file/d/138yQfUWvv4nd_JqFYNjIh4dJW9uCnFF5/view?usp=sharing' },
@@ -9437,7 +9735,7 @@
         { name: '월운해룡', hanja: '月雲海龍', born: 1929, died: 2023, books: ['못다 갚을 은혜 : 月雲堂 逸中事 월운스님회고담'] },
         { name: '연담묘순', hanja: '', born: 1946, books: ['묘순 스님 사진집'] },
         { name: '법정', hanja: '法頂', born: 1932, died: 2010, books: ['新譯 華嚴經 (신역 화엄경)'] },
-        { name: '탄허택성', hanja: '呑虛宅成', born: 1913, died: 1983, books: ['呑虛禪師의 禪敎觀 (탄허선사의 선교관)', '방산굴의 무영수 (方山窟의 無影樹)'] },
+        { name: '탄허택성', hanja: '呑虛宅成', born: 1913, died: 1983, books: ['呑虛禪師의 禪敎觀 (탄허선사의 선교관)', '呑虛思想特講 (탄허사상 특강)', '방산굴의 무영수 (方山窟의 無影樹)'] },
         { name: '영허녹원', hanja: '暎虛綠園', born: 1928, died: 2017, books: ['허공에 가득한 깨달음 : 영허녹원 (暎虛綠園)', '허공에 가득한 깨달음 : 영허녹원 (暎虛綠園) · 파일 2'] },
         { name: '경운원기', hanja: '擎雲元奇', born: 1852, died: 1936, books: ['華嚴宗主 擎雲元奇 大禪師 散稿輯 (화엄종주 경운원기 대선사 산고집)', '華嚴宗主 擎雲元奇 大禪師 散稿輯 (화엄종주 경운원기 대선사 산고집) · 컬러 표지판'] },
         { name: '석전정호', hanja: '石顚鼎鎬', born: 1870, died: 1948, books: ['석전 박한영 전서 (石顚 朴漢永 全書)', '戒學約詮 註解 (계학약전 주해)'] },
@@ -9458,12 +9756,15 @@
         { name: '일엽하엽', hanja: '백련도엽', born: 1896, died: 1971, books: ['一葉禪文 (일엽선문) : 金一葉禪師 文集'] },
         { name: '청담순호', hanja: '올연청담', born: 1902, died: 1971, books: ['마음에 타는 불 무엇으로 끄려는고 : 求道小說 청담큰스님'] },
         { name: '학월경산', hanja: '', born: 1917, died: 1979, books: ['청정율사 경산 스님의 삶과 가르침'] },
-        { name: '영파정영', hanja: '', born: 1923, died: 2007, books: ['無門三昧 (무문삼매) : 영파 정영 대종사 수행록'] }
+        { name: '영파정영', hanja: '', born: 1923, died: 2007, books: ['無門三昧 (무문삼매) : 영파 정영 대종사 수행록'] },
+        { name: '경하현성', hanja: '', born: null, died: null, books: ['구도와 전법 그리고 인연 : 경하현성 도선사 조실 회고록'] },
+        { name: '포월봉률', hanja: '', born: null, died: null, books: ['식민지 동토에 광복의 꽃씨 뿌린 선지식 : 포월당 봉률스님 행적기'] }
       ]
     }
   };
 
   // ===== 분류 체계 (메인 카테고리 + 서브카테고리) =====
+  // 09 Journal(학술지) 규칙: 100호 이하 → volumes 책등 / 100호 넘는 학술지 → 신문 서가처럼 (newspaper: {...} + 별도 js 목록)
   // 책 항목의 category 필드는 서브카테고리 코드(예: '01-0006')를 그대로 씁니다.
   const CATEGORIES = [
     { code:'01-0000', label:'Korean', subs:[
@@ -9472,7 +9773,7 @@
         {code:'01-0003', label:'K-Texts'},
         {code:'01-0004', label:'K-History'},
         {code:'01-0005', label:'K-Series'},
-        {code:'01-0006', label:'K-Journal'}
+        {code:'01-0006', label:'K-Periodical'}
     ]},
     { code:'02-0000', label:'Art', subs:[
         {code:'02-0001', label:'Stupa'},
@@ -9509,6 +9810,11 @@
     { code:'08-0000', label:'Tools', subs:[
         {code:'08-0001', label:'Index'},
         {code:'08-0002', label:'Encyclopedia'}
+    ]},
+    { code:'09-0000', label:'Journal', subs:[
+        {code:'09-0001', label:'K-Journal'},
+        {code:'09-0002', label:'Asia-Journal'},
+        {code:'09-0003', label:'Western'}
     ]},
     { code:'10-0000', label:'General Buddhism', subs:[
         {code:'10-0001', label:'에세이'}
@@ -11200,7 +11506,7 @@
     if (!b.pageOrder) return b.volumes;
     if (b._order === 'page') {
       const by = ed => b.volumes.filter(v => v.ed === ed).sort((x, y) => (+x.p0 || 1e9) - (+y.p0 || 1e9));
-      return [...by('입력본').map(v => ({ ...v, sec: '입력본 · 앞에서부터' })), ...by('영인본').map(v => ({ ...v, sec: '영인본 · 뒤에서부터' }))];
+      return [...b.volumes.filter(v => v.ed === '서문').map(v => ({ ...v, sec: '서문' })), ...by('입력본').map(v => ({ ...v, sec: '입력본 · 앞에서부터' })), ...by('영인본').map(v => ({ ...v, sec: '영인본 · 뒤에서부터' }))];
     }
     return b.volumes.map(v => ({ ...v, sec: v.temple }));
   }
@@ -11309,6 +11615,38 @@
         a.querySelector('.bk-emb').src = b.spineDesign.emblem;
         stackChars(a.querySelector('.bk-no'), vol.title.replace(/^佛敎\s*/, ''));
         stackChars(a.querySelector('.bk-pub'), '佛敎社');
+      } else if (b.spineDesign && b.spineDesign.kind === 'kjg') {
+        // 규장각의 불교문헌: 표지 3색(먹남색 · 황토 · 옥색) · 제목 · 문헌번호 · 쪽수 · 두께 일정
+        a.className = 'spine spine-kjg';
+        a.innerHTML = `<span class="kj-top"><span class="kj-t"></span></span><span class="kj-mid"><span class="kj-no"></span><span class="kj-pg"></span></span><span class="kj-bot"></span>`;
+        stackChars(a.querySelector('.kj-t'), '규장각의 불교문헌');
+        const no = a.querySelector('.kj-no');
+        if (vol.n0) { no.innerHTML = `<b>${vol.n0}</b><i></i><b>${vol.n1}</b>`; }
+        else stackChars(no, '序');
+        a.querySelector('.kj-pg').textContent = `p.${+vol.p0}–${+vol.p1}`;
+      } else if (b.spineDesign && b.spineDesign.kind === 'kbh') {
+        // 韓國佛敎學: 흰 비단결 천 · 붓글씨 제호 · 第N輯 · 韓國佛敎學會 · 연도(숫자)
+        const hn = n => { const D = '〇一二三四五六七八九'; let t = ''; const h = Math.floor(n / 100), te = Math.floor(n % 100 / 10), o = n % 10;
+          if (h) t += (h > 1 ? D[h] : '') + '百'; if (te) t += (te > 1 ? D[te] : '') + '十'; if (o) t += D[o]; return t; };
+        const no = vol.no || (b.volumes.indexOf(vol) + 1);
+        const TONE = ['#e9e6dc', '#e4e1d6', '#ebe7dd', '#e2dfd5', '#e7e4da'];
+        a.className = 'spine spine-kbh';
+        a.style.setProperty('--p', TONE[(no * 7) % TONE.length]);
+        a.innerHTML = `<img class="kbh-title" alt=""><span class="kbh-no"></span><span class="kbh-pub"></span><span class="kbh-yr"></span>`;
+        a.querySelector('.kbh-title').src = b.spineDesign.titleImg;
+        stackChars(a.querySelector('.kbh-no'), '第' + hn(no) + '輯');
+        stackChars(a.querySelector('.kbh-pub'), '韓國佛敎學會');
+        if (vol.yr) stackChars(a.querySelector('.kbh-yr'), vol.yr); else a.querySelector('.kbh-yr').remove();
+      } else if (b.spineDesign && b.spineDesign.kind === 'cbj') {
+        // 朝鮮佛教: 흰 갱지 · 위쪽 거친 먹띠(표지 윗단) · 예서 제호 · 장식 줄 · 第N號 · 朝鮮佛教社
+        const PAPER = ['#e4ded0', '#ddd7c8', '#e2dacb', '#d9d4c6', '#e6dfcf'];
+        const no = b.volumes.indexOf(vol) + 1;
+        a.className = 'spine spine-cb';
+        a.style.setProperty('--p', PAPER[(no * 3) % PAPER.length]);
+        a.innerHTML = `<span class="cb-band"></span><img class="cb-title" alt=""><span class="cb-orn"></span><span class="cb-no"></span><span class="cb-pub"></span>`;
+        a.querySelector('.cb-title').src = b.spineDesign.titleImg;
+        stackChars(a.querySelector('.cb-no'), vol.title.replace(/^朝鮮佛教\s*/, ''));
+        stackChars(a.querySelector('.cb-pub'), '朝鮮佛教社');
       } else if (b.spineDesign && b.spineDesign.kind === 'kgj') {
         // 金剛杵: 호마다 조금씩 다른 갱지색 · 위아래 겹줄 · 전서 제목 · 第N號 · 金剛杵社
         const PAPER = ['#d8d0bd', '#cfc9b6', '#d6cbb2', '#cbc6b7', '#d3cdb9', '#dcd2bb'];
@@ -11458,6 +11796,13 @@
         a.querySelector('.ak-no').textContent = vol.vno || '';
         const pin = a.querySelector('.ak-pin'); pin.innerHTML = '';
         (vol.pin || '').split('·').forEach(t => { const c = document.createElement('span'); c.textContent = t; pin.appendChild(c); });
+      } else if (b.spineDesign && b.spineDesign.kind === 'bhr' && vol.ed === '서문') {
+        // 서문과 논문: 얇은 먹갈색 천 + 금박 · 近代禪院芳啣錄 · 서문과 논문 · 序
+        a.className = 'spine spine-bhr pre';
+        a.innerHTML = `<span class="bh-ser"></span><span class="bh-rule"></span><span class="bh-tp"></span><span class="bh-ed"></span>`;
+        stackChars(a.querySelector('.bh-ser'), '近代禪院芳啣錄');
+        stackChars(a.querySelector('.bh-tp'), '서문과 논문');
+        stackChars(a.querySelector('.bh-ed'), '序');
       } else if (b.spineDesign && b.spineDesign.kind === 'bhr') {
         // 근대선원방함록: 영인본은 쪽빛+금박, 입력본은 미색+먹 · 近代禪院芳啣錄 · 절 이름(한자) · 연대 · 影印本/入力本 · 권 번호 · 원본 쪽수
         a.className = 'spine spine-bhr ' + (vol.ed === '영인본' ? 'img' : 'txt');
@@ -11467,7 +11812,7 @@
         a.querySelector('.bh-yr').textContent = vol.yrs || '';
         stackChars(a.querySelector('.bh-ed'), vol.ed === '영인본' ? '影印本' : '入力本');
         a.querySelector('.bh-no').textContent = vol.ed === '영인본' ? '1' : '2';
-        a.querySelector('.bh-pg').textContent = vol.p0 ? `p.${vol.p0}–${vol.p1}` : '';
+        a.querySelector('.bh-pg').textContent = vol.p0 && vol.p1 ? `p.${vol.p0}–${vol.p1}` : '';
       } else if (b.spineDesign && b.spineDesign.kind === 'vsi') {
         // Oxford VSI: 위 단색 + 아래 붓질 색띠 · 옆으로 누운 대문자 제목 + 굵은 'A Very Short Introduction' · 저자 · 번호 · OXFORD
         a.className = 'spine spine-vsi';
